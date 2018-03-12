@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e565d029096b88d304b9cfc241807084873e735
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cea67e0309bccac7d21d7e8db659a55d34d4959a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>정규식의 교체 구문
 <a name="top"></a> 교체 구문은 either/or 또는 조건부 일치를 허용하도록 정규식을 수정합니다. .NET에서는 다음 세 가지 교체 구문을 지원합니다.  
@@ -126,18 +126,18 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- 정규식 패턴 `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` 는 다음 테이블과 같이 해석됩니다.  
+ 정규식 패턴 `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.  
   
 |패턴|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
-|`(?<n2>\d{2}-)*`|숫자 2개, 하이픈 순의 일치 항목 0개 또는 1개를 찾습니다. 이 캡처링 그룹의 이름을 `n2`로 지정합니다.|  
+|`(?<n2>\d{2}-)?`|숫자 2개, 하이픈 순의 일치 항목 0개 또는 1개를 찾습니다. 이 캡처링 그룹의 이름을 `n2`로 지정합니다.|  
 |`(?(n2)`|`n2` 가 입력 문자열에서 일치하는지 여부를 테스트합니다.|  
 |`)\d{7}`|`n2` 가 일치하는 경우 일곱 개의 10진수를 일치시킵니다.|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|`n2` 가 일치하지 않는 경우 세 10진수, 하이픈, 두 10진수, 다른 하이픈 및 네 10진수를 일치시킵니다.|  
 |`\b`|단어 경계를 찾습니다.|  
   
- 다음 예제에서는 명명된 그룹 대신 번호가 있는 그룹을 사용하는 이 예제의 변형을 보여 줍니다. 정규식 패턴은 `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`입니다.  
+ 다음 예제에서는 명명된 그룹 대신 번호가 있는 그룹을 사용하는 이 예제의 변형을 보여 줍니다. 정규식 패턴은 `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`입니다.  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  

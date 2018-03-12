@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: cb672ef74d9eb83df7d1c8985e518136dad54c34
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-search-strings"></a>방법: 문자열 검색
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="does-a-string-follow-a-pattern"></a>문자열은 패턴을 따르나요?
 
-다음 코드는 정규식을 사용하여 배열에서 각 문자열 형식의 유효성을 검사합니다. 유효성 검사에서는 각 문자열이 전화 번호의 형식을 사용해야 합니다. 이 경우 3개의 숫자 그룹이 대시로 구분되고, 처음 두 그룹에는 세 자리 숫자가 포함되며, 세 번째 그룹에는 네 자리 숫자가 포함됩니다. 검색 패턴은 정규식 `^\\d{3}-\\d{3}-\\d{4}$`을 사용합니다. 자세한 내용은 [정규식 언어 - 빠른 참조](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c)를 참조하세요.
+다음 코드는 정규식을 사용하여 배열에서 각 문자열 형식의 유효성을 검사합니다. 유효성 검사에서는 각 문자열이 전화 번호의 형식을 사용해야 합니다. 이 경우 3개의 숫자 그룹이 대시로 구분되고, 처음 두 그룹에는 세 자리 숫자가 포함되며, 세 번째 그룹에는 네 자리 숫자가 포함됩니다. 검색 패턴은 정규식 `^\\d{3}-\\d{3}-\\d{4}$`을 사용합니다. 자세한 내용은 [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)를 참조하세요.
 
 | pattern  | 의미                             |
 | -------- |-------------------------------------|

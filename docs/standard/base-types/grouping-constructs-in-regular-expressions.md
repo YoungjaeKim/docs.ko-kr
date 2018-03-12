@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>정규식의 교체 그룹화 구문
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
@@ -393,7 +393,7 @@ ms.lasthandoff: 02/27/2018
 |패턴|설명|  
 |-------------|-----------------|  
 |`\d{2}`|두 개의 10진수를 찾습니다.|  
-|`{?<=\b20)`|단어 경계에서 두 개의 10진수 앞에 10진수 "20"이 있는 경우 일치 항목 찾기를 계속합니다.|  
+|`(?<=\b20)`|단어 경계에서 두 개의 10진수 앞에 10진수 "20"이 있는 경우 일치 항목 찾기를 계속합니다.|  
 |`\b`|단어 경계에서 일치 항목 찾기를 끝냅니다.|  
   
  너비가 0인 긍정 lookbehind 어설션은 캡처된 그룹의 마지막 문자(하나 또는 여러 개)가 해당 그룹의 정규식 패턴과 일치하는 문자의 하위 집합이어야 하는 경우 역추적을 제한하는 데도 사용됩니다. 예를 들어, 그룹이 모든 연속 단어 문자를 캡처하는 경우 너비가 0인 긍정 lookbehind 어설션을 사용하여 마지막 문자가 사전순이 되도록 할 수 있습니다.  
