@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: c6a0565ac7022928f5c2bdad5387d896c6c3d387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples"></a>튜플
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>C# 튜플와의 상호 운용
 
-C# 7 언어 튜플을 도입 되었습니다.  F #의 구조체 튜플에 해당 되며 C# 및가 구조체의 튜플 합니다.  와 상호 운용 하는 경우 C# 튜플을 사용 하 여 튜플 구조체를 사용 해야 합니다.
+C# 7 언어 튜플을 도입 되었습니다.  C#의 튜플 struct 이며 구조체 튜플을 F #에서 동일 합니다.  C#과 상호 운용 해야 하는 경우 구조체 튜플을 사용 해야 합니다.
 
 작업을 수행 하는 것과 쉽습니다.  예를 들어 C# 클래스에 튜플을 전달 튜플이 수도 있는 결과 사용할를 가정해 봅니다.
 

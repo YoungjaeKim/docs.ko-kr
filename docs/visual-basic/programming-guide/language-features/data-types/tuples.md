@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2653b9dc8a6ecbcb718c20be8bd6275edf4cfb6e
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples-visual-basic"></a>튜플 (Visual Basic)
 
@@ -64,69 +64,70 @@ Visual Basic 프로젝트에서 사용 하는 Visual Basic 컴파일러의 버�
 <PropertyGroup> 
   <LangVersion>15.3</LangVersion> 
 </PropertyGroup> 
+```
 
-The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+버전 번호는 15.3 부터는 Visual Basic 컴파일러의 모든 버전일 수 있습니다. 하드 코딩 특정 컴파일러 버전을 대신 지정할 수도 있습니다 "최신"의 값으로 `LangVersion` 를 시스템에 설치 하는 Visual Basic 컴파일러의 가장 최신 버전을 사용 하 여 컴파일합니다.
 
-In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+Visual Basic 컴파일러에 따라서는 후보 이름에서 튜플 요소 이름을 유추할 수 없습니다 및와 같은 기본 이름으로 사용 하 여 튜플 필드 참조만 수 `Item1`, `Item2`등입니다. 여기에는 다음이 포함됩니다.
 
-- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+- 후보 이름은 튜플 멤버의 이름과 같은 `Item3`, `Rest`, 또는 `ToString`합니다.
 
-- The candidate name is duplicated in the tuple.
+- 튜플의 후보 이름이 중복 됩니다.
  
-When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`. 
+필드 이름 유추가 실패 한 경우 Visual Basic 컴파일러 오류가 발생 하지 않습니다 없거나 이러한 속성이 런타임 시 발생 하는 예외입니다. 대신, 튜플 필드 참조 해야의 미리 정의 된 이름이 같은 `Item1` 및 `Item2`합니다. 
   
-## Tuples versus structures
+## <a name="tuples-versus-structures"></a>구조 및 튜플
 
-A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. These include:
+Visual Basic 튜플 값 형식이 중 하나의 인스턴스가는 **System.ValueTuple** 제네릭 형식입니다. 예를 들어는 `holiday` 의 인스턴스가 이전 예제에서 정의 된 튜플을 <xref:System.ValueTuple%603> 구조입니다. 데이터에 대 한 간단한 컨테이너 되도록 설계 되었습니다. 튜플의 쉽게 여러 데이터 항목이 있는 개체를 만들 수 있도록 목표, 이후 사용자 정의 구조를 가질 수 있는 기능 중 일부는 없습니다. 여기에는 다음이 포함됩니다.
 
-- Customer members. You cannot define your own properties, methods, or events for a tuple.
+- 고객 멤버입니다. 사용자 고유의 속성, 메서드 또는 튜플의 대 한 이벤트를 정의할 수 없습니다.
 
-- Validation. You cannot validate the data assigned to fields.
+- 유효성 검사 합니다. 필드에 할당 된 데이터를 확인할 수 없습니다.
 
-- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+- 변경 불가능 합니다. Visual Basic 튜플은 변경할 수 있습니다. 반면, 사용자 정의 구조를 제어할 수 있습니다 인지 인스턴스 변경할 수 있는 변경 불가능 합니다.
 
-If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+사용자 지정 멤버, 속성 및 필드 유효성 검사 또는 불변성 중요 한 경우에 Visual Basic을 사용 해야 [구조](../../../language-reference/statements/structure-statement.md) 을 사용자 지정 값 형식을 정의 합니다.
 
-A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+Visual Basic 튜플 멤버의 상속지 않습니다 해당 **ValueTuple** 유형입니다. 해당 필드와 함께 다음 메서드는 다음과 같습니다.
 
-| Member | Description |
+| 멤버 | 설명 |
 | ---|---|
-| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
-| Equals | Determines whether the current tuple is equal to another tuple or object. |
-| GetHashCode | Calculates the hash code for the current instance. |
-| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
+| CompareTo | 현재 튜플을 다른 튜플에 동일한 수의 요소를 비교합니다. |
+| 같음 | 현재 튜플을 다른 튜플 또는 개체와 같은지 여부를 결정 합니다. |
+| GetHashCode | 현재 인스턴스에 대 한 해시 코드를 계산합니다. |
+| ToString | 형식은이 튜플의 문자열 표현을 반환 `(Item1, Item2...)`여기서 `Item1` 및 `Item2` 튜플의 필드의 값을 나타냅니다. |
 
-In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
+또한는 **ValueTuple** 형식은 구현 <xref:System.Collections.IStructuralComparable> 및 <xref:System.Collections.IStructuralEquatable> 인터페이스는 고객 비교자를 정의할 수 있습니다.
 
-## Assignment and tuples
+## <a name="assignment-and-tuples"></a>할당 및 튜플
 
-Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
+Visual Basic에서는 동일한 필드 수 있는 튜플 형식 사이 할당을 지원 합니다. 다음 중 하나 이면 필드 유형을 변환할 수 있습니다.
 
-- The source and target field are of the same type.
+- 원본 및 대상 필드는 같은 형식입니다.
 
-- A widening (or implicit) conversion of the source type to the target type is defined. 
+- 확대 (또는 암시적) 변환 원본 유형 대상 유형으로 정의 됩니다. 
 
-- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
+- `Option Strict` `On`, 축소 (또는 명시적) 변환 원본 유형 대상 유형으로 정의 됩니다. 이 변환은 원본 값이 대상 형식의 범위 밖에 있는 경우 예외를 throw 합니다.
 
-Other conversions are not considered for assignments. Let's look at the kinds of assignments that are allowed between tuple types.
+다른 변환은 할당에 고려되지 않습니다. 튜플 형식 간에 허용되는 할당 종류를 살펴보겠습니다.
 
-Consider these variables used in the following examples:
+다음 예제에서 사용되는 이러한 변수를 살펴보세요.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Note that these two tuples have different names for the fields.
+처음 두 개의 변수 `unnamed` 및 `anonymous`는 필드에 대해 제공 된 의미 체계 이름이 없습니다. 필드 이름 요소가 기본 `Item1` 및 `Item2`합니다. 마지막 두 개의 변수 `named` 및 `differentName` 의미 체계 필드 이름이 있습니다. 이러한 두 튜플의 필드 이름은 서로 다릅니다.
 
-All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Therefore, all of these assignments work:
+이러한 튜플의 네 필드 (라고도 함 '인자 수가'), 동일한 수 있고 해당 필드의 형식이 동일 합니다. 따라서 다음 할당이 모든 작동합니다.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-Notice that the names of the tuples are not assigned. The values of the fields are assigned following the order of the fields in the tuple.
+튜플 이름은 할당되지 않습니다. 필드 값은 튜플의 필드 순서에 따라 할당됩니다.
 
-Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
+마지막으로 할당할 수 있습니다 알는 `named` 에 튜플을 `conversion` 튜플 경우에의 첫 번째 필드로 `named` 은 `Integer`, 및의 첫 번째 필드 `conversion` 는 `Long`합니다. 변환 있기 때문에이 할당 성공는 `Integer` 에 `Long` 확대 변환 합니다.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tuples with different numbers of fields are not assignable:
+필드의 수를 다르게 하 여 튜플은 할당할 수 없습니다.
 
 ```vb
 ' Does not compile.

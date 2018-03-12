@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10e9f4be3d02ac24c70c4a370ed96ff0dada130a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c61fe689a2a708b10fdf21e3638b1fc6ff117d25
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 형식 및 비 Blittable 형식
 대부분의 데이터 형식은 관리되는 메모리와 관리되지 않는 메모리 둘 다에서 공통된 표현을 사용하며 interop 마샬러의 특별한 처리가 필요하지 않습니다. 이러한 형식은 관리 코드와 비관리 코드 간에 전달될 때 변환이 필요하지 않기 때문에 *blittable 형식*이라고 합니다.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/19/2018
   
 -   정수 배열 등 blittable 형식의 1차원 배열. 그러나 blittable 형식의 변수 배열을 포함하는 형식 자체는 blittable이 아닙니다.  
   
--   blittable 형식(및 서식이 지정된 형식으로 마샬링된 경우 클래스)만 포함하는 서식이 지정된 값 형식. 서식이 지정된 값 형식에 대한 자세한 내용은 [값 형식에 대한 기본 마샬링](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a)을 참조하세요.  
+-   blittable 형식(및 서식이 지정된 형식으로 마샬링된 경우 클래스)만 포함하는 서식이 지정된 값 형식. 서식이 지정된 값 형식에 대한 자세한 내용은 [값 형식에 대한 기본 마샬링](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))을 참조하세요.  
   
  개체 참조는 blittable이 아닙니다. 여기에는 그 자체가 blittable인 개체에 대한 참조 배열이 포함됩니다. 예를 들어 blittable인 구조를 정의할 수 있지만 이러한 구조에 대한 참조 배열을 포함하는 blittable 형식을 정의할 수 없습니다.  
   
@@ -66,18 +68,18 @@ ms.lasthandoff: 01/19/2018
   
  관리되는 일부 데이터 형식은 관리되지 않는 환경에서 다른 표현이 필요합니다. 이러한 비 blittable 데이터 형식을 마샬링할 수 있는 형식으로 변환해야 합니다. 예를 들어 관리되는 문자열은 문자열 개체로 변환해야 마샬링할 수 있기 때문에 비 blittable 형식입니다.  
   
- 다음 표에는 <xref:System> 네임스페이스의 비 blittable 형식이 나와 있습니다. 정적 메서드 또는 클래스 인스턴스를 참조하는 데이터 구조인 [대리자](http://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2)도 비 blittable입니다.  
+ 다음 표에는 <xref:System> 네임스페이스의 비 blittable 형식이 나와 있습니다. 정적 메서드 또는 클래스 인스턴스를 참조하는 데이터 구조인 [대리자](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100))도 비 blittable입니다.  
   
 |비 blittable 형식|설명|  
 |-------------------------|-----------------|  
 |[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|C 스타일 배열 또는 `SAFEARRAY`로 변환합니다.|  
-|[System.Boolean](http://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|`true`가 1 또는 -1인 1, 2 또는 4바이트 값으로 변환합니다.|  
-|[System.Char](http://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb)|유니코드 또는 ANSI 문자로 변환합니다.|  
-|[System.Class](http://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6)|클래스 인터페이스로 변환합니다.|  
+|[System.Boolean](https://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9(v=vs.100))|`true`가 1 또는 -1인 1, 2 또는 4바이트 값으로 변환합니다.|  
+|[System.Char](https://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb(v=vs.100))|유니코드 또는 ANSI 문자로 변환합니다.|  
+|[System.Class](https://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6(v=vs.100))|클래스 인터페이스로 변환합니다.|  
 |[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|Variant 또는 인터페이스로 변환합니다.|  
 |[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|C 스타일 배열 또는 `SAFEARRAY`로 변환합니다.|  
 |[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|null 참조로 종료되는 문자열 또는 BSTR로 변환합니다.|  
-|[System.Valuetype](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a)|고정된 메모리 레이아웃을 사용하는 구조로 변환합니다.|  
+|[System.Valuetype](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))|고정된 메모리 레이아웃을 사용하는 구조로 변환합니다.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|C 스타일 배열 또는 `SAFEARRAY`로 변환합니다.|  
   
  클래스 및 개체 형식은 COM interop에서만 지원됩니다. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# 및 C++의 해당 형식은 [클래스 라이브러리 개요](../../../docs/standard/class-library-overview.md)를 참조하세요.  
