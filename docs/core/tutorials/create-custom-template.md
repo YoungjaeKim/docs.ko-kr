@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.workload: dotnetcore
-ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿 만들기
 
@@ -33,14 +34,14 @@ ms.lasthandoff: 12/23/2017
 - 빈 *content* 폴더를 삭제합니다.
 - *nuspec* 파일을 삭제합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - [.NET Core 2.0 SDK](https://www.microsoft.com/net/core) 이상 버전을 설치합니다.
 - 참조 항목 [dotnet new에 대한 사용자 지정 템플릿](../tools/custom-templates.md)을 읽어보세요.
 
 ## <a name="create-a-template-from-a-project"></a>프로젝트에서 템플릿 만들기
 
-컴파일 및 실행되는 것으로 확인한 기존 프로젝트를 사용하거나 하드 드라이브의 폴더에서 새 콘솔 앱 프로젝트를 만듭니다. 이 자습서에서는 프로젝트 폴더 이름은 사용자 프로필의 *Documents/Templates*에 저장된 *GarciaSoftware.ConsoleTemplate.CSharp*입니다. 이 자습서의 프로젝트 템플릿 이름은 *\<회사 이름>.\<템플릿 형식>.\<프로그래밍 언어>*이지만, 프로젝트와 템플릿에 원하는 이름을 지정할 수 있습니다.
+컴파일 및 실행되는 것으로 확인한 기존 프로젝트를 사용하거나 하드 드라이브의 폴더에서 새 콘솔 앱 프로젝트를 만듭니다. 이 자습서에서는 프로젝트 폴더 이름은 사용자 프로필의 *Documents\Templates*에 저장된 *GarciaSoftware.ConsoleTemplate.CSharp*입니다. 이 자습서의 프로젝트 템플릿 이름은 *\<회사 이름>.\<템플릿 형식>.\<프로그래밍 언어>*이지만, 프로젝트와 템플릿에 원하는 이름을 지정할 수 있습니다.
 
 1. 프로젝트의 루트에 *.template.config*라는 폴더를 추가합니다.
 1. *.template.config* 폴더 내부에서 *template.json* 파일을 만들어 템플릿을 구성합니다. 에 대 한 자세한 정보와 멤버 정의 대 한는 *template.json* 파일, 참조는 [새 dotnet 용 사용자 지정 템플릿](../tools/custom-templates.md#templatejson) 항목 및 [ *template.json* JSON 스키마 저장소에서 스키마](http://json.schemastore.org/template)합니다.
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="pack-the-template-into-a-nuget-package"></a>템플릿을 NuGet 패키지로 압축
 
-1. NuGet 패키지에 대한 폴더를 만듭니다. 자습서의 경우 폴더 이름 *GarciaSoftware.ConsoleTemplate.CSharp*가 사용되고 폴더는 사용자 프로필의 *Documents/NuGetTemplates* 폴더 내부에 만들어집니다. 새 템플릿 폴더 내부에 *content*라는 폴더를 만들어 프로젝트 파일을 저장합니다.
+1. NuGet 패키지에 대한 폴더를 만듭니다. 자습서의 경우 폴더 이름 *GarciaSoftware.ConsoleTemplate.CSharp*가 사용되고 폴더는 사용자 프로필의 *Documents\NuGetTemplates* 폴더 내부에 만들어집니다. 새 템플릿 폴더 내부에 *content*라는 폴더를 만들어 프로젝트 파일을 저장합니다.
 1. 프로젝트 폴더의 콘텐츠와 함께 *.template.config/template.json* 파일을 직접 만든 *content* 폴더로 복사합니다.
 1. *콘텐츠* 폴더 옆에 [*nuspec* 파일](/nuget/create-packages/creating-a-package)을 추가합니다. 패키지 콘텐츠를 설명하고 NuGet 패키지를 만드는 프로세스를 적용하는 XML 매니페스트 파일입니다.
    
@@ -102,10 +103,10 @@ ms.lasthandoff: 12/23/2017
    </package>
    ```
 
-1. `nuget pack <PATH_TO_NUSPEC_FILE>` 명령을 사용하여 [패키지를 만듭니다](/nuget/create-packages/creating-a-package#creating-the-package). 다음 명령은 NuGet 자산을 저장하는 폴더가 *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp/*라고 가정합니다. 하지만 시스템에서 폴더가 어디에 있든지 `nuget pack` 명령은 *nuspec* 파일의 경로를 허용합니다.
+1. `nuget pack <PATH_TO_NUSPEC_FILE>` 명령을 사용하여 [패키지를 만듭니다](/nuget/create-packages/creating-a-package#creating-the-package). 다음 명령은 NuGet 자산을 저장하는 폴더가 *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp\*라고 가정합니다. 하지만 시스템에서 폴더가 어디에 있든지 `nuget pack` 명령은 *nuspec* 파일의 경로를 허용합니다.
 
    ```console
-   nuget pack C:/Users/<USER>/Documents/NuGetTemplates/GarciaSoftware.ConsoleTemplate.CSharp/GarciaSoftware.ConsoleTemplate.CSharp.nuspec
+   nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec
    ```
 
 ### <a name="publishing-the-package-to-nugetorg"></a>nuget.org에 패키지 게시
@@ -119,7 +120,7 @@ NuGet 패키지를 게시하려면 [패키지 만들기 및 게시](/nuget/quick
 직접 생성한 *nupkg* 파일에서 템플릿을 설치하려면 `dotnet new` 명령과 `-i|--install` 옵션을 함께 사용하고 *nupkg* 파일 경로를 제공합니다.
 
 ```console
-dotnet new -i C:/Users/<USER>/GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
+dotnet new -i C:\Users\<USER>\GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
 ```
 
 #### <a name="install-the-template-from-a-nuget-package-stored-at-nugetorg"></a>nuget.org에 저장된 NuGet 패키지에서 템플릿 설치
@@ -187,14 +188,14 @@ dotnet new -u GarciaSoftware.ConsoleTemplate.CSharp.1.0.0
 이 자습서에서는 프로젝트 템플릿이 사용자 프로필의 *Documents/Templates* 폴더에 저장된다고 가정합니다. 해당 위치에서 \<USER>를 사용자의 프로필 이름으로 바꾸는 다음 명령을 사용하여 템플릿을 설치합니다.
 
 ```console
-dotnet new -i C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -i C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 ### <a name="create-a-project-from-the-template"></a>템플릿에서 프로젝트 만들기
 
 파일 시스템에서 템플릿이 설치된 후 템플릿 엔진의 출력을 배치할 디렉터리에서 `dotnet new <TEMPLATE>` 명령을 실행하여 템플릿을 사용합니다(`-o|--output` 옵션을 사용하여 특정 디렉터리를 지정하는 경우 제외). 자세한 내용은 [`dotnet new` 옵션](~/docs/core/tools/dotnet-new.md#options)을 참조하세요. 템플릿의 짧은 이름을 `dotnet new` 명령에 직접 제공합니다.
 
-*C:/Users/\<USER>/Documents/Projects/MyConsoleApp*에 만들어진 새 프로젝트 폴더에서 `garciaconsole` 템플릿을 기반으로 프로젝트를 만듭니다.
+*C:\Users\\\<USER>\Documents\Projects\MyConsoleApp*에 만들어진 새 프로젝트 폴더에서 `garciaconsole` 템플릿을 기반으로 프로젝트를 만듭니다.
 
 ```console
 dotnet new garciaconsole
@@ -202,14 +203,14 @@ dotnet new garciaconsole
 
 ### <a name="uninstall-the-template"></a>템플릿 제거
 
-로컬 파일 시스템의 *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*에서 템플릿을 만든 경우 `-u|--uninstall` 스위치와 템플릿 폴더 경로를 사용하여 템플릿을 제거합니다.
+로컬 파일 시스템의 *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp*에서 템플릿을 만든 경우 `-u|--uninstall` 스위치와 템플릿 폴더 경로를 사용하여 템플릿을 제거합니다.
 
 ```console
-dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 > [!NOTE]
-> 로컬 파일 시스템에서 템플릿을 제거하려면 경로를 정규화해야 합니다. 예를 들어 *C:/Users/\<사용자>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지만 상위 폴더의 *./GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지 않습니다.
+> 로컬 파일 시스템에서 템플릿을 제거하려면 경로를 정규화해야 합니다. 예를 들어 *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp* will work, but *./GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지 않습니다.
 > 마지막의 종료하는 디렉터리 슬래시도 템플릿 경로에 포함하지 마세요.
 
 ## <a name="see-also"></a>참고 항목

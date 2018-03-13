@@ -3,16 +3,16 @@ title: "Windows에서 .NET Core의 필수 구성 요소"
 description: "Windows 컴퓨터에서 .NET Core 응용프로그램을 개발 및 실행하기 위해 필요한 종속성이 무엇인지 살펴보세요."
 author: JRAlexander
 ms.author: johalex
-ms.date: 02/28/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e64ecb807fd377458a9998ebbdfe2f6f15b115bb
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows에서 .NET Core의 필수 구성 요소
 
@@ -100,5 +100,6 @@ Visual Studio에서 .NET Core 1.x 앱을 개발하려면 **기타 도구 집합*
 >
 > * **도움말** 메뉴에서 **Microsoft Visual Studio 정보**를 선택합니다.
 > * **Microsoft Visual Studio 정보** 대화 상자에서 버전 번호를 확인합니다.
->   * .NET Core 2.x 앱의 경우 Visual Studio 2017 버전 15.3(26730.01) 이상.
->   * .NET Core 1.x 앱의 경우 Visual Studio 2017 버전 15.0(26228.04) 이상.
+>   * .NET Core 2.1 미리 보기 1 앱의 경우 Visual Studio 2017 버전 15.6 미리 보기 6 이상.
+>   * .NET Core 2.0 앱의 경우 Visual Studio 2017 버전 15.3 이상.
+>   * .NET Core 1.x 앱의 경우 Visual Studio 2017 버전 15.0 이상.

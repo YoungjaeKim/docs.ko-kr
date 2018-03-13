@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c89695379d545ac5b22fc0716f3e0060b6c08f31
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>구문 분석 시작
 
@@ -73,7 +73,7 @@ C# 코드 구조의 분석에 구문 API를 사용합니다. **구문 API**는 �
 
 ### <a name="manual-traversal"></a>수동 트래버스
 
-[GitHub 샘플 리포지토리](https://github.com/dotnet/samples/csharp/roslyn-sdk/SyntaxQuickStart)에서 이 샘플의 완성된 코드를 볼 수 있습니다.
+[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart)에서 이 샘플의 완성된 코드를 볼 수 있습니다.
 
 > [!NOTE]
 > 구문 트리 형식은 상속을 사용하여 프로그램의 여러 위치에서 유효한 다른 구문 요소를 설명합니다. 종종 이러한 API를 사용하면 속성이나 컬렉션 멤버를 파생된 특정 형식에 캐스팅하게 됩니다. 다음 예제에서 할당 및 캐스팅은 명시적으로 형식화된 변수를 사용하는 별도의 문입니다. API의 반환 형식 및 반환되는 개체의 런타임 형식을 확인하기 위해 코드를 읽을 수 있습니다. 이 연습에서는 암시적으로 형식화된 변수를 사용하고 API 이름을 사용하여 검사된 개체의 형식을 설명하는 것이 더 일반적입니다.
@@ -103,7 +103,7 @@ Hello World 프로그램의 텍스트를 `Program` 클래스의 상수로 추가
 
 [!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
-해당 멤버는 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>입니다. `namespace Hello World` 선언 범위에 있는 모든 항목을 나타냅니다. 다음 코드를 추가하여 노드가 `HelloWorld` 네임스페이스 내에서 선언된 내용을 검사합니다.
+해당 멤버는 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>입니다. `namespace HelloWorld` 선언 범위에 있는 모든 항목을 나타냅니다. 다음 코드를 추가하여 노드가 `HelloWorld` 네임스페이스 내에서 선언된 내용을 검사합니다.
 
 [!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
@@ -127,14 +127,14 @@ The tree has 4 using statements. They are:
         System.Collections
         System.Linq
         System.Text
-The first member is a NamespaceDeclaration
+The first member is a NamespaceDeclaration.
 There are 1 members declared in this namespace.
-The first member is a ClassDeclaration
-There are 1 members declared in the Program class
-The first member is a MethodDeclaration
-The return type of the Main method is void
-The method has 1 parameters
-The type of the args parameter is string[]
+The first member is a ClassDeclaration.
+There are 1 members declared in the Program class.
+The first member is a MethodDeclaration.
+The return type of the Main method is void.
+The method has 1 parameters.
+The type of the args parameter is string[].
 The body text of the Main method follows:
         {
             Console.WriteLine("Hello, World!");
@@ -143,7 +143,7 @@ The body text of the Main method follows:
 
 ### <a name="query-methods"></a>쿼리 메서드
 
-트리를 트래버스하는 것 외에도 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>에 정의된 쿼리 메서드를 사용하여 구문 트리를 탐색할 수 있습니다. 이러한 메서드는 XPath에 익숙한 사용자라면 누구나 즉시 익숙해질 것입니다. LINQ에서 이러한 메서드를 사용하여 트리에서 신속히 작업할 수 있습니다. <xref:Microsoft.CodeAnalysis.SyntaxNode>에는 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> 및 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes> 등의 쿼리 메서드가 있습니다.
+트리를 트래버스하는 것 외에도 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>에 정의된 쿼리 메서드를 사용하여 구문 트리를 탐색할 수 있습니다. 이러한 메서드는 XPath에 익숙한 사용자라면 누구나 즉시 익숙해질 것입니다. LINQ에서 이러한 메서드를 사용하여 트리에서 신속히 작업할 수 있습니다. <xref:Microsoft.CodeAnalysis.SyntaxNode>에는 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> 및 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A> 등의 쿼리 메서드가 있습니다.
 
 이러한 쿼리 메서드를 사용하여 트리를 탐색하는 대신 `Main` 메서드에 대한 인수를 찾을 수 있습니다. `Main` 메서드의 맨 아래에 다음 코드를 추가합니다.
 
@@ -163,7 +163,7 @@ The body text of the Main method follows:
 
 새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만들고 이름을 "**SyntaxWalker**"로 지정합니다.
 
-[GitHub 리포지토리](https://github.com/dotnet/docs/samples/csharp/roslyn-sdk/SyntaxQuickStart)에서 이 샘플의 완성된 코드를 볼 수 있습니다. GitHub의 샘플에는 이 자습서에 설명된 모든 프로젝트가 포함됩니다.
+[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart)에서 이 샘플의 완성된 코드를 볼 수 있습니다. GitHub의 샘플에는 이 자습서에 설명된 모든 프로젝트가 포함됩니다.
 
 앞의 예제와 같이 분석하려는 프로그램의 텍스트를 포함하도록 문자열 상수를 정의할 수 있습니다.
 
@@ -198,23 +198,23 @@ The body text of the Main method follows:
 프로그램을 컴파일하고 실행합니다. 다음과 같은 내용이 출력됩니다.
 
 ```console
-        VisitUsingDirective called with System
-        VisitUsingDirective called with System.Collections.Generic
-        VisitUsingDirective called with System.Linq
-        VisitUsingDirective called with System.Text
-        VisitUsingDirective called with Microsoft.CodeAnalysis
-                Success. Adding Microsoft.CodeAnalysis
-        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp
-                Success. Adding Microsoft.CodeAnalysis.CSharp
-        VisitUsingDirective called with Microsoft
-                Success. Adding Microsoft
-        VisitUsingDirective called with System.ComponentModel
-        VisitUsingDirective called with Microsoft.Win32
-                Success. Adding Microsoft.Win32
-        VisitUsingDirective called with System.Runtime.InteropServices
-        VisitUsingDirective called with System.CodeDom
-        VisitUsingDirective called with Microsoft.CSharp
-                Success. Adding Microsoft.CSharp
+        VisitUsingDirective called with System.
+        VisitUsingDirective called with System.Collections.Generic.
+        VisitUsingDirective called with System.Linq.
+        VisitUsingDirective called with System.Text.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.
+                Success. Adding Microsoft.CodeAnalysis.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp.
+                Success. Adding Microsoft.CodeAnalysis.CSharp.
+        VisitUsingDirective called with Microsoft.
+                Success. Adding Microsoft.
+        VisitUsingDirective called with System.ComponentModel.
+        VisitUsingDirective called with Microsoft.Win32.
+                Success. Adding Microsoft.Win32.
+        VisitUsingDirective called with System.Runtime.InteropServices.
+        VisitUsingDirective called with System.CodeDom.
+        VisitUsingDirective called with Microsoft.CSharp.
+                Success. Adding Microsoft.CSharp.
 Microsoft.CodeAnalysis
 Microsoft.CodeAnalysis.CSharp
 Microsoft

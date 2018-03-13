@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6492edae6e4311252dc664236fb43cd373f7c59f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 24b3db01047a9f9a47182e0e1ac105f69562c316
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="strings-c-programming-guide"></a>문자열(C# 프로그래밍 가이드)
 문자열은 값이 텍스트인 <xref:System.String> 형식의 개체입니다. 내부적으로 텍스트는 <xref:System.Char> 개체의 순차적 읽기 전용 컬렉션으로 저장됩니다. C# 문자열의 끝에 null 종료 문자가 없으므로 C# 문자열에는 포함된 null 문자('\0')를 여러 개 사용할 수 있습니다. 문자열의 <xref:System.String.Length%2A> 속성은 유니코드 문자 수가 아닌 포함된 `Char` 개체 수를 나타냅니다. 문자열에서 개별 유니코드 코드 포인트에 액세스하려면 <xref:System.Globalization.StringInfo> 개체를 사용합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/28/2018
   
  [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
   
- 원래 문자열에 대한 검색 및 바꾸기 작업과 같이, 수정을 기반으로 하는 새 문자열 작성 방법에 대한 자세한 내용은 [방법: 문자열 콘텐츠 수정](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)을 참조하세요.  
+ 원래 문자열에 대한 검색 및 바꾸기 작업과 같이, 수정을 기반으로 하는 새 문자열 작성 방법에 대한 자세한 내용은 [방법: 문자열 콘텐츠 수정](../../how-to/modify-string-contents.md)을 참조하세요.  
   
 ## <a name="regular-and-verbatim-string-literals"></a>일반 및 축자 문자열 리터럴  
  다음 예제와 같이 C#에서 제공하는 이스케이프 문자를 포함해야 하는 경우 일반 문자열 리터럴을 사용합니다.  
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/28/2018
  <xref:System.Console.WriteLine%2A> 메서드를 한 번 오버로드하면 형식 문자열을 매개 변수로 가져옵니다. 따라서 메서드에 대한 명시적 호출이 없어도 형식 문자열 리터럴을 포함할 수 있습니다. 그러나 <xref:System.Diagnostics.Trace.WriteLine%2A>은 형식 문자열이 아닌 문자열만 허용하므로, <xref:System.Diagnostics.Trace.WriteLine%2A> 메서드를 사용하여 Visual Studio **출력** 창에 디버그 출력을 표시할 경우에는 <xref:System.String.Format%2A> 메서드를 명시적으로 호출해야 합니다. 형식 문자열에 대한 자세한 내용은 [형식 서식 지정](../../../standard/base-types/formatting-types.md)을 참조하세요.  
   
 ## <a name="substrings"></a>부분 문자열  
- 부분 문자열은 문자열에 포함된 임의의 문자 시퀀스입니다. 원래 문자열 일부에서 새 문자열을 만들려면 <xref:System.String.Substring%2A> 메서드를 사용하세요. <xref:System.String.IndexOf%2A> 메서드를 사용하면 부분 문자열 항목을 하나 이상 검색할 수 있습니다. 지정된 부분 문자열의 모든 항목을 새 문자열로 바꾸려면 <xref:System.String.Replace%2A> 메서드를 사용하세요. <xref:System.String.Substring%2A> 메서드와 마찬가지로, <xref:System.String.Replace%2A>는 실제로 새 문자열을 반환하며, 원래 문자열은 수정되지 않습니다. 자세한 내용은 [방법: 문자열 검색](../../how-to/search-strings.md) 및 [방법: 문자열 내용 수정](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)을 참조하세요.  
+ 부분 문자열은 문자열에 포함된 임의의 문자 시퀀스입니다. 원래 문자열 일부에서 새 문자열을 만들려면 <xref:System.String.Substring%2A> 메서드를 사용하세요. <xref:System.String.IndexOf%2A> 메서드를 사용하면 부분 문자열 항목을 하나 이상 검색할 수 있습니다. 지정된 부분 문자열의 모든 항목을 새 문자열로 바꾸려면 <xref:System.String.Replace%2A> 메서드를 사용하세요. <xref:System.String.Substring%2A> 메서드와 마찬가지로, <xref:System.String.Replace%2A>는 실제로 새 문자열을 반환하며, 원래 문자열은 수정되지 않습니다. 자세한 내용은 [방법: 문자열 검색](../../how-to/search-strings.md) 및 [방법: 문자열 내용 수정](../../how-to/modify-string-contents.md)을 참조하세요.  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
@@ -123,11 +123,11 @@ string s = String.Empty;
   
 |항목|설명|  
 |-----------|-----------------|  
-|[방법: 문자열 내용 수정](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|문자열의 콘텐츠를 수정하는 방법을 보여 주는 코드 예제를 제공합니다.|  
-|[방법: 여러 문자열 연결](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|`+` 연산자 및 `Stringbuilder` 클래스를 사용하여 컴파일 및 런타임 시 문자열을 서로 조인하는 방법을 보여 줍니다.|  
+|[방법: 문자열 내용 수정](../../how-to/modify-string-contents.md)|문자열을 변환하고 문자열의 내용을 수정하는 기술을 보여 줍니다.|  
+|[방법: 여러 문자열 연결](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|컴파일 시간 및 실행 시간에 여러 문자열을 하나의 문자열로 결합하는 기술을 보여 줍니다.|  
 |[방법: 문자열 비교](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|문자열의 서수 비교를 수행하는 방법을 보여 줍니다.|  
 |[방법: String.Split을 사용하여 문자열 구문 분석](../../how-to/parse-strings-using-split.md)|`String.Split` 메서드 문자열을 사용하여 문자열을 구문 분석하는 방법을 보여 주는 코드 예제가 포함되어 있습니다.|  
-|[방법: 문자열 검색](../../how-to/search-strings.md)|특정 메서드를 사용하여 문자열을 검색하는 방법에 대해 설명합니다.|  
+|[방법: 문자열 검색](../../how-to/search-strings.md)|문자열에서 특정 텍스트 또는 패턴에 대해 검색을 사용하는 방법을 설명합니다.|  
 |[방법: 문자열이 숫자 값을 나타내는지 확인](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|문자열에 올바른 숫자 값이 있는지 여부를 확인할 수 있도록 문자열을 안전하게 구문 분석하는 방법을 보여 줍니다.|  
 |[방법: 문자열을 DateTime으로 변환](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|"01/24/2008"과 같은 문자열을 <xref:System.DateTime?displayProperty=nameWithType> 개체로 변환하는 방법을 보여 줍니다.|  
 |[기본적인 문자열 작업](../../../../docs/standard/base-types/basic-string-operations.md)|<xref:System.String?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 메서드를 사용하여 기본적인 문자열 작업을 수행하는 항목에 대한 링크를 제공합니다.|  

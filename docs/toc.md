@@ -267,6 +267,7 @@
 ### [문자열 연결 방법](csharp/how-to/concatenate-multiple-strings.md)
 ### [방법 문자열을 DateTime으로 변환](standard/base-types/parsing-datetime.md)
 ### [문자열 검색 방법](csharp/how-to/search-strings.md)
+### [문자열 내용 수정 방법](csharp/how-to/modify-string-contents.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK(Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 프로그래밍 가이드](csharp/programming-guide/)

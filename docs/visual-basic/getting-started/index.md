@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 291065ae4c42cea741c4631923506076fcbc2f2e
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 시작
 설명서의 이 섹션에서는 Visual Basic 응용 프로그램의 개발을 시작하는 데 도움이 되는 내용을 제공합니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/28/2018
  [Visual Basic 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
  무료 버전을 포함하여 Visual Basic 지원이 포함된 Visual Studio 버전에 대한 다운로드 링크를 제공합니다.  
 
- [초보자를 위한 Visual Basic 기본 사항](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
+ [초보자를 위한 Visual Basic 기본 사항](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
  Visual Basic 프로그래밍의 기본 개념에 대해 설명하는 Microsoft Virtual Academy 과정입니다.
 
  [개체 지향 프로그래밍](../programming-guide/concepts/object-oriented-programming.md)  

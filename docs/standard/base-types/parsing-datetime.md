@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a17c96a03a35fcc4eb12e188dbc79d8d48153fb7
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>.NET에서 날짜 및 시간 문자열 구문 분석
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/22/2018
 > 이 문서의 모든 C# 샘플은 브라우저에서 실행됩니다. **실행** 단추를 눌러 출력을 볼 수 있습니다. 편집해서 직접 실험할 수도 있습니다.
 
 > [!NOTE]
-> 이러한 예제는 GitHub 문서 리포지토리에서 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) 및 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions)용으로 제공됩니다. 또한 프로젝트를 [C#]((https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) 또는 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip)용 zip 파일로 다운로드할 수 있습니다.
+> 이러한 예제는 GitHub 문서 리포지토리에서 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) 및 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions)용으로 제공됩니다. 또는 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) 또는 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip)용 zip 파일로 프로젝트를 다운로드할 수 있습니다.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/22/2018
  
 ## <a name="parseexact"></a>ParseExact
 
-<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 메서드는 지정된 문자열 패턴 중 하나를 따르는 문자열을 <xref:System.DateTime> 개체로 변환합니다. 지정된 형식 중 하나가 아닌 문자열을 이 메서드에 전달하면 <xref:System.FormatException>이 throw됩니다. 표준 날짜 및 시간 형식 지정자 또는 사용자 지정 형식 지정자의 조합 중 하나를 지정할 수 있습니다. 사용자 지정 서식 지정자를 사용하면 사용자 지정 문자열을 생성할 수 있습니다. 지정자에 대한 설명은 [표준 날짜 및 시간 형식 문자열](standard-date-and-time-format-strings.md) 및 [사용자 지정 날짜 및 시간 형식 문자열](custom-date-and-time-format-strings.md)의 항목을 참조하세요.  
+<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 메서드는 지정된 문자열 패턴 중 하나를 따르는 문자열을 <xref:System.DateTime> 개체로 변환합니다. 지정된 형식 중 하나가 아닌 문자열을 이 메서드에 전달하면 <xref:System.FormatException>이 throw됩니다. 표준 날짜 및 시간 형식 지정자 또는 사용자 지정 형식 지정자의 조합 중 하나를 지정할 수 있습니다. 사용자 지정 서식 지정자를 사용하면 사용자 지정 문자열을 생성할 수 있습니다. 지정자에 대한 설명은 [표준 날짜 및 시간 서식 문자열](standard-date-and-time-format-strings.md) 및 [사용자 지정 날짜 및 시간 서식 문자열](custom-date-and-time-format-strings.md)의 항목을 참조하세요.  
 
 다음 예제에서 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 메서드는 구문 분석할 문자열 개체 뒤에 형식 지정자와 <xref:System.Globalization.CultureInfo> 개체를 전달합니다. 이 <xref:System.DateTime.ParseExact%2A> 메서드는 `en-US` 문화권의 자세한 날짜 패턴을 따라는 문자열만 구문 분석할 수 있습니다.  
 

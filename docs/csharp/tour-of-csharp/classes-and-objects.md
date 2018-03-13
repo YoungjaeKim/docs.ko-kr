@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 37e04e918ead283f474899a9421aee2140ab7c11
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 97559a6e7b24f4a61b49dd4f050747a6d0ccbda0
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="classes-and-objects"></a>클래스 및 개체
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/08/2017
 * 유형
     - 클래스에 의해 선언된 중첩 형식
 
-## <a name="accessibility"></a>접근성
+## <a name="accessibility"></a>액세스 가능성
 
 클래스의 각 멤버에는 멤버에 액세스할 수 있는 프로그램 텍스트의 영역을 제어하는 액세스 가능성이 연결되어 있습니다. 액세스 가능성은 5가지 형태로 제공됩니다. 이러한 내용은 아래에 간략하게 정리되어 있습니다.
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/08/2017
 * `private`
     - 이 클래스로만 액세스가 제한됨
 * `private protected`
-    - 동일한 어셈블리 포함 형식 내에서에서 파생 된 클래스 또는 클래스에 대해서만 액세스
+    - 동일한 어셈블리 내의 포함하는 클래스 또는 포함하는 형식에서 파생된 클래스로만 액세스가 제한됨
 
 ## <a name="type-parameters"></a>형식 매개 변수
 
