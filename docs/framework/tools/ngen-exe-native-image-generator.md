@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -25,11 +26,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 20c120323356171d78da35a490488f4654baece6
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
@@ -83,12 +85,12 @@ ngen /? | /help
   
 |작업|설명|  
 |------------|-----------------|  
-|`install` [`assemblyName` | `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`|`2`|`3`}]]|어셈블리 및 해당 종속성에 대한 네이티브 이미지를 생성하고 그러한 이미지를 네이티브 이미지 캐시에 설치합니다.<br /><br /> `/queue`를 지정하면 네이티브 이미지 서비스에 대한 작업이 큐에 대기합니다. 기본 우선 순위는 3입니다. [우선 순위 수준](#PriorityTable) 표를 참조하세요.|  
-|`uninstall` [`assemblyName` | `assemblyPath`] [`scenarios`] [`config`]|네이티브 이미지 캐시에서 어셈블리에 대한 네이티브 이미지와 그 종속성을 삭제합니다.<br /><br /> 단일 이미지와 그 종속성을 제거하려면 해당 이미지를 설치할 때 사용한 것과 동일한 명령줄 인수를 사용합니다. **참고:** [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 `uninstall` * 동작이 더 이상 지원되지 않습니다.|  
+|`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|어셈블리 및 해당 종속성에 대한 네이티브 이미지를 생성하고 그러한 이미지를 네이티브 이미지 캐시에 설치합니다.<br /><br /> `/queue`를 지정하면 네이티브 이미지 서비스에 대한 작업이 큐에 대기합니다. 기본 우선 순위는 3입니다. [우선 순위 수준](#PriorityTable) 표를 참조하세요.|  
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|네이티브 이미지 캐시에서 어셈블리에 대한 네이티브 이미지와 그 종속성을 삭제합니다.<br /><br /> 단일 이미지와 그 종속성을 제거하려면 해당 이미지를 설치할 때 사용한 것과 동일한 명령줄 인수를 사용합니다. **참고:** [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 `uninstall` * 동작이 더 이상 지원되지 않습니다.|  
 |`update` [`/queue`]|무효화된 네이티브 이미지를 업데이트합니다.<br /><br /> `/queue`를 지정하면 네이티브 이미지 서비스에 대한 업데이트가 큐에 대기합니다. 업데이트는 항상 우선 순위 3에서 예약되므로 컴퓨터가 유휴 상태일 때 실행됩니다.|  
-|`display` [`assemblyName` | `assemblyPath`]|어셈블리에 대한 네이티브 이미지와 그 종속성의 상태를 표시합니다.<br /><br /> 인수를 지정하지 않은 경우 네이티브 이미지 캐시에 있는 모든 것이 표시됩니다.|  
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> 또는<br /><br /> `eqi` [1|2|3]|큐에 대기한 컴파일 작업을 실행합니다.<br /><br /> 우선 순위를 지정하면 우선 순위가 크거나 같은 컴파일 작업이 실행됩니다. 우선 순위를 지정하지 않으면 큐에 대기한 컴파일 작업이 모두 실행됩니다.|  
-|`queue` {`pause` | `continue` | `status`}|네이티브 이미지 서비스를 일시 중지하거나 일시 중지된 서비스를 계속 수행할 수 있도록 하거나 서비스 상태를 쿼리합니다.|  
+|`display` [`assemblyName` &#124; `assemblyPath`]|어셈블리에 대한 네이티브 이미지와 그 종속성의 상태를 표시합니다.<br /><br /> 인수를 지정하지 않은 경우 네이티브 이미지 캐시에 있는 모든 것이 표시됩니다.|  
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> 또는<br /><br /> `eqi` [1&#124;2&#124;3]|큐에 대기한 컴파일 작업을 실행합니다.<br /><br /> 우선 순위를 지정하면 우선 순위가 크거나 같은 컴파일 작업이 실행됩니다. 우선 순위를 지정하지 않으면 큐에 대기한 컴파일 작업이 모두 실행됩니다.|  
+|`queue` {`pause` &#124; `continue` &#124; `status`}|네이티브 이미지 서비스를 일시 중지하거나 일시 중지된 서비스를 계속 수행할 수 있도록 하거나 서비스 상태를 쿼리합니다.|  
   
 <a name="ArgumentTable"></a>   
 ## <a name="arguments"></a>인수  
