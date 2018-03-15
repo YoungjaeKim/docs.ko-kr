@@ -46,7 +46,7 @@ object.Value
  <xref:System.Xml.Linq.XElement.Value%2A> 속성을 사용 하면 컬렉션의 첫 번째 요소 값에 액세스 하기가 쉽지 <xref:System.Xml.Linq.XElement> 개체입니다. 이 속성은 먼저는 컬렉션 개체를 하나 이상 포함 되어 있는지 확인 합니다. 이 속성을 반환 하는 경우 컬렉션은 비어, `Nothing`합니다. 이 속성의 값을 반환 하는 그렇지 않은 경우는 <xref:System.Xml.Linq.XElement.Value%2A> 속성 컬렉션의 첫 번째 요소입니다.  
   
 > [!NOTE]
->  사용 하 여 XML 특성의 값에 액세스할 때는 ' @' 식별자, 특성 값으로 반환 됩니다는 `String` 명시적으로 지정할 필요가 없습니다는 <xref:System.Xml.Linq.XAttribute.Value%2A> 속성입니다.  
+>  사용 하 여 XML 특성의 값에 액세스할 때는 '@' 식별자, 특성 값으로 반환 됩니다는 `String` 명시적으로 지정할 필요가 없습니다는 <xref:System.Xml.Linq.XAttribute.Value%2A> 속성입니다.  
   
  컬렉션의 다른 요소에 액세스 하려면 XML 확장 인덱서 속성을 사용할 수 있습니다. 자세한 내용은 참조 [확장 인덱서 속성](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)합니다.  
   

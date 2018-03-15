@@ -1,90 +1,61 @@
 ---
-title: "F # Ionide 사용 하 여 Visual Studio 코드에서 시작"
+title: "Visual Studio Code에서 F #으로 시작."
 description: "Visual Studio Code 및 Ionide 플러그 인 suite F #을 사용 하는 방법에 알아봅니다."
 keywords: "visual f #, f #, 함수형 프로그래밍,.NET, Visual Studio Code vscode Ionide"
 author: cartermp
 ms.author: phcart
-ms.date: 09/28/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c452e791b27bc3f32e137a515011d953005344c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>F # Ionide 사용 하 여 Visual Studio 코드에서 시작
+# <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code에서 F #으로 시작.
 
-작성할 수 있습니다 F # [Visual Studio Code](https://code.visualstudio.com) 와 [Ionide 플러그 인](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)는 뛰어난 플랫폼 간 사용할 수 있는 경량 IDE 경험을 얻을 수 IntelliSense 및 기본 코드 리팩터링 합니다.  방문 [Ionide.io](https://ionide.io) 플러그 인 집합에 대 한 자세한 내용을 보려면 합니다.
+작성할 수 있습니다 F # [Visual Studio Code](https://code.visualstudio.com) 와 [Ionide 플러그 인](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)는 뛰어난 플랫폼 간 사용할 수 있는 경량 IDE (Integrade 개발 Enivronment) 경험을 얻을 수 IntelliSense 및 기본 코드 리팩터링 합니다.  방문 [Ionide.io](http://ionide.io) 플러그 인 집합에 대 한 자세한 내용을 보려면 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
-F # 4.0 이상이 Ionide 사용 하려면 컴퓨터에 설치 되어야 합니다.
+있어야 [git 설치](https://git-scm.com/download) 및 사용할 수 있도록 경로에 Ionide 프로젝트 템플릿을 사용 합니다.  입력 하 여 올바르게 설치 되었는지 확인할 수 `git --version` 고 키를 눌러 명령 프롬프트에서 **Enter**합니다.
 
-있어야 [git 설치](https://git-scm.com/download) 및 사용할 수 있도록 경로에 Ionide 프로젝트 템플릿을 사용 합니다.  입력 하 여 올바르게 설치 되었는지 확인할 수 `git` 명령 prompt.and 긴급에 **Enter**합니다.
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-### <a name="windows"></a>Windows
-
-Windows를 사용 하는 경우 설치 하 고 F #에 대 한 두 가지 옵션이 있습니다.
-
-Visual Studio를 이미 설치 하 고 F # 없는 경우 다음을 할 수 있습니다 [Visual F # 도구를 설치](get-started-visual-studio.md#installing-f)합니다.  그러면 작성, 컴파일 및 F # 코드를 실행 하는 데 필요한 모든 구성 요소 설치 됩니다.
-
-Visual Studio를 설치 하지 않으려는 경우 다음 지침을 따르세요.
-
-1. 설치 [.NET Framework 4.5 이상을](https://www.microsoft.com/en-US/download/details.aspx?id=30653) Windows 7을 실행 하는 경우.  Windows 8 이상이 사용 하 여이 작업을 수행할 필요가 없습니다.
-
-2. OS에 대 한 Windows SDK를 설치 합니다.
-
-    * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
-    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
-    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
-
-3. 설치는 [Microsoft Build Tools 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159)합니다.  또한 설치 해야 할 수 있습니다 [Microsoft 빌드 도구 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40760)합니다.
-
-4. 설치는 [Visual F # 도구](https://www.microsoft.com/en-us/download/details.aspx?id=48179)합니다.
-
-64 비트 Windows에서 컴파일러 및 도구는 여기에서 확인할:
-
-```
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsc.exe
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsi.exe
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
-```
-
-32 비트 Windows에서 컴파일러 도구의 위치는 다음과 같습니다.
-
-```
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsc.exe
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsi.exe
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
-```
-
-Ionide 컴파일러 및 도구를 자동으로 검색 하지만 어떤 이유로 그렇지 않은 경우 (예를 들어, Visual F # 도구에 설치 된 다른 디렉터리), 포함 된 폴더를 수동으로 추가할 수 있습니다 (`...\Microsoft SDKs\F#\4.0`)를 사용자의 경로입니다.
-
-### <a name="macos"></a>macOS
-
-Ionide macOS 등에서 사용 하 여 [모노](https://www.mono-project.com)합니다.  Homebrew를 통해 모노 macOS에 설치 하는 가장 쉬운 방법은 됩니다.  단순히 터미널에 다음을 입력 합니다.
+사용 하 여 Ionide [모노](http://www.mono-project.com)합니다.  Homebrew를 통해 모노 macOS에 설치 하는 가장 쉬운 방법은 됩니다.  단순히 터미널에 다음을 입력 합니다.
 
 ```
 brew install mono
 ```
 
-### <a name="linux"></a>Linux
+또한 설치 해야는 [.NET Core SDK](https://www.microsoft.com/net/download)합니다.
 
-Linux에서 Ionide 또한 사용 하 여 [모노](https://www.mono-project.com)합니다.  Debian 또는 Ubuntu 인 경우 다음을 사용할 수 있습니다.
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
+
+Linux에서 Ionide 또한 사용 하 여 [모노](https://www.mono-project.com)합니다. Debian 또는 Ubuntu 인 경우 다음을 사용할 수 있습니다.
 
 ```
 sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
+또한 설치 해야는 [.NET Core SDK](https://www.microsoft.com/net/download)합니다.
+
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
+
+Windows를 사용 하는 경우 해야 [F #를 지 원하는 Visual Studio 설치](get-started-visual-studio.md#installing-f)합니다. 작성, 컴파일 및 F # 코드를 실행 하는 데 필요한 모든 구성 요소를 설치 합니다.
+
+또한 설치 해야는 [.NET Core SDK](https://www.microsoft.com/net/download/)합니다.
+
+---
+
 ## <a name="installing-visual-studio-code-and-the-ionide-plugin"></a>Visual Studio Code 및 Ionide 플러그 인 설치
 
-Visual Studio Code에서 설치할 수는 [code.visualstudio.com](https://code.visualstudio.com) 웹 사이트입니다.  그런 다음 두 가지 방법으로 Ionide 플러그 인을 찾을 수 있습니다.
+Visual Studio Code에서 설치할 수는 [code.visualstudio.com](https://code.visualstudio.com) 웹 사이트입니다. 그런 다음 두 가지 방법으로 Ionide 플러그 인을 찾을 수 있습니다.
 
 1. 명령 팔레트 (Ctrl + Shift + P windows에서는 ⌘ + macOS, Ctrl + Shift + P linux에서 Shift + P)를 사용 하 하 고 다음을 입력.
 
@@ -96,7 +67,7 @@ Visual Studio Code에서 설치할 수는 [code.visualstudio.com](https://code.v
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-Visual Studio 코드에서 지원 되는 F #에 필요한 유일한 플러그 인 [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)합니다.  그러나 설치할 수도 있습니다 [Ionide 모조](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) 을 받을 [가짜](https://fake.build/) 지원 및 [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) 가져오려는 [Paket](https://fsprojects.github.io/Paket/) 지원 합니다.  가짜 및 Paket는 프로젝트를 빌드하고 각각 종속성을 관리 하기 위한 추가 F # 커뮤니티 도구입니다.
+Visual Studio 코드에서 지원 되는 F #에 필요한 유일한 플러그 인 [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)합니다. 그러나 설치할 수도 있습니다 [Ionide 모조](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) 을 받을 [가짜](https://fsharp.github.io/FAKE/) 지원 및 [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) 가져오려는 [Paket](https://fsprojects.github.io/Paket/) 지원 합니다. 가짜 및 Paket는 프로젝트를 빌드하고 각각 종속성을 관리 하기 위한 추가 F # 커뮤니티 도구입니다.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Ionide를 사용 하 여 첫 번째 프로젝트 만들기
 
@@ -139,7 +110,7 @@ F #:: "새 프로젝트"를 클릭 하 여 선택 **Enter**는이 단계로 이�
 
 1. F # 프로젝트 자체를 아래에서 `ClassLibraryDemo` 폴더입니다.
 2. 통해 패키지를 추가 하기 위한 올바른 디렉터리 구조 [ `Paket` ](https://fsprojects.github.io/Paket/)합니다.
-3. 플랫폼 간 빌드 스크립트와 [ `FAKE` ](https://fake.build/)합니다.
+3. 플랫폼 간 빌드 스크립트와 [ `FAKE` ](https://fsharp.github.io/FAKE/)합니다.
 4. `paket.exe` 있습니다에 대 한 종속성을 해결 하 고 패키지를 가져올 수 있는 실행 파일입니다.
 5. A `.gitignore` Git 기반 소스 제어에이 프로젝트를 추가 하려는 경우 파일입니다.
 
