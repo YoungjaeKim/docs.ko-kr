@@ -4,17 +4,17 @@ description: "F # 프로그래밍 언어에서이 둘러보기는 샘플 코드�
 keywords: "visual f #, f #, 기능 프로그래밍,.NET, 둘러보기"
 author: cartermp
 ms.author: phcart
-ms.date: 01/24/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c027e6b71f35fc3b58750eb164124de145244825
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7327573a25aa62af28570b4a8662235f3e41a972
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tour-of-f"></a>F # 둘러보기 #
 
@@ -22,20 +22,13 @@ F #에 대 한 자세한 내용은 읽기 및 쓰기 F # 코드는 가장 좋은
 
 두 가지 기본 개념인 F #: 함수 및 형식이 있습니다.  이 둘러보기가 개념에 해당 하는 언어의 기능을 강조 됩니다.
 
-## <a name="how-to-run-the-code-samples"></a>코드 샘플을 실행 하는 방법
-
->[!NOTE]
-코드 샘플을 실행 하기 위한 두 가지 옵션은 [시도 F #](http://www.tryfsharp.org/Create) (Silverlight가 필요) 및 [Azure 전자 필기장에 대 한 F #](https://notebooks.azure.com/Microsoft/libraries/fsharp/html/FSharp%20for%20Azure%20Notebooks.ipynb) Microsoft Azure에서.
-
-이 코드 샘플을 실행 하는 가장 빠른 방법은 사용 하는 [F # Interactive](tutorials/fsharp-interactive/index.md)합니다.  방금 복사/붙여넣기 코드 예제를 실행할 수 있습니다.  또는 프로젝트를 컴파일하고 콘솔 응용 프로그램 코드를 실행 하려면를 설정할 수 있습니다.  참조는 [시작](./get-started/index.md) 자세한 섹션.
-
 ## <a name="functions-and-modules"></a>함수 및 모듈
 
 F # 프로그램의 가장 기본적인 조각 ***함수*** 구조로 구성 ***모듈***합니다.  [함수](language-reference/functions/index.md) 출력을 생성 하는 입력에 대해 작업을 수행 하 고 아래에 구성 됩니다 [모듈](language-reference/modules.md)는 F #에서 항목을 그룹화 하는 기본 방법입니다.  사용 하 여 정의 된는 [ `let` 바인딩](language-reference/functions/let-bindings.md), 함수 이름을 지정 하 고 해당 인수를 정의 합니다.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let`바인딩은 다른 언어의 변수과 유사한 이름을에 연결한 값도 있습니다.  `let`바인딩은 ***변경할 수 없는*** 기본적으로 의미 하는 값 또는 함수의 이름에 바인딩된 후 변경할 수는 현재 위치입니다.  이 알고리즘은 변수는 다른 언어의 반대 ***변경 가능한***, 즉 해당 값에서에서 변경할 수 있습니다 언제 든 시간입니다.  사용할 수는 변경할 수 있는 바인딩을 필요 하면 `let mutable ...` 구문입니다.
+`let` 바인딩은 다른 언어의 변수과 유사한 이름을에 연결한 값도 있습니다.  `let` 바인딩은 ***변경할 수 없는*** 기본적으로 의미 하는 값 또는 함수의 이름에 바인딩된 후 변경할 수는 현재 위치입니다.  이 알고리즘은 변수는 다른 언어의 반대 ***변경 가능한***, 즉 해당 값에서에서 변경할 수 있습니다 언제 든 시간입니다.  사용할 수는 변경할 수 있는 바인딩을 필요 하면 `let mutable ...` 구문입니다.
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 

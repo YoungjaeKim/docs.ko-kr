@@ -476,6 +476,9 @@
                 - name: 연산자
                   tocHref: /dotnet/csharp/language-reference/operators/
                   topicHref: /dotnet/csharp/language-reference/operators/index
+                - name: 특수 문자
+                  tocHref: /dotnet/csharp/language-reference/tokens/
+                  topicHref: /dotnet/csharp/language-reference/tokens/index
                 - name: 전처리기 지시문
                   tocHref: /dotnet/csharp/language-reference/preprocessor-directives/
                   topicHref: /dotnet/csharp/language-reference/preprocessor-directives/index
