@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,22 +14,23 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="endpoint-addresses"></a>끝점 주소
 모든 끝점에는 해당 끝점을 찾아서 식별하는 데 사용되는 연결된 주소가 있습니다. 이 주소는 주로 끝점의 위치를 지정하는 URI(Uniform Resource Identifier)로 구성됩니다. 끝점 주소는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프로그래밍 모델에 <xref:System.ServiceModel.EndpointAddress> 클래스로 표시됩니다. 이 클래스에는 한 끝점에서 다른 끝점과 메시지를 교환할 때 상대 끝점을 인증할 수 있도록 하는 선택적 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 속성과 서비스에 연결하는 데 필요한 다른 SOAP 헤더를 정의하는 선택적 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 속성 집합이 포함되어 있습니다. 선택적 헤더는 서비스 끝점을 확인하거나 상호 작용하는 데 필요한 추가적인 자세한 주소 지정 정보를 제공합니다. 끝점 주소는 통신 중에 WS-Addressing EPR(끝점 참조)로 표시됩니다.  
   
 ## <a name="uri-structure-of-an-address"></a>주소의 URI 구조  
- 대부분 전송 주소 URI에는 네 가지 부분이 있습니다. 예를 들어 URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint의 네 부분을 다음과 같이 항목화할 수 있습니다.  
+ 대부분 전송 주소 URI에는 네 가지 부분이 있습니다. 예를 들어 URI의 네 부분 http://www.fabrikam.com:322/mathservice.svc/secureEndpoint 다음과 같이 항목별로 수 있습니다.  
   
 -   스키마: http:  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/19/2018
 </system.serviceModel>  
 ```  
   
- 앞의 예제에서 net.tcp://payroll.myorg.com:8000 및 http://shipping.myorg.com:8000은 해당 스키마에 대해 통과되는 유일한 기본 주소입니다.  
+ 위의 예에서 net.tcp://payroll.myorg.com: 8000 및 http://shipping.myorg.com:8000 해당 체계를 통해 전달 되는 유일한 기본 주소입니다.  
   
  `baseAddressPrefixFilter`는 와일드카드를 지원하지 않습니다.  
   

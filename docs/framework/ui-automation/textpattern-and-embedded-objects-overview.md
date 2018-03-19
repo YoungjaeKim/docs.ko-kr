@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 97f2f03cd55512c29c686759e756a1941f472157
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 및 포함 개체 개요
 > [!NOTE]
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/19/2018
   
  텍스트 범위의 내용을 이동해야 하는 경우 <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 메서드가 성공적으로 실행되려면 백그라운드에서 일련의 단계를 거쳐야 합니다.  
   
-1.  텍스트 범위가 정규화됩니다. 다시 말해서, 텍스트 범위가 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 끝점에서 중복 제거 범위로 축소되어 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 끝점이 불필요해집니다. 이 단계는 텍스트 범위가 <xref:System.Windows.Automation.Text.TextUnit> 경계까지 확장된 경우 모호성을 제거하기 위해 필요합니다. 예를 들어 "{The U}RL [http://www.microsoft.com](http://www.microsoft.com) is embedded in text"에서 "{" 및 "}"는 텍스트 범위 끝점입니다.  
+1.  텍스트 범위가 정규화됩니다. 다시 말해서, 텍스트 범위가 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 끝점에서 중복 제거 범위로 축소되어 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 끝점이 불필요해집니다. 이 단계는 텍스트 범위에 걸쳐 있는 경우 모호성을 제거 하는 데 필요한 <xref:System.Windows.Automation.Text.TextUnit> 경계: 예를 들어 "{The U} RL [ http://www.microsoft.com ](http://www.microsoft.com) 텍스트에 포함 된" 위치 "{" 및 "}"는 텍스트 범위 끝점입니다.  
   
 2.  결과 범위가 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 내에서 뒤쪽으로 옮겨져 요청된 <xref:System.Windows.Automation.Text.TextUnit> 경계의 시작 부분으로 이동하게 됩니다.  
   
@@ -79,14 +81,14 @@ Move() 및 ExpandToEnclosingUnit()에 따라 텍스트 범위가 조정되는 �
 ### <a name="hyperlink"></a>하이퍼링크  
  **예제 1 - 포함된 텍스트 하이퍼링크가 들어 있는 텍스트 범위**  
   
- {The URL [http://www.microsoft.com](http://www.microsoft.com) is embedded in text}.  
+ {URL [ http://www.microsoft.com ](http://www.microsoft.com) 텍스트에 포함 된}.  
   
 |호출되는 메서드|결과|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|"The URL http://www.microsoft.com is embedded in text"라는 문자열을 반환합니다.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|문자열을 반환 "URL http://www.microsoft.com 텍스트에 포함 된"입니다.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|텍스트 범위를 포함하는 가장 안쪽의 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다. 이 예제에서는 텍스트 공급자 자체를 나타내는 <xref:System.Windows.Automation.AutomationElement> 입니다.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|하이퍼링크 컨트롤을 나타내는 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 여기서 <xref:System.Windows.Automation.AutomationElement> 는 이전 `GetChildren` 메서드에서 반환되는 개체입니다.|"http://www.microsoft.com"을 나타내는 범위를 반환합니다.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 여기서 <xref:System.Windows.Automation.AutomationElement> 는 이전 `GetChildren` 메서드에서 반환되는 개체입니다.|나타내는 범위를 반환 합니다. "http://www.microsoft.com"입니다.|  
   
  **예제 2 - 포함된 텍스트 하이퍼링크에 부분적으로 걸쳐 있는 텍스트 범위**  
   
@@ -100,7 +102,7 @@ Move() 및 ExpandToEnclosingUnit()에 따라 텍스트 범위가 조정되는 �
   
  **예 3-텍스트 컨테이너의 콘텐츠에 부분적으로 걸쳐 있는 텍스트 범위입니다. 텍스트 컨테이너에 포함된 된 텍스트 하이퍼링크가 텍스트 범위에 속하지 않는 합니다.**  
   
- {The URL} [http://www.microsoft.com](http://www.microsoft.com) is embedded in text.  
+ {URL} [ http://www.microsoft.com ](http://www.microsoft.com) 텍스트에 포함 됩니다.  
   
 |호출되는 메서드|결과|  
 |-------------------|------------|  

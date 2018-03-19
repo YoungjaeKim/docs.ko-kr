@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="health-monitoring"></a>상태 모니터링
 
@@ -37,7 +37,7 @@ ASP.NET Core 마이크로 서비스 또는 웹 응용 프로그램을 개발할 
 
 eShopOnContainers 샘플 응용 프로그램에서 HealthChecks 라이브러리가 사용되는 방식을 확인할 수 있습니다. 시작하려면 각 마이크로 서비스에 대한 성능 상태를 구성하는 항목을 정의해야 합니다. 샘플 응용 프로그램에서 마이크로 서비스 API가 HTTP를 통해 액세스할 수 있고 관련 SQL Server 데이터베이스도 사용할 수 있으면 마이크로 서비스가 정상입니다.
 
-나중에 HealthChecks 라이브러리를 NuGet 패키지로 설치할 수 있습니다. 그러나 이 문서를 작성한 시점 이후로는 코드를 솔루션의 일부로 다운로드하고 컴파일해야 합니다. https://github.com/dotnet-architecture/HealthChecks에서 사용할 수 있는 코드를 복제하고 솔루션에 다음 폴더를 복사합니다.
+나중에 HealthChecks 라이브러리를 NuGet 패키지로 설치할 수 있습니다. 그러나 이 문서를 작성한 시점 이후로는 코드를 솔루션의 일부로 다운로드하고 컴파일해야 합니다. 복제에 사용할 수 있는 코드가 https://github.com/dotnet-architecture/HealthChecks 솔루션을 다음 폴더에 복사 합니다.
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -188,14 +188,14 @@ Azure Service Fabric을 사용하는 경우 단순한 상태 검사보다 더 �
 
 마지막으로 모든 이벤트 스트림을 저장하는 경우 Microsoft Power BI 또는 타사 솔루션(예: Kibana 또는 Splunk)을 사용하여 데이터를 시각화할 수 있습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **ASP.NET Core HealthChecks**(초기 릴리스) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET Core HealthChecks** (초기 릴리스) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **Service Fabric 상태 모니터링 소개**
+-   **서비스 패브릭 상태 모니터링 소개**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure Application Insights**
+-   **Azure 응용 프로그램 통찰력**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**

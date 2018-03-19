@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 형식 지원 구현 참고 사항
 이 항목에서는 자세히 알아야 할 몇 가지 구현 정보에 대해 설명합니다.  
@@ -37,14 +37,14 @@ ms.lasthandoff: 12/23/2017
  다음에서는 CLR 형식과 XML 데이터 형식 간에 발생할 수 있는 불일치 및 이에 대한 처리 방법을 설명합니다.  
   
 > [!NOTE]
->  `xs` 접두사는 http://www.w3.org/2001/XMLSchema 및 네임스페이스 URI로 매핑됩니다.  
+>  `xs` 접두사에 매핑되지는 http://www.w3.org/2001/XMLSchema 및 네임 스페이스 URI입니다.  
   
 ### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan 및 xs:duration  
  다르지만 동등한 특정 기간 값이 있다는 점에서 `xs:duration` 형식은 부분적으로 정렬됩니다. 이는 `xs:duration` 형식의 경우 1개월(P1M)과 같은 값은 32일(P32D)보다 작고 27일(P27D)보다 크며 28일, 29일 또는 30일과 같음을 의미합니다.  
   
  <xref:System.TimeSpan> 클래스는 이러한 부분 정렬을 지원하지 않습니다. 대신 이 클래스는 1년과 1개월에 대해 각각 365일과 30일의 특정 일 수를 선택합니다.  
   
- `xs:duration` 형식에 대한 자세한 내용은 W3C XML Schema Part 2: Datatypes Recommendation(http://www.w3.org/TR/xmlschema-2/)을 참조하세요.  
+ 대 한 자세한 내용은 `xs:duration` 입력 W3C XML 스키마 2 부를 참조 하십시오: Datatypes 권장 사항을에서 http://www.w3.org/TR/xmlschema-2/합니다.  
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time, 양력 날짜 형식 및 System.DateTime  
  `xs:time` 값을 <xref:System.DateTime> 개체에 매핑하면 <xref:System.DateTime.MinValue> 필드를 사용하여 <xref:System.DateTime>, <xref:System.DateTime.Year%2A> 및 <xref:System.DateTime.Month%2A>와 같은 <xref:System.DateTime.Day%2A> 개체의 날짜 속성이 가능한 가장 작은 <xref:System.DateTime> 값으로 초기화됩니다.  

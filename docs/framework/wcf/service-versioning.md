@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="service-versioning"></a>서비스 버전 관리
 서비스 및 서비스가 노출하는 끝점은 비즈니스 요구의 변경, 정보 기술의 요구 사항 또는 다른 문제 해결 등의 다양한 이유 때문에 최초로 배포된 후, 수명 동안 여러 차례에 걸쳐 변경되어야 할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다. 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]의 버전 관리를 고려하는 방법에 대해 설명합니다.  
@@ -110,7 +112,7 @@ ms.lasthandoff: 12/22/2017
  데이터 계약 버전 관리와 마찬가지로 서비스 계약 버전 관리에는 작업 추가, 변경 및 제거가 포함됩니다.  
   
 ### <a name="specifying-name-namespace-and-action"></a>이름, 네임스페이스 및 동작 지정  
- 기본적으로 서비스 계약의 이름은 인터페이스의 이름입니다. 이 기본 네임스페이스는 "http://tempuri.org"이며, 각 작업의 동작은 "http://tempuri.org/contractname/methodname"입니다. 서비스 계약에 대한 이름 및 네임스페이스, 각 작업에 대한 동작을 명시적으로 지정하여 "http://tempuri.org"의 사용을 피하고, 인터페이스와 메서드 이름이 서비스 계약에서 노출되지 않도록 하는 것이 좋습니다.  
+ 기본적으로 서비스 계약의 이름은 인터페이스의 이름입니다. 기본 네임 스페이스는 "http://tempuri.org", 있으며, 각 작업의 작업은 "http://tempuri.org/contractname/methodname"입니다. 명시적으로 지정할 이름 및 서비스 계약에 대 한 네임 스페이스와 사용 하지 않으려면 각 작업에 대 한 동작 것이 좋습니다. "http://tempuri.org" 인터페이스와 메서드 이름이 서비스의 계약에서 노출 되지 않도록 하 고 있습니다.  
   
 ### <a name="adding-parameters-and-operations"></a>매개 변수 및 작업 추가  
  서비스에 의해 노출된 서비스 작업을 추가하는 것은 주요하지 않은 변경 내용입니다. 이러한 새 작업에서는 기존 클라이언트의 요구를 고려하지 않아도 되기 때문입니다.  
@@ -136,7 +138,7 @@ ms.lasthandoff: 12/22/2017
  클라이언트에서 새 끝점 주소 또는 바인딩을 동적으로 검색할 수 없는 경우, 끝점 주소 및 바인딩에 대한 변경 내용은 주요 변경 내용입니다. 이 기능을 구현하는 메커니즘 중 하나는 UDDI(Universal Description, Discovery, and Integration) 레지스트리 및 UDDI 호출 패턴을 사용하는 것입니다. 여기서 클라이언트는 끝점과 통신하려고 시도하며, 실패 시 현재 끝점 메타데이터에 대해 잘 알려진 UDDI 레지스트리를 쿼리합니다. 그런 다음 클라이언트는 이 메타데이터의 주소 및 바인딩을 사용하여 끝점과 통신합니다. 이 통신이 성공하면 클라이언트는 나중에 사용할 수 있도록 주소 및 바인딩 정보를 캐시합니다.  
   
 ## <a name="routing-service-and-versioning"></a>라우팅 서비스 및 버전 관리  
- 서비스 변경이 주요한 변경이고 서로 다른 버전의 서비스를 두 개 이상 동시에 실행해야 하면 WCF 라우팅 서비스를 사용하여 적절한 서비스 인스턴스에 메시지를 라우팅할 수 있습니다. WCF 라우팅 서비스는 콘텐츠 기반 라우팅을 사용합니다. 즉, 메시지 내의 정보를 사용하여 메시지를 라우팅할 위치를 확인합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]WCF 라우팅 서비스 참조 [라우팅 서비스](../../../docs/framework/wcf/feature-details/routing-service.md)합니다. 서비스 버전 관리에 대 한 WCF 라우팅 서비스를 사용 하는 방법의 예를 참조 하십시오. [방법: 서비스 버전 관리](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)합니다.  
+ 서비스 변경이 주요한 변경이고 서로 다른 버전의 서비스를 두 개 이상 동시에 실행해야 하면 WCF 라우팅 서비스를 사용하여 적절한 서비스 인스턴스에 메시지를 라우팅할 수 있습니다. WCF 라우팅 서비스는 콘텐츠 기반 라우팅을 사용합니다. 즉, 메시지 내의 정보를 사용하여 메시지를 라우팅할 위치를 확인합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF 라우팅 서비스 참조 [라우팅 서비스](../../../docs/framework/wcf/feature-details/routing-service.md)합니다. 서비스 버전 관리에 대 한 WCF 라우팅 서비스를 사용 하는 방법의 예를 참조 하십시오. [방법: 서비스 버전 관리](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)합니다.  
   
 ## <a name="appendix"></a>부록  
  엄격한 버전 관리가 필요한 경우 일반 데이터 계약 버전 관리 지침을 변경 불가능한 데이터 계약으로 간주하고, 변경이 필요한 경우 새 항목을 만듭니다. 새로운 각 데이터 계약에 대해 새 클래스를 만들어야 하므로 이전 데이터 계약 클래스의 측면에서 작성된 기존 코드를 사용하지 않고, 새 데이터 계약 클래스의 측면에서 코드를 새로 작성하기 위한 메커니즘이 필요합니다.  

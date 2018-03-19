@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="rules-for-inferring-simple-types"></a>단순 형식 유추 규칙
 <xref:System.Xml.Schema.XmlSchemaInference> 클래스가 특성 및 요소에 대한 데이터 형식을 유추하는 방법을 설명합니다.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/23/2017
   
  첫 번째 `attr2` 값이 나타나면 `attr2` 값을 기준으로 `unsignedByte`의 형식이 `0`로 유추됩니다. 두 번째 `attr2`가 나타나면 `string` 클래스는 유추된 형식을 승격시킬 때 이전 값을 고려하기 때문에 그 형식은 현재 유추된 형식 `unsignedByte` 및 현재 값 `true`를 기준으로 <xref:System.Xml.Schema.XmlSchemaInference>으로 승격됩니다. 하지만 위에서 설명한 대로 `attr2`의 두 인스턴스가 다른 두 XML 문서가 아닌 같은 XML 문서에 나타나면 `attr2`는 `boolean`으로 유추됩니다.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>http://www.w3.org/2001/XMLSchema-instance 네임스페이스의 무시된 특성  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>특성을 무시는 http://www.w3.org/2001/XMLSchema-instance Namespace  
  다음은 스키마 유추에서 무시된 스키마 정의 특성입니다.  
   
 |특성|설명|  

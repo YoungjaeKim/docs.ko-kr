@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF 서비스 게시
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 게시는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 제공하는 초기 개발 환경에서부터 테스트 목적으로 프로덕션 환경에 응용 프로그램을 실제로 배포하는 것에 이르기까지 프로세스를 진행하도록 도와 줍니다. 최종 배포 계획에 커밋하기 전에 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 게시를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스가 올바르게 수행되고 게시할 준비가 되었는지 확인할 수 있습니다. 또한 테스트 목적으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리를 여러 대상 위치에 배포할 수도 있습니다.  
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  서비스 프로젝트를 열고, 선택 **빌드**->**게시 \<프로젝트 이름 >** 주 메뉴에서에서 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 **솔루션 탐색기**클릭 **게시**합니다.  
   
-3.  **게시** 창이 나타납니다. 클릭는 **... **. 단추를 클릭하여 서비스를 배포할 대상 위치를 지정합니다. 로컬 IIS, 파일 시스템 또는 FTP 사이트에 응용 프로그램을 배포 하도록 선택할 수 있습니다. 로컬 IIS에 응용 프로그램을 배포할 경우 웹 사이트를 선택 하 고, 대상 웹 응용 프로그램을 클릭 하 여 만들 수는 **새 웹 응용 프로그램 만들기** 오른쪽 위 모퉁이에서 아이콘입니다.  
+3.  **게시** 창이 나타납니다. 클릭는 **...** . 단추를 클릭하여 서비스를 배포할 대상 위치를 지정합니다. 로컬 IIS, 파일 시스템 또는 FTP 사이트에 응용 프로그램을 배포 하도록 선택할 수 있습니다. 로컬 IIS에 응용 프로그램을 배포할 경우 웹 사이트를 선택 하 고, 대상 웹 응용 프로그램을 클릭 하 여 만들 수는 **새 웹 응용 프로그램 만들기** 오른쪽 위 모퉁이에서 아이콘입니다.  
   
 4.  클릭 한 후 **게시** 주 창에서 Visual Studio 응용 프로그램을 지정한 대상 위치에 배포 및 대상 디렉터리에 Web.config,.svc 및 어셈블리 파일을 복사 합니다. 이어야 합니다. .Svc의 이름은 됩니다 "projectname.servicename.svc"입니다. 서비스를 성공적으로 게시 된 후에 Visual Studio 출력 창의 "연결 하는 하이퍼링크"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName..."와 비슷합니다는 옥을 찾을 수 있습니다. Ctrl 키를 누르고 링크를 클릭하여 Visual Studio 내에서 브라우저 페이지를 열고 서비스 디렉터리 구조를 볼 수 있습니다.  
   
