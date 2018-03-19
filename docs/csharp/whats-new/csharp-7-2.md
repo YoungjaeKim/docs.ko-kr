@@ -8,11 +8,11 @@ ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 9e7fefde6763dbd5c73c01e45e5652d9f207c213
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: db22c9251fa5e9f5a9cb66af6ec8b193b88e0eb3
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2의 새로운 기능
 
@@ -31,7 +31,7 @@ C# 7.2는 [언어 버전 선택](csharp-7-1.md#language-version-selection) 구�
   - 명명된 인수 뒤에는 위치 인수가 올 수 있습니다.
 * [숫자 리터럴의 선행 밑줄](#leading-underscores-in-numeric-literals)
   - 숫자 리터럴은 이제 인쇄된 숫자 앞에 선행 밑줄이 있을 수 있습니다.
-* [`private protected` 액세스 한정자](#private-protected)
+* [`private protected` 액세스 한정자](#private-protected-access-modifier)
   - `private protected` 액세스 한정자는 동일한 어셈블리의 파생된 클래스에 대해 액세스를 사용합니다.
 
 ## <a name="reference-semantics-with-value-types"></a>값 형식과 참조 의미 체계

@@ -2,21 +2,22 @@
 title: "연산자(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 267022b8c6b7f8faf301cae1a62f4dfaa8249f96
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="operators-c-programming-guide"></a>연산자(C# 프로그래밍 가이드)
 C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* 에 적용되는 프로그램 요소입니다. 증가 연산자(`++`)나 `new`같이 피연산자 하나를 사용하는 연산자를 *단항* 연산자라고 합니다. 산술 연산자(`+`,`-`,`*`,`/`) 같이 피연산자 두 개를 사용하는 연산자를 *이항* 연산자라고 합니다. 조건 연산자(`?:`)는 피연산자 세 개를 사용하며 이는 C#에서 유일한 삼진 연산자입니다.  
@@ -63,9 +64,9 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
   
 |식|설명|  
 |----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|ID|  
+|[+](../../../csharp/language-reference/operators/addition-operator.md)x|클레임|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|부정|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|논리 부정|  
+|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|논리 부정|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|비트 부정 연산|  
 |[++](../../../csharp/language-reference/operators/increment-operator.md)x|전위 증가|  
 |[--](../../../csharp/language-reference/operators/decrement-operator.md)x|전위 감소|  
@@ -131,7 +132,7 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
 |x op= y|복합 할당. 다음 연산자를 지원합니다. [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|익명 함수(람다 식)|  
   
-## <a name="associativity"></a>associativity  
+## <a name="associativity"></a>결합성  
  우선 순위가 동일한 연산자 두 개 이상이 식 하나에 있으면 두 연산자의 결합성에 따라 연산 순서가 결정됩니다. 왼쪽 결합성이 있는 연산자는 왼쪽에서 오른쪽으로 계산됩니다. 예를 들어, `x * y / z` 는 `(x * y) / z`로 계산됩니다. 오른쪽 결합성이 있는 연산자는 오른쪽에서 왼쪽으로 계산됩니다. 예를 들어, 할당 연산자는 오른쪽 결합성이 있는 연산자입니다. 아닌 경우 다음 코드 오류가 발생합니다.  
   
 ```csharp  

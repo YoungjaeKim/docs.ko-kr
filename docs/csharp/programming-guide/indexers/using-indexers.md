@@ -11,11 +11,11 @@ ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d5c727edbbea116d858c6acf6b600f8fd9f43ee2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17bbfabe8a53fc51e81434d0a2bd9fb2b29c4695
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-indexers-c-programming-guide"></a>인덱서 사용(C# 프로그래밍 가이드)
 인덱서는 클라이언트 응용 프로그램이 배열처럼 액세스할 수 있는 [class](../../../csharp/language-reference/keywords/class.md), [struct](../../../csharp/language-reference/keywords/struct.md), [interface](../../../csharp/language-reference/keywords/interface.md)를 만들 수 있게 해주는 편리한 구문입니다. 인덱서는 내부 컬렉션 또는 배열을 캡슐화하는 데 주로 사용되는 형식에서 자주 구현됩니다. 예를 들어 24시간 동안 10회 기록된 화씨온도를 나타내는 TempRecord라는 클래스가 있다고 가정합니다. 이 클래스에는 온도를 나타내는 float 형식의 “temps” 배열과 온도가 기록된 날짜를 나타내는 <xref:System.DateTime>이 포함되어 있습니다. 이 클래스에서 인덱서를 구현하면 클라이언트가 TempRecord 인스턴스의 온도에 `float temp = tr.temps[4]` 대신 `float temp = tr[4]`로 액세스할 수 있습니다. 인덱서 표기법은 클라이언트 응용 프로그램에 대한 구문을 간소화할 뿐 아니라 클래스와 해당 용도를 다른 개발자가 이해하기 쉽게 만듭니다.  
@@ -36,7 +36,7 @@ public int this[int index]    // Indexer declaration
   
  인덱서의 시그니처는 정식 매개 변수의 형식 및 개수로 구성됩니다. 정식 매개 변수의 이름이나 인덱서 형식은 포함되지 않습니다. 동일한 클래스에서 둘 이상의 인덱서를 선언하는 경우 다른 시그니처가 있어야 합니다.  
   
- 인덱서 값은 변수로 분류되지 않으므로 인덱서 값을 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수로 전달할 수 없습니다.  
+ 인덱서 값은 변수로 분류되지 않으므로 인덱서 값을 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수로 전달할 수 없습니다.  
   
  다른 언어에서 사용할 수 있는 이름을 인덱서에 제공하려면 선언에 `name` 특성을 사용합니다. 예:  
   

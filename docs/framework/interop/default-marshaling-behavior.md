@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e66caf800fd49b4822ee22326b8a5cf712d99bb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>기본 마샬링 동작
 Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되는 메모리와 관리되지 않는 메모리 간에 전달될 때 동작하는 방식을 제어하는 규칙에 따라 작동합니다. 이러한 기본 제공 규칙은 데이터 형식 변환, 호출 수신자가 전달된 데이터를 변경하고 해당 변경 내용을 호출자에게 반환할 수 있는지 여부 및 마샬러가 성능 최적화를 제공하는 상황과 같은 마샬링 작업을 제어합니다.  
@@ -33,7 +35,7 @@ Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되
  이 섹션에서는 interop 마샬링 서비스의 기본 동작 특성을 식별합니다. 배열, 부울 형식, char 형식, 대리자, 클래스, 개체, 문자열 및 구조체 마샬링에 대한 자세한 정보를 표시됩니다.  
   
 > [!NOTE]
->  제네릭 형식의 마샬링은 지원되지 않습니다. 자세한 내용은 [제네릭 형식을 통한 상호 운용](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)을 참조하세요.  
+>  제네릭 형식의 마샬링은 지원되지 않습니다. 자세한 내용은 [제네릭 형식을 통한 상호 운용](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))을 참조하세요.  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Interop 마샬러를 사용한 메모리 관리  
  Interop 마샬러는 항상 비관리 코드에 의해 할당된 메모리를 해제하려고 합니다. 이 동작은 COM 메모리 관리 규칙을 준수하지만 네이티브 C++를 제어하는 규칙과는 다릅니다.  

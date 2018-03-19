@@ -10,23 +10,23 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a2db07c4f5688aece212681af40d69c377f6fa4a
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>자습서: 형식 공급자 만들기
 
 F # 형식 공급자 메커니즘에는 정보가 풍부한 프로그래밍에 대 한 지원의 중요 한 부분입니다. 이 자습서에서는 개발의 기본 개념을 설명 하기 위해 몇 가지 단순 형식 공급자를 통해 사용자 고유의 형식 공급자를 만드는 방법을 설명 합니다. F # 형식 공급자 메커니즘에 대 한 자세한 내용은 참조 [형식 공급자](index.md)합니다.
 
-F # 생태계는 자주 사용 되는 인터넷 및 엔터프라이즈 데이터 서비스에 대 한 형식 공급자의 범위를 포함합니다. 예:
+F # 생태계는 자주 사용 되는 인터넷 및 엔터프라이즈 데이터 서비스에 대 한 형식 공급자의 범위를 포함합니다. 예를 들어:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 문서 형식을 JSON, XML, CSV 및 HTML에 대 한 형식 공급자를 포함 합니다.
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 문서 형식을 JSON, XML, CSV 및 HTML에 대 한 형식 공급자가 포함 됩니다.
 
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/) 이러한 데이터 원본에 대 한 쿼리 개체의 매핑 및 F # LINQ를 통해 SQL 데이터베이스에 대 한 강력한 형식의 액세스를 제공 합니다.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) 에 일련의 com에 대 한 형식 공급자를 더미 시간이 검사 F #에서 T-SQL의 포함
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) 컴파일 시간에 대 한 형식 공급자 집합을 체크 F #에서 T-SQL의 포함 합니다.
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) SQL, Entity Framework, OData와 WSDL 데이터 서비스에 액세스 하기 위한.NET Framework 프로그래밍에만 사용 하기 위해 형식 공급자의 이전 버전 집합입니다.
 
@@ -135,11 +135,11 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
   // And add them to the namespace
   do this.AddNamespace(namespaceName, types)
 
-  [<assembly:TypeProviderAssembly>] 
-  do()
+[<assembly:TypeProviderAssembly>] 
+do()
 ```
 
-이 공급자를 사용 하려면 Visual Studio 2012의 개별 인스턴스를 열고 F # 스크립트를 만들 후 다음 코드 에서처럼 #r을 사용 하 여 스크립트에서 공급자에 대 한 참조를 추가 합니다.
+이 공급자를 사용 하려면 Visual Studio의 개별 인스턴스를 열고 F # 스크립트를 만들 후 다음 코드 에서처럼 #r을 사용 하 여 스크립트에서 공급자에 대 한 참조를 추가 합니다.
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -451,13 +451,13 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 ### <a name="type-checked-regex-provider"></a>Regex 공급자를 확인 하는 입력
 
-.NET을 래핑하는 정규식에 대 한 형식 공급자를 구현 하 고 가정 `System.Text.RegularExpressions.Regex` 다음 컴파일 타임 보증을 제공 하는 인터페이스에서 라이브러리:
+.NET을 래핑하는 정규식에 대 한 형식 공급자를 구현 하 고 가정 <xref:System.Text.RegularExpressions.Regex> 다음 컴파일 타임 보증을 제공 하는 인터페이스에서 라이브러리:
 
 - 정규식 올바른지 여부를 확인 합니다.
 
 - 일치 하는 정규식에서 모든 그룹 이름을 기반으로 하는 항목에 명명 된 속성을 제공 합니다.
 
-이 섹션에서는 만들려는 형식 공급자를 사용 하는 방법을 보여 줍니다는 `RegExProviderType` 정규식 패턴에서 이러한 장점을 제공 하기 위해 매개 변수화를 입력 합니다. 형식 공급자를 추출할 수 있는 그룹 패턴에서 명명 된 일치 하는 속성을 사용 하 여 액세스할 수 있도록와 지정 된 패턴과 유효 없는 경우 컴파일러에서 오류를 보고 합니다. 형식 공급자를 디자인할 때 노출 된 API 모양 고려해 야 최종 사용자와.NET 코드에이 디자인은 변환 하는 방법에 있습니다. 다음 예제에는 지역 번호의 구성 요소를 이러한 API를 사용 하는 방법을 보여 줍니다.
+이 섹션에서는 만들려는 형식 공급자를 사용 하는 방법을 보여 줍니다는 `RegexTyped` 정규식 패턴에서 이러한 장점을 제공 하기 위해 매개 변수화를 입력 합니다. 형식 공급자를 추출할 수 있는 그룹 패턴에서 명명 된 일치 하는 속성을 사용 하 여 액세스할 수 있도록와 지정 된 패턴과 유효 없는 경우 컴파일러에서 오류를 보고 합니다. 형식 공급자를 디자인할 때 노출 된 API 모양 고려해 야 최종 사용자와.NET 코드에이 디자인은 변환 하는 방법에 있습니다. 다음 예제에는 지역 번호의 구성 요소를 이러한 API를 사용 하는 방법을 보여 줍니다.
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -480,7 +480,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 - `RegexTyped` 생성자의 패턴에 대 한 정적 형식 인수를 전달 Regex 생성자에 호출 됩니다.
 
-- 결과 `Match` 표준에 따라 나타내는 메서드에 `System.Text.RegularExpressions.Match` 유형입니다.
+- 결과 `Match` 표준에 따라 나타내는 메서드에 <xref:System.Text.RegularExpressions.Match> 유형입니다.
 
 - 제공 된 속성의 결과 각 명명 된 그룹에 일치 하는 인덱서를 사용 하는 결과 속성에 액세스 및 `Groups` 컬렉션입니다.
 
@@ -552,7 +552,7 @@ do ()
 
 - 사용 하면 `obj` 수 있지만 메서드를의 기본 유형을 사용 하 여 대로 `Regex` 개체는 다음 예제와 같이이 형식의 런타임 표현이으로 합니다.
 
-- 에 대 한 호출의 `Regex` 생성자 throw는 `System.ArgumentException` 경우 정규식 유효 하지 않습니다. 컴파일러는이 예외를 catch 하 고 컴파일 타임에 또는 Visual Studio 편집기에서 오류 메시지를 사용자에 게 보고. 이 예외를 응용 프로그램을 실행 하지 않고 유효성을 검사 하려면 정규식 사용 합니다.
+- 에 대 한 호출의 `Regex` 생성자 throw는 <xref:System.ArgumentException> 경우 정규식 유효 하지 않습니다. 컴파일러는이 예외를 catch 하 고 컴파일 타임에 또는 Visual Studio 편집기에서 오류 메시지를 사용자에 게 보고. 이 예외를 응용 프로그램을 실행 하지 않고 유효성을 검사 하려면 정규식 사용 합니다.
 
 위에 정의 된 형식 도움이 되지 않습니다 아직 의미 있는 메서드 또는 속성을 포함 하지 않습니다. 먼저 추가 하는 정적 `IsMatch` 메서드:
 
@@ -583,7 +583,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-다음 각 그룹에 대해 일치 하는 항목 형식에 하나의 속성을 추가 합니다. 런타임 시 일치 하는로 표시 되는 `System.Text.RegularExpressions.Match` 값 이므로 속성을 정의 하는 인용 사용 해야 합니다는 `System.Text.RegularExpressions.Match.Groups` 인덱싱된 관련 그룹을 가져올 속성입니다.
+다음 각 그룹에 대해 일치 하는 항목 형식에 하나의 속성을 추가 합니다. 런타임 시 일치 하는로 표시 되는 <xref:System.Text.RegularExpressions.Match> 값 이므로 속성을 정의 하는 인용 사용 해야 합니다는 <xref:System.Text.RegularExpressions.Match.Groups> 인덱싱된 관련 그룹을 가져올 속성입니다.
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -756,13 +756,11 @@ do ()
 간단한 예로 공학용 형식으로 데이터를 쉼표로 구분 된 값 (CSV)에 액세스 하기 위한 형식 공급자를 것이 좋습니다. 이 섹션에서는 CSV 파일 다음 표에서 같이 뒤에 부동 소수점 데이터는 머리글 행을 포함 하는 가정 합니다.
 
 
-```
-|Distance (meter)|Time (second)|
+|거리 (미터)|시간 (초)|
 |----------------|-------------|
 |50.0|3.7|
 |100.0|5.2|
 |150.0|6.4|
-```
 
 이 섹션에 있는 행을 가져오는 데 사용할 수 있는 형식을 제공 하는 방법을 보여 줍니다는 `Distance` 형식의 속성이 `float<meter>` 및 `Time` 형식의 속성이 `float<second>`합니다. 간단히 하기 위해 다음과 같은 가정 설정 됩니다.
 
@@ -788,7 +786,7 @@ printfn "%f" (float time)
 이 경우 컴파일러는 다음 예제와 같은 것으로 이러한 호출을 변환 해야:
 
 ```fsharp
-let info = new MiniCsvFile("info.csv")
+let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
 printfn "%f" (float time)
@@ -1045,9 +1043,10 @@ ProvidedType API 버전 AddMember의 연기 했습니다.
 
 ### <a name="providing-array-types-and-generic-type-instantiations"></a>배열 형식 및 제네릭 형식 인스턴스화를 제공합니다.
 
-일반을 사용 하 여 제공 된 멤버 (시그니처 배열 형식, byref 형식 및 제네릭 형식의 인스턴스화에 포함)를 수행한 `MakeArrayType`, `MakePointerType`, 및 `MakeGenericType` System.Type의 인스턴스에 있는 포함 하 여 `ProvidedTypeDefinitions`합니다.
+일반을 사용 하 여 제공 된 멤버 (시그니처 배열 형식, byref 형식 및 제네릭 형식의 인스턴스화에 포함)를 수행한 `MakeArrayType`, `MakePointerType`, 및 `MakeGenericType` 의 모든 인스턴스에서 <xref:System.Type>를 포함 하 여 `ProvidedTypeDefinitions`합니다.
 
-참고: 경우에 따라 할 수 있습니다 도우미를 사용 하 여 `ProvidedTypeBuilder.MakeGenericType`합니다.  자세한 내용은 형식 공급자 SDK 설명서를 참조 합니다.
+> [!NOTE]
+> 도우미를 사용 해야 경우에 따라 `ProvidedTypeBuilder.MakeGenericType`합니다.  참조는 [형식 공급자 SDK 설명서](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) 내용을 확인 합니다.
 
 ### <a name="providing-unit-of-measure-annotations"></a>주석 측정 단위를 제공합니다.
 
@@ -1096,12 +1095,12 @@ ProvidedTypes API 측정값 주석을 제공 하기 위한 도우미를 제공 �
 
 #### <a name="providing-generated-types"></a>생성 된 형식 제공
 
-이 문서에서 설명한 지금까지 지워진된 형식을 제공 하는 방법입니다. 사용자의 프로그램에 실제.NET 형식 정의로 추가 되는 생성 된 형식을 제공 하도록 F # 형식 공급자 메커니즘을 사용할 수 있습니다. 참조 해야 생성 된 형식 정의 사용 하 여 형식을 제공 합니다.
+지금까지이 문서는 지워진된 형식을 제공 하는 방법을 설명 했습니다. 사용자의 프로그램에 실제.NET 형식 정의로 추가 되는 생성 된 형식을 제공 하도록 F # 형식 공급자 메커니즘을 사용할 수 있습니다. 참조 해야 생성 된 형식 정의 사용 하 여 형식을 제공 합니다.
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 F # 3.0 버전의 일부인 ProvidedTypes 0.2 도우미 코드에서는 제한적 으로만 생성 된 형식을 제공 하는 데 지원 합니다. 다음 문은 생성 된 형식 정의 대해 적용 되어야 합니다.

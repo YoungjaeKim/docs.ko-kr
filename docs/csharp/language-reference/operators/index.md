@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-operators"></a>C# 연산자
 C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 수행할 연산(수학, 인덱싱, 함수 호출 등)을 지정하는 기호입니다.  많은 연산자를 [오버로드](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)하여 사용자 정의 형식에 적용되는 경우의 의미를 변경할 수 있습니다.  
@@ -78,7 +78,7 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
   
  [-x](../../../csharp/language-reference/operators/subtraction-operator.md) – 숫자 부정  
   
- [!x](../../../csharp/language-reference/operators/logical-negation-operator.md) –논리 부정  
+ [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md) – 논리 부정  
   
  [~x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) – 비트 보수  
   

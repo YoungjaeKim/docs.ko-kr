@@ -11,14 +11,14 @@ ms.assetid: 6a2b261e-a1cc-49a6-b4f0-6cacae385a1e
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7f2d4e613491b26e82523d230398af3ec34b4d0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f76f63aee0100c6af6bde73c8543b4e7136b1954
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="passing-arrays-using-ref-and-out-c-programming-guide"></a>ref 및 out을 사용하여 배열 전달(C# 프로그래밍 가이드)
-모든 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수처럼 배열 형식의 `out` 매개 변수는 사용하기 전에 할당해야 합니다. 즉, 호출 수신자가 할당해야 합니다. 예:  
+모든 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수처럼 배열 형식의 `out` 매개 변수는 사용하기 전에 할당해야 합니다. 즉, 호출 수신자가 할당해야 합니다. 예:  
   
  [!code-csharp[csProgGuideArrays#39](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-using-ref-and-out_1.cs)]  
   
@@ -28,12 +28,12 @@ ms.lasthandoff: 11/21/2017
   
  다음 두 예제에서는 메서드에 배열을 전달하는 데 사용된 `out`과 `ref` 사이의 차이점을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서 `theArray` 배열은 호출자(`Main` 메서드)에서 선언되어 `FillArray` 메서드에서 초기화됩니다. 그런 다음 호출자로 배열 요소가 반환되어 표시됩니다.  
   
  [!code-csharp[csProgGuideArrays#37](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-using-ref-and-out_3.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서 `theArray` 배열은 호출자(`Main` 메서드)에서 초기화되고 `FillArray` 매개 변수를 사용하여 `ref` 메서드에 전달됩니다. 일부 배열 요소는 `FillArray` 메서드에서 업데이트됩니다. 그런 다음 호출자로 배열 요소가 반환되어 표시됩니다.  
   
  [!code-csharp[csProgGuideArrays#38](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-using-ref-and-out_4.cs)]  

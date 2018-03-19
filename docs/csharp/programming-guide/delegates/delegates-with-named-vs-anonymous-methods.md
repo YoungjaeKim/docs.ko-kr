@@ -2,20 +2,21 @@
 title: "대리자 비교: 명명된 메서드 및 무명 메서드(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 59317ad3cd9a5d360d0375bf46ff0c9f752a5944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d242f9ab1ecb1963f674d6094f05d78b77fbee9c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>대리자 비교: 명명된 메서드 및 무명 메서드(C# 프로그래밍 가이드)
 [대리자](../../../csharp/language-reference/keywords/delegate.md)는 명명된 메서드에 연결할 수 있습니다. 명명된 메서드를 사용하여 대리자를 인스턴스화하면 메서드가 매개 변수로 전달됩니다. 예를 들면 다음과 같습니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
  대리자 인스턴스는 정적 또는 인스턴스 메서드를 캡슐화할 수 있습니다.  
   
- 대리자는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수를 사용할 수 있지만, 멀티캐스트 이벤트 대리자의 경우 호출될 대리자를 알 수 없기 때문에 사용하지 않는 것이 좋습니다.  
+ 대리자는 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수를 사용할 수 있지만, 멀티캐스트 이벤트 대리자의 경우 호출될 대리자를 알 수 없기 때문에 사용하지 않는 것이 좋습니다.  
   
 ## <a name="example-1"></a>예제 1  
  다음은 대리자를 선언하고 사용하는 간단한 예제입니다. 대리자 `Del` 및 연결된 메서드 `MultiplyNumbers`에 동일한 시그니처가 있습니다.  

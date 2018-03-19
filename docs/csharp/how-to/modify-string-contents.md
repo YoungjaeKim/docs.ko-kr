@@ -9,15 +9,17 @@ helpviewer_keywords:
 - strings [C#], modifying
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a67cf24c0f6024d23bc1106943d3447620f18b1f
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 830ca207c4cd5bd24dbb667328465cafb2509409
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>방법: C#에서 문자열 내용 수정 #
 
 이 문서에서는 기존 `string`을 수정하여 `string`을 생성하는 다양한 기술을 보여 줍니다. 설명된 모든 기술은 새 `string` 개체로 수정의 결과를 반환합니다. 이를 명확하게 보여 주기 위해 모든 예제는 새 변수에 결과를 저장합니다. 그런 다음, 기존 `string` 및 각 예제를 실행할 때 수정의 결과인 `string`을 검사할 수 있습니다.
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 이 문서에서 설명되는 여러 가지 기술이 있습니다. 기존 텍스트를 바꿀 수 있습니다. 패턴을 검색하고 다른 텍스트와 일치하는 텍스트를 바꿀 수 있습니다. 일련의 문자로 문자열을 처리할 수 있습니다. 공백을 제거하는 편리한 메서드를 사용할 수도 있습니다. 시나리오에 가장 일치하는 기술을 선택해야 합니다.
 

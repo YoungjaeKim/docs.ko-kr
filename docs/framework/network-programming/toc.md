@@ -66,6 +66,7 @@
 #### [방법: 시간 기반 캐시 정책을 사용자 지정](how-to-customize-a-time-based-cache-policy.md)
 #### [방법: 요청에 캐시 정책 설정](how-to-set-cache-policy-for-a-request.md)
 ## [네트워크 프로그래밍의 보안](security-in-network-programming.md)
+### [TLS(전송 계층 보안) 모범 사례](tls.md)
 ### [SSL(Secure Sockets Layer) 사용](using-secure-sockets-layer.md)
 #### [인증서 선택 및 유효성 검사](certificate-selection-and-validation.md)
 ### [인터넷 인증](internet-authentication.md)
