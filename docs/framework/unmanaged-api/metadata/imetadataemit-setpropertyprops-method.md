@@ -67,7 +67,7 @@ HRESULT SetPropertyProps (
  [in] 속성에 대 한 기본 값입니다.  
   
  `cchValue`  
- [in] (유니코드) 수의 문자 `pValue`합니다.  
+ [in] \(유니코드) 수의 문자 `pValue`합니다.  
   
  `mdSetter`  
  [in] 속성 값을 설정 하는 메서드.  

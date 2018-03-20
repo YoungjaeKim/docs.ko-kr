@@ -20,10 +20,10 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 64829eee5b21a44acb18cbec9b901d77d49cab90
-ms.sourcegitcommit: 3eea47bff3201ae5d3395b0c7947806c2faca255
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework와 함께 전송 계층 보안 (TLS) 모범 사례
 

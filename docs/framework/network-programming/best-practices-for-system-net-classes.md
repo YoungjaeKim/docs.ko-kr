@@ -16,20 +16,23 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 83254955138c99ec0187e5cf74566266c2ecb303
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90722abbdb4568be115c0ac77007d5f18984df6f
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 클래스에 대한 모범 사례
 다음 권장 사항은 <xref:System.Net>에 포함된 클래스를 최대한 활용하는 데 도움이 됩니다.  
   
+-   보안 TLS (전송 계층) 모범 사례를 참조 하십시오. [보안 TLS (전송 계층).NET Framework와 함께 유용한](tls.md)합니다.
+
 -   가능한 경우 하위 클래스에 대한 형식 캐스팅 대신 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse>를 사용합니다. **WebRequest** 및 **WebResponse**를 사용하는 응용 프로그램은 광범위한 코드 변경 없이 새 인터넷 프로토콜을 활용할 수 있습니다.  
   
 -   **System.Net** 클래스를 사용하여 서버에서 실행되는 ASP.NET 응용 프로그램을 작성할 때는 성능 관점에서 대체로 <xref:System.Net.WebRequest.GetResponse%2A> 및 <xref:System.Net.WebResponse.GetResponseStream%2A>에 대해 비동기 메서드를 사용하는 것이 좋습니다.  

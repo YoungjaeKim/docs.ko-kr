@@ -3,17 +3,17 @@ title: "F# 가이드"
 description: "이 가이드에서는 F #,.NET에서 실행 되는 함수형 프로그래밍 언어에 대 한 다양 한 교육 자료에 대 한 개요를 제공 합니다."
 author: jackfoxy
 ms.author: phcart
-ms.date: 02/28/2018
+ms.date: 03/19/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: b7cf3feb5699f85bf09a47f008fdaf70ac7c8d77
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 8be5ac5090e10ae9270e7eec529bd9b7c3c663fb
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="f-guide"></a>F# 가이드
 
@@ -29,9 +29,13 @@ let getGreeting name =
 // Use the EntryPoint attribute to run the program.
 [<EntryPoint>]
 let main args =
-    args                     // Use F# pipe operators to send the args into some functions.
-    |> Array.map getGreeting // Turn each name into a friendly greeting.
-    |> Array.iter printfn    // Print them!
+    // Define a list of names
+    let names = [| "Don"; "Julia"; "Xi" |]
+    
+    // Print a fun greeting for each name!
+    names
+    |> Array.map getGreeting
+    |> Array.iter (fun greeting -> printfn "%s" greeting)
 
     0
 ```

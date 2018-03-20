@@ -77,7 +77,7 @@ HRESULT DefineField (
  [in] 필드에 대 한 상수 값입니다.  
   
  `cchValue`  
- [in] (유니코드) 문자의 크기 `pValue`합니다.  
+ [in] \(유니코드) 문자의 크기 `pValue`합니다.  
   
  `pmd`  
  [out] `mdFieldDef` 할당 된 토큰입니다.  
