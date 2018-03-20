@@ -3,16 +3,17 @@ title: "dotnet run 명령 - .NET Core CLI"
 description: "dotnet run 명령은 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다."
 author: mairaw
 ms.author: mairaw
-ms.date: 09/24/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 1f5a3927859f89bef6c50d3d31b73de43cd1cd31
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 251aca6dcd3edb17fe86dc03ea8f5c6d7d699d48
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -42,9 +43,9 @@ dotnet run [-h|--help]
 
 ## <a name="description"></a>설명
 
-`dotnet run` 명령은 하나의 명령을 사용하여 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다. 명령줄에서 빠른 반복 개발에 유용합니다. 이 명령은 코드 빌드 시 [`dotnet build`](dotnet-build.md) 명령에 의존합니다. 프로젝트를 먼저 복원해야 하는 등, 빌드에 대한 요구 사항은 `dotnet run`에도 적용됩니다. 
+`dotnet run` 명령은 하나의 명령을 사용하여 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다. 명령줄에서 빠른 반복 개발에 유용합니다. 이 명령은 코드 빌드 시 [`dotnet build`](dotnet-build.md) 명령에 의존합니다. 프로젝트를 먼저 복원해야 하는 등, 빌드에 대한 요구 사항은 `dotnet run`에도 적용됩니다.
 
-출력 파일은 기본 위치, 즉 `bin/<configuration>/<target>`에 기록됩니다. 예를 들어 `netcoreapp1.0` 응용 프로그램이 있고 `dotnet run`을 실행하는 경우 출력은 `bin/Debug/netcoreapp1.0`에 추가됩니다. 필요에 따라 파일을 덮어씁니다. 임시 파일은 `obj` 디렉터리에 놓입니다. 
+출력 파일은 기본 위치, 즉 `bin/<configuration>/<target>`에 기록됩니다. 예를 들어 `netcoreapp1.0` 응용 프로그램이 있고 `dotnet run`을 실행하는 경우 출력은 `bin/Debug/netcoreapp1.0`에 추가됩니다. 필요에 따라 파일을 덮어씁니다. 임시 파일은 `obj` 디렉터리에 놓입니다.
 
 프로젝트가 여러 프레임워크를 지정하는 경우 프레임워크를 지정하는 데 `-f|--framework <FRAMEWORK>` 옵션을 사용하지 않은 한, `dotnet run`을 실행하면 오류가 발생합니다.
 
@@ -57,6 +58,8 @@ dotnet myapp.dll
 `dotnet` 드라이버에 대한 자세한 내용은 [.NET Core 명령줄 도구(CLI)](index.md) 항목을 참조하세요.
 
 응용 프로그램을 실행하기 위해 `dotnet run` 명령은 NuGet 캐시에서 공유 런타임의 외부에 있는 응용 프로그램의 종속성을 확인합니다. 캐시된 종속성을 사용하기 때문에 프로덕션 환경에서 응용 프로그램을 실행하는 데 `dotnet run`을 사용하는 것은 바람직하지 않습니다. 대신, [`dotnet publish`](dotnet-publish.md) 명령을 사용하여 [배포를 만들고](../deploying/index.md) 게시된 출력을 배포합니다.
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="options"></a>옵션
 
@@ -133,7 +136,7 @@ dotnet myapp.dll
 프로젝트 파일의 경로 및 이름을 지정합니다. (참고 참조) 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
 
 > [!NOTE]
-> `-p|--project` 옵션과 함께 프로젝트 파일의 경로와 이름을 사용합니다. CLI의 재발로 인해 폴더 경로에 .NET Core 1.x SDK를 제공할 수 없습니다. 이 문제에 대한 자세한 내용은 [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)(dotnet run -p로 프로젝트를 시작할 수 없음(dotnet/cli #5992))를 참조하세요.
+> `-p|--project` 옵션과 함께 프로젝트 파일의 경로와 이름을 사용합니다. CLI의 재발로 인해 폴더 경로에 .NET Core SDK 1.x를 제공할 수 없습니다. 이 문제에 대한 자세한 내용은 [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)(dotnet run -p로 프로젝트를 시작할 수 없음(dotnet/cli #5992))를 참조하세요.
 
 ---
 
@@ -150,3 +153,7 @@ dotnet myapp.dll
 현재 디렉터리에 있는 프로젝트를 실행합니다. `--` 인수가 사용되므로 이 예제의 `--help` 인수는 응용 프로그램에 전달됩니다.
 
 `dotnet run --configuration Release -- --help`
+
+최소 출력만을 표시하는 현재 디렉터리에 프로젝트에 대한 종속성 및 도구를 저장한 다음, 프로젝트를 실행합니다(.NET Core SDK 2.0 이상 버전).
+
+`dotnet run --verbosity m`

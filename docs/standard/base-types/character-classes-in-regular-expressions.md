@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 98aaa5c7bbd28facf9cc06fd0d0898b72ea7dbc2
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>정규식의 문자 클래스
 <a name="Top"></a> 문자 클래스는 문자 집합을 정의하며, 이 중 하나가 입력 문자열에서 발생하면 일치하는 것으로 판정할 수 있습니다. .NET의 정규식 언어는 다음과 같은 문자 클래스를 지원합니다.  
@@ -170,7 +170,7 @@ ms.lasthandoff: 01/09/2018
   
 -   정규식 패턴이 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션에 의해 수정되거나 `.` 문자 클래스를 포함하는 패턴의 일부가 `s` 옵션에 의해 수정되는 경우 `.`가 문자를 일치시킵니다. 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)을 참조하세요.  
   
-     다음 예제에서는 기본 및 `.` 옵션으로 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 문자 클래스의 다른 동작을 보여줍니다. 정규식 `^.+`는 문자열의 시작 부분에서 시작하여 모든 문자를 찾습니다. 기본적으로 일치는 첫 번째 줄의 끝 부분에서 끝납니다. 정규식 패턴은 캐리지 리턴 문자, `\r` 또는 \u000D와 일치하지만 `\n`과는 일치하지 않습니다. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션은 전체 입력 문자열을 한 줄로 해석하기 때문에 `\n`을 포함하여 입력 문자열의 모든 문자와 일치합니다.  
+     다음 예제에서는 기본 및 `.` 옵션으로 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 문자 클래스의 다른 동작을 보여 줍니다. 정규식 `^.+`는 문자열의 시작 부분에서 시작하여 모든 문자를 찾습니다. 기본적으로 일치는 첫 번째 줄의 끝 부분에서 끝납니다. 정규식 패턴은 캐리지 리턴 문자, `\r` 또는 \u000D와 일치하지만 `\n`과는 일치하지 않습니다. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션은 전체 입력 문자열을 한 줄로 해석하기 때문에 `\n`을 포함하여 입력 문자열의 모든 문자와 일치합니다.  
   
      [!code-csharp[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any2.cs#5)]
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
@@ -296,7 +296,7 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]
 >  모든 비단어 문자와 일치하기 때문에 `\W` 언어 요소는 정규식 패턴이 특정 비단어 문자가 따라오는 임의의 비단어 문자를 여러 번 찾으려 하는 경우 lazy 수량자와 함께 사용되는 경우가 많습니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
   
- 다음 예제에서는 `\W` 문자 클래스를 보여줍니다.  공백 또는 문장 부호와 같은 한두 개의 비단어 문자가 따라오는 단어와 일치하는 정규식 패턴 `\b(\w+)(\W){1,2}`를 정의합니다. 정규식은 다음 표와 같이 해석됩니다.  
+ 다음 예제에서는 `\W` 문자 클래스를 보여 줍니다.  공백 또는 문장 부호와 같은 한두 개의 비단어 문자가 따라오는 단어와 일치하는 정규식 패턴 `\b(\w+)(\W){1,2}`를 정의합니다. 정규식은 다음 표와 같이 해석됩니다.  
   
 |요소|설명|  
 |-------------|-----------------|  
@@ -327,7 +327,7 @@ ms.lasthandoff: 01/09/2018
   
  ECMAScript와 호환되는 동작을 지정한 경우 `\s`는 `[ \f\n\r\t\v]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
- 다음 예제에서는 `\s` 문자 클래스를 보여줍니다. "s" 또는 "es"로 끝나고 그 뒤에 공백 문자나 입력 문자열의 끝이 있는 단어와 일치하는 정규식 패턴 `\b\w+(e)?s(\s|$)`를 정의합니다. 정규식은 다음 표와 같이 해석됩니다.  
+ 다음 예제에서는 `\s` 문자 클래스를 보여 줍니다. "s" 또는 "es"로 끝나고 그 뒤에 공백 문자나 입력 문자열의 끝이 있는 단어와 일치하는 정규식 패턴 `\b\w+(e)?s(\s|$)`를 정의합니다. 정규식은 다음 표와 같이 해석됩니다.  
   
 |요소|설명|  
 |-------------|-----------------|  
@@ -348,7 +348,7 @@ ms.lasthandoff: 01/09/2018
   
  ECMAScript와 호환되는 동작을 지정한 경우 `\S`는 `[^ \f\n\r\t\v]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
- 다음 예제에서는 `\S` 언어 요소를 보여줍니다. 정규식 패턴 `\b(\S+)\s?`는 공백 문자로 구분된 문자열을 찾습니다. 일치 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 두 번째 요소는 일치하는 문자열을 포함합니다. 정규식은 다음 표에 나와 있는 것처럼 해석할 수 있습니다.  
+ 다음 예제에서는 `\S` 언어 요소를 보여 줍니다. 정규식 패턴 `\b(\S+)\s?`는 공백 문자로 구분된 문자열을 찾습니다. 일치 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 두 번째 요소는 일치하는 문자열을 포함합니다. 정규식은 다음 표에 나와 있는 것처럼 해석할 수 있습니다.  
   
 |요소|설명|  
 |-------------|-----------------|  
@@ -367,7 +367,7 @@ ms.lasthandoff: 01/09/2018
   
  ECMAScript와 호환되는 동작을 지정한 경우 `\d`는 `[0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
- 다음 예제에서는 `\d` 언어 요소를 보여줍니다. 입력 문자열이 미국 및 캐나다의 올바른 전화 번호를 나타내는지 여부를 테스트합니다. 정규식 패턴 `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$`는 다음 테이블과 같이 정의됩니다.  
+ 다음 예제에서는 `\d` 언어 요소를 보여 줍니다. 입력 문자열이 미국 및 캐나다의 올바른 전화 번호를 나타내는지 여부를 테스트합니다. 정규식 패턴 `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$`는 다음 테이블과 같이 정의됩니다.  
   
 |요소|설명|  
 |-------------|-----------------|  
@@ -391,7 +391,7 @@ ms.lasthandoff: 01/09/2018
   
  ECMAScript와 호환되는 동작을 지정한 경우 `\D`는 `[^0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
- 다음 예제에서는 \D 언어 요소를 보여줍니다. 부품 번호 같은 문자열이 10진수 문자 및 10진수가 아닌 문자의 적절한 조합으로 구성되어 있는지 여부를 테스트합니다. 정규식 패턴 `^\D\d{1,5}\D*$`는 다음 테이블과 같이 정의됩니다.  
+ 다음 예제에서는 \D 언어 요소를 보여 줍니다. 부품 번호 같은 문자열이 10진수 문자 및 10진수가 아닌 문자의 적절한 조합으로 구성되어 있는지 여부를 테스트합니다. 정규식 패턴 `^\D\d{1,5}\D*$`는 다음 테이블과 같이 정의됩니다.  
   
 |요소|설명|  
 |-------------|-----------------|  

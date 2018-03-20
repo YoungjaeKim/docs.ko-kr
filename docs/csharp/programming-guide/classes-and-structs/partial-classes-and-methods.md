@@ -2,21 +2,22 @@
 title: "Partial 클래스 및 메서드(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 396914e487bee0924c36bb1d7a0f28976f4ad354
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partial 클래스 및 메서드(C# 프로그래밍 가이드)
 [클래스](../../../csharp/language-reference/keywords/class.md) 또는 [구조체](../../../csharp/language-reference/keywords/struct.md), [인터페이스](../../../csharp/language-reference/keywords/interface.md) 또는 메서드의 정의를 둘 이상의 소스 파일에 분할할 수 있습니다. 각 소스 파일에는 형식 또는 메서드 정의 섹션이 있으며 모든 부분은 응용 프로그램이 컴파일될 때 결합됩니다.  
@@ -150,7 +151,7 @@ partial void onNameChanged()
   
 -   부분 메서드(Partial Method) 선언은 상황별 키워드 [partial](../../../csharp/language-reference/keywords/partial-type.md)로 시작해야 하고, 메서드에서 [void](../../../csharp/language-reference/keywords/void.md)를 반환해야 합니다.  
   
--   부분 메서드(Partial Method)는 [ref](../../../csharp/language-reference/keywords/ref.md) 매개 변수를 사용할 수 있지만 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수는 사용할 수 없습니다.  
+-   부분 메서드(Partial Method)는 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 또는 [ref](../../../csharp/language-reference/keywords/ref.md) 매개 변수를 사용할 수 있지만 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수는 사용할 수 없습니다.  
   
 -   부분 메서드(Partial Method)는 암시적으로 [private](../../../csharp/language-reference/keywords/private.md)이므로 [가상](../../../csharp/language-reference/keywords/virtual.md)일 수 없습니다.  
   

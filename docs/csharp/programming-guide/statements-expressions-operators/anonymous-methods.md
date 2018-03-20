@@ -2,21 +2,22 @@
 title: "무명 메서드(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - anonymous methods [C#]
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4d942e0f3245f6404c896173b2c7ca6f1090a8c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e78257c5aab84562cd8cdb336bb5a91ba59534
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>무명 메서드(C# 프로그래밍 가이드)
 2.0 이전의 C# 버전에서 [delegate](../../../csharp/language-reference/keywords/delegate.md)를 선언하는 유일한 방법은 [명명된 메서드](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)를 사용하는 것이었습니다. C# 2.0에서는 무명 메서드가 도입되었고, C# 3.0 이상에서는 람다 식이 인라인 코드를 작성하는 기본 방법으로 무명 메서드를 대체합니다. 그러나 이 항목의 무명 메서드 관련 정보는 람다 식에도 적용됩니다. 무명 메서드가 람다 식에서 찾을 수 없는 기능을 제공하는 한 가지 경우가 있습니다. 무명 메서드를 사용하여 매개 변수 목록을 생략할 수 있습니다. 즉, 무명 메서드를 여러 시그니처를 가진 대리자로 변환할 수 있습니다. 람다 식에서는 이 작업이 불가능합니다. 람다 식에 대한 자세한 내용은 [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
@@ -44,13 +45,13 @@ ms.lasthandoff: 11/21/2017
   
  외부 변수 `n`에 대한 참조는 대리자를 만들 때 *캡처*됩니다. 지역 변수와 달리 캡처된 변수의 수명은 무명 메서드를 참조하는 대리자가 가비지 수집에 적격할 때까지 연장됩니다.  
   
- 무명 메서드는 외부 범위의 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수에 액세스할 수 없습니다.  
+ 무명 메서드는 외부 범위의 [in](../../../csharp/language-reference/keywords/in.md), [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수에 액세스할 수 없습니다.  
   
  안전하지 않은 코드는 *무명 메서드 블록* 내에서 액세스할 수 없습니다.  
   
  [is](../../../csharp/language-reference/keywords/is.md) 연산자의 왼쪽에는 무명 메서드를 사용할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 대리자를 인스턴스화하는 다음 두 가지 방법을 보여 줍니다.  
   
 -   무명 메서드에 대리자 연결  

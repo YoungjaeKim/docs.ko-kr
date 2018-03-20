@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: ce81991e48fb5eb4eb3bed3dd2fcfe1734ca7bac
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="implementing-value-objects"></a>값 개체 구현
 
@@ -92,6 +92,13 @@ public abstract class ValueObject
         }
         return !thisValues.MoveNext() && !otherValues.MoveNext();
     }
+
+    public override int GetHashCode()
+    {
+        return GetAtomicValues()
+         .Select(x => x != null ? x.GetHashCode() : 0)
+         .Aggregate((x, y) => x ^ y);
+    }        
     // Other utilility methods
 }
 ```
@@ -302,19 +309,19 @@ public class Address
 •   다른 엔터티를 참조할 수 있습니다. 즉, 다른 소유되지 않은 형식과의 관계에서 종속되는 쪽의 역할을 할 수 있습니다.
 
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 -   **Martin Fowler. ValueObject 패턴**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (서적, 가치 개체 논의 포함) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (도서; 값 개체의 토론 포함) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Vaughn Vernon. 도메인 기반 디자인 구현.** (서적, 가치 개체 논의 포함) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+-   **Vaughn Vernon. 도메인 기반 디자인 구현.** (도서; 값 개체의 토론 포함) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
 -   **섀도 속성**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **복합 형식 및/또는 값 개체**. EF Core GitHub 리포지토리 관련 토론(문제 탭) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
+-   **복합 형식 및/또는 값 개체**. EF Core GitHub 리포지토리에서 토론(문제 탭) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
 
 -   **ValueObject.cs.** eShopOnContainers의 기준 값 개체 클래스.
     [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)

@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f18c2332f3576847800423c5c0bf7471bf37aafc
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="c-operators"></a>C# 연산자
 C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 수행할 연산(수학, 인덱싱, 함수 호출 등)을 지정하는 기호입니다.  많은 연산자를 [오버로드](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)하여 사용자 정의 형식에 적용되는 경우의 의미를 변경할 수 있습니다.  
@@ -84,7 +84,7 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
   
  [++x](../../../csharp/language-reference/operators/increment-operator.md) – 전위 증가  1 더 큰 x 값(일반적으로 정수 1을 더함)으로 저장소 위치를 업데이트한 후 x의 값을 반환합니다.  
   
- [--x](../../../csharp/language-reference/operators/decrement-operator.md) – 전위 감소  1 더 작은 x 값(일반적으로 정수 1을 뺌)으로 저장소 위치를 업데이트한 후 x의 값을 반환합니다.  
+ [--x](../../../csharp/language-reference/operators/decrement-operator.md) – 전위 감소  1보다 작은 x 값(일반적으로 정수 1을 뺌)으로 저장소 위치를 업데이트한 후 x의 값을 반환합니다.  
   
  [(T)x](../../../csharp/language-reference/operators/invocation-operator.md) – 형식 캐스팅  
   

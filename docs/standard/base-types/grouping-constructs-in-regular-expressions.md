@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>정규식의 교체 그룹화 구문
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
@@ -301,7 +301,7 @@ ms.lasthandoff: 03/08/2018
   
  그룹 옵션 구문은 캡처링 그룹이 아닙니다. 즉, *subexpression* 에 의해 캡처된 문자열의 일부가 일치 항목에 포함되더라도 캡처된 그룹에 포함되지 않으며 <xref:System.Text.RegularExpressions.GroupCollection> 개체를 채우는 데 사용되지도 않습니다.  
   
- 예를 들어, 다음 예제의 정규식 `\b(?ix: d \w+)\s` 는 문자 "d"로 시작하는 모든 단어를 식별할 때 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 패턴 공백을 무시하기 위해 그룹화 구문에 인라인 옵션을 사용합니다. 정규식은 다음 테이블과 같이 정의됩니다.  
+ 예를 들어, 다음 예제의 정규식 `\b(?ix: d \w+)\s`는 문자 "d"로 시작하는 모든 단어를 식별할 때 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 패턴 공백을 무시하기 위해 그룹화 구문에 인라인 옵션을 사용합니다. 정규식은 다음 테이블과 같이 정의됩니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  

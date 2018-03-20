@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 9d435fd87a6103d505c14219499eeea9aee045fb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fa840d80bba98889f75863db2612f196d78bd3c5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="structs"></a>구조체
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 
 `Point`가 클래스이면 a와 b가 같은 개체를 참조하므로 20이 출력됩니다. Point가 구조체이면 `a`를 `b`에 대입할 때 값의 복사본이 만들어지고 이 복사본은 `a.x`로의 후속 대입에 의해 영향을 받지 않으므로 10이 출력됩니다.
 
-이전 예제에는 구조체의 제한 사항 중 두 가지를 집중적으로 보여 줍니다. 첫째, 일반적으로 전체 구조체를 복사하는 것이 개체 참조를 복사하는 것보다 덜 효율적이므로 대입 및 값 매개 변수 전달이 참조 형식보다 덜 경제적일 수 있습니다. 둘째, `ref` 및 `out` 매개 변수를 제외하고, 구조체에 대한 참조를 만들 수 없으므로 다양한 상황에서 사용하는 것이 불가능합니다.
+이전 예제에는 구조체의 제한 사항 중 두 가지를 집중적으로 보여 줍니다. 첫째, 일반적으로 전체 구조체를 복사하는 것이 개체 참조를 복사하는 것보다 덜 효율적이므로 대입 및 값 매개 변수 전달이 참조 형식보다 덜 경제적일 수 있습니다. 둘째, `in`, `ref` 및 `out` 매개 변수를 제외하고, 구조체에 대한 참조를 만들 수 없으므로 다양한 상황에서 사용하는 것이 불가능합니다.
 
 >[!div class="step-by-step"]
 [이전](classes-and-objects.md)

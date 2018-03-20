@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
+ms.sourcegitcommit: 3eea47bff3201ae5d3395b0c7947806c2faca255
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿 만들기
 
@@ -103,7 +103,7 @@ ms.lasthandoff: 03/12/2018
    </package>
    ```
 
-1. `nuget pack <PATH_TO_NUSPEC_FILE>` 명령을 사용하여 [패키지를 만듭니다](/nuget/create-packages/creating-a-package#creating-the-package). 다음 명령은 NuGet 자산을 저장하는 폴더가 *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp\*라고 가정합니다. 하지만 시스템에서 폴더가 어디에 있든지 `nuget pack` 명령은 *nuspec* 파일의 경로를 허용합니다.
+1. `nuget pack <PATH_TO_NUSPEC_FILE>` 명령을 사용하여 [패키지를 만듭니다](/nuget/create-packages/creating-a-package#creating-the-package). 다음 명령은 NuGet 자산을 저장하는 폴더가 *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp*라고 가정합니다. 하지만 시스템에서 폴더가 어디에 있든지 `nuget pack` 명령은 *nuspec* 파일의 경로를 허용합니다.
 
    ```console
    nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec

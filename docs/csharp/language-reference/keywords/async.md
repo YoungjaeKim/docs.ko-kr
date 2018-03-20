@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="async-c-reference"></a>async(C# 참조)
 `async` 한정자를 사용하여 메서드, [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 비동기로 지정합니다. 메서드 또는 식에 이 한정자를 사용하면 *비동기 메서드*라고 합니다. 다음 예제에서는 `ExampleMethodAsync`라는 비동기 메서드를 정의합니다. 
@@ -78,7 +78,7 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
 - 이벤트 처리기에만 사용해야 하는 [void](../../../csharp/language-reference/keywords/void.md).
 - C# 7부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `System.Threading.Tasks.ValueTask<TResult>` 형식은 이러한 구현 중 하나입니다. NuGet 패키지 `System.Threading.Tasks.Extensions`를 추가하면 사용할 수 있습니다. 
 
-비동기 메서드는 모든 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수를 선언할 수 없고 <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->참조 반환 값을 가질 수도 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.  
+비동기 메서드는 모든 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수를 선언할 수 없고 [참조 반환 값](../../programming-guide/classes-and-structs/ref-returns.md)을 가질 수도 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.  
   
 메서드의 [return](../../../csharp/language-reference/keywords/return.md) 문에서 `TResult` 형식의 피연산자를 지정할 경우 비동기 메서드의 반환 형식으로 `Task<TResult>`를 지정합니다. 메서드가 완료되었을 때 의미 있는 값이 반환되지 않을 경우 `Task`를 사용합니다. 즉, 이 메서드를 호출하면 `Task`가 반환되지만 `Task`가 완료되면 `await`를 기다리는 모든 `Task` 식이 `void`가 됩니다.  
   

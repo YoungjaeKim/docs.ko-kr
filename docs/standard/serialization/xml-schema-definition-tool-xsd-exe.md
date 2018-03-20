@@ -8,7 +8,7 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -16,10 +16,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 스키마 정의 도구(Xsd.exe)를 사용하면 XDR, XML 및 XSD 파일 또는 런타임 어셈블리의 클래스에서 XML 스키마 또는 공용 언어 런타임 클래스를 생성할 수 있습니다.  
@@ -98,7 +98,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  클래스를 XSD로  
  런타임 어셈블리 파일의 형식에서 XML 스키마를 생성합니다. 생성된 스키마는 `System.Xml.Serialization.XmlSerializer`에서 사용되는 XML 형식을 정의합니다.  
   
- Xsd.exe를 사용하면 W3C(World Wide Web 컨소시엄)에서 제시하는 XSD(XML Schema Definition) 언어를 따르는 XML 스키마만 조작할 수 있습니다. XSD 제안 또는 XML  표준에 대한 자세한 내용은 http://w3.org를 참조하십시오.  
+ Xsd.exe를 사용하면 W3C(World Wide Web 컨소시엄)에서 제시하는 XSD(XML Schema Definition) 언어를 따르는 XML 스키마만 조작할 수 있습니다. XML 스키마 정의 제안 또는 XML 표준에 대 한 자세한 내용은 참조 하십시오. http://w3.org합니다.  
   
 ## <a name="setting-options-with-an-xml-file"></a>XML 파일로 옵션 설정  
  `/parameters` 스위치를 사용하여 여러 가지 옵션을 설정하는 단일 XML 파일을 지정할 수 있습니다. 설정할 수 있는 옵션은 XSD.exe 도구를 사용하는 방법에 따라 다릅니다. 스키마 생성, 코드 파일 생성 또는 `DataSet` 기능이 있는 코드 파일 생성을 선택할 수 있습니다. 예를 들면, 스키마는 생성하지만 코드 파일은 생성하지 않을 때 `<assembly\>` 요소를 실행 파일(.exe) 또는 형식 라이브러리 파일(.dll) 이름으로 설정할 수 있습니다. 다음 XML에서는 지정된 실행 파일에 `<generateSchemas\>` 요소를 사용하는 방법을 보여 줍니다.  

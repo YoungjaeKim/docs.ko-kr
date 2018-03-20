@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.workload: dotnetcore
-ms.openlocfilehash: 599f46253a29db5dfd21d0d44ecf67654b6d2eb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
 
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/23/2017
 
 주요 .NET Core 메타패키지:
 
-- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - .NET Core 배포에 포함된 라이브러리를 설명합니다. [`.NETCoreApp` 프레임워크를 설정합니다](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). 더 작은 `NETStandard.Library`에 종속됩니다.
+- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - .NET Core 배포에 포함된 라이브러리를 설명합니다. [`.NETCoreApp` 프레임워크를 설정합니다](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). 더 작은 `NETStandard.Library`에 종속됩니다.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - .NET Core에서 실행되는 mscorlib 기반 PCL(이식 가능한 클래스 라이브러리)을 사용하도록 설정하는 호환성 외관의 집합입니다.
 
 ## <a name="frameworks"></a>프레임워크

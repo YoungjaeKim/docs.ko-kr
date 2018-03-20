@@ -2,7 +2,8 @@
 title: "string(C# 참조)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8899eb75b1b7c556a1e92f173a4d0ca4135014c8
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-c-reference"></a>string(C# 참조)
-`string` 형식은 0자 이상의 유니코드 문자 시퀀스를 나타냅니다. `string`은 .NET Framework에서 <xref:System.String>의 별칭입니다.  
+`string` 형식은 0자 이상의 유니코드 문자 시퀀스를 나타냅니다. `string`는 .NET에서 <xref:System.String>의 별칭입니다.  
   
  `string`은 참조 형식이지만 같음 연산자(`==` 및 `!=`)는 참조가 아니라 `string` 개체의 값을 비교하도록 정의됩니다. 이 때문에 좀 더 직관적으로 문자열이 같은지 테스트할 수 있습니다. 예:  
   
@@ -76,7 +77,7 @@ Console.WriteLine(a);
 > [!NOTE]
 >  이스케이프 코드 `\udddd`(여기서 `dddd`는 4자리 숫자)는 유니코드 문자 U+`dddd`를 나타냅니다. 8자리 유니코드 이스케이프 코드 `\Udddddddd`도 인식됩니다.  
   
- 축자 문자열 리터럴은 @으로 시작하며 큰따옴표로 묶여 있습니다. 예:  
+ 축자 문자열 리터럴은 `@`로 시작하며 큰따옴표로 묶여 있습니다. 예:  
   
 ```csharp  
 @"good morning"  // a string literal  
@@ -94,11 +95,11 @@ Console.WriteLine(a);
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
 ```  
   
- @ 기호의 또 다른 사용법은 C# 키워드인 참조된([/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)) 식별자를 사용하는 것입니다.  
+ `@` 특수 문자의 다른 용도는 [@ - 축자 식별자](../tokens/verbatim.md)를 참조하세요.  
   
  C#의 문자열에 대한 자세한 내용은 [문자열](../../../csharp/programming-guide/strings/index.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
@@ -29,7 +29,7 @@ EF(Entity Framework) Core는 널리 사용되는 Entity Framework 데이터 액�
 
 EF Core를 소개하는 내용은 이미 Microsoft 설명서에 있으므로 여기서는 간단하게 해당 정보에 대한 링크만 제공하겠습니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 -   **Entity Framework Core**
     [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
@@ -37,10 +37,10 @@ EF Core를 소개하는 내용은 이미 Microsoft 설명서에 있으므로 여
 -   **Visual Studio를 사용하여 ASP.NET Core 및 Entity Framework Core 시작**
     [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
--   **DbContext 클래스**
+-   **DbContext Class**
     [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
--   **Compare EF Core 및 EF6.x**
+-   **EF Core & EF6.x 비교**
     [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD 관점에서 본 Entity Framework Core의 인프라
@@ -238,15 +238,15 @@ builder.RegisterType<OrderRepository>()
 
 리포지토리에 singleton 수명을 사용하면 DbContext를 범위가 지정된(InstancePerLifetimeScope) 수명으로 설정(DBContext의 기본 수명)할 경우 심각한 동시성 문제가 발생할 수 있습니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
--   **ASP.NET MVC 응용 프로그램에서 리포지토리 및 작업 단위 패턴 구현**
+-   **ASP.NET MVC 응용 프로그램에서 작업 패턴의 리포지토리 및 단위 구현**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathan Allen. Entity Framework, Dapper 및 체인을 사용하여 리포지토리 패턴에 대한 전략 구현**
+-   **Jonathan Allen. Entity Framework, Dapper 및 Chain을 사용하여 리포지토리 패턴에 대한 전략 구현**
     [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre. Autofac IoC 컨테이너 인스턴스 범위와 ASP.NET Core IoC 컨테이너 서비스 수명 비교**
+-   **Cesar de la Torre. ASP.NET Core IoC 컨테이너 서비스 수명과 Autofac IoC 컨테이너 인스턴스 범위 비교**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>테이블 매핑
@@ -330,7 +330,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>EF Core의 Hi/Lo 알고리즘
 
-앞의 예제에서 본 코드의 흥미로운 점은 키 생성 전략으로 [Hi/Lo 알고리즘](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/)을 사용한다는 것입니다.
+앞의 예제에서 본 코드의 흥미로운 점은 키 생성 전략으로 [Hi/Lo 알고리즘](https://vladmihalcea.com/the-hilo-algorithm/)을 사용한다는 것입니다.
 
 Hi/Lo 알고리즘은 고유 키가 필요한 경우에 유용합니다. 요약하자면, Hi-Lo 알고리즘은 테이블 행에 고유 식별자를 할당하지만 행을 데이터베이스에 즉시 저장하지 않습니다. 따라서 일반 순차적 데이터베이스 ID와 마찬가지로 식별자를 사용하여 바로 시작할 수 있습니다.
 
@@ -455,18 +455,18 @@ public IEnumerable<T> List(ISpecification<T> spec)
 리포지토리에서 IQueryable을 반환하는 것을 권장하지는 않지만, 리포지토리 내에서 사용하여 결과 집합을 빌드하는 데 사용하는 것은 아무 문제 없습니다. 위의 List 메서드에 이 접근 방식이 사용된 것을 볼 수 있습니다. 중간 IQueryable 식을 사용하여 쿼리의 포함 목록을 빌드한 후 마지막 줄에서 사양의 기준을 사용하여 쿼리가 실행됩니다.
 
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 -   **테이블 매핑**
     [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **HiLo를 사용하여 Entity Framework Core로 키 생성**
+-   **Entity Framework Core를 사용하여 키를 생성하도록 HiLo 사용**
     [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
--   **필드 백업**
+-   **지원 필드**
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith. Entity Framework Core에서 컬렉션 캡슐화**
+-   **Steve Smith. Entity Framework Core에서 캡슐화된 컬렉션**
     [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **섀도 속성**

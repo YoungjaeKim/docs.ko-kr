@@ -15,11 +15,11 @@ ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
 람다 식은 [대리자](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 또는 [식 트리](../../../csharp/programming-guide/delegates/using-delegates.md) 형식을 만드는 데 사용할 수 있는 [익명 함수](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 입니다. 람다 식을 사용하여 인수로 전달되거나 함수 호출 값으로 반환되는 로컬 함수를 쓸 수 있습니다. 람다 식은 LINQ 쿼리 식을 작성하는 데 특히 유용합니다.  
@@ -56,7 +56,7 @@ namespace ConsoleApplication1
   
  람다 식은 메서드 기반 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서 <xref:System.Linq.Enumerable.Where%2A> 같은 표준 쿼리 연산자 메서드의 인수로 사용됩니다.  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 하듯이 메서드 기반의 구문을 사용하여 <xref:System.Linq.Enumerable> 클래스에서 <xref:System.Linq.Enumerable.Where%2A> 메서드를 호출하는 경우 매개 변수는 <xref:System.Func%602?displayProperty=nameWithType> 대리자 형식입니다. 람다 식은 이러한 대리자를 만드는 가장 간단한 방법입니다. 예를 들어 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에서처럼 이 메서드를 <xref:System.Linq.Queryable?displayProperty=nameWithType> 클래스에서 호출하는 경우 매개 변수 형식은 <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType><Func\>이고, 여기서 Func는 입력 매개 변수를 16개까지 가질 수 있는 임의의 Func 대리자입니다. 이 경우에도 람다 식을 사용하면 식 트리를 간단하게 만들 수 있습니다. 람다 식은 `Where` 호출과 비슷하게 보일 수 있지만 실제로 람다 식을 통해 생성되는 개체 형식은 다릅니다.  
+ <xref:System.Linq.Enumerable.Where%2A> to Objects 및 <xref:System.Linq.Enumerable> 에서처럼 메서드 기반의 구문을 사용하여 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 클래스에서 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]메서드를 호출하는 경우 매개 변수는 <xref:System.Func%602?displayProperty=nameWithType>대리자 형식입니다. 람다 식은 이러한 대리자를 만드는 가장 간단한 방법입니다. 예를 들어 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에서처럼 이 메서드를 <xref:System.Linq.Queryable?displayProperty=nameWithType> 클래스에서 호출하는 경우 매개 변수 형식은 <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType><Func\>이고, 여기서 Func는 입력 매개 변수를 16개까지 가질 수 있는 임의의 Func 대리자입니다. 이 경우에도 람다 식을 사용하면 식 트리를 간단하게 만들 수 있습니다. 람다 식은 `Where` 호출과 비슷하게 보일 수 있지만 실제로 람다 식을 통해 생성되는 개체 형식은 다릅니다.  
   
  위의 예제에서 대리자 시그니처는 형식이 암시적으로 지정된 `int`형식의 입력 매개 변수 하나를 포함하고 `int`를 반환합니다. 람다 식에도 입력 매개 변수 하나(`x`)와 컴파일러에서 `int` 형식으로 암시적으로 변환할 수 있는 반환 값이 있기 때문에 람다 식을 이 형식의 대리자로 변환할 수 있습니다. 형식 유추는 다음 단원에서 자세하게 설명합니다. 입력 매개 변수를 5로 사용하여 대리자를 호출하면 25라는 결과가 반환됩니다.  
   
@@ -172,7 +172,7 @@ bool result = myFunc(4); // returns false of course
   
  System.Linq.Queryable에 정의되어 있는 표준 쿼리 연산자의 경우와 같이 인수 형식이 `Expression<Func>`인 경우에도 람다 식을 사용할 수 있습니다. `Expression<Func>` 인수를 지정하면 식 트리에 람다 식이 컴파일됩니다.  
   
- 다음 코드에서는 표준 쿼리 연산자인 <xref:System.Linq.Enumerable.Count%2A> 메서드를 보여줍니다.  
+ 다음 코드에서는 표준 쿼리 연산자인 <xref:System.Linq.Enumerable.Count%2A> 메서드를 보여 줍니다.  
   
 ```csharp  
 int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
@@ -187,7 +187,7 @@ int oddNumbers = numbers.Count(n => n % 2 == 1);
 var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);  
 ```  
   
- 이 예제에서는 괄호로 묶어 입력 매개 변수를 여러 개 지정하는 방법을 보여줍니다. 이 메서드는 값이 해당 위치보다 작은 숫자를 발견할 때까지 숫자 배열의 모든 요소를 반환합니다. 여기서 람다 연산자(`=>`)를 크거나 같음 연산자(`>=`)와 혼동하면 안 됩니다.  
+ 이 예제에서는 괄호로 묶어 입력 매개 변수를 여러 개 지정하는 방법을 보여 줍니다. 이 메서드는 값이 해당 위치보다 작은 숫자를 발견할 때까지 숫자 배열의 모든 요소를 반환합니다. 여기서 람다 연산자(`=>`)를 크거나 같음 연산자(`>=`)와 혼동하면 안 됩니다.  
   
 ```csharp  
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
@@ -211,7 +211,7 @@ customers.Where(c => c.City == "London");
  공용 형식 시스템에는 "람다 식"이라는 개념이 기본적으로 포함되어 있지 않기 때문에 람다 식 자체에는 형식이 없습니다. 그러나 람다 식의 "형식"을 비공식적으로 언급해야 할 경우도 있는데 이 경우 형식은 대리자 형식 또는 람다 식이 변환되는 <xref:System.Linq.Expressions.Expression> 형식을 의미합니다.  
   
 ## <a name="variable-scope-in-lambda-expressions"></a>람다 식의 변수 범위  
- 람다 식은 람다 함수를 정의하는 메서드 범위 내에 있거나 람다 식을 포함하는 형식 범위 내에 있는 *외부 변수*([무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 참조)를 참조할 수 있습니다. 이러한 방식으로 캡처되는 변수는 변수가 범위를 벗어나 가비지 수집되는 경우에도 람다 식에 사용할 수 있도록 저장됩니다. 외부 변수는 명확하게 할당해야만 람다 식에 사용할 수 있습니다. 다음 예제에서는 이러한 규칙을 보여줍니다.  
+ 람다 식은 람다 함수를 정의하는 메서드 범위 내에 있거나 람다 식을 포함하는 형식 범위 내에 있는 *외부 변수*([무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 참조)를 참조할 수 있습니다. 이러한 방식으로 캡처되는 변수는 변수가 범위를 벗어나 가비지 수집되는 경우에도 람다 식에 사용할 수 있도록 저장됩니다. 외부 변수는 명확하게 할당해야만 람다 식에 사용할 수 있습니다. 다음 예제에서는 이러한 규칙을 보여 줍니다.  
   
 ```csharp  
 delegate bool D();  
@@ -265,7 +265,7 @@ class Test
   
 -   람다 식에 사용된 변수는 외부 메서드에 표시되지 않습니다.  
   
--   람다 식은 바깥쪽 메서드에서 `ref` 또는 `out` 매개 변수를 직접 캡처할 수 없습니다.  
+-   람다 식은 바깥쪽 메서드에서 `in`, `ref` 또는 `out` 매개 변수를 직접 캡처할 수 없습니다.  
   
 -   람다 식의 return 문에 의해서는 바깥쪽 메서드가 반환되지 않습니다.  
   

@@ -10,23 +10,23 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 1a97d830c675c8e3980eddae78f3face279ec6dc
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 6395d873c4a04501d25a2edbb1acc0a163dd3e5c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions"></a>람다 식 #
 
 *람다 식*은 개체로 처리되는 코드 블록(식 또는 문 블록)입니다. 이 식은 인수로 메서드에 전달할 수 있으며 메서드 호출에서 반환될 수도 있습니다. 람다 식은 다음과 같은 경우에 광범위하게 사용됩니다.
 
-- 와 같은 비동기 메서드를 실행 하는 코드를 전달 <xref:System.Threading.Tasks.Task.Run(System.Action)>합니다.
+- 실행될 코드를 <xref:System.Threading.Tasks.Task.Run(System.Action)>과 같은 비동기 메서드에 전달.
 
 - [LINQ 쿼리 식](linq/index.md) 작성.
 
 - [식 트리](expression-trees-building.md) 만들기.
 
-람다 식은 대리자로 나타내거나 대리자로 컴파일되는 식 트리로 나타낼 수 있는 코드입니다. 람다 식의 특정 대리자 형식은 해당 매개 변수 및 반환 값에 따라 달라집니다. 값을 반환하지 않는 람다 식은 해당 매개 변수의 개수에 따라 특정 `Action` 대리자에 해당하고, 값을 반환하는 람다 식은 해당 매개 변수의 개수에 따라 특정 `Func` 대리자에 해당합니다. 2 개의 매개 변수가 있지만 아무 값도 반환 하는 람다 식에 해당 하는 예를 들어 한 <xref:System.Action%602> 위임 합니다. 에 해당 하는 하나의 매개 변수가 있으며 값을 반환 하는 람다 식을 <xref:System.Func%602> 위임 합니다.
+람다 식은 대리자로 나타내거나 대리자로 컴파일되는 식 트리로 나타낼 수 있는 코드입니다. 람다 식의 특정 대리자 형식은 해당 매개 변수 및 반환 값에 따라 달라집니다. 값을 반환하지 않는 람다 식은 해당 매개 변수의 개수에 따라 특정 `Action` 대리자에 해당하고, 값을 반환하는 람다 식은 해당 매개 변수의 개수에 따라 특정 `Func` 대리자에 해당합니다. 예를 들어 매개 변수는 두 개지만 값을 반환하지 않는 람다 식은 <xref:System.Action%602> 대리자에 해당합니다. 매개 변수가 하나이고 값을 반환하는 람다 식은 <xref:System.Func%602> 대리자에 해당합니다.
 
 람다 식은 [람다 선언 연산자](language-reference/operators/lambda-operator.md) `=>`을 사용하여 람다의 매개 변수 목록을 실행 코드와 구분합니다. 람다 식을 만들려면 람다 연산자 왼쪽에 입력 매개 변수(있는 경우)를 지정하고 다른 쪽에 식이나 문 블록을 삽입합니다. 예를 들어 한 줄 람다 식 `x => x * x`는 이름이 `x`인 매개 변수를 지정하고 `x` 제곱 값을 반환합니다. 다음 예제와 같이 대리자 형식에 이 식을 할당할 수도 있습니다.
 
@@ -96,7 +96,7 @@ C#의 튜플 지원에 대한 자세한 내용은 [C# 튜플 형식](tuples.md)�
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>표준 쿼리 연산자와 람다 식 ##
 
-다른 구현 간에 개체에 대 한 LINQ 하나는 형식의 입력된 매개 변수는의 <xref:System.Func%601> 제네릭 대리자의 제품군입니다. 이러한 대리자는 형식 매개 변수를 사용하여 입력 매개 변수의 수와 형식 및 대리자의 반환 형식을 정의합니다. `Func` 대리자는 소스 데이터 집합에 있는 각 요소에 적용할 사용자 정의 식을 캡슐화하는 데 매우 유용합니다. 예를 들어는 <xref:System.Func%601> 인 구문은 대리자:
+다른 구현 중에 LINQ to Objects는 형식이 제네릭 대리자의 <xref:System.Func%601> 패밀리 중 하나인 입력 매개 변수를 사용합니다. 이러한 대리자는 형식 매개 변수를 사용하여 입력 매개 변수의 수와 형식 및 대리자의 반환 형식을 정의합니다. `Func` 대리자는 소스 데이터 집합에 있는 각 요소에 적용할 사용자 정의 식을 캡슐화하는 데 매우 유용합니다. 예를 들어 구문이 다음과 같은 <xref:System.Func%601> 대리자를 가정해 보세요.
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -108,7 +108,7 @@ C#의 튜플 지원에 대한 자세한 내용은 [C# 튜플 형식](tuples.md)�
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
-인수 형식이 람다 식을 제공할 수도 있습니다는 <xref:System.Linq.Expressions.Expression%601>에 정의 되어 있는 표준 쿼리 연산자는 <xref:System.Linq.Queryable> 유형입니다. 지정 하는 경우는 <xref:System.Linq.Expressions.Expression%601> 인수를 람다는 식 트리로 컴파일됩니다. 다음 예제에서는 [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})) 표준 쿼리 연산자를 사용합니다.
+<xref:System.Linq.Queryable> 형식에 정의되어 있는 표준 쿼리 연산자의 경우와 같이 인수 형식이 <xref:System.Linq.Expressions.Expression%601>인 경우에도 람다 식을 사용할 수 있습니다. <xref:System.Linq.Expressions.Expression%601> 인수를 지정하면 람다 식이 식 트리로 컴파일됩니다. 다음 예제에서는 [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})) 표준 쿼리 연산자를 사용합니다.
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 
@@ -150,7 +150,7 @@ C#의 튜플 지원에 대한 자세한 내용은 [C# 튜플 형식](tuples.md)�
 
 - 람다 식에 사용된 변수는 외부 메서드에 표시되지 않습니다.
 
-- 람다 식은 바깥쪽 메서드에서 `ref` 또는 `out` 매개 변수를 직접 캡처할 수 없습니다.
+- 람다 식은 바깥쪽 메서드에서 `in`, `ref` 또는 `out` 매개 변수를 직접 캡처할 수 없습니다.
 
 - 람다 식의 return 문에 의해서는 바깥쪽 메서드가 반환되지 않습니다.
 

@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
 <a name="Top"></a> 기본적으로 입력 문자열을 정규식 패턴의 리터럴 문자와 비교할 때는 대/소문자를 구분하고, 정규식 패턴의 공백은 리터럴 공백 문자로 해석되며, 정규식의 캡처링 그룹은 명시적 및 암시적으로 명명됩니다. 정규식 옵션을 지정하여 기본 정규식 동작의 이러한 측면과 몇 가지 다른 측면을 수정할 수 있습니다. 다음 테이블에 나열되어 있는 이러한 옵션은 정규식 패턴의 일부로 인라인으로 포함되거나, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스 생성자 또는 정적 패턴 일치 메서드에 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값으로 제공될 수 있습니다.  
@@ -193,7 +193,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="single-line-mode"></a>한 줄 모드  
  <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션 또는 `s` 인라인 옵션은 정규식 엔진이 입력 문자열이 한 줄로 구성된 것처럼 입력 문자열을 처리하도록 합니다. 이 옵션은 마침표(`.`) 언어 요소가 줄 바꿈 문자 `\n` 또는 \u000A를 제외한 모든 문자와 일치하는 대신 모든 문자와 일치하도록 해당 언어 요소의 동작을 변경하여 그렇게 합니다.  
   
- 다음 예제에서는 `.` 옵션을 사용할 때 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 언어 요소의 동작이 변경되는 방법을 보여줍니다. 정규식 `^.+`는 문자열의 시작 부분에서 시작하여 모든 문자를 찾습니다. 기본적으로 일치는 첫 번째 줄의 끝 부분에서 끝납니다. 정규식 패턴은 캐리지 리턴 문자, `\r` 또는 \u000D와 일치하지만 `\n`과는 일치하지 않습니다. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션은 전체 입력 문자열을 한 줄로 해석하기 때문에 `\n`을 포함하여 입력 문자열의 모든 문자와 일치합니다.  
+ 다음 예제에서는 `.` 옵션을 사용할 때 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 언어 요소의 동작이 변경되는 방법을 보여 줍니다. 정규식 `^.+`는 문자열의 시작 부분에서 시작하여 모든 문자를 찾습니다. 기본적으로 일치는 첫 번째 줄의 끝 부분에서 끝납니다. 정규식 패턴은 캐리지 리턴 문자, `\r` 또는 \u000D와 일치하지만 `\n`과는 일치하지 않습니다. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션은 전체 입력 문자열을 한 줄로 해석하기 때문에 `\n`을 포함하여 입력 문자열의 모든 문자와 일치합니다.  
   
  [!code-csharp[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any2.cs#5)]
  [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
@@ -219,7 +219,7 @@ ms.lasthandoff: 12/23/2017
   
  정규식 엔진이 <xref:System.Text.RegularExpressions.GroupCollection> 및 <xref:System.Text.RegularExpressions.CaptureCollection> 컬렉션 개체를 둘 다 채워야 하므로 이후에 사용되지 않는 캡처링 그룹에는 비용이 많이 들 수 있습니다. 대안으로 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 옵션 또는 `n` 인라인 옵션을 사용하여 유효한 캡처만 `(?<`*name*`>` *subexpression*`)` 구문에 의해 지정된, 명시적으로 명명되거나 번호가 매겨진 그룹임을 지정할 수 있습니다.  
   
- 다음 예제에서는 `\b\(?((\w+),?\s?)+[\.!?]\)?` 메서드가 <xref:System.Text.RegularExpressions.Regex.Match%2A> 옵션을 사용하여 호출된 경우와 이 옵션을 사용하지 않고 호출된 경우에 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 정규식 패턴에서 반환하는 일치 항목에 대한 정보를 표시합니다. 첫 번째 메서드 호출의 출력이 보여주는 것처럼, 정규식 엔진은 캡처된 부분 문자열에 대한 정보로 <xref:System.Text.RegularExpressions.GroupCollection> 및 <xref:System.Text.RegularExpressions.CaptureCollection> 컬렉션 개체를 완전히 채웁니다. 두 번째 메서드는 `options`가 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>로 설정된 상태로 호출되었기 때문에 그룹에 대한 정보를 캡처하지 않습니다.  
+ 다음 예제에서는 `\b\(?((\w+),?\s?)+[\.!?]\)?` 메서드가 <xref:System.Text.RegularExpressions.Regex.Match%2A> 옵션을 사용하여 호출된 경우와 이 옵션을 사용하지 않고 호출된 경우에 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 정규식 패턴에서 반환하는 일치 항목에 대한 정보를 표시합니다. 첫 번째 메서드 호출의 출력이 보여 주는 것처럼, 정규식 엔진은 캡처된 부분 문자열에 대한 정보로 <xref:System.Text.RegularExpressions.GroupCollection> 및 <xref:System.Text.RegularExpressions.CaptureCollection> 컬렉션 개체를 완전히 채웁니다. 두 번째 메서드는 `options`가 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>로 설정된 상태로 호출되었기 때문에 그룹에 대한 정보를 캡처하지 않습니다.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit1.cs#9)]
  [!code-vb[Conceptual.Regex.Language.Options#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit1.vb#9)]  
@@ -318,7 +318,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  오른쪽에서 왼쪽 패턴 모드는 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 값을 `options` 클래스 생성자 또는 정적 패턴 일치 메서드의 <xref:System.Text.RegularExpressions.Regex> 매개 변수에 제공해서만 사용할 수 있으며, 인라인 옵션으로는 사용할 수 없습니다.  
   
- <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 옵션은 검색 방향만 변경하며 오른쪽에서 왼쪽으로 정규식 패턴을 해석하지는 않습니다. 예를 들어, 정규식 `\bb\w+\s`는 문자 "b"로 시작하고 뒤에 공백 문자가 있는 단어와 일치합니다. 다음 예제에서 입력 문자열은 하나 이상의 "b" 문자를 포함하는 세 단어로 구성됩니다. 첫 번째 단어는 "b"로 시작하고, 두 번째 단어는 "b"로 끝나며, 세 번째 단어는 단어 중간에 두 개의 "b" 문자를 포함합니다. 예제의 출력이 보여주는 것처럼, 첫 번째 단어만 정규식 패턴과 일치합니다.  
+ <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 옵션은 검색 방향만 변경하며 오른쪽에서 왼쪽으로 정규식 패턴을 해석하지는 않습니다. 예를 들어, 정규식 `\bb\w+\s`는 문자 "b"로 시작하고 뒤에 공백 문자가 있는 단어와 일치합니다. 다음 예제에서 입력 문자열은 하나 이상의 "b" 문자를 포함하는 세 단어로 구성됩니다. 첫 번째 단어는 "b"로 시작하고, 두 번째 단어는 "b"로 끝나며, 세 번째 단어는 단어 중간에 두 개의 "b" 문자를 포함합니다. 예제의 출력이 보여 주는 것처럼, 첫 번째 단어만 정규식 패턴과 일치합니다.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
  [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]  
@@ -353,12 +353,12 @@ ms.lasthandoff: 12/23/2017
   
 -   문자 클래스 구문. 정식 정규식은 유니코드를 지원하는 반면 ECMAScript는 지원하지 않으므로, ECMAScript의 문자 클래스의 구문이 더 제한되어 있으며 일부 문자 클래스 언어 요소는 다른 의미를 지닙니다. 예를 들어, ECMAScript는 유니코드 범주 또는 블록 요소 `\p` 및 `\P`와 같은 언어 요소를 지원하지 않습니다. 마찬가지로, 단어 문자와 일치하는 `\w` 요소는 ECMAScript를 사용할 경우 `[a-zA-Z_0-9]` 문자 클래스와 동일하고 정식 동작을 사용할 경우 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`와 동일합니다. 자세한 내용은 [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)을 참조하세요.  
   
-     다음 예제에서는 정식 패턴 일치와 ECMAScript 패턴 일치 간의 차이점을 보여줍니다. 이 예제에서는 뒤에 공백 문자가 있는 단어와 일치하는 정규식 `\b(\w+\s*)+`를 정의합니다. 입력은 두 개의 문자열로 구성되어 있는데, 한 문자열은 라틴 문자 집합을 사용하고 다른 문자열은 키릴 자모 문자 집합을 사용합니다. 출력에 표시된 것처럼, ECMAScript 일치를 사용하는 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 메서드에 대한 호출은 키릴 자모 단어와 일치하지 않는 반면 정식 일치를 사용하는 메서드 호출은 이러한 단어와 일치합니다.  
+     다음 예제에서는 정식 패턴 일치와 ECMAScript 패턴 일치 간의 차이점을 보여 줍니다. 이 예제에서는 뒤에 공백 문자가 있는 단어와 일치하는 정규식 `\b(\w+\s*)+`를 정의합니다. 입력은 두 개의 문자열로 구성되어 있는데, 한 문자열은 라틴 문자 집합을 사용하고 다른 문자열은 키릴 자모 문자 집합을 사용합니다. 출력에 표시된 것처럼, ECMAScript 일치를 사용하는 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 메서드에 대한 호출은 키릴 자모 단어와 일치하지 않는 반면 정식 일치를 사용하는 메서드 호출은 이러한 단어와 일치합니다.  
   
      [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
      [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]  
   
--   자신을 참조하는 캡처링 그룹. 자신에 대한 역참조가 있는 정규식 캡처 클래스는 각 캡처 반복으로 업데이트되어야 합니다. 다음 예제에서 보여주는 것처럼, 이 기능은 정규식 `((a+)(\1) ?)+`가 ECMAScript를 사용할 경우에는 입력 문자열 " aa aaaa aaaaaa "과 일치하고 정식 일치를 사용할 경우에는 일치하지 않도록 합니다.  
+-   자신을 참조하는 캡처링 그룹. 자신에 대한 역참조가 있는 정규식 캡처 클래스는 각 캡처 반복으로 업데이트되어야 합니다. 다음 예제에서 보여 주는 것처럼, 이 기능은 정규식 `((a+)(\1) ?)+`가 ECMAScript를 사용할 경우에는 입력 문자열 " aa aaaa aaaaaa "과 일치하고 정식 일치를 사용할 경우에는 일치하지 않도록 합니다.  
   
      [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
      [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]  
@@ -386,7 +386,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="comparison-using-the-invariant-culture"></a>고정 문화권을 사용한 비교  
  기본적으로 정규식 엔진은 대/소문자를 구분하지 않는 비교를 수행할 때 현재 문화권의 대/소문자 사용 규칙을 사용하여 동일한 대문자와 소문자를 확인합니다.  
   
- 그러나 이 동작은 일부 비교 형식에는 바람직하지 않은데, 특히 사용자 입력을 시스템 리소스의 이름과 비교할 때 그렇습니다(예: 암호, 파일 또는 URL). 다음 예제에서는 이러한 상황을 시나리오로 보여줍니다. 이 코드는 URL 앞에 **FILE://**가 있는 모든 리소스에 대한 액세스를 차단하도록 작성되었습니다. 이 정규식에서는 정규식 `$FILE://`를 사용하여 문자열에 대해 대/소문자를 구분하지 않는 일치를 시도합니다. 그러나 현재 시스템 문화권이 tr-TR(터키어-터키)인 경우 "I"는 "i"의 대문자에 해당하는 문자가 아닙니다. 따라서 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드에 대한 호출에서 `false`를 반환하고 파일에 대한 액세스가 허용됩니다.  
+ 그러나 이 동작은 일부 비교 형식에는 바람직하지 않은데, 특히 사용자 입력을 시스템 리소스의 이름과 비교할 때 그렇습니다(예: 암호, 파일 또는 URL). 다음 예제에서는 이러한 상황을 시나리오로 보여 줍니다. 이 코드는 URL 앞에 **FILE://**가 있는 모든 리소스에 대한 액세스를 차단하도록 작성되었습니다. 이 정규식에서는 정규식 `$FILE://`를 사용하여 문자열에 대해 대/소문자를 구분하지 않는 일치를 시도합니다. 그러나 현재 시스템 문화권이 tr-TR(터키어-터키)인 경우 "I"는 "i"의 대문자에 해당하는 문자가 아닙니다. 따라서 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드에 대한 호출에서 `false`를 반환하고 파일에 대한 액세스가 허용됩니다.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#14)]
  [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]  

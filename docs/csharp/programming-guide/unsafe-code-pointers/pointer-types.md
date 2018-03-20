@@ -2,20 +2,21 @@
 title: "포인터 형식(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 안전하지 않은 컨텍스트에서는 형식이 포인터 형식, 값 형식 또는 참조 형식이 될 수 있습니다. 포인터 형식 선언은 다음 형식 중 하나를 사용합니다.  
@@ -113,11 +114,11 @@ Console.ReadLine();
   
  포인터는 `null`일 수 있습니다. null 포인터에 간접 참조 연산자를 적용할 때 발생하는 동작은 구현에 따라 다릅니다.  
   
- 메서드 사이에 포인터를 전달하면 정의되지 않은 동작이 발생할 수 있다는 사실에 주의해야 합니다. Out 또는 Ref 매개 변수를 통해, 또는 함수 결과로 지역 변수에 포인터를 반환하는 경우를 예로 들 수 있습니다. fixed 블록에서 포인터가 설정되면 이 포인터가 가리키는 변수의 고정 상태가 해제될 수 있습니다.  
+ 메서드 사이에 포인터를 전달하면 정의되지 않은 동작이 발생할 수 있다는 사실에 주의해야 합니다. `in`, `out` 또는 `ref` 매개 변수를 통해, 또는 함수 결과로 지역 변수에 포인터를 반환하는 메서드를 고려합니다. fixed 블록에서 포인터가 설정되면 이 포인터가 가리키는 변수의 고정 상태가 해제될 수 있습니다.  
   
  다음 표에서는 안전하지 않은 컨텍스트에서 포인터에 대해 수행할 수 있는 연산자와 문을 보여 줍니다.  
   
-|연산자/문|기능|  
+|연산자/문|사용|  
 |-------------------------|---------|  
 |*|포인터 간접 참조를 수행합니다.|  
 |->|포인터를 통해 구조체 멤버에 액세스합니다.|  

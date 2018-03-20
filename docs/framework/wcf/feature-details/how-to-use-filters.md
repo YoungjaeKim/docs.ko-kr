@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="how-to-use-filters"></a>방법: 필터 사용
 이 항목에서는 여러 필터를 사용하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 regularCalc와 roundingCalc라는 두 계산기 서비스 구현으로 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 한 서비스에서 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 응용 프로그램은 서비스의 반올림 버전을 사용할 것인지 여부를 지정해야 합니다. 서비스 기본 설정이 지정되지 않으면 메시지는 두 서비스 사이에서 부하 분산됩니다. 두 서비스에 의해 노출되는 연산은 다음과 같습니다.  
@@ -124,7 +126,7 @@ ms.lasthandoff: 12/22/2017
      이 **MessageFilter** 는 "rounding" 값이 포함 된 메시지에서 RoundingCalculator 헤더를 찾습니다. 이 헤더는 클라이언트에 의해 설정되어 메시지가 roundingCalc 서비스로 라우트되어야 함을 나타냅니다.  
   
     > [!NOTE]
-    >  S12 네임 스페이스 접두사는 기본적으로 네임 스페이스 테이블에 정의 된 하 고 "http://www.w3.org/2003/05/soap-envelope" 네임 스페이스를 나타냅니다.  
+    >  S12 네임 스페이스 접두사는 기본적으로 네임 스페이스 테이블에 정의 되며 네임 스페이스를 나타냅니다 "http://www.w3.org/2003/05/soap-envelope"입니다.  
   
 2.  또한 두 가상 끝점에 수신된 메시지를 찾는 필터도 정의해야 합니다. 첫 번째 가상 끝점은 "regular/calculator" 끝점입니다. 클라이언트는 이 끝점에 요청을 보내 메시지가 regularCalc 서비스로 라우트되어야 함을 나타낼 수 있습니다. 다음 구성에서는 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>를 사용하여 메시지가 filterData에 지정된 이름을 가진 끝점을 통해 도착했는지 확인하는 필터를 정의합니다.  
   
@@ -236,7 +238,7 @@ ms.lasthandoff: 12/22/2017
     </behaviors>  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 구성 파일의 전체 목록입니다.  
   
 ```xml  

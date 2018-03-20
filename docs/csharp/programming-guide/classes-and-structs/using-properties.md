@@ -2,26 +2,27 @@
 title: "속성 사용(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aae36195f4a6eb2ab49ec27e1e07debff7289b37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>속성 사용(C# 프로그래밍 가이드)
 속성은 필드 및 메서드 모두의 측면을 결합합니다. 개체의 사용자에게 속성은 필드로 표시되며, 속성에 액세스하려면 동일한 구문이 필요합니다. 클래스의 구현자에게 속성은 [get](../../../csharp/language-reference/keywords/get.md) 접근자 및/또는 [set](../../../csharp/language-reference/keywords/set.md) 접근자를 나타내는 하나 또는 두 개의 코드 블록입니다. `get` 접근자에 대한 코드 블록은 속성을 읽을 때 실행되고, `set` 접근자에 대한 코드 블록은 속성에 새 값을 할당할 때 실행됩니다. `set` 접근자가 없는 속성은 읽기 전용으로 간주됩니다. `get` 접근자가 없는 속성은 쓰기 전용으로 간주됩니다. 두 접근자가 모두 있는 속성은 읽기/쓰기입니다.  
   
- 필드와 달리 속성은 변수로 분류되지 않습니다. 따라서 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수로 속성을 전달할 수 없습니다.  
+ 필드와 달리 속성은 변수로 분류되지 않습니다. 따라서 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 매개 변수로 속성을 전달할 수 없습니다.  
   
  속성은 여러 가지 용도로 사용됩니다. 변경을 허용하기 전에 데이터의 유효성을 검사하고, 데이터가 실제로 데이터베이스 등의 다른 소스에서 검색되는 클래스에 데이터를 투명하게 공개하고, 데이터 변경 시 이벤트 발생, 다른 필드의 값 변경 등의 작업을 수행할 수 있습니다.  
   
@@ -66,9 +67,9 @@ ms.lasthandoff: 11/21/2017
  `set` 접근자의 지역 변수 선언에 대해 암시적 매개 변수 이름 `value`를 사용하면 오류가 발생합니다.  
   
 ## <a name="remarks"></a>설명  
- 속성으로 표시할 수 있습니다 `public`, `private`, `protected`, `internal`, `protected internal` 또는 `private protected`합니다. 이러한 액세스 한정자는 클래스 사용자가 속성에 액세스하는 방법을 정의합니다. 동일한 속성에 대한 `get` 및 `set` 접근자가 서로 다른 액세스 한정자를 가질 수 있습니다. 예를 들어 `get`은 형식 외부에서 읽기 전용 액세스를 허용하도록 `public`이 되고, `set`은 `private` 또는 `protected`가 될 수 있습니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
+ 속성은 `public`, `private`, `protected`, `internal`, `protected internal` 또는 `private protected`로 표시될 수 있습니다. 이러한 액세스 한정자는 클래스 사용자가 속성에 액세스하는 방법을 정의합니다. 동일한 속성에 대한 `get` 및 `set` 접근자가 서로 다른 액세스 한정자를 가질 수 있습니다. 예를 들어 `get`은 형식 외부에서 읽기 전용 액세스를 허용하도록 `public`이 되고, `set`은 `private` 또는 `protected`가 될 수 있습니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
   
- `static` 키워드를 사용하여 속성을 정적 속성으로 선언할 수 있습니다. 그러면 클래스의 인스턴스가 없는 경우에도 언제든지 호출자가 속성을 사용할 수 있습니다. 자세한 내용은 [정적 클래스 및 정적 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.  
+ `static` 키워드를 사용하여 속성을 정적 속성으로 선언할 수 있습니다. 그러면 클래스의 인스턴스가 없는 경우에도 언제든지 호출자가 속성을 사용할 수 있습니다. 자세한 내용은 [static 클래스 및 static 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.  
   
  [virtual](../../../csharp/language-reference/keywords/virtual.md) 키워드를 사용하여 속성을 가상 속성으로 표시할 수 있습니다. 그러면 파생 클래스에서 [override](../../../csharp/language-reference/keywords/override.md) 키워드를 사용하여 속성 동작을 재정의할 수 있습니다. 이러한 옵션에 대한 자세한 내용은 [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)을 참조하세요.  
   
@@ -77,12 +78,12 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  [static](../../../csharp/language-reference/keywords/static.md) 속성의 접근자에 [virtual](../../../csharp/language-reference/keywords/virtual.md), [abstract](../../../csharp/language-reference/keywords/abstract.md) 또는 [override](../../../csharp/language-reference/keywords/override.md) 한정자를 사용하면 오류가 발생합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 인스턴스, 정적 및 읽기 전용 속성을 보여 줍니다. 키보드에서 직원 이름을 받고 `NumberOfEmployees`를 1만큼 증가한 다음 직원 이름과 번호를 표시합니다.  
   
  [!code-csharp[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 파생 클래스에서 이름이 같은 다른 속성에 의해 숨겨진 기본 클래스의 속성에 액세스하는 방법을 보여 줍니다.  
   
  [!code-csharp[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_9.cs)]  
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
      멤버를 숨기는 방법에 대한 자세한 내용은 [new 한정자](../../../csharp/language-reference/keywords/new-modifier.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서 두 클래스 `Cube` 및 `Square`는 추상 클래스 `Shape`를 구현하고 해당 abstract `Area` 속성을 재정의합니다. 속성의 [override](../../../csharp/language-reference/keywords/override.md) 한정자를 사용합니다. 프로그램은 변을 입력으로 사용하고 사각형과 정육면체의 면적을 계산합니다. 또한 면적을 입력으로 사용하고 사각형 및 정육면체의 해당 변을 계산합니다.  
   
  [!code-csharp[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  

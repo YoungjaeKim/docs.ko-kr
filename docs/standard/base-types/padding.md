@@ -1,9 +1,8 @@
 ---
 title: ".NET에서 문자열 채우기"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/15/2018
 ms.prod: .net
-ms.reviewer: 
 ms.suite: 
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea903c1f950e7c226e043c1fa7276a66126b2512
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bf90c841c8fff21dd423fcd19613b5eb46a2c80c
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="padding-strings-in-net"></a>.NET에서 문자열 채우기
-다음 <xref:System.String> 메서드 중 하나를 사용하여 원래 문자열에 선행 또는 후행 문자를 지정된 총 길이까지 추가해 새로 구성된 문자열을 만듭니다. 채움 문자는 공백이나 지정된 문자를 사용할 수 있고 결과적으로 오른쪽에 맞춤인지 아니면 왼쪽 맞춤인지를 표시합니다.  
+
+다음 <xref:System.String> 메서드 중 하나를 사용하여 원래 문자열에 선행 또는 후행 문자를 지정된 총 길이까지 추가해 새로 구성된 문자열을 만듭니다. 안쪽 여백 문자는 공백이나 지정된 문자일 수 있습니다. 결과 문자열은 오른쪽 맞춤 또는 왼쪽 맞춤으로 표시됩니다. 원래 문자열의 길이가 원하는 총 길이보다 크거나 같은 경우 안쪽 여백 메서드는 변경되지 않은 원래 문자열을 반환합니다. 자세한 내용은 <xref:System.String.PadLeft%2A?displayProperty=nameWithType> 및 <xref:System.String.PadRight%2A?displayProperty=nameWithType> 메서드의 두 오버로드의 **반환** 섹션을 참조하세요.
   
 |메서드 이름|사용|  
 |-----------------|---------|  
