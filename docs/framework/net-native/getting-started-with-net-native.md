@@ -1,19 +1,21 @@
 ---
-title: ".NET 네이티브 시작"
-ms.custom: 
+title: .NET 네이티브 시작
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 56ff06c17eda8483c7d067af9fb39a402d2f6ea5
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/19/2018
 4.  [누락된 메타데이터 문제를 수동으로 해결](#Step4)하고 [3단계](#Step3)를 반복하여 모든 문제를 해결합니다.  
   
 > [!NOTE]
->  기존 Windows 스토어 앱을 [!INCLUDE[net_native](../../../includes/net-native-md.md)]로 마이그레이션하는 경우 [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
+>  기존 Windows 스토어 앱을 [!INCLUDE[net_native](../../../includes/net-native-md.md)]로 마이그레이션하는 경우 [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 <a name="Step1"></a>   
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>1단계: UWP 앱의 디버그 빌드 개발 및 테스트  
