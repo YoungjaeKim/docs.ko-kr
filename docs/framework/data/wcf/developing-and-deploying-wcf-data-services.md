@@ -1,12 +1,13 @@
 ---
-title: "WCF Data Services 개발 및 배포"
-ms.custom: 
+title: WCF Data Services 개발 및 배포
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, developing
@@ -14,11 +15,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8abe23aebefadc68268aa1dada8474336b1f87e7
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  **로컬 IIS 서버**  
   
-     IIS(인터넷 정보 서비스)에서 실행되는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 사이트인 데이터 서비스를 만들 때 로컬 컴퓨터에서 IIS를 사용하여 데이터 서비스를 개발하고 테스트하는 것이 좋습니다. IIS에서 데이터 서비스를 실행하면 디버깅하는 동안 HTTP 요청을 쉽게 추적할 수 있습니다. 또한 IIS에서 데이터 서비스에 필요한 파일, 데이터베이스 및 기타 리소스에 액세스하는 데 필요한 권한을 미리 결정할 수도 있습니다. IIS에서 데이터 서비스를 실행하려면 IIS 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 를 올바르게 설치하고 구성했는지 확인하고 파일 시스템 및 데이터베이스에 있는 IIS 계정에 액세스 권한을 부여해야 합니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.  
+     IIS(인터넷 정보 서비스)에서 실행되는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 사이트인 데이터 서비스를 만들 때 로컬 컴퓨터에서 IIS를 사용하여 데이터 서비스를 개발하고 테스트하는 것이 좋습니다. IIS에서 데이터 서비스를 실행하면 디버깅하는 동안 HTTP 요청을 쉽게 추적할 수 있습니다. 또한 IIS에서 데이터 서비스에 필요한 파일, 데이터베이스 및 기타 리소스에 액세스하는 데 필요한 권한을 미리 결정할 수도 있습니다. IIS에서 데이터 서비스를 실행하려면 IIS 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 를 올바르게 설치하고 구성했는지 확인하고 파일 시스템 및 데이터베이스에 있는 IIS 계정에 액세스 권한을 부여해야 합니다. 자세한 내용은 [방법: IIS에서 실행되는 WCF Data Services 개발](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.  
   
     > [!NOTE]
     >  관리자 권한으로 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 를 실행해야만 개발 환경을 사용하여 로컬 IIS 서버를 구성할 수 있습니다.  
@@ -117,7 +119,7 @@ ms.lasthandoff: 01/19/2018
      [!INCLUDE[crabout](../../../../includes/crabout-md.md)]배포 옵션에 대 한 프로그램 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 참조 [Visual Studio 및 ASP.NET에 대 한 웹 배포 개요](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3)합니다.  
   
     > [!TIP]
-    >  데이터 서비스를 IIS에 배포하기 전에 IIS가 실행 중인 웹 서버로의 배포를 테스트했는지 확인해야 합니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.  
+    >  데이터 서비스를 IIS에 배포하기 전에 IIS가 실행 중인 웹 서버로의 배포를 테스트했는지 확인해야 합니다. 자세한 내용은 [방법: IIS에서 실행되는 WCF Data Services 개발](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.  
   
 -   **Windows Azure**  
   
@@ -126,7 +128,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="deployment-considerations"></a>배포 고려 사항  
  데이터 서비스를 배포할 때 다음 사항을 고려해야 합니다.  
   
--   [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자를 사용하는 데이터 서비스를 배포하여 SQL Server 데이터베이스에 액세스하는 경우 데이터 서비스 배포와 함께 데이터 구조, 데이터 또는 둘 다를 전파해야 할 수 있습니다. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 는 대상 데이터베이스에서 이 작업을 수행하기 위해 스크립트(.sql 파일)를 자동으로 만들 수 있으며, 이러한 스크립트는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램의 웹 배포 패키지에 포함할 수 있습니다. 자세한 내용은 참조 [NIB: 방법:는 데이터베이스와 웹 응용 프로그램 프로젝트를 배포](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)합니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 사이트의 경우에는 **의** 데이터베이스 게시 마법사 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]를 사용하여 이 작업을 수행할 수 있습니다. 자세한 내용은 [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)을 참조하세요.  
+-   [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자를 사용하는 데이터 서비스를 배포하여 SQL Server 데이터베이스에 액세스하는 경우 데이터 서비스 배포와 함께 데이터 구조, 데이터 또는 둘 다를 전파해야 할 수 있습니다. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 는 대상 데이터베이스에서 이 작업을 수행하기 위해 스크립트(.sql 파일)를 자동으로 만들 수 있으며, 이러한 스크립트는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램의 웹 배포 패키지에 포함할 수 있습니다. 자세한 내용은 참조 [NIB: 방법:는 데이터베이스와 웹 응용 프로그램 프로젝트를 배포](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)합니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 사이트의 경우에는 **의** 데이터베이스 게시 마법사 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]를 사용하여 이 작업을 수행할 수 있습니다. 자세한 내용은 [데이터베이스 게시 마법사를 사용 하 여 데이터베이스 배포](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)을 참조하세요.  
   
 -   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 에는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현이 포함되기 때문에 Windows Server AppFabric을 사용하여 Windows Server에서 실행되는 IIS에 배포된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용하여 데이터 서비스를 모니터링[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 은 [Windows Server AppFabric으로 WCF Data Services 추적](http://go.microsoft.com/fwlink/?LinkID=202005)게시물을 참조하십시오.  
   

@@ -1,12 +1,13 @@
 ---
-title: "런타임 프로파일링"
-ms.custom: 
+title: 런타임 프로파일링
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance counters
@@ -18,11 +19,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4a8f3af4878e0f6911fcc55ec76b26649d517b3b
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
      **선택한 개체의 인스턴스** 목록 상자에서 응용 프로그램 이름을 클릭하여 해당 응용 프로그램에 대한 성능 카운터를 모니터링합니다.  
   
-     여러 버전의 런타임을 구분하거나 이름이 같은 여러 응용 프로그램의 차이를 분명히 보여 주려면 레지스트리 키도 수정해야 합니다. 자세한 내용은 [Performance Counters and In-Process Side-By-Side Applications](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md)을 참조하세요.  
+     여러 버전의 런타임을 구분하거나 이름이 같은 여러 응용 프로그램의 차이를 분명히 보여 주려면 레지스트리 키도 수정해야 합니다. 자세한 내용은 [성능 카운터 및 In-Process Side-By-Side 응용 프로그램](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md)을 참조하세요.  
   
 > [!NOTE]
 >  성능 콘솔이 실행되는 동안 새로운 성능 카운터가 설치되면 새로운 카운터를 표시하기 위해 성능 콘솔을 중지하고 다시 시작합니다.  

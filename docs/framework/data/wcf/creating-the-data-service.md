@@ -1,22 +1,24 @@
 ---
-title: "데이터 서비스 만들기"
-ms.custom: 
+title: 데이터 서비스 만들기
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7d890e4c2041ae4c70a79adfc0ab4141402fcd3f
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
@@ -35,7 +37,7 @@ ms.lasthandoff: 01/19/2018
 4.  데이터 서비스에 액세스할 수 있도록 설정합니다.  
   
 > [!NOTE]
->  이 작업을 완료할 때 만드는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 응용 프로그램은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]에서 제공하는 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Development Server에서 실행됩니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server는 로컬 컴퓨터에서의 액세스만 지원합니다. 개발 중에 보다 쉽게 데이터 서비스를 테스트하고 관련 문제를 해결하려면 IIS(인터넷 정보 서비스)를 사용하여 데이터 서비스를 호스트하는 응용 프로그램을 실행하는 것이 좋습니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.  
+>  이 작업을 완료할 때 만드는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 응용 프로그램은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]에서 제공하는 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Development Server에서 실행됩니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server는 로컬 컴퓨터에서의 액세스만 지원합니다. 개발 중에 보다 쉽게 데이터 서비스를 테스트하고 관련 문제를 해결하려면 IIS(인터넷 정보 서비스)를 사용하여 데이터 서비스를 호스트하는 응용 프로그램을 실행하는 것이 좋습니다. 자세한 내용은 [방법: IIS에서 실행되는 WCF Data Services 개발](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.  
   
 ### <a name="to-create-the-aspnet-web-application"></a>ASP.NET 웹 응용 프로그램을 만들려면  
   
