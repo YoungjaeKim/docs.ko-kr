@@ -1,14 +1,14 @@
 ---
-title: "&lt;AppContextSwitchOverrides&gt; 요소"
-ms.custom: 
+title: '&lt;AppContextSwitchOverrides&gt; 요소'
+ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AppContextSwitchOverrides
@@ -16,23 +16,24 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
   
  \<configuration>  
- \<런타임 >  
-\<AppContextSwitchOverrides >  
+ \<runtime>  
+\<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/09/2018
   
 |값|설명|  
 |-----------|-----------------|  
-|"name = value"|미리 정의 된 스위치 이름과 해당 값 (`true` 또는 `false`). 여러 스위치 이름/값 쌍은 세미콜론으로 구분 됩니다 (";"). .NET Framework에서 지원 되는 미리 정의 된 스위치 이름 목록은 설명 섹션을 참조 합니다.|  
+|"name=value"|미리 정의 된 스위치 이름과 해당 값 (`true` 또는 `false`). 여러 스위치 이름/값 쌍은 세미콜론으로 구분 됩니다 (";"). .NET Framework에서 지원 되는 미리 정의 된 스위치 이름 목록은 설명 섹션을 참조 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/09/2018
   
  라이브러리 개발자 라이브러리의 이후 버전에서 도입 되거나 변경 된 기능을 취소 하기 위해 호출자를 허용 하려면 사용자 지정 스위치 정의할 수도 있습니다. 자세한 내용은 <xref:System.AppContext> 클래스를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `AppContextSwitchOverrides` 단일 응용 프로그램 호환성 스위치를 정의 하는 요소 `Switch.System.Globalization.NoAsyncCurrentCulture`, 비동기 메서드 호출에 스레드를 넘어서 전달에서 culture에 맞지 않는 합니다.  
   
 ```xml  

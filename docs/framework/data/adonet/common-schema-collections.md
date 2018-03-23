@@ -1,24 +1,26 @@
 ---
-title: "공용 스키마 컬렉션"
-ms.custom: 
+title: 공용 스키마 컬렉션
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="common-schema-collections"></a>공용 스키마 컬렉션
 공통 스키마 컬렉션은 각 .NET Framework 관리 공급자를 통해 구현되는 스키마 컬렉션입니다. 호출 하 여 지원 되는 스키마 컬렉션의 목록을 확인 하려면.NET Framework 관리 공급자를 쿼리할 수 있습니다는 **GetSchema** 메서드를 인수 없이, 또는 "metadatacollections 라는" 스키마 컬렉션 이름을 사용 합니다. 그러면 지원되는 스키마 컬렉션의 목록, 각자 지원하는 제약 조건 수 및 사용하는 식별자 부분 수가 포함된 <xref:System.Data.DataTable>이 반환됩니다. 이 컬렉션은 필요한 모든 열을 설명합니다. 공급자는 필요에 따라 열을 추가할 수 있습니다. 예를 들어, `SqlClient` 및 `OracleClient`는 ParameterName 을 Restrictions 컬렉션에 추가합니다.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 |열 이름|데이터 형식|설명|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|복합 식별자의 복합 구분 기호와 일치하는 정규식입니다. 예를 들어 "\\." (SQL Server 용) 또는 "@&#124; \\." (Oracle의 경우)입니다.<br /><br /> 복합 식별자는 일반적으로 용도 데이터베이스 개체 이름에 대 한 예를 들어:, pubs.dbo.authors 또는 pubs@dbo.authors합니다.<br /><br /> SQL Server에 대 한 정규식을 사용 하 여 "\\."입니다. Oracleclient를 사용 하 여 "@&#124; \\.".<br /><br /> ODBC의 경우 Catalog_name_seperator를 사용합니다.<br /><br /> OLE DB의 경우 DBLITERAL_CATALOG_SEPARATOR 또는 DBLITERAL_SCHEMA_SEPARATOR를 사용합니다.|  
+|CompositeIdentifierSeparatorPattern|string|복합 식별자의 복합 구분 기호와 일치하는 정규식입니다. 예를 들어 "\\." (SQL Server 용) 또는 "@&#124;\\." (Oracle의 경우)입니다.<br /><br /> 복합 식별자는 일반적으로 용도 데이터베이스 개체 이름에 대 한 예를 들어:, pubs.dbo.authors 또는 pubs@dbo.authors합니다.<br /><br /> SQL Server에 대 한 정규식을 사용 하 여 "\\."입니다. Oracleclient를 사용 하 여 "@&#124;\\."입니다.<br /><br /> ODBC의 경우 Catalog_name_seperator를 사용합니다.<br /><br /> OLE DB의 경우 DBLITERAL_CATALOG_SEPARATOR 또는 DBLITERAL_SCHEMA_SEPARATOR를 사용합니다.|  
 |DataSourceProductName|string|"Oracle" 또는 "SQLServer"와 같은 공급자에서 액세스하는 제품의 이름입니다.|  
 |DataSourceProductVersion|string|공급자에서 액세스하는 제품의 버전을 Microsoft 형식이 아닌 데이터 소스 기본 형식으로 나타냅니다.<br /><br /> 경우에 따라 DataSourceProductVersion과 DataSourceProductVersionNormalized는 동일한 값입니다. OLE DB 및 ODBC의 경우 이 값은 항상 기본 API에서 동일한 함수 호출로 매핑될 때와 같습니다.|  
 |DataSourceProductVersionNormalized|string|`String.Compare()`와 비교할 수 있는 데이터 소스의 표준화된 버전. 이 형식은 버전 10이 버전 1과 버전 2 사이에 정렬되지 않도록 공급자의 모든 버전에서 일관성이 유지됩니다.<br /><br /> 예를 들어 Oracle 공급자는 Oracle 8i 데이터 소스 "08.01.07.04.01"을 반환 하 게 하는 정규화 된 버전에 대 한 "nn.nn.nn.nn.nn"의 형식을 사용 합니다. SQL Server는 일반적인 Microsoft "nn.nn.nnnn" 형식을 사용 합니다.<br /><br /> 경우에 따라 DataSourceProductVersion과 DataSourceProductVersionNormalized는 동일한 값입니다. OLE DB 및 ODBC의 경우 이 값은 항상 기본 API에서 동일한 함수 호출로 매핑될 때와 같습니다.|  
@@ -53,10 +55,10 @@ ms.lasthandoff: 01/17/2018
 |ParameterMarkerPattern|string|매개 변수 표식과 일치하는 정규식입니다. 매개 변수 이름이 있는 경우 일치하는 매개 변수 이름 값을 가집니다.<br /><br /> 예를 들어, 매개 변수 이름에 포함될 ‘@’ 선행 문자와 함께 명명된 매개 변수를 지원하는 경우 정규식은 “(@[A-Za-z0-9_$#]*)”입니다.<br /><br /> 그러나 명명 된 매개 변수를 지원 되는 경우는 ':' 일은 문자가 매개 변수 이름의 일부가 아니므로,: ": ([z0-9_$ #]\*)"입니다.<br /><br /> 물론 데이터 소스에서 명명된 매개 변수를 지원하는 경우 정규식은 단순히 &quot;?&quot;입니다.|  
 |ParameterNameMaxLength|int|매개 변수 이름의 최대 길이(문자 수)입니다. Visual Studio에서는 매개 변수 이름이 지원되는 경우 최대 길이에 대한 최소 값을 30자로 간주합니다.<br /><br /> 데이터 소스에서 명명된 매개 변수를 지원하지 않는 경우 이 속성은 0을 반환합니다.|  
 |ParameterNamePattern|string|유효 매개 변수 이름과 일치하는 정규식입니다. 매개 변수 이름에 사용할 수 있는 문자에 관한 규칙은 데이터 소스마다 다릅니다.<br /><br /> Visual Studio에서는 매개 변수 이름이 지원되는 경우 문자 "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}"를 매개 변수 이름에 사용할 수 있는 최소 지원 문자 집합으로 간주합니다.|  
-|QuotedIdentifierPattern|string|따옴표로 묶은 식별자와 일치하고 따옴표를 제외한 일치하는 식별자 값이 있는 정규식입니다. 예를 들어 큰따옴표로 따옴표 붙은 식별자를 식별 하는 데 사용 하는 데이터 원본,이 됩니다: "(([^\\"] &#124;\\" \\")*)".|  
+|QuotedIdentifierPattern|string|따옴표로 묶은 식별자와 일치하고 따옴표를 제외한 일치하는 식별자 값이 있는 정규식입니다. 예를 들어 큰따옴표로 따옴표 붙은 식별자를 식별 하는 데 사용 하는 데이터 원본,이 됩니다: "(([^\\"]&#124;\\"\\") *) "입니다.|  
 |QuotedIdentifierCase|<xref:System.Data.Common.IdentifierCase>|따옴표로 묶은 식별자의 대/소문자 구분 여부를 나타냅니다.|  
 |StatementSeparatorPattern|string|문 구분 기호와 일치하는 정규식입니다.|  
-|StringLiteralPattern|string|문자 리터럴과 일치하고 일치하는 리터럴 값이 있는 정규식입니다. 예를 들어, 작은 따옴표 문자열을 식별 하는 데 사용 하는 데이터 원본,이 됩니다: "('([^'] &#124; ') *')"'|  
+|StringLiteralPattern|string|문자 리터럴과 일치하고 일치하는 리터럴 값이 있는 정규식입니다. 예를 들어, 작은 따옴표 문자열을 식별 하는 데 사용 하는 데이터 원본,이 됩니다: "('([^']&#124;'') *')"'|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|데이터 소스에서 지원하는 SQL 조인 문의 형식을 지정합니다.|  
   
 ## <a name="datatypes"></a>DataTypes  

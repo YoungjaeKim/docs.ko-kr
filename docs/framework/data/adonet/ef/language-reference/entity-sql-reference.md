@@ -1,24 +1,26 @@
 ---
-title: "엔터티 SQL 참조"
-ms.custom: 
+title: 엔터티 SQL 참조
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="entity-sql-reference"></a>엔터티 SQL 참조
 이 단원에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 참조 항목이 포함되어 있습니다. 이 항목에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 작업이 요약되고 범주별로 그룹화되어 있습니다.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/19/2018
 |[=(같음)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|두 식이 같은지 비교합니다.|  
 |[>(보다 큼)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 큰지 여부를 결정합니다.|  
 |[>=(크거나 같음)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 크거나 같은지 여부를 결정합니다.|  
-|[&#91; 하지 &#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|쿼리 식이 null인지 여부를 결정합니다.|  
+|[&AMP;#91;하지&AMP;#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|쿼리 식이 null인지 여부를 결정합니다.|  
 |[<(보다 작음)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작은지 여부를 결정합니다.|  
 |[<=(작거나 같음)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작거나 같은지 여부를 결정합니다.|  
 |[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.|  
@@ -71,7 +73,7 @@ ms.lasthandoff: 01/19/2018
 |--------------|-----------------|  
 |[& & (논리적 AND)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|논리적 AND|  
 |[! (논리적 NOT)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|논리적 NOT|  
-|[&#124; &#124; (논리적 OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|논리적 OR|  
+|[&#124;&#124;(논리적 OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|논리적 OR|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|부울 식 집합을 계산하여 결과를 확인합니다.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|결과 [때](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) true로 평가 될 때 절.|  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 01/19/2018
 |[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|쿼리에서 반환된 데이터를 조건에 따라 필터링합니다.|  
   
 ## <a name="reference-operators"></a>참조 연산자  
- 참조는 특정 엔터티 집합 내의 특정 엔터티를 가리키는 논리 포인터(외래 키)입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]다음 연산자를 생성, 해체 및 참조를 통해 탐색을 지원 합니다.  
+ 참조는 특정 엔터티 집합 내의 특정 엔터티를 가리키는 논리 포인터(외래 키)입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 다음 연산자를 생성, 해체 및 참조를 통해 탐색을 지원 합니다.  
   
 |연산자|사용|  
 |--------------|---------|  
@@ -111,20 +113,20 @@ ms.lasthandoff: 01/19/2018
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|EXCEPT 피연산자 오른쪽 쿼리 식에서 반환되지 않은 모든 고유한 값 컬렉션을 EXCEPT 피연산자 왼쪽에 있는 쿼리 식에서 반환합니다.|  
 |[&#91;NOT&#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|컬렉션이 비어 있는지 확인합니다.|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|여러 컬렉션의 컬렉션을 하나의 결합된 컬렉션으로 변환합니다.|  
-|[&#91; 하지 &#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|컬렉션에 일치하는 값이 있는지 여부를 확인합니다.|  
+|[&AMP;#91;하지&AMP;#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|컬렉션에 일치하는 값이 있는지 여부를 확인합니다.|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|INTERSECT 피연산자의 왼쪽과 오른쪽에 있는 두 쿼리 식에서 반환된 고유한 값의 컬렉션을 반환합니다.|  
 |[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|두 컬렉션에 공통 요소가 있는지 여부를 확인합니다.|  
 |[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|중복 요소가 모두 제거된 새 컬렉션을 생성하여 개체 컬렉션을 집합으로 변환하는 데 사용됩니다.|  
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|두 개 이상의 쿼리 결과를 단일 컬렉션으로 결합합니다.|  
   
 ## <a name="type-operators"></a>형식 연산자  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]생성, 쿼리 및 조작 하는 식 (값)의 형식을 허용 하는 작업을 제공 합니다. 다음 표에서는 형식에 사용되는 연산자를 보여 줍니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 생성, 쿼리 및 조작 하는 식 (값)의 형식을 허용 하는 작업을 제공 합니다. 다음 표에서는 형식에 사용되는 연산자를 보여 줍니다.  
   
 |연산자|사용|  
 |--------------|---------|  
 |[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|데이터 형식의 식을 다른 형식의 식으로 변환합니다.|  
 |[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|에 사용 되는 [함수](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) 작업의 엔터티 형식 또는 복합 형식의 컬렉션을 선언 합니다.|  
-|[&#91; 하지 &#93; 의](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|식의 형식이 지정된 형식 또는 그 하위 형식인지 여부를 확인합니다.|  
+|[&AMP;#91;하지&AMP;#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|식의 형식이 지정된 형식 또는 그 하위 형식인지 여부를 확인합니다.|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|쿼리 식에서 특정 형식을 가진 개체 컬렉션을 반환합니다.|  
 |[명명된 형식 생성자](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|엔터티 형식이나 복합 형식의 인스턴스를 만드는 데 사용됩니다.|  
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|값 목록에서 multiset 인스턴스를 만듭니다.|  

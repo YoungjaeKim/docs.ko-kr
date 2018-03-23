@@ -1,26 +1,26 @@
 ---
-title: "WCF 서비스 게시"
-ms.custom: 
+title: WCF 서비스 게시
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF 서비스 게시
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 게시는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 제공하는 초기 개발 환경에서부터 테스트 목적으로 프로덕션 환경에 응용 프로그램을 실제로 배포하는 것에 이르기까지 프로세스를 진행하도록 도와 줍니다. 최종 배포 계획에 커밋하기 전에 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 게시를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스가 올바르게 수행되고 게시할 준비가 되었는지 확인할 수 있습니다. 또한 테스트 목적으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리를 여러 대상 위치에 배포할 수도 있습니다.  

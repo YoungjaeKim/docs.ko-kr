@@ -1,34 +1,34 @@
 ---
-title: "데이터 계약 스키마 참조"
-ms.custom: 
+title: 데이터 계약 스키마 참조
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data-contract-schema-reference"></a>데이터 계약 스키마 참조
 이 항목에서는 XML serialization에 대한 CLR(공용 언어 런타임) 형식을 설명하기 위해 <xref:System.Runtime.Serialization.DataContractSerializer> 에서 사용하는 XSD(XML 스키마) 하위 집합에 대해 설명합니다.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 매핑  
- 또한 WSDL(웹 서비스 기술 언어) 또는 XSD 문서에 액세스하여 서비스 또는 클라이언트에 대한 데이터 계약을 생성하기 위해 Svcutil.exe를 사용하는 경우 `DataContractSerializer` 는 메타데이터 끝점 또는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 를 사용하여 [indigo1](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)서비스에서 메타데이터를 내보낼 때 CLR 형식을 XSD에 매핑합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)합니다.  
+ 또한 WSDL(웹 서비스 기술 언어) 또는 XSD 문서에 액세스하여 서비스 또는 클라이언트에 대한 데이터 계약을 생성하기 위해 Svcutil.exe를 사용하는 경우 `DataContractSerializer` 는 메타데이터 끝점 또는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 를 사용하여 [indigo1](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)서비스에서 메타데이터를 내보낼 때 CLR 형식을 XSD에 매핑합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 계약 Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)합니다.  
   
  또한 WSDL(웹 서비스 기술 언어) 또는 XSD 문서에 액세스하여 서비스 또는 클라이언트에 대한 데이터 계약을 생성하기 위해 Svcutil.exe를 사용하는 경우 `DataContractSerializer` 는 XSD를 CLR 형식에 매핑합니다.  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 |`elementFormDefault`|정규화되어야 합니다. `DataContractSerializer`에서 스키마를 지원하려면 모든 요소가 정규화되어야 합니다. 설정 하거나이 수행할 수 있습니다 xs:schema/@elementFormDefault 을 "qualified" 또는 설정 하 여 xs:element/@form 각 개별 요소 선언 시 "qualified"로 합니다.|  
 |`finalDefault`|무시됩니다.|  
 |`Id`|무시됩니다.|  
-|`targetNamespace`|지원되며 데이터 계약 네임스페이스에 매핑됩니다. 이 특성을 지정하지 않으면 빈 네임스페이스가 사용됩니다. 예약된 네임스페이스 http://schemas.microsoft.com/2003/10/Serialization/일 수 없습니다.|  
+|`targetNamespace`|지원되며 데이터 계약 네임스페이스에 매핑됩니다. 이 특성을 지정하지 않으면 빈 네임스페이스가 사용됩니다. 예약된 된 네임 스페이스 일 수 없습니다 http://schemas.microsoft.com/2003/10/Serialization/합니다.|  
 |`version`|무시됩니다.|  
   
 ### <a name="xsschema-contents"></a>\<xs: schema >: 콘텐츠  
@@ -213,7 +213,7 @@ ms.lasthandoff: 12/22/2017
 |`keyref`|무시됩니다.|  
 |(비어 있음)|지원됩니다.|  
   
- \*사용 하는 경우는 `simpleType` 및 `complexType,` 때문에 명명 된 데이터 계약이 요소 이름에서 파생 된 생성 된 이름으로 생성 되 고 익명 데이터 계약이 없는 없다는 점을 제외 하면 익명 형식에 대 한 매핑을 익명이 아닌 형식 구문과 동일 합니다. 다음 목록에는 익명 형식에 대한 규칙이 포함되어 있습니다.  
+ \* 사용 하는 경우는 `simpleType` 및 `complexType,` 때문에 명명 된 데이터 계약이 요소 이름에서 파생 된 생성 된 이름으로 생성 되 고 익명 데이터 계약이 없는 없다는 점을 제외 하면 익명 형식에 대 한 매핑을 익명이 아닌 형식 구문과 동일 합니다. 다음 목록에는 익명 형식에 대한 규칙이 포함되어 있습니다.  
   
 -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현 정보: `xs:element` 이름에 마침표가 없는 경우 익명 형식은 외부 데이터 계약 형식의 내부 형식에 매핑됩니다. 이름에 마침표가 있는 경우 결과 데이터 계약 형식은 내부 형식이 아닌 독립적입니다.  
   
@@ -231,7 +231,7 @@ ms.lasthandoff: 12/22/2017
 |`id`|무시됩니다.|  
 |`name`|지원되며 데이터 계약 이름에 매핑됩니다.|  
   
-### <a name="xssimpletype-contents"></a>\<xs:simpleType >: 콘텐츠  
+### <a name="xssimpletype-contents"></a>\<xs:simpleType>: contents  
   
 |목차|스키마|  
 |--------------|------------|  
@@ -239,7 +239,7 @@ ms.lasthandoff: 12/22/2017
 |`list`|지원됩니다. 열거형 데이터 계약에 플래그됩니다. `xs:simpleType` 목록 단원을 참조하십시오.|  
 |`union`|사용할 수 없습니다.|  
   
-### <a name="xsrestriction"></a>\<xs: restriction >  
+### <a name="xsrestriction"></a>\<xs:restriction>  
   
 -   복합 형식 제한은 base="`xs:anyType`"에만 지원됩니다.  
   
@@ -342,7 +342,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<: list >  
+### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` 는 `System.FlagsAttribute` 로 표시된 열거형 형식을 `xs:list` 에서 파생된 `xs:string`에 매핑합니다. 다른 `xs:list` 변형은 지원되지 않습니다.  
   
 ### <a name="xslist-attributes"></a>\<: list >: 특성  
@@ -537,7 +537,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 형식 매핑  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 은 `ISerializable` 버전 1.0에서 지속성이나 데이터 전송을 위해 개체를 serialize하는 일반 메커니즘으로 새로 추가되었습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 을 구현하고 응용 프로그램 간에 전달할 수 있는 다양한 `ISerializable` 형식이 있습니다. `DataContractSerializer` 는 기본적으로 `ISerializable` 클래스에 대한 지원을 제공합니다. `DataContractSerializer`는 형식의 QName(정규화된 이름)에 의해서만 달라지는 효율적인 속성 컬렉션인 `ISerializable` 구현 스키마 형식을 매핑합니다. 예를 들어, `DataContractSerializer` 는 <xref:System.Exception> 을 http://schemas.datacontract.org/2004/07/System 네임스페이스에서 다음 XSD 형식에 매핑합니다.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 은 `ISerializable` 버전 1.0에서 지속성이나 데이터 전송을 위해 개체를 serialize하는 일반 메커니즘으로 새로 추가되었습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 을 구현하고 응용 프로그램 간에 전달할 수 있는 다양한 `ISerializable` 형식이 있습니다. `DataContractSerializer` 는 기본적으로 `ISerializable` 클래스에 대한 지원을 제공합니다. `DataContractSerializer` 는 형식의 QName(정규화된 이름)에 의해서만 달라지는 효율적인 속성 컬렉션인 `ISerializable` 구현 스키마 형식을 매핑합니다. 예를 들어는 `DataContractSerializer` 매핑합니다 <xref:System.Exception> 에서 다음 XSD 형식에는 http://schemas.datacontract.org/2004/07/System 네임 스페이스입니다.  
   
 ```xml  
 <xs:complexType name="Exception">  

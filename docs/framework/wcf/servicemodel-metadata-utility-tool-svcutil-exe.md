@@ -1,12 +1,13 @@
 ---
-title: "ServiceModel Metadata 유틸리티 도구(Svcutil.exe)"
-ms.custom: 
+title: ServiceModel Metadata 유틸리티 도구(Svcutil.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], building
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata 유틸리티 도구(Svcutil.exe)
 ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비스 모델 코드를 생성하고, 서비스 모델 코드에서 메타데이터 문서를 생성하는 데 사용됩니다.  
@@ -63,16 +65,16 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
   
 |옵션|설명|  
 |------------|-----------------|  
-|/directory:\<디렉터리 >|파일을 만들 디렉터리입니다.<br /><br /> 기본값: 현재 디렉터리<br /><br /> 약식: `/d`|  
+|/directory:\<directory>|파일을 만들 디렉터리입니다.<br /><br /> 기본값: 현재 디렉터리<br /><br /> 약식: `/d`|  
 |/help|이 도구의 명령 구문 및 옵션을 표시합니다.<br /><br /> 약식: `/?`|  
 |/noLogo|저작권 및 배너 메시지를 표시하지 않습니다.|  
-|/svcutilConfig:\<configFile >|App.config 파일 대신 사용할 사용자 지정 구성 파일을 지정합니다. 이 옵션은 도구의 구성 파일을 바꾸지 않고 system.serviceModel 확장을 등록하는 데 사용될 수 있습니다.|  
+|/svcutilConfig:\<configFile>|App.config 파일 대신 사용할 사용자 지정 구성 파일을 지정합니다. 이 옵션은 도구의 구성 파일을 바꾸지 않고 system.serviceModel 확장을 등록하는 데 사용될 수 있습니다.|  
 |/target:\<출력 유형 >|도구에서 생성할 출력을 지정합니다.<br /><br /> 유효한 값은 코드, 메타데이터 또는 xmlSerializer입니다.<br /><br /> 약식: `/t`|  
   
 ### <a name="code-generation"></a>코드 생성  
  Svcutil.exe를 사용하여 메타데이터 문서에서 서비스 계약, 클라이언트 및 데이터 형식에 대한 코드를 생성할 수 있습니다. 이러한 메타데이터 문서는 지속적인 저장소에 있거나 온라인으로 검색할 수 있습니다. 온라인 검색은 WS-Metadata Exchange 프로토콜이나 DISCO 프로토콜을 따릅니다. 자세한 내용은 메타데이터 다운로드 단원을 참조하십시오.  
   
- SvcUtil.exe 도구를 사용하여 미리 정의된 WSDL 문서를 기반으로 서비스 및 데이터 계약을 생성할 수 있습니다. /serviceContract 스위치를 사용하고 WSDL 문서를 다운로드하거나 찾을 수 있는 URL 또는 파일 위치를 지정합니다. 이렇게 하면 WSDL 문서에 정의된 서비스 및 데이터 계약을 생성하여 불만 서비스를 구현하는 데 사용할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][하는 방법: 메타 데이터 검색 및 규격 서비스 구현](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)합니다.  
+ SvcUtil.exe 도구를 사용하여 미리 정의된 WSDL 문서를 기반으로 서비스 및 데이터 계약을 생성할 수 있습니다. /serviceContract 스위치를 사용하고 WSDL 문서를 다운로드하거나 찾을 수 있는 URL 또는 파일 위치를 지정합니다. 이렇게 하면 WSDL 문서에 정의된 서비스 및 데이터 계약을 생성하여 불만 서비스를 구현하는 데 사용할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [방법: 메타 데이터 검색 및 규격 서비스 구현](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)합니다.  
   
  BasicHttpContextbinding 끝점이 있는 서비스의 경우 Svcutil.exe는 대신 `allowCookies` 특성이 `true`로 설정된 BasicHttpBinding을 생성합니다. 서버의 컨텍스트에 쿠키가 사용됩니다. 서비스가 쿠키를 사용할 때 클라이언트에서 컨텍스트를 관리하려면 컨텍스트 바인딩을 사용하도록 구성을 수동으로 수정할 수 있습니다.  
   
@@ -90,20 +92,20 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
 |옵션|설명|  
 |------------|-----------------|  
 |/async|동기 및 비동기 메서드 서명을 모두 생성합니다.<br /><br /> 기본값: 동기 메서드 서명만 생성합니다<br /><br /> 약식: `/a`|  
-|/collectionType:\<유형 >|WCF 클라이언트에 대한 목록 컬렉션 형식을 지정합니다.<br/><br /> 기본값: 컬렉션 형식은 System.Array 합니다. <br /><br /> 약식: `/ct`|  
-|/config:\<configFile >|생성된 구성 파일의 파일 이름을 지정합니다.<br /><br /> 기본값: output.config|  
+|/collectionType:\<type>|WCF 클라이언트에 대한 목록 컬렉션 형식을 지정합니다.<br/><br /> 기본값: 컬렉션 형식은 System.Array 합니다. <br /><br /> 약식: `/ct`|  
+|/config:\<configFile>|생성된 구성 파일의 파일 이름을 지정합니다.<br /><br /> 기본값: output.config|  
 |/dataContractOnly|데이터 계약 형식에 대한 코드만 생성합니다. 서비스 계약 형식은 생성되지 않습니다.<br /><br /> 이 옵션에 대한 로컬 메타데이터 파일만 지정해야 합니다.<br /><br /> 약식: `/dconly`|  
 |/enableDataBinding|모든 데이터 계약 형식에 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하여 데이터 바인딩을 사용할 수 있습니다.<br /><br /> 약식: `/edb`|  
-|/excludeType:\<유형 >|참조된 계약 형식에서 제외할 정규화된 형식 이름 또는 정규화된 어셈블리 형식 이름을 지정합니다.<br /><br /> 별도의 DLL에서 `/r`과 함께 이 스위치를 사용하는 경우 XSD 클래스의 전체 이름이 참조됩니다.<br /><br /> 약식: `/et`|  
+|/excludeType:\<type>|참조된 계약 형식에서 제외할 정규화된 형식 이름 또는 정규화된 어셈블리 형식 이름을 지정합니다.<br /><br /> 별도의 DLL에서 `/r`과 함께 이 스위치를 사용하는 경우 XSD 클래스의 전체 이름이 참조됩니다.<br /><br /> 약식: `/et`|  
 |/importXmlTypes|비데이터 계약 형식을 IXmlSerializable 형식으로 가져오도록 데이터 계약 serializer를 구성합니다.|  
 |/internal|internal로 표시된 클래스를 생성합니다. 기본값: 공용 클래스만 생성합니다.<br /><br /> 약식: `/i`|  
-|/language:\<언어 >|코드 생성에 사용할 프로그래밍 언어를 지정합니다. Machine.config 파일에 등록된 언어 이름 또는 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 상속된 클래스의 정규화된 이름을 입력해야 합니다.<br /><br /> 값: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> 기본값: csharp<br /><br /> 약식: `/l` **참고:** 스위치 Visual Studio 2005 s p 1과 함께 제공 되는 코드 공급자에 대 한 c + + 지원 합니다.|  
+|/language:\<language>|코드 생성에 사용할 프로그래밍 언어를 지정합니다. Machine.config 파일에 등록된 언어 이름 또는 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 상속된 클래스의 정규화된 이름을 입력해야 합니다.<br /><br /> 값: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> 기본값: csharp<br /><br /> 약식: `/l` **참고:** 스위치 Visual Studio 2005 s p 1과 함께 제공 되는 코드 공급자에 대 한 c + + 지원 합니다.|  
 |/mergeConfig|기존 파일을 덮어쓰는 대신 생성된 구성을 기존 파일에 병합합니다.|  
 |/messageContract|메시지 계약 형식을 생성합니다.<br /><br /> 약식: `/mc`|  
-|/namespace:\<문자열, 문자열 >|WSDL 또는 XML 스키마 targetNamespace에서 CLR 네임스페이스로의 매핑을 지정합니다. 사용 하 여 '\*'에 targetNamespace 해당 CLR 네임 스페이스에 명시적으로 매핑하지 않고 모든으로 매핑됩니다.<br /><br /> 메시지 계약 이름이 작업 이름과 충돌하지 않도록 하려면 `::`을 사용하여 형식 참조를 한정하거나 이름이 고유한지 확인해야 합니다.<br /><br /> 기본값: 데이터 계약에 대한 스키마 문서의 대상 네임스페이스에서 파생됩니다. 기본 네임스페이스는 생성된 다른 모든 형식에 사용됩니다.<br /><br /> 약식: `/n` **참고:** XmlSerializer를 사용 하는 형식을 생성 하는, 단일 네임 스페이스 매핑을 지원 됩니다. 생성 된 모든 형식으로 지정 된 네임 스페이스 또는 기본 네임 스페이스에서 갖게 됩니다 ' *'입니다.|  
+|/namespace:\<string,string>|WSDL 또는 XML 스키마 targetNamespace에서 CLR 네임스페이스로의 매핑을 지정합니다. 사용 하 여 '\*'에 targetNamespace 해당 CLR 네임 스페이스에 명시적으로 매핑하지 않고 모든으로 매핑됩니다.<br /><br /> 메시지 계약 이름이 작업 이름과 충돌하지 않도록 하려면 `::`을 사용하여 형식 참조를 한정하거나 이름이 고유한지 확인해야 합니다.<br /><br /> 기본값: 데이터 계약에 대한 스키마 문서의 대상 네임스페이스에서 파생됩니다. 기본 네임스페이스는 생성된 다른 모든 형식에 사용됩니다.<br /><br /> 약식: `/n` **참고:** XmlSerializer를 사용 하는 형식을 생성 하는, 단일 네임 스페이스 매핑을 지원 됩니다. 생성 된 모든 형식으로 지정 된 네임 스페이스 또는 기본 네임 스페이스에서 갖게 됩니다 ' *'입니다.|  
 |/noConfig|구성 파일을 생성하지 않습니다.|  
 |/noStdLib|표준 라이브러리를 참조하지 않습니다.<br /><br /> 기본값: Mscorlib.dll 및 System.servicemodel.dll이 참조됩니다.|  
-|/out:\<파일 >|생성된 코드에 대한 파일 이름을 지정합니다.<br /><br /> 기본값: WSDL 정의 이름, WSDL 서비스 이름 또는 스키마 중 하나의 대상 네임스페이스에서 파생됩니다.<br /><br /> 약식: `/o`|  
+|/out:\<file>|생성된 코드에 대한 파일 이름을 지정합니다.<br /><br /> 기본값: WSDL 정의 이름, WSDL 서비스 이름 또는 스키마 중 하나의 대상 네임스페이스에서 파생됩니다.<br /><br /> 약식: `/o`|  
 |/reference:\<파일 경로 >|지정한 어셈블리에서 형식을 참조합니다. 클라이언트를 생성할 때 이 옵션을 사용하여 가져오는 메타데이터를 나타내는 형식이 포함될 수 있는 어셈블리를 지정합니다.<br /><br /> 이 스위치를 사용하여 메시지 계약 및 <xref:System.Xml.Serialization.XmlSerializer> 형식을 지정할 수 없습니다.<br /><br /> <xref:System.DateTimeOffset>을 참조하는 경우 새 형식을 생성하는 대신 이 형식을 사용합니다. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 사용하여 응용 프로그램이 작성되는 경우 SvcUtil.exe는 <xref:System.DateTimeOffset>을 자동으로 참조합니다.<br /><br /> 약식: `/r`|  
 |/serializable|Serializable 특성으로 표시된 클래스를 생성합니다.<br /><br /> 약식: `/s`|  
 |/serviceContract|서비스 계약에만 해당하는 코드를 생성합니다. 클라이언트 클래스 및 구성이 생성되지 않습니다.<br /><br /> 약식: `/sc`|  
@@ -127,10 +129,10 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
   
 |옵션|설명|  
 |------------|-----------------|  
-|/serviceName:\<serviceConfigName >|내보낼 서비스의 구성 이름을 지정합니다. 이 옵션을 사용할 경우 연결된 구성 파일이 있는 실행 가능한 어셈블리를 입력으로 전달해야 합니다. Svcutil.exe는 서비스 구성에 대한 연결된 모든 구성 파일을 검색합니다. 구성 파일에 확장 형식이 있는 경우 이러한 형식을 포함하는 어셈블리는 GAC에 있거나 `/reference` 옵션을 사용하여 명시적으로 제공되어야 합니다.|  
+|/serviceName:\<serviceConfigName>|내보낼 서비스의 구성 이름을 지정합니다. 이 옵션을 사용할 경우 연결된 구성 파일이 있는 실행 가능한 어셈블리를 입력으로 전달해야 합니다. Svcutil.exe는 서비스 구성에 대한 연결된 모든 구성 파일을 검색합니다. 구성 파일에 확장 형식이 있는 경우 이러한 형식을 포함하는 어셈블리는 GAC에 있거나 `/reference` 옵션을 사용하여 명시적으로 제공되어야 합니다.|  
 |/reference:\<파일 경로 >|형식 참조를 확인하는 데 사용되는 어셈블리 집합에 지정된 어셈블리를 추가합니다. 구성에 등록된 타사 확장(Behaviors, Bindings 및 BindingElements)을 사용하는 서비스를 내보내거나 유효성을 검사하는 경우 이 옵션을 사용하여 GAC에 없는 확장 어셈블리를 찾으십시오.<br /><br /> 약식: `/r`|  
 |/dataContractOnly|데이터 계약 형식에 대해서만 작동합니다. 서비스 계약은 처리되지 않습니다.<br /><br /> 이 옵션에 대한 로컬 메타데이터 파일만 지정해야 합니다.<br /><br /> 약식: `/dconly`|  
-|/excludeType:\<유형 >|내보내기에서 제외할 형식의 정규화된 이름 또는 정규화된 어셈블리 이름을 지정합니다. 형식을 내보내기에서 제외하기 위해 서비스 또는 서비스 계약 집합에 대한 메타데이터를 내보내는 경우 이 옵션을 사용할 수 있습니다. 이 옵션은 `/dconly` 옵션과 함께 사용할 수 없습니다.<br /><br /> 여러 서비스가 포함된 단일 어셈블리가 있고, 각 서비스에서 XSD 이름이 같은 별도의 클래스를 사용하는 경우 이 스위치에 XSD 클래스 이름 대신 서비스 이름을 지정해야 합니다.<br /><br /> XSD 또는 데이터 계약 형식은 지원되지 않습니다.<br /><br /> 약식: `/et`|  
+|/excludeType:\<type>|내보내기에서 제외할 형식의 정규화된 이름 또는 정규화된 어셈블리 이름을 지정합니다. 형식을 내보내기에서 제외하기 위해 서비스 또는 서비스 계약 집합에 대한 메타데이터를 내보내는 경우 이 옵션을 사용할 수 있습니다. 이 옵션은 `/dconly` 옵션과 함께 사용할 수 없습니다.<br /><br /> 여러 서비스가 포함된 단일 어셈블리가 있고, 각 서비스에서 XSD 이름이 같은 별도의 클래스를 사용하는 경우 이 스위치에 XSD 클래스 이름 대신 서비스 이름을 지정해야 합니다.<br /><br /> XSD 또는 데이터 계약 형식은 지원되지 않습니다.<br /><br /> 약식: `/et`|  
   
 ### <a name="service-validation"></a>서비스 유효성 검사  
  유효성 검사는 서비스를 호스트하지 않고 서비스 구현의 오류를 검색하는 데 사용될 수 있습니다. 유효성을 검사할 서비스를 나타내려면 `/serviceName` 옵션을 사용해야 합니다.  
@@ -144,10 +146,10 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
 |옵션|설명|  
 |------------|-----------------|  
 |/validate|`/serviceName` 옵션에 의해 지정된 서비스 구현의 유효성을 검사합니다. 이 옵션을 사용할 경우 연결된 구성 파일이 있는 실행 가능한 어셈블리를 입력으로 전달해야 합니다.<br /><br /> 약식: `/v`|  
-|/serviceName:\<serviceConfigName >|유효성을 검사할 서비스의 구성 이름을 지정합니다. Svcutil.exe는 서비스 구성에 대한 모든 입력 어셈블리의 연결된 모든 구성 파일을 검색합니다. 구성 파일에 확장 형식이 있는 경우 이러한 형식을 포함하는 어셈블리는 GAC에 있거나 `/reference` 옵션을 사용하여 명시적으로 제공되어야 합니다.|  
+|/serviceName:\<serviceConfigName>|유효성을 검사할 서비스의 구성 이름을 지정합니다. Svcutil.exe는 서비스 구성에 대한 모든 입력 어셈블리의 연결된 모든 구성 파일을 검색합니다. 구성 파일에 확장 형식이 있는 경우 이러한 형식을 포함하는 어셈블리는 GAC에 있거나 `/reference` 옵션을 사용하여 명시적으로 제공되어야 합니다.|  
 |/reference:\<파일 경로 >|형식 참조를 확인하는 데 사용되는 어셈블리 집합에 지정된 어셈블리를 추가합니다. 구성에 등록된 타사 확장(Behaviors, Bindings 및 BindingElements)을 사용하는 서비스를 내보내거나 유효성을 검사하는 경우 이 옵션을 사용하여 GAC에 없는 확장 어셈블리를 찾으십시오.<br /><br /> 약식: `/r`|  
 |/dataContractOnly|데이터 계약 형식에 대해서만 작동합니다. 서비스 계약은 처리되지 않습니다.<br /><br /> 이 옵션에 대한 로컬 메타데이터 파일만 지정해야 합니다.<br /><br /> 약식: `/dconly`|  
-|/excludeType:\<유형 >|유효성 검사에서 제외할 형식의 정규화된 이름 또는 정규화된 어셈블리 이름을 지정합니다.<br /><br /> 약식: `/et`|  
+|/excludeType:\<type>|유효성 검사에서 제외할 형식의 정규화된 이름 또는 정규화된 어셈블리 이름을 지정합니다.<br /><br /> 약식: `/et`|  
   
 ### <a name="metadata-download"></a>메타데이터 다운로드  
  Svcutil.exe를 사용하여 실행 중인 서비스에서 메타데이터를 다운로드하고 로컬 파일에 저장할 수 있습니다. 메타데이터를 다운로드하려면 `/t:metadata` 옵션을 지정해야 합니다. 그렇지 않으면 클라이언트 코드가 생성됩니다. HTTP 및 HTTPS URL 스키마의 경우 Svcutil.exe에서는 WS-Metadata Exchange 및 DISCO를 사용하여 메타데이터를 검색하려고 시도합니다. 기타 모든 URL 스키마의 경우 Svcutil.exe에서 WS-Metadata Exchange만 사용합니다.  
@@ -189,8 +191,8 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
 |옵션|설명|  
 |------------|-----------------|  
 |/reference:\<파일 경로 >|형식 참조를 확인하는 데 사용되는 어셈블리 집합에 지정된 어셈블리를 추가합니다.<br /><br /> 약식: `/r`|  
-|/excludeType:\<유형 >|내보내기 또는 유효성 검사에서 제외할 형식의 정규화된 이름 또는 정규화된 어셈블리 이름을 지정합니다.<br /><br /> 약식: `/et`|  
-|/out:\<파일 >|생성된 코드에 대한 파일 이름을 지정합니다. 이 옵션은 여러 어셈블리가 도구에 입력으로 전달되는 경우 무시됩니다.<br /><br /> 기본값: 어셈블리 이름에서 파생됩니다.<br /><br /> 약식: `/o`|  
+|/excludeType:\<type>|내보내기 또는 유효성 검사에서 제외할 형식의 정규화된 이름 또는 정규화된 어셈블리 이름을 지정합니다.<br /><br /> 약식: `/et`|  
+|/out:\<file>|생성된 코드에 대한 파일 이름을 지정합니다. 이 옵션은 여러 어셈블리가 도구에 입력으로 전달되는 경우 무시됩니다.<br /><br /> 기본값: 어셈블리 이름에서 파생됩니다.<br /><br /> 약식: `/o`|  
 |/UseSerializerForFaults|지정 하는 <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` 기본값 대신 오류를 읽고 쓰는에 사용할 <xref:System.Runtime.Serialization.DataContractSerializer>합니다.|  
   
 ## <a name="examples"></a>예제  

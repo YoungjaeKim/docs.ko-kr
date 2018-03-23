@@ -1,7 +1,7 @@
 ---
-title: ".NET 용어"
-description: ".NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다."
-keywords: ".NET 용어, .NET 사전, .NET 용어, .NET 플랫폼, .NET framework, .NET 런타임"
+title: .NET 용어
+description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
+keywords: .NET 용어, .NET 사전, .NET 용어, .NET 플랫폼, .NET framework, .NET 런타임
 author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
@@ -13,10 +13,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -272,7 +272,7 @@ OS는 런타임 환경의 일부이지만 .NET 런타임의 일부는 아닙니�
 
 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 응용 프로그램 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현입니다. PC, 태블릿, 패블릿, 휴대폰, Xbox 등 대상으로 지정할 수 있는 다양한 종류의 장치를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32 대신 사용할 Windows API 집합(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++, C#, VB.NET 및 JavaScript로 작성할 수 있습니다. C# 및 VB.NET을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [.NET 가이드](index.md)  
 [.NET Framework 가이드](../framework/index.md)  

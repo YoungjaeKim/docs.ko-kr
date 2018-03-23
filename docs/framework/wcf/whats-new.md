@@ -1,33 +1,35 @@
 ---
-title: "기능 &#39; Windows Communication Foundation 4.5의 새로운 s"
-ms.custom: 
+title: 어떤&#39;Windows Communication Foundation 4.5의 새로운 s
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-caps.latest.revision: "35"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 091925dd1f505693df0d1eb770bca604cf038667
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="what39s-new-in-windows-communication-foundation-45"></a>기능 &#39; Windows Communication Foundation 4.5의 새로운 s
+# <a name="what39s-new-in-windows-communication-foundation-45"></a>어떤&#39;Windows Communication Foundation 4.5의 새로운 s
 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에 새로 추가된 기능에 대해 설명합니다.  
   
 ## <a name="wcf-simplification-features"></a>WCF 단순화 기능  
- WCF 4.5 응용 프로그램을 더 쉽게 개발하고 유지할 수 있도록 많은 작업이 이루어졌습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)합니다.  
+ WCF 4.5 응용 프로그램을 더 쉽게 개발하고 유지할 수 있도록 많은 작업이 이루어졌습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)합니다.  
   
 ### <a name="task-based-async-support"></a>작업 기반 비동기 지원  
  기본적으로 서비스 참조를 추가하면 태스크 반환 비동기 서비스 작업 메서드가 생성됩니다. 이는 동기 및 비동기 메서드에 대해 수행됩니다. 따라서 새로운 작업 기반 비동기 프로그래밍 모델을 사용하여 비동기적으로 서비스 작업을 호출할 수 있습니다. 생성된 프록시 메서드를 호출하면 WCF는 비동기 작업을 나타내는 작업 개체를 생성하고 해당 작업를 사용자에게 반환합니다. 작업이 완료 되는 작업을 완료 합니다.  비동기 작업을 구현 하는 경우에 작업 기반 비동기 작업으로 구현할 수 있습니다. 자세한 내용은 참조 하십시오 [동기 및 비동기 작업](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다.  
@@ -35,22 +37,22 @@ ms.lasthandoff: 01/19/2018
 ### <a name="simplified-generated-configuration-files"></a>단순화되어 생성된 구성 파일  
  Visual Studio에 서비스 참조를 추가하거나 SvcUtil.exe 도구를 사용하면 클라이언트 구성 파일이 생성됩니다. 이전 버전의 WCF에서는 바인딩 속성 값이 기본값인 경우를 포함하여 모든 바인딩 속성 값이 이러한 구성 파일에 포함되었습니다. WCF 4.5에서는 생성된 구성 파일에 기본값이 아닌 값으로 설정된 바인딩 속성만 포함됩니다.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)  
   
 ### <a name="contract-first-development"></a>계약 중심 개발  
  WCF는 이제 계약 중심 개발을 지원합니다. svcutl.exe에는 WSDL 문서에서 서비스 및 데이터 계약을 생성하는 데 사용할 수 있는 /serviceContract 스위치가 있습니다.  
   
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>이식 가능한 하위 집합 프로젝트의 서비스 참조 추가  
- 이식 가능한 하위 집합 프로젝트를 사용하면 복수 .NET 플랫폼(데스크톱, Silverlight, Windows Phone, XBOX)을 지원하면서 .NET 어셈블리 프로그래머가 하나의 소스 트리를 유지하고 시스템을 빌드할 수 있습니다. 이식 가능한 하위 집합 프로젝트는 모든.NET 플랫폼에 사용할 수 있는.NET framework 어셈블리인.NET 이식 가능한 라이브러리만 참조 합니다. 개발자 환경은 다른 WCF 클라이언트 응용 프로그램에 서비스 참조를 추가하는 것과 동일합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][이식 가능한 하위 집합 프로젝트에서 서비스 참조 추가](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)합니다.  
+ 이식 가능한 하위 집합 프로젝트를 사용하면 복수 .NET 플랫폼(데스크톱, Silverlight, Windows Phone, XBOX)을 지원하면서 .NET 어셈블리 프로그래머가 하나의 소스 트리를 유지하고 시스템을 빌드할 수 있습니다. 이식 가능한 하위 집합 프로젝트는 모든.NET 플랫폼에 사용할 수 있는.NET framework 어셈블리인.NET 이식 가능한 라이브러리만 참조 합니다. 개발자 환경은 다른 WCF 클라이언트 응용 프로그램에 서비스 참조를 추가하는 것과 동일합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [이식 가능한 하위 집합 프로젝트에서 서비스 참조 추가](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)합니다.  
   
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 호환 모드 기본값 변경  
- WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 기능에 완전하게 액세스할 수 있게 해 주는 ASP.NET 호환 모드를 제공합니다. 이 모드를 사용 하려면 설정 해야 합니다는 `aspNetCompatibilityEnabled` 특성을 true로는 [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config의 섹션입니다. 또한 이 appDomain의 모든 서비스는 `RequirementsMode`의 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 속성이 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 또는 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>로 설정되어야 합니다. 기본적으로 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 로 설정 되었습니다 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Communication Foundation의 새로운 소식](../../../docs/framework/wcf/whats-new.md) 및 [WCF 서비스 및 ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.  
+ WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 기능에 완전하게 액세스할 수 있게 해 주는 ASP.NET 호환 모드를 제공합니다. 이 모드를 사용 하려면 설정 해야 합니다는 `aspNetCompatibilityEnabled` 특성을 true로는 [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config의 섹션입니다. 또한 이 appDomain의 모든 서비스는 `RequirementsMode`의 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 속성이 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 또는 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>로 설정되어야 합니다. 기본적으로 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 로 설정 되었습니다 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Communication Foundation의 새로운 소식](../../../docs/framework/wcf/whats-new.md) 및 [WCF 서비스 및 ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.  
   
 ### <a name="new-transport-default-values"></a>새 전송 기본값  
- 구성을 단순화하기 위해 여러 전송 속성의 기본값이 변경되었습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)합니다.  
+ 구성을 단순화하기 위해 여러 전송 속성의 기본값이 변경되었습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)합니다.  
   
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas  
- <xref:System.Xml.XmlDictionaryReaderQuotas>에는 메시지를 만드는 동안 인코더가 사용하는 메모리의 크기를 제한하는 XML 사전 판독기에 대한 구성 가능 할당량 값이 포함됩니다. 이러한 할당량은 구성 가능하지만, 개발자가 이를 명시적으로 설정해야 할 가능성을 줄이기 위해 기본값이 변경되었습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)합니다.  
+ <xref:System.Xml.XmlDictionaryReaderQuotas>에는 메시지를 만드는 동안 인코더가 사용하는 메모리의 크기를 제한하는 XML 사전 판독기에 대한 구성 가능 할당량 값이 포함됩니다. 이러한 할당량은 구성 가능하지만, 개발자가 이를 명시적으로 설정해야 할 가능성을 줄이기 위해 기본값이 변경되었습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)합니다.  
   
 ### <a name="wcf-configuration-validation"></a>WCF 구성 유효성 검사  
  이제 Visual Studio 내에서 빌드 프로세스의 일부로 WCF 구성 파일에 대해 프로젝트 내에 정의된 특성의 유효성이 검사됩니다. 유효성 검사가 실패할 경우 유효성 검사 오류 또는 경고의 목록이 Visual Studio에 표시됩니다.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
  WCF 서비스의 기존 및 새 개발자들이 서비스를 구성하는 데 도움이 되도록 이제 Visual Studio XML 편집기에서 서비스 구성 파일에 포함된 모든 구성 요소 및 해당 속성에 대한 도구 설명을 제공합니다.  
   
 ## <a name="streaming-improvements"></a>스트리밍 향상  
- 수신 측이 읽고 있지 않거나 느리게 읽고 있을 때 전송 측이 스레드를 차단하지 않는 진정한 의미의 비동기 스트리밍을 추가 지원하여 확장성을 향상시켰습니다. 클라이언트가 스트리밍된 메시지를 IIS에서 호스팅된 WCF 서비스에 전송할 때 메시지 버퍼링 제한을 제거하였습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)합니다.  
+ 수신 측이 읽고 있지 않거나 느리게 읽고 있을 때 전송 측이 스레드를 차단하지 않는 진정한 의미의 비동기 스트리밍을 추가 지원하여 확장성을 향상시켰습니다. 클라이언트가 스트리밍된 메시지를 IIS에서 호스팅된 WCF 서비스에 전송할 때 메시지 버퍼링 제한을 제거하였습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)합니다.  
   
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>IIS를 사용하여 HTTPS에 끝점 노출 단순화  
  HTTPS에서 끝점 노출을 단순화하기 위해 HTTPS 프로토콜 매핑이 추가되었습니다. HTTPS 끝점을 활성화하려면 웹 사이트에 HTTPS 바인딩 및 SSL 인증서가 구성되어 있는지 확인하고 서비스를 호스팅하는 가상 디렉터리에 HTTPS를 사용하도록 설정하기만 하면 됩니다. 서비스에 메타데이터가 활성화되어 있으면 메타데이터도 HTTPS에 노출됩니다.  
@@ -77,7 +79,7 @@ ms.lasthandoff: 01/19/2018
 |--------------|--------|-----------------|------------------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30초|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 프로세서 수|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 전송용 프로세서 수<br /><br /> 4 \* SMSvcHost.exe 용 프로세서 수|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>[Net.TCP Port Sharing Service를 구성 합니다.](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 전송용 프로세서 수<br /><br /> 4 \* SMSvcHost.exe 용 프로세서 수|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Net.TCP Port Sharing Service를 구성 합니다.](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 프로세서 수|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
 |receiveTimeout|SMSvcHost.exe|30초|[Net.TCP Port Sharing Service 구성](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 01/19/2018
  WCF 서비스의 기존 및 새 개발자들이 서비스를 구성하는 데 도움이 되도록 이제 Visual Studio XML 편집기에서 서비스 구성 파일에 포함된 모든 구성 요소 및 해당 속성에 대한 도구 설명을 제공합니다.  
   
 ## <a name="configuring-wcf-services-in-code"></a>코드로 WCF 서비스 구성  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서는 개발자가 구성 파일 또는 코드를 사용하여 서비스를 구성할 수 있습니다.  구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 서비스를 코드로 구성할 수도 있습니다. 이전 버전 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)](4.0 이하)의 경우 자체 호스팅 시나리오에서 코드로 서비스를 구성하기가 쉬웠으며 <xref:System.ServiceModel.ServiceHost> 클래스를 사용하여 ServiceHost.Open을 호출하기 전에 끝점 및 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 자체 호스팅 서비스와 웹 호스팅 서비스를 모두 코드로 구성할 수 있는 더욱 손쉬운 방법을 제공합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][코드로 WCF 서비스를에서 구성](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)합니다.  
+ [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서는 개발자가 구성 파일 또는 코드를 사용하여 서비스를 구성할 수 있습니다.  구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 서비스를 코드로 구성할 수도 있습니다. 이전 버전 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)](4.0 이하)의 경우 자체 호스팅 시나리오에서 코드로 서비스를 구성하기가 쉬웠으며 <xref:System.ServiceModel.ServiceHost> 클래스를 사용하여 ServiceHost.Open을 호출하기 전에 끝점 및 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 자체 호스팅 서비스와 웹 호스팅 서비스를 모두 코드로 구성할 수 있는 더욱 손쉬운 방법을 제공합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [코드로 WCF 서비스를에서 구성](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)합니다.  
   
 ## <a name="channelfactory-caching"></a>ChannelFactory 캐싱  
  WCF 클라이언트 응용 프로그램에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다.  <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.  
@@ -98,10 +100,10 @@ ms.lasthandoff: 01/19/2018
   
 4.  리소스 삭제  
   
- 이 오버헤드를 최소화하기 위해 사용자가 WCF 클라이언트 프록시를 사용할 때 WCF가 채널 팩터리를 캐시할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][채널 팩터리 및 캐싱](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md)합니다.  
+ 이 오버헤드를 최소화하기 위해 사용자가 WCF 클라이언트 프록시를 사용할 때 WCF가 채널 팩터리를 캐시할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [채널 팩터리 및 캐싱](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md)합니다.  
   
 ## <a name="compression-and-the-binary-encoder"></a>압축 및 이진 인코더  
- WCF 4.5부터는 WCF 이진 인코더에서 압축을 추가 지원합니다. 압축 형식은 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> 속성에서 구성합니다. 클라이언트와 서비스 모두 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> 속성을 구성해야 합니다. HTTP, HTTPS 및 TCP 프로토콜에 대해 압축이 가능합니다. 클라이언트가 압축을 사용하도록 지정하더라도 서비스에서 이를 지원하지 않으면 프로토콜이 일치하지 않는다는 프로토콜 예외가 throw됩니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][메시지 인코더 선택](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ WCF 4.5부터는 WCF 이진 인코더에서 압축을 추가 지원합니다. 압축 형식은 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> 속성에서 구성합니다. 클라이언트와 서비스 모두 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> 속성을 구성해야 합니다. HTTP, HTTPS 및 TCP 프로토콜에 대해 압축이 가능합니다. 클라이언트가 압축을 사용하도록 지정하더라도 서비스에서 이를 지원하지 않으면 프로토콜이 일치하지 않는다는 프로토콜 예외가 throw됩니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [메시지 인코더 선택](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
   
 ## <a name="udp"></a>UDP  
  개발자가 "fire and forget"를 사용 하는 서비스를 작성할 수 있도록 UDP 전송에 대 한 지원이 추가 되었습니다 메시징입니다. 클라이언트는 서비스에 메시지를 보내고 서비스에서 응답을 기대하지 않습니다.  
