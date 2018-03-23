@@ -1,4 +1,5 @@
 # [C# 6.0 초안 사양](index.md)
+## [소개](../../../../_csharplang/spec/introduction.md)
 ## [어휘 구조](../../../../_csharplang/spec/lexical-structure.md)
 ## [기본 개념](../../../../_csharplang/spec/basic-concepts.md)
 ## [유형](../../../../_csharplang/spec/types.md)

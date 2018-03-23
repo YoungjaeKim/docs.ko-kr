@@ -1,35 +1,34 @@
 ---
-title: /win32resource
-ms.date: 07/20/2015
+title: -win32resource
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
-- /win32resource
+- -win32resource
 - win32resource
 helpviewer_keywords:
 - /win32resource compiler option [Visual Basic]
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d839b1100b1ae76fbd4653ebc60c79db11b77685
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 4e210d88d32ac7341ab881ca6ff0e44961469a31
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="win32resource"></a>/win32resource
+# <a name="-win32resource"></a>-win32resource
 출력 파일에 Win32 리소스 파일을 삽입합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-/win32resource:filename  
+-win32resource:filename  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -39,18 +38,18 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>설명  
  Microsoft Windows 리소스 컴파일러 (RC)와 Win32 리소스 파일을 만들 수 있습니다.  
   
- Win32 리소스 버전을 포함할 수 있습니다 또는에서 응용 프로그램을 식별 하는 데 도움이 되는 비트맵 (아이콘) 정보 **파일 탐색기**합니다. 지정 하지 않으면 `/win32resource`, 컴파일러는 어셈블리 버전에 따라 버전 정보를 생성 합니다. `/win32resource` 및 `/win32icon` 옵션은 함께 사용할 수 없습니다.  
+ Win32 리소스 버전을 포함할 수 있습니다 또는에서 응용 프로그램을 식별 하는 데 도움이 되는 비트맵 (아이콘) 정보 **파일 탐색기**합니다. 지정 하지 않으면 `-win32resource`, 컴파일러는 어셈블리 버전에 따라 버전 정보를 생성 합니다. `-win32resource` 및 `-win32icon` 옵션은 함께 사용할 수 없습니다.  
   
- 참조 [/linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) 참조에는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 리소스 파일 또는 [/resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) 연결할는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 리소스 파일입니다.  
+ 참조 [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) 참조에는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 리소스 파일 또는 [-리소스 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) 연결할는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 리소스 파일입니다.  
   
 > [!NOTE]
->  `/win32resource` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 경우에 사용할 수는 있습니다.  
+>  `-win32resource` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 경우에 사용할 수는 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 코드에서는 `In.vb` Win32 리소스 파일을 첨부 `Rf.res`:  
   
-```  
-vbc /win32resource:rf.res in.vb  
+```console  
+vbc -win32resource:rf.res in.vb  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

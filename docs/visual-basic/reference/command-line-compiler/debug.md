@@ -1,10 +1,11 @@
 ---
 title: /debug(Visual Basic)
-ms.date: 07/20/2015
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - debug compiler switches
@@ -12,24 +13,23 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 07ab386ddb456c059b6390b986ec0a880320973b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 7430a3ac85a86ed5528af9ea830da530208749eb
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="debug-visual-basic"></a>/debug(Visual Basic)
+# <a name="-debug-visual-basic"></a>-디버그 (Visual Basic)
 컴파일러가 디버깅 정보를 생성 하 여 출력 파일에 배치 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-/debug[+ | -]  
+-debug[+ | -]  
 ' -or-  
-/debug:[full | pdbonly]  
+-debug:[full | pdbonly]  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -46,15 +46,15 @@ ms.lasthandoff: 12/21/2017
   
  응용 프로그램의 디버그 성능을 구성하는 방법에 대한 자세한 내용은 [쉽게 디버깅할 수 있도록 이미지 만들기](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)를 참조하세요.  
   
-|Visual Studio에서 /debug을 설정 하려면 통합 개발 환경|  
+|Visual Studio 통합된 개발 환경에서 디버그-설정 하려면|  
 |---|  
 |1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급 컴파일 옵션**을 클릭합니다.<br />4.  값을 수정 된 **디버그 정보 생성** 상자입니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  출력 파일에 디버깅 정보를 저장 하는 다음 예제에서는 `App.exe`합니다.  
   
 ```  
-vbc /debug /out:app.exe test.vb  
+vbc -debug -out:app.exe test.vb  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

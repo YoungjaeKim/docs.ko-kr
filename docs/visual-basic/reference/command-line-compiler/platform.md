@@ -1,32 +1,31 @@
 ---
-title: /platform(Visual Basic)
-ms.date: 07/20/2015
+title: -플랫폼 (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - platform compiler option [Visual Basic]
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 09c7d677e614186d26a2ff8a1ce2fe5213cf7799
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="platform-visual-basic"></a>/platform(Visual Basic)
+# <a name="-platform-visual-basic"></a>-플랫폼 (Visual Basic)
 출력 파일을 실행할 수 있는 CLR(공용 언어 런타임) 플랫폼 버전을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-/platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
+-platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -41,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |`anycpu32bitpreferred`|임의의 플랫폼에서 실행되도록 어셈블리를 컴파일합니다. 응용 프로그램은 32비트 및 64비트 버전 Windows 둘 다에서 32비트 응용 프로그램으로 실행됩니다. 이 플래그는 실행 파일(.EXE)에 대해서만 유효하며, 사용하려면 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]가 필요합니다.|  
   
 ## <a name="remarks"></a>설명  
- 출력 파일의 대상 프로세서 유형을 지정하려면 `/platform` 옵션을 사용합니다.  
+ 출력 파일의 대상 프로세서 유형을 지정하려면 `-platform` 옵션을 사용합니다.  
   
  일반적으로 Visual Basic에서 작성된 .NET Framework 어셈블리는 플랫폼에 관계없이 동일하게 실행됩니다. 그러나 플랫폼별로 동작이 다른 경우도 있습니다. 이러한 경우의 일반적인 예는 다음과 같습니다.  
   
@@ -55,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 -   일부 플랫폼에만 있는 구성 요소를 통한 플랫폼 호출 또는 COM interop 사용  
   
- **/platform** 옵션에 해당 코드가 실행 되는 아키텍처에 대 한 가정을 알고 있는 경우 몇 가지 문제가 완화 됩니다. 구체적으로는 다음과 같습니다.  
+ **-플랫폼** 옵션에 해당 코드가 실행 되는 아키텍처에 대 한 가정을 알고 있는 경우 몇 가지 문제가 완화 됩니다. 구체적으로는 다음과 같습니다.  
   
 -   응용 프로그램이 32비트 컴퓨터에서 실행되는데 64비트 플랫폼을 대상으로 지정하는 경우에는 오류 메시지가 훨씬 더 일찍 표시되며, 이 스위치를 사용하지 않아 발생하는 오류보다는 문제 자체에 대한 내용이 중점적으로 표시됩니다.  
   
@@ -63,17 +62,17 @@ ms.lasthandoff: 12/21/2017
   
  64비트 Windows 운영 체제:  
   
--   `/platform:x86`으로 컴파일된 어셈블리는 WOW64에서 실행되는 32비트 CLR에서 실행됩니다.  
+-   `-platform:x86`으로 컴파일된 어셈블리는 WOW64에서 실행되는 32비트 CLR에서 실행됩니다.  
   
--   `/platform:anycpu`로 컴파일된 실행 파일은 64비트 CLR에서 실행됩니다.  
+-   `-platform:anycpu`로 컴파일된 실행 파일은 64비트 CLR에서 실행됩니다.  
   
--   `/platform:anycpu`로 컴파일된 DLL은 이 DLL이 로드된 프로세스와 동일한 CLR에서 실행됩니다.  
+-   `-platform:anycpu`로 컴파일된 DLL은 이 DLL이 로드된 프로세스와 동일한 CLR에서 실행됩니다.  
   
--   `/platform:anycpu32bitpreferred`로 컴파일된 실행 파일은 32비트 CLR에서 실행됩니다.  
+-   `-platform:anycpu32bitpreferred`로 컴파일된 실행 파일은 32비트 CLR에서 실행됩니다.  
   
  64 비트 버전의 Windows에서 실행 되도록 응용 프로그램을 개발 하는 방법에 대 한 자세한 내용은 참조 [64 비트 응용 프로그램](../../../framework/64-bit-apps.md)합니다.  
   
-### <a name="to-set-platform-in-the-visual-studio-ide"></a>Visual Studio IDE에서 /platform을 설정하려면  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>-Visual Studio IDE에서 플랫폼을 설정 하려면  
   
 1.  **솔루션 탐색기**, 프로젝트를 선택 열고는 **프로젝트** 메뉴를 차례로 클릭 **속성**합니다.  
   
@@ -81,11 +80,11 @@ ms.lasthandoff: 12/21/2017
   
      자세한 내용은 참조 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)합니다.  
   
-## <a name="example"></a>예  
- 다음 예제에서는 `/platform` 컴파일러 옵션을 사용하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `-platform` 컴파일러 옵션을 사용하는 방법을 보여 줍니다.  
   
-```  
-vbc /platform:x86 myFile.vb  
+```console
+vbc -platform:x86 myFile.vb  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

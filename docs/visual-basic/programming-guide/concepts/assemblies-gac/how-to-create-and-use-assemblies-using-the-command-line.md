@@ -1,22 +1,21 @@
 ---
-title: "방법: 명령줄 (Visual Basic)를 사용 하 여 어셈블리 만들기 및 사용"
-ms.custom: 
-ms.date: 07/20/2015
+title: '방법: 명령줄 (Visual Basic)를 사용 하 여 어셈블리 만들기 및 사용'
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72f3e91f9fb88019f937dcd281aa14ab4e887daf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: b39648107697cdbaa8856705f44df605efda11fa
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>방법: 명령줄 (Visual Basic)를 사용 하 여 어셈블리 만들기 및 사용
 어셈블리 또는 DLL(동적 연결 라이브러리)은 런타임 시 프로그램에 연결됩니다. DLL 빌드 및 사용을 보여 주려면 다음 시나리오를 고려합니다.  
@@ -110,19 +109,19 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 ## <a name="compiling-the-code"></a>코드 컴파일  
  `MathLibrary.DLL` 파일을 빌드하려면 다음 명령줄을 사용하여 두 개의 파일 `Add` 및 `Mult`를 컴파일합니다.  
   
-```vb  
-vbc /target:library /out:MathLibrary.DLL Add.vb Mult.vb  
+```console  
+vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [/target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) 컴파일러 옵션 EXE 파일 대신 DLL을 출력 하도록 컴파일러에 지시 합니다. [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) 파일 이름이 옵니다 컴파일러 옵션은 DLL 파일 이름을 지정 하는 데 사용 됩니다. 사용하지 않을 경우 컴파일러는 첫 번째 파일(`Add.vb`)을 DLL의 이름으로 사용합니다.  
+ [-대상 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) 컴파일러 옵션 EXE 파일 대신 DLL을 출력 하도록 컴파일러에 지시 합니다. [-(Visual Basic) 아웃](../../../../visual-basic/reference/command-line-compiler/out.md) 의 파일 이름은 컴파일러 옵션은 DLL 파일 이름을 지정 하는 데 사용 됩니다. 사용하지 않을 경우 컴파일러는 첫 번째 파일(`Add.vb`)을 DLL의 이름으로 사용합니다.  
   
  실행 파일 `TestCode.exe`를 빌드하려면 다음 명령줄을 사용합니다.  
   
-```vb  
-vbc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.vb  
+```console  
+vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- **/out** 컴파일러 옵션은 EXE 파일을 출력하도록 컴파일러에 지시하고 출력 파일의 이름(`TestCode.exe`)을 지정합니다. 이 컴파일러 옵션은 선택 사항입니다. [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러 옵션을이 프로그램을 사용 하는 DLL 파일을 지정 합니다.  
+ **-아웃** 컴파일러 옵션 EXE 파일을 출력 하도록 컴파일러에 지시 하 고 출력 파일의 이름을 지정 합니다 (`TestCode.exe`). 이 컴파일러 옵션은 선택 사항입니다. [-참조 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러 옵션을이 프로그램을 사용 하는 DLL 파일을 지정 합니다.  
   
  명령줄에서 빌드에 대 한 자세한 내용은 참조 및 [명령줄에서 빌드](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)합니다.  
   

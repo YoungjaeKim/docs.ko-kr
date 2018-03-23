@@ -1,12 +1,12 @@
 ---
-title: "암호화 및 해독용 키 생성"
-ms.custom: 
+title: 암호화 및 해독용 키 생성
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - asymmetric keys [.NET Framework]
 - cryptography [.NET Framework], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -80,7 +80,7 @@ TDES.GenerateKey();
   
  두 메서드는 공개 키 정보만 반환할지 또는 공개 키와 개인 키 정보를 모두 반환할지를 나타내는 부울 값을 허용합니다. **메서드를 사용하여** RSACryptoServiceProvider **클래스를** RSAParameters <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> 구조체의 값으로 초기화할 수 있습니다.  
   
- 비대칭 개인 키는 로컬 컴퓨터에 축자로 저장하거나 일반 텍스트로 저장해서는 안 됩니다. 개인 키를 저장해야 하는 경우에는 키 컨테이너를 사용해야 합니다. 키 컨테이너에서 개인 키를 저장하는 방법에 대한 자세한 내용은 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)을 참조하세요.  
+ 비대칭 개인 키는 로컬 컴퓨터에 축자로 저장하거나 일반 텍스트로 저장해서는 안 됩니다. 개인 키를 저장해야 하는 경우에는 키 컨테이너를 사용해야 합니다. 키 컨테이너에서 개인 키를 저장하는 방법에 대한 자세한 내용은 [방법: 키 컨테이너에 비대칭 키 저장](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)을 참조하세요.  
   
  다음 코드 예제에서는 공개/개인 키 쌍을 만들어 **RSACryptoServiceProvider** 클래스의 새 인스턴스를 만들고 공개 키 정보를 **RSAParameters** 구조체에 저장합니다.  
   

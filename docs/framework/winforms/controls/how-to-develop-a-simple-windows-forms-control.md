@@ -1,12 +1,13 @@
 ---
-title: "방법: 간단한 Windows Forms 컨트롤 개발"
-ms.custom: 
+title: '방법: 간단한 Windows Forms 컨트롤 개발'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da876ec74bf80d4329451a9bf125421731c7f9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab7fced9237cad3de30d417770f6f1d7f7e7ed6a
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>방법: 간단한 Windows Forms 컨트롤 개발
 이 섹션에서는 사용자 지정 Windows Forms 컨트롤을 작성하는 주요 단계를 설명합니다. 이 연습에서 개발 된 간단한 컨트롤의 맞춤을 사용 하는 <xref:System.Windows.Forms.Control.Text%2A> 변경할 속성입니다. 이벤트를 발생시키거나 처리하지 않습니다.  
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     컨트롤의 시각적 표시를 변경 하는 속성을 설정 하는 경우 호출 해야는 <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드 컨트롤을 다시 그리도록 합니다. <xref:System.Windows.Forms.Control.Invalidate%2A>기본 클래스에 정의 된 <xref:System.Windows.Forms.Control>합니다.  
+     컨트롤의 시각적 표시를 변경 하는 속성을 설정 하는 경우 호출 해야는 <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드 컨트롤을 다시 그리도록 합니다. <xref:System.Windows.Forms.Control.Invalidate%2A> 기본 클래스에 정의 된 <xref:System.Windows.Forms.Control>합니다.  
   
 3.  보호 된 재정의 <xref:System.Windows.Forms.Control.OnPaint%2A> 에서 상속 된 <xref:System.Windows.Forms.Control> 사용자 컨트롤에 렌더링 논리를 제공 합니다. 재정의 하지 않을 경우 <xref:System.Windows.Forms.Control.OnPaint%2A>, 컨트롤 자체를 그릴 수 없습니다. 다음 코드 조각에는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드 표시는 <xref:System.Windows.Forms.Control.Text%2A> 속성에서 상속 <xref:System.Windows.Forms.Control> 로 지정 된 맞춤으로는 `alignmentValue` 필드입니다.  
   
@@ -70,12 +72,12 @@ ms.lasthandoff: 12/22/2017
   
     2.  소스 코드를 어셈블리로 컴파일하고 응용 프로그램의 디렉터리에 저장합니다. 이를 수행하려면 소스 파일이 포함된 디렉터리에서 다음 명령을 실행합니다.  
   
-        ```vb  
-        vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
+        ```console  
+        vbc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.vb  
         ```  
   
-        ```csharp  
-        csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
+        ```console 
+        csc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.cs  
         ```  
   
          `/t:library` 컴파일러 옵션은 사용자가 만드는 어셈블리가 실행 파일이 아니라 라이브러리임을 컴파일러에 알립니다. `/out` 옵션은 어셈블리의 경로 및 이름을 지정합니다. `/r` 옵션은 코드에 의해 참조되는 어셈블리의 이름을 제공합니다. 이 예제에서는 응용 프로그램에서만 사용할 수 있는 전용 어셈블리를 만들 수 있습니다. 따라서 응용 프로그램의 디렉터리에 저장해야 합니다. 배포하기 위한 컨트롤을 패키징하고 배포하는 방법에 대한 자세한 내용은 [배포](../../../../docs/framework/deployment/index.md)를 참조하세요.  
@@ -94,19 +96,19 @@ ms.lasthandoff: 12/22/2017
   
 2.  소스 파일을 포함하는 디렉터리에서 다음 명령을 실행하여 소스 코드를 실행 가능한 어셈블리로 컴파일합니다.  
   
-    ```vb  
-    vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
+    ```console  
+    vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
     ```  
   
-    ```csharp  
-    csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
+    ```console 
+    csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs  
     ```  
   
      CustomWinControls.dll 클래스를 포함 하는 어셈블리는 `FirstControl`합니다. 이 어셈블리는 액세스하는 양식의 소스 파일과 동일한 디렉터리에 있어야 합니다(SimpleForm.cs 또는 SimpleForms.vb).  
   
 3.  다음 명령을 사용하여 SimpleForm.exe를 실행합니다.  
   
-    ```  
+    ```console
     SimpleForm  
     ```  
   
