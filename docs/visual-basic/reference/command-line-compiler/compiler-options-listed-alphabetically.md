@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a1619343874396e22c3606f8a0aeadd81cd7a
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic 컴파일러 옵션 사전순 목록
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] IDE(통합 개발 환경)에서 프로그램을 컴파일하는 대신 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 명령줄 컴파일러를 사용할 수 있습니다. 다음은 사전순으로 정렬된 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 명령줄 컴파일러 옵션 목록입니다.  
+Visual Basic 명령줄 컴파일러에서 프로그램을 컴파일할 수 대신으로 제공 되는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합된 개발 환경 (IDE). 다음은 사전순으로 정렬 한 Visual Basic 명령줄 컴파일러 옵션의 목록입니다.  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 |옵션|용도|  
 |------------|-------------|  
@@ -36,9 +38,9 @@ ms.lasthandoff: 03/22/2018
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|조건부 컴파일 기호를 정의합니다.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다.|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|XML 파일에 대해 문서 주석을 처리합니다.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에서 내부 컴파일러 오류를 보고하는 방식을 지정합니다.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic 컴파일러에서 내부 컴파일러 오류를 보고 하는 방법을 지정 합니다.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|출력 파일의 섹션에 맞출 위치를 지정합니다.|  
-|[-help](../../../visual-basic-reference/command-line-compiler/help.md)|컴파일러 옵션을 표시합니다. 이 명령은 `-?` 옵션 지정과 같습니다. 컴파일이 수행되지 않습니다.|  
+|[-help](../../../visual-basic/reference/command-line-compiler/help.md)|컴파일러 옵션을 표시합니다. 이 명령은 `-?` 옵션 지정과 같습니다. 컴파일이 수행되지 않습니다.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|특정 실행 파일이 높은 엔트로피 ASLR(Address Space Layout Randomization)을 지원하는지 여부를 나타냅니다.|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|지정된 어셈블리에서 네임스페이스를 가져옵니다.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|어셈블리에 강력한 이름을 지정하는 키 쌍의 키 컨테이너 이름을 지정합니다.|  
@@ -67,6 +69,8 @@ ms.lasthandoff: 03/22/2018
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|컴파일러에서 구문 관련 오류 및 경고에 대한 코드를 표시하지 않도록 합니다.|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|하위 디렉터리에서 컴파일할 소스 파일을 검색합니다.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|어셈블리에서 메타데이터를 가져옵니다.|  
+|[/refonly](refonly-compiler-option.md)|한 참조 어셈블리를 출력합니다.|
+|[/refout](refout-compiler-option.md)|참조 어셈블리의 출력 경로 지정합니다.|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|정수 오버플로 검사를 사용하지 않습니다.|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|관리되는 리소스를 어셈블리에 포함합니다.|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|모든 형식 선언에 대한 네임스페이스를 지정합니다.|  

@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 명령줄 컴파일러"
+title: Visual Basic 명령줄 컴파일러
 ms.date: 02/20/2018
 ms.prod: .net
 ms.technology:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b1219a5965352057ab6fe564282394e14f6d063
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 1a2f03a62488b746b623b7ead94c122b40178a97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic 명령줄 컴파일러
 
 Visual Basic 명령줄 컴파일러를 Visual Studio 통합된 개발 환경 (IDE)에서 프로그램을 컴파일하는 대신을 제공 합니다. 이 섹션에는 Visual Basic 컴파일러 옵션에 대 한 설명을 포함합니다.
 
-모든 컴파일러 옵션은 두 가지 형태로 사용할 수 있는:-옵션과 /option 합니다. Visual Basic 설명서만 /option 폼을 표시 합니다.
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>단원 내용
 

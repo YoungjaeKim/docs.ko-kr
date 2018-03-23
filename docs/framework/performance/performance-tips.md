@@ -1,13 +1,13 @@
 ---
-title: ".NET 성능 팁"
-ms.custom: 
+title: .NET 성능 팁
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - C# language, performance
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Visual Basic, performance
 - performance [Visual Basic]
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload:
 - wiwagn
-ms.openlocfilehash: cad50862d5ed05dd13c3f73f50af0c466ad930cd
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: ac1f5b9e0897650751320a7f5a9290c378d428b6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-performance-tips"></a>.NET 성능 팁
 *성능*이라는 용어는 일반적으로 프로그램의 실행 속도를 나타냅니다. 경우에 따라 소스 코드에서 특정 기본 규칙을 따라 실행 속도를 높일 수 있습니다. 일부 프로그램에서는 코드를 자세히 검사하고 프로파일러를 사용하여 최대한 빠르게 실행 중인지 확인하는 작업을 해야 합니다. 다른 프로그램에서는 코드가 작성된 대로 만족스럽게 실행되므로 이러한 최적화를 수행하지 않아도 됩니다. 이 문서에서는 성능이 떨어질 수 있는 몇 가지 일반적인 영역과 성능 향상 팁 및 추가 성능 항목에 대한 링크를 나열합니다. 성능 계획 및 측정에 대한 자세한 내용은 [성능](../../../docs/framework/performance/index.md)을 참조하세요.  
@@ -48,10 +48,10 @@ ms.lasthandoff: 02/19/2018
 -   [가비지 수집기 기본 및 성능 힌트](http://go.microsoft.com/fwlink/?LinkId=99296)  
   
 -   [.NET 응용 프로그램에서의 성능 팁과 요량](http://go.microsoft.com/fwlink/?LinkId=99297)  
-  
--   [.NET용 진단 도구 살펴보기](http://go.microsoft.com/fwlink/?LinkId=112407)  
-  
+
 -   [Rico Mariani의 성능 정보](http://go.microsoft.com/fwlink/?LinkId=115679)  
+
+-   [Vance Morrison의 블로그](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>참고 항목  
  [성능](../../../docs/framework/performance/index.md)  
