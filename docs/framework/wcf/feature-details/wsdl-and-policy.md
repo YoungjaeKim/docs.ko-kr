@@ -1,24 +1,26 @@
 ---
-title: "WSDL 및 정책"
-ms.custom: 
+title: WSDL 및 정책
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wsdl-and-policy"></a>WSDL 및 정책
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, WS-Policy 및 WS-PolicyAttachment 구현 세부 정보와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 소개된 추가 WS-Policy 어설션 및 WSDL 1.1 확장에 대해 다룹니다.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 |msc|http://schemas.microsoft.com/ws/2005/12/wsdl/contract|  
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
-## <a name="wcf-wsdl11-extensions"></a>WCF WSDL1.1 확장  
+## <a name="wcf-wsdl11-extensions"></a>WCF WSDL1.1 확장명  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 다음 WSDL1.1 확장을 사용하여 계약 세션 요구 사항에 대해 설명합니다.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  

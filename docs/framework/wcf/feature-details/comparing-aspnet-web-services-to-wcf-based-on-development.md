@@ -1,24 +1,26 @@
 ---
-title: "개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교"
-ms.custom: 
+title: 개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 ASP.NET 웹 서비스처럼 프로그래밍하고 구성하며 동작을 모방하도록 할 수 있는 ASP.NET 호환 모드 옵션이 있습니다. 다음 단원에서는 ASP.NET 웹 서비스와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 응용 프로그램을 개발하는 데 필요한 사항을 기반으로 이 두 가지 기술을 비교합니다.  
@@ -380,7 +382,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  이 예제에서는 <xref:System.ServiceModel.ServiceHost> 생성에서 하나 이상의 전송 프로토콜에 대한 주소가 지정되는 방식을 보여 줍니다. 이러한 주소를 기본 주소라고 합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 끝점에 제공되는 주소는 끝점의 호스트에 대한 기본 주소에 상대적인 주소입니다. 호스트에는 통신 전송 프로토콜마다 기본 주소가 하나씩 있을 수 있습니다. 이전 구성 파일의 샘플 구성에서 끝점에 대해 선택된 <xref:System.ServiceModel.BasicHttpBinding>은 HTTP를 전송 프로토콜로 사용하므로 `EchoService` 끝점의 주소는 호스트의 HTTP 기본 주소에 상대적입니다. 이전 예제에서 호스트의 경우 HTTP 기본 주소는 http://www.contoso.com:8000/입니다. IIS 또는 WAS에서 호스트되는 서비스의 기본 주소는 해당 서비스에 대한 서비스 파일의 URL입니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 끝점에 제공되는 주소는 끝점의 호스트에 대한 기본 주소에 상대적인 주소입니다. 호스트에는 통신 전송 프로토콜마다 기본 주소가 하나씩 있을 수 있습니다. 이전 구성 파일의 샘플 구성에서 끝점에 대해 선택된 <xref:System.ServiceModel.BasicHttpBinding>은 HTTP를 전송 프로토콜로 사용하므로 `EchoService` 끝점의 주소는 호스트의 HTTP 기본 주소에 상대적입니다. 앞의 예제에서 호스트의 경우 HTTP 기본 주소는 http://www.contoso.com:8000/합니다. IIS 또는 WAS에서 호스트되는 서비스의 기본 주소는 해당 서비스에 대한 서비스 파일의 URL입니다.  
   
  IIS 또는 WAS에서 호스트되고 전송 프로토콜로 HTTP만 사용하도록 구성된 서비스만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 호환 모드 옵션을 사용하도록 만들 수 있습니다. 이 옵션을 사용하려면 다음 단계를 수행해야 합니다.  
   

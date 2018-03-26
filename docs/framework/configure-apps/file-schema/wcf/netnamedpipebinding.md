@@ -1,24 +1,26 @@
 ---
 title: '&lt;netNamedPipeBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: dd11c1381de3d2c965e884ee2d43b8a0c08063bb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 프로세스 간 시스템 통신에 적합한, 안전하고 신뢰할 수 있는 바인딩을 정의합니다. 기본적으로 이 바인딩에서는 안정성을 위한 WS-ReliableMessaging, 전송 보안을 위한 전송 보안, 메시지 배달을 위한 명명된 파이프 및 이진 메시지 인코딩을 지원하는 런타임 통신 스택을 생성합니다.  
@@ -91,7 +93,7 @@ ms.lasthandoff: 01/19/2018
   
  `NetNamedPipeBinding`의 기본 구성은 `NetTcpBinding`에서 제공하는 구성과 비슷하지만, WCF 구현이 시스템에서만 사용되므로 노출되는 기능이 더 적기 때문에 더 간단합니다. 가장 두드러진 차이점은 `securityMode` 설정에서는 `None` 및 `Transport` 옵션만 제공한다는 것입니다. SOAP 보안 지원은 포함된 옵션이 아닙니다. 보안 동작은 선택적 `securityMode` 특성을 사용하여 구성할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 netNamedPipeBinding 바인딩의 예로, 동일한 시스템에서 프로세스 간 통신을 제공합니다. 이름이 지정된 파이프는 시스템 간에 작동하지 않습니다.  
   
  클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 바인딩 형식은 `binding` 요소의 `<endpoint>` 특성에서 지정합니다. netNamedPipeBinding 바인딩을 구성하고 설정 중 일부를 변경하려면 바인딩 구성을 정의해야 합니다. 끝점은 `bindingConfiguration` 특성이 있는 이름으로 바인딩 구성을 참조해야 합니다. 이 예제에서는 바인딩 구성 이름이 Binding1로 지정됩니다.  

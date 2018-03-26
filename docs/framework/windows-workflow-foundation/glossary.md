@@ -21,7 +21,7 @@ ms.openlocfilehash: 54a0cc6d9a0c922e57bf00b649894f26b42a64f4
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5용 Windows Workflow Foundation 용어집
 다음은 Windows Workflow Foundation 설명서에서 사용되는 용어입니다.  

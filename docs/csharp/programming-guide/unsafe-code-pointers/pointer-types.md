@@ -1,5 +1,5 @@
 ---
-title: "포인터 형식(C# 프로그래밍 가이드)"
+title: 포인터 형식(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 안전하지 않은 컨텍스트에서는 형식이 포인터 형식, 값 형식 또는 참조 형식이 될 수 있습니다. 포인터 형식 선언은 다음 형식 중 하나를 사용합니다.  
@@ -38,7 +38,7 @@ void* identifier; //allowed but not recommended
   
  포인터 형식은 [개체](../../../csharp/language-reference/keywords/object.md)에서 상속되지 않으며 포인터 형식과 `object`는 서로 변환되지 않습니다. 또한 boxing과 unboxing은 포인터를 지원하지 않습니다. 그러나 다른 포인터 형식 간의 변환 및 포인터 형식과 정수 형식 사이의 변환은 허용됩니다.  
   
- 동일한 선언에서 여러 포인터를 선언하는 경우 별표(*)는 기본 형식에만 함께 사용되고 각 포인터 이름의 접두사로는 사용되지 않습니다. 예:  
+ 동일한 선언에서 여러 포인터를 선언하는 경우 별표(*)는 기본 형식에만 함께 사용되고 각 포인터 이름의 접두사로는 사용되지 않습니다. 예를 들어:  
   
 ```  
 int* p1, p2, p3;   // Ok  

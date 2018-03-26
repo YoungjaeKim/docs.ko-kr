@@ -1,7 +1,7 @@
 ---
-title: "이벤트 구독"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 이벤트 구독"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 이벤트 구독
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 이벤트 구독
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -300,9 +300,9 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 일부 메시지 처리는 본질적으로 멱등성입니다. 예를 들어 시스템에서 이미지 썸네일을 생성할 경우 생성된 썸네일에 대한 메시지가 몇 번 처리되었는가는 중요하지 않을 수 있습니다. 결과는 썸네일이 생성되었고 언제나 동일하다는 것입니다. 반면 신용카드 청구를 위한 결제 게이트를 호출하는 등의 작업은 전혀 멱등성이 없을 수 있습니다. 이 경우 메시지를 여러 번 처리함으로써 기대하는 효과를 얻을 수 있는지 여부를 확인해야 합니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   **메시지 멱등성 준수** (이 페이지의 부제목) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **메시지 멱을 구분 하지 않고** (이 페이지에 부제목) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>통합 이벤트 메시지 중복 제거
 
@@ -320,65 +320,65 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 "재전달" 플래그가 설정된 경우에는 메시지가 이미 처리되었을 수 있으므로 수신자를 고려해야 합니다. 하지만 메시지가 처리된다는 보장은 없으며 메시지가 메시지 브로커에서 나온 이후 네트워크 문제 등의 이유로 수신자에게 도달하지 않을 수 있습니다. 반면, "재전달" 플래그가 설정되지 않은 경우 메시지는 확실히 두 번 이상 전송되지 않습니다. 따라서 수신자는 메시지에 "재배달" 플래그가 설정된 경우에만 메시지를 중복 제거하거나 멱등 방식으로 처리해야 합니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   **Forked eShopOnContainers using NServiceBus (Particular Software)**
+-   **분기 eShopOnContainers NServiceBus (특정 소프트웨어)을 사용 하 여**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Event Driven Messaging**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **이벤트 구동 메시징**
+    [*http://soapatterns.org/design\_패턴/이벤트\_구동\_메시징*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling**
+-   **Jimmy Bogard. 결합 평가 복원 력으로 리팩터링:**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publish-Subscribe channel**
+-   **게시-구독 채널**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Communicating Between Bounded Contexts**
+-   **Bounded 컨텍스트 간 통신**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual Consistency**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **결과적 일관성**
+    [*https://en.wikipedia.org/wiki/Eventual\_일관성*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Strategies for Integrating Bounded Contexts**
+-   **Philip Brown. 통합 하기 위한 전략 컨텍스트 제한**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2**
+-   **Chris Richardson. 집계, 이벤트 소싱 및 CQRS-2 부를 사용 하 여 트랜잭션 Microservices 개발**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Event Sourcing pattern**
+-   **Chris Richardson. 이벤트 소싱 패턴**
     [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
--   **Introducing Event Sourcing**
+-   **이벤트 소싱 소개**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Event Store database**. 공식 사이트입니다.
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Event-Driven Data Management for Microservices**
+-   **Patrick Nommensen. Microservices에 대 한 이벤트 기반 데이터 관리**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **The CAP Theorem**
-    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **단면 정리**
+    [*https://en.wikipedia.org/wiki/CAP\_정리*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **What is CAP Theorem?**
+-   **단면 정리 이란?**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Data Consistency Primer**
+-   **데이터 일관성 입문**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling. The CAP Theorem: Why “Everything is Different” with the Cloud and Internet**
+-   **Rick Saling. 단면 정리: 때문에 "모든 항목은 다르게 지정" 된 클라우드 및 인터넷**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed**
+-   **Eric Brewer. 단면 12 년간 나중: "규칙" 변경 방법**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Participating in External (DTC) Transactions** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **외부 (DTC) 트랜잭션에 참여** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure Service Bus. Brokered Messaging: Duplicate Detection**
+-   **Azure Service Bus. 중복 검색 조정 된 메시징:**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide** (RabbitMQ documentation) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **안정성 가이드** (RabbitMQ 설명서) [  *https://www.rabbitmq.com/reliability.html \#소비자*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

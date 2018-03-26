@@ -1,12 +1,13 @@
 ---
-title: "태그 확장명 및 WPF XAML"
-ms.custom: 
+title: 태그 확장명 및 WPF XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - brace character [WPF]
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>태그 확장명 및 WPF XAML
 이 항목에서는 XAML 태그 확장의 구문 규칙, 용도, 기반이 되는 클래스 개체 모델 등을 비롯한 개념에 대해 소개합니다. 태그 확장은 XAML 언어의 일반적 기능이며 XAML 서비스에 대한 .NET 구현의 일반적 기능입니다. 이 항목에서는 WPF XAML에서 사용할 태그 확장에 대해 자세히 설명합니다.  
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `Binding`은 런타임에 부모 개체에 적용되는 데이터 컨텍스트를 사용하여 속성에 대한 데이터 바인딩된 값을 제공합니다. 이 태그 확장은 데이터 바인딩을 지정하는 인라인 구문을 사용하기 때문에 비교적 복잡합니다. 자세한 내용은 [Binding 태그 확장](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)을 참조하세요.  
   
--   `RelativeSource`에 대 한 원본 정보를 제공는 <xref:System.Windows.Data.Binding> 런타임에 개체 트리는 사용 가능한 여러 관계를 탐색할 수 있는 합니다. 즉, 주변 개체 트리에 대한 완전한 지식 없이 코드에 생성되거나 다용도 템플릿에 생성되는 바인딩에 대한 특수한 소스를 제공합니다. 자세한 내용은 [RelativeSource 태그 확장](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)을 참조하세요.  
+-   `RelativeSource` 에 대 한 원본 정보를 제공는 <xref:System.Windows.Data.Binding> 런타임에 개체 트리는 사용 가능한 여러 관계를 탐색할 수 있는 합니다. 즉, 주변 개체 트리에 대한 완전한 지식 없이 코드에 생성되거나 다용도 템플릿에 생성되는 바인딩에 대한 특수한 소스를 제공합니다. 자세한 내용은 [RelativeSource 태그 확장](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)을 참조하세요.  
   
 -   `TemplateBinding`을 사용하면 컨트롤 템플릿에서 템플릿을 사용할 클래스의 개체-모델 정의 속성에서 가져온 템플릿 기반 속성 값을 사용할 수 있습니다. 즉, 템플릿 정의 내의 속성은 템플릿이 적용된 후의 컨텍스트에만 액세스할 수 있습니다. 자세한 내용은 [TemplateBinding 태그 확장](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)을 참조하세요. `TemplateBinding`의 실질적인 사용 방법에 대한 자세한 내용은 [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   

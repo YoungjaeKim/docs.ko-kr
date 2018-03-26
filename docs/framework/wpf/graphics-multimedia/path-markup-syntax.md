@@ -1,12 +1,13 @@
 ---
-title: "경로 태그 구문"
-ms.custom: 
+title: 경로 태그 구문
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
@@ -14,27 +15,28 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="path-markup-syntax"></a>경로 태그 구문
 그러나 경로에 대해서는 [Shape 및 기본 그리기 개요 WPF에서에서](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) 및 [기 하 도형 개요](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md),이 항목에 자세히 설명 경로 지정 하는 데 강력 하 고 복잡 한 최소 언어 더 조밀 하 게 사용 하 여 기 하 도형 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 항목을 이해 하려면의 기본 기능에 잘 알고 있어야 <xref:System.Windows.Media.Geometry> 개체입니다. 자세한 내용은 참조는 [기 하 도형 개요](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)합니다.  
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry 및 PathFigureCollection 미니 언어  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기하학적 경로 설명 하기 위해 미니 언어를 제공 하는 두 개의 클래스를 제공: <xref:System.Windows.Media.StreamGeometry> 및 <xref:System.Windows.Media.PathFigureCollection>합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기하학적 경로 설명 하기 위해 미니 언어를 제공 하는 두 개의 클래스를 제공: <xref:System.Windows.Media.StreamGeometry> 및 <xref:System.Windows.Media.PathFigureCollection>합니다.  
   
 -   사용 하면는 <xref:System.Windows.Media.StreamGeometry> 형식의 속성을 설정할 때 최소 언어 <xref:System.Windows.Media.Geometry>와 같은 <xref:System.Windows.UIElement.Clip%2A> 속성은 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.Shapes.Path.Data%2A> 속성의는 <xref:System.Windows.Shapes.Path> 요소입니다. 다음 예제에서는 특성 구문을 사용 하 여 한 <xref:System.Windows.Media.StreamGeometry>합니다.  
   
@@ -58,17 +60,17 @@ ms.lasthandoff: 12/22/2017
   
 |StreamGeometry XAML 특성 사용|  
 |-----------------------------------------|  
-|`<`*개체* *속성* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 사용 구문에 대 한 특성을 <xref:System.Windows.Media.PathFigureCollection> 하나 이상의 그림 설명으로 구성 됩니다.  
   
 |PathFigureCollection XAML 특성 사용|  
 |-----------------------------------------------|  
-|`<`*개체* *속성* `="` `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |용어|설명|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 지정 여부는 <xref:System.Windows.Media.StreamGeometry> 사용 하 여는 <xref:System.Windows.Media.FillRule.EvenOdd> 또는 <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>합니다.<br /><br /> -   `F0`지정 된 <xref:System.Windows.Media.FillRule.EvenOdd> 채우기 규칙입니다.<br />-   `F1`지정 된 <xref:System.Windows.Media.FillRule.Nonzero> 채우기 규칙입니다.<br /><br /> 하위 경로 기본 동작을 사용 하 여이 명령을 생략 하면 <xref:System.Windows.Media.FillRule.EvenOdd>합니다. 이 명령을 지정하는 경우 맨 앞에 배치해야 합니다.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 지정 여부는 <xref:System.Windows.Media.StreamGeometry> 사용 하 여는 <xref:System.Windows.Media.FillRule.EvenOdd> 또는 <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>합니다.<br /><br /> -   `F0` 지정 된 <xref:System.Windows.Media.FillRule.EvenOdd> 채우기 규칙입니다.<br />-   `F1` 지정 된 <xref:System.Windows.Media.FillRule.Nonzero> 채우기 규칙입니다.<br /><br /> 하위 경로 기본 동작을 사용 하 여이 명령을 생략 하면 <xref:System.Windows.Media.FillRule.EvenOdd>합니다. 이 명령을 지정하는 경우 맨 앞에 배치해야 합니다.|  
 |*figureDescription*|이동 명령, 그리기 명령 및 선택적 닫기 명령으로 구성된 그림입니다.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|그림의 시작점을 지정하는 이동 명령입니다. 참조는 [이동 명령을](#themovecommand) 섹션.|  
 |*drawCommands*|그림의 콘텐츠를 설명하는 하나 이상의 그리기 명령입니다. 참조는 [그리기 명령](#drawcommands) 섹션.|  
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
  대문자 또는 소문자를 사용하여 각 명령을 입력합니다. 대문자는 절대값을 나타내고 소문자는 상대값을 나타냅니다. 해당 세그먼트에 대한 제어점은 이전 예제의 끝점을 기준으로 합니다. 동일한 형식의 둘 이상의 명령을 순차적으로 입력할 때 중복 명령 입력; 생략할 수 있습니다. 예를 들어 `L 100,200 300,400` 같습니다 `L 100,200 L 300,400`합니다. 다음 표에서 **이동** 및 **그리기** 명령입니다.  
   
 ### <a name="line-command"></a>선 명령  
- 현재 점과 지정된 끝점 간에 직선을 만듭니다. `l 20 30`및 `L 20,30` 은 유효한 예 **줄** 명령입니다.  
+ 현재 점과 지정된 끝점 간에 직선을 만듭니다. `l 20 30` 및 `L 20,30` 은 유효한 예 **줄** 명령입니다.  
   
 |구문|  
 |------------|  

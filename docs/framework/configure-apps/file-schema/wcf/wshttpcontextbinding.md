@@ -1,24 +1,26 @@
 ---
 title: '&lt;wsHttpContextBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: dbc1ab595931d363d0cb3c65839d26a8ad5a7519
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwshttpcontextbindinggt"></a>&lt;wsHttpContextBinding&gt;
 보호 수준을 서명해야 하는 <xref:System.ServiceModel.WSHttpBinding>의 컨텍스트를 제공합니다.  

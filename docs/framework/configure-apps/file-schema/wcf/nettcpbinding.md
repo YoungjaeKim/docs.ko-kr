@@ -1,28 +1,28 @@
 ---
 title: '&lt;netTcpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 057baf6d18cba61c0ceeb7d5152edcf082392310
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 시스템 간 통신에 적합한 안전하고, 신뢰할 수 있으며, 최적화된 바인딩을 지정합니다. 기본적으로 메시지 보안 및 인증을 위한 Windows 보안, 메시지 배달을 위한 TCP 및 이진 메시지 인코딩을 지원하는 런타임 통신 스택을 생성합니다.  
@@ -108,7 +108,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
   
  `netTcpBinding`의 기본 구성은 `wsHttpBinding`에서 제공하는 구성보다 더 빠르지만 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]와 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 간의 통신에만 쓰입니다. 보안 동작은 선택적 `securityMode` 특성을 사용하여 구성할 수 있습니다. WS-ReliableMessaging 사용 시 선택적 `reliableSessionEnabled` 특성을 사용하여 구성할 수 있습니다. 그러나 신뢰 메시징은 기본적으로 해제되어 있습니다. `wsHttpBinding` 및 `basicHttpBinding`과 같이 HTTP 시스템에서 제공한 바인딩은 기본적으로 설정을 적용하도록 구성되는 반면, `netTcpBinding` 바인딩은 기본적으로 설정을 해제하는 것이 일반적이므로, 예를 들어 WS-* 사양 지원을 받으려면 옵트인(opt in)해야 합니다. 따라서 끝점 간에 메시지를 교환할 경우의 TCP 기본 구성이 HTTP 바인딩을 위한 기본 구성보다 더 빠릅니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 바인딩 형식은 `binding` 요소의 `<endpoint>` 특성에서 지정합니다. netTcpBinding 바인딩을 구성하고 일부 설정을 변경하려면 바인딩 구성을 정의해야 합니다. 끝점은 `bindingConfiguration` 특성을 사용하여 바인딩 구성을 참조해야 합니다. 다음 예제에서는 바인딩 구성을 정의합니다.  
   
 ```xml  

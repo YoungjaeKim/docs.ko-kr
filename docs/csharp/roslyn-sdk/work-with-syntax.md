@@ -1,6 +1,6 @@
 ---
-title: ".NET Compiler Platform SDK 구문 모델 사용"
-description: "이 개요에서는 구문 노드를 이해하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다."
+title: .NET Compiler Platform SDK 구문 모델 사용
+description: 이 개요에서는 구문 노드를 이해하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -9,10 +9,10 @@ ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
 ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="work-with-syntax"></a>구문 작업
 
@@ -69,13 +69,13 @@ ms.lasthandoff: 02/05/2018
 
 각 노드, 토큰 또는 기타 정보는 원본 텍스트 내의 해당 위치와 구성된 문자 수를 알고 있습니다. 텍스트 위치는 0부터 시작하는 `char` 인덱스인 32비트 정수로 표현됩니다. <xref:Microsoft.CodeAnalysis.Text.TextSpan> 개체는 시작 위치 및 문자 수이며 정수로 표현됩니다. <xref:Microsoft.CodeAnalysis.Text.TextSpan>의 길이가 0인 경우 두 문자 사이의 위치를 나타냅니다.
 
-각 노드에는 두 개의 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 속성 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 및 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>이 있습니다. 
+각 노드에 두 개의 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 속성: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 및 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>합니다. 
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 속성은 노드의 하위 트리에 있는 첫 번째 토큰의 시작부터 마지막 토큰의 끝에 이르는 텍스트 범위입니다. 이 범위는 모든 선행 또는 후행 기타 정보를 포함하지 않습니다.
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> 속성은 노드의 일반 범위와 모든 선행 또는 후행 기타 정보의 범위를 포함하는 텍스트 범위입니다.
 
-예: 
+예를 들어: 
 
 ``` csharp
       if (x > 3)
@@ -89,7 +89,7 @@ ms.lasthandoff: 02/05/2018
 
 ## <a name="kinds"></a>종류
 
-각 노드, 토큰 또는 기타 정보에는 표시되는 정확한 구문 요소를 식별하는 <xref:System.Int32?displayProperty=nameWithType> 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 속성이 있습니다. 이 값은 언어별 열거형으로 캐스팅될 수 있습니다. 각 언어, C# 또는 VB에는 문법에서 가능한 모든 노드, 토큰 및 기타 정보 요소를 나열하는 단일 `SyntaxKind` 열거형(각각 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 및 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>)이 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 확장 메서드에 액세스하여 이 변환을 자동으로 수행할 수 있습니다.
+각 노드, 토큰 또는 기타 정보에는 표시되는 정확한 구문 요소를 식별하는 <xref:System.Int32?displayProperty=nameWithType> 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 속성이 있습니다. 이 값은 언어별 열거형으로 캐스팅될 수 있습니다. 각 언어, C# 또는 VB에는 문법에서 가능한 모든 노드, 토큰 및 기타 정보 요소를 나열하는 단일 `SyntaxKind` 열거형(각각 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 및 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>)이 있습니다. 에 액세스 하 여이 변환을 자동으로 수행할 수 있습니다는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 확장 메서드입니다.
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 속성은 동일한 노드 클래스를 공유하는 구문 노드 형식의 쉬운 명확성을 허용합니다. 토큰 및 기타 정보의 경우 이 속성은 요소의 한 형식을 다른 형식에서 구분하는 유일한 방법입니다. 
 

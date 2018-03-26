@@ -1,24 +1,26 @@
 ---
-title: "ServiceDescription 및 WSDL 참조"
-ms.custom: 
+title: ServiceDescription 및 WSDL 참조
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7eadfaaae920071092f569fe2b8882875ed9497f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 및 WSDL 참조
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 WSDL(웹 서비스 기술 언어) 문서를 <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에 매핑하는 방법을 설명합니다.  

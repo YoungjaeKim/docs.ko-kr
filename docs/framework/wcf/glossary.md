@@ -23,7 +23,7 @@ ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5용 Windows Communication Foundation 용어집
 다음은 Windows Workflow Foundation 설명서에서 사용하도록 정의되는 용어입니다.  

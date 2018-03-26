@@ -1,7 +1,7 @@
 ---
-title: "인프라 지속성 계층 디자인"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 인프라 지속성 계층 디자인"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 인프라 지속성 계층 디자인
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 인프라 지속성 계층 디자인
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>인프라 지속성 계층 디자인
 
@@ -134,34 +134,34 @@ public interface ISpecification<T>
 
 **중요 참고:** 사양 패턴은 다음의 추가 리소스에서와 같이 다양한 방식으로 구현될 수 있는 이전 패턴입니다. 패턴/개념으로서 이전 방법이 익히기에 좋지만 Linq 및 식 같은 현대 언어 역량을 이용하지 않는 이전 구현은 주의하십시오.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 ### <a name="the-repository-pattern"></a>리포지토리 패턴
 
--   **Edward Hieatt와 Rob Mee. 리포지토리 패턴.**
+-   **Edward Hieatt와 Rob Mee. 리포지토리 패턴입니다.**
     [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
 -   **리포지토리 패턴**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **리포지토리 패턴: 데이터 지속성 추상적 개념**
+-   **리포지토리 패턴: 데이터 지 속성 추상화**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (서적, 리포지토리 패턴 논의 포함) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (예약; 리포지토리 패턴에 대 한 설명이 포함) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>작업 단위 패턴
 
--   **Martin Fowler. 작업 단위 패턴.**
+-   **Martin Fowler. 단위 작업 패턴입니다.**
     [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **ASP.NET MVC 응용 프로그램에서 리포지토리 및 작업 단위 패턴 구현**
+-   **ASP.NET MVC 응용 프로그램에서 작업 패턴의 리포지토리 및 단위 구현**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 ### <a name="the-specification-pattern"></a>사양 패턴
 
--   **사양 패턴.**
+-   **사양 패턴입니다.**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric(2004). 도메인 기반 디자인. Addison-Wesley. p. 224.**

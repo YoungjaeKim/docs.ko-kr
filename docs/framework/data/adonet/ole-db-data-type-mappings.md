@@ -1,24 +1,26 @@
 ---
-title: "OLE DB 데이터 형식 매핑"
-ms.custom: 
+title: OLE DB 데이터 형식 매핑
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 407f194a8530f9b9e4241a6bdb4d26a4b891aa46
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB 데이터 형식 매핑
 다음 표에서는 .NET Framework Data Provider ADO 및 OLE DB([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)])의 데이터 형식에 대해 유추된 <xref:System.Data.OleDb> 형식을 보여 줍니다. 또한 이 표에는 <xref:System.Data.OleDb.OleDbDataReader>의 형식화된 접근자 메서드도 나열되어 있습니다.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/17/2018
 |adUserDefined|DBTYPE_UDT|지원되지 않음||  
 |adVarNumeric|DBTYPE_VARNUMERIC|지원되지 않음||  
   
- \*OLE DB 형식에 대 한 `DBTYPE_IUNKNOWN` 및 `DBTYPE_IDISPATCH`, 개체 참조는 포인터의 마샬링된 표현입니다.  
+ \* OLE DB 형식에 대 한 `DBTYPE_IUNKNOWN` 및 `DBTYPE_IDISPATCH`, 개체 참조는 포인터의 마샬링된 표현입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  

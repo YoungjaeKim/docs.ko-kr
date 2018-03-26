@@ -1,24 +1,26 @@
 ---
-title: ".NET Remoting에서 WCF로 마이그레이션"
-ms.custom: 
+title: .NET Remoting에서 WCF로 마이그레이션
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Remoting에서 WCF로 마이그레이션
 이 문서에서는 WCF(Windows Communication Foundation)를 사용하기 위해 .NET Remoting을 사용하는 응용 프로그램을 마이그레이션하는 방법을 설명합니다. 이러한 제품 간의 비슷한 개념을 비교한 다음 WCF의 몇 가지 일반적인 Remoting 시나리오를 수행하는 방법을 설명합니다.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |서비스 작업|서버 유형의 공용 메서드|[OperationContract] 특성으로 표시|  
 |Serialization|ISerializable 또는 [Serializable]|DataContractSerializer 또는 XmlSerializer|  
 |전달된 개체|값 방식 또는 참조 방식|값 방식만 해당|  
-|오류/예외|모든 직렬화 가능 예외|FaultContract\<TDetail >|  
+|오류/예외|모든 직렬화 가능 예외|FaultContract\<TDetail>|  
 |클라이언트 프록시 개체|강력한 형식의 투명 프록시는 MarshalByRefObjects에서 자동으로 생성됩니다.|생성 된 강력한 형식의 프록시가 주문형 ChannelFactory를 사용 하 여\<TChannel >|  
 |필요한 플랫폼|클라이언트와 서버 모두 Microsoft OS 및 .NET를 사용해야 합니다.|플랫폼 간|  
 |메시지 형식|전용|산업 표준(SOAP, WS-* 등)|  

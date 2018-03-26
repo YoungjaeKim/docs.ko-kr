@@ -1,15 +1,15 @@
 ---
-title: "한 문서에서 다른 문서로 기존 노드 복사"
-ms.custom: 
+title: 한 문서에서 다른 문서로 기존 노드 복사
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>한 문서에서 다른 문서로 기존 노드 복사
 **ImportNode** 메서드는 **XmlDocument** 간에 하나의 노드나 전체 노드 하위 트리를 복사하는 메커니즘입니다. 호출에서 반환되는 노드는 특성 값, 노드 이름, 노드 형식과 접두사, 로컬 이름, 네임스페이스 URI(Uniform Resource Identifier)와 같은 모든 네임스페이스 관련 특성이 포함된 소스 문서의 노드 복사본입니다. 소스 문서는 변경되지 않습니다. 노드를 가져온 후에 계속해서 노드 삽입에 사용되는 메서드 중 하나를 사용하여 트리에 해당 노드를 추가해야 합니다.  

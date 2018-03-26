@@ -1,7 +1,7 @@
 ---
-title: "도메인 이벤트. 디자인 및 구현"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 도메인 이벤트, 디자인 및 구현"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 도메인 이벤트. 디자인 및 구현
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 도메인 이벤트, 디자인 및 구현
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/29/2018
 2.  명령 처리기에서 명령 수신하기
     -   단일 집계의 트랜잭션 실행
     -   (선택 사항) 파생 작업에 대해 도메인 이벤트 발생시키기(예: OrderStartedDomainEvent)
-1.  여러 집합체나 응용 프로그램 동작에서 다수의 파생 작업을 실행하는 도메인 이벤트(현재 프로세스 내) 처리 예:
+1.  여러 집합체나 응용 프로그램 동작에서 다수의 파생 작업을 실행하는 도메인 이벤트(현재 프로세스 내) 처리 예를 들어:
     -   buyer(구매자) 및 payment(지불) 메서드를 검증 또는 생성합니다.
     -   관련 통합 이벤트를 생성하고 이벤트 버스에 보내서 마이크로 서비스에 상태를 전파하거나 외부 동작(예: 구매자에게 이메일 보내기)을 트리거합니다.
     -   다른 파생 작업을 처리합니다.
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/29/2018
 
 **그림 9-15**. 도메인당 여러 동작 처리
 
-이벤트 처리기는 일반적으로 응용 프로그램 계층에 있는데, 리포지토리나 응용 프로그램 API와 같은 인프라 개체를 마이크로 서비스의 동작에 사용하기 때문입니다. 이런 의미에서 이벤트 처리기는 명령 처리기와 유사하기 때문에 두 가지 모두 응용 프로그램 계층의 일부입니다. 중요한 차이는 명령은 한 번만 처리되어야 한다는 점입니다. 도메인 이벤트는 0번 또는 *n*번 처리될 수 있습니다. If가 각 처리기마다 다른 목적으로 여러 수신자 또는 이벤트 처리기에서 수신될 수 있기 때문입니다.
+이벤트 처리기는 일반적으로 응용 프로그램 계층에 있는데, 리포지토리나 응용 프로그램 API와 같은 인프라 개체를 마이크로 서비스의 동작에 사용하기 때문입니다. 이런 의미에서 이벤트 처리기는 명령 처리기와 유사하기 때문에 두 가지 모두 응용 프로그램 계층의 일부입니다. 중요한 차이는 명령은 한 번만 처리되어야 한다는 점입니다. 도메인 이벤트 수 0 처리 또는 *n* 있었기 때문에 경우 여러 수신기 또는 각 처리기에 대 한 다른 목적으로 이벤트 처리기에서 받을 수 있습니다.
 
 도메인당 처리기의 수가 변화할 수 있으면 현재 코드에 영향을 미치지 않으면서 훨씬 더 많은 도메인 규칙을 추가할 수 있습니다. 예를 들어 이벤트 바로 뒤에 발생해야 하는 다음 비즈니스 규칙을 적용하는 것은 이벤트 처리기를 몇 개(또는 한 개만) 추가하는 것만큼 쉬울 수 있습니다.
 
@@ -335,39 +335,39 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 언급했듯이, 도메인 이벤트를 사용하여 도메인 내 변경의 파생 작업을 명시적으로 구현합니다. DDD 용어를 사용하려면, 도메인 이벤트를 사용하여 하나 또는 여러 집합체 전반에 파생 작업을 명시적으로 구현합니다. 추가적으로, 데이터베이스 잠금의 확장성을 높이고 영향을 줄이려면 동일한 도메인 내의 집합체 간에 최종 일관성을 사용합니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **Greg Young. What is a Domain Event?(도메인 이벤트란?)**
+-   **Greg Young. 도메인 이벤트는 무엇입니까?**
     [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Jan Stenberg. Domain Events and Eventual Consistency(도메인 이벤트와 최종 일관성)**
+-   **Jan Stenberg. 도메인 이벤트와 결과적 일관성**
     [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
--   **Jimmy Bogard. A better domain events pattern(더 나은 도메인 이벤트 패턴)**
+-   **Jimmy Bogard. 더 나은 도메인 이벤트 패턴**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together(효율적인 집계 설계 2부: 집합체가 함께 작동하도록 만들기)**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+-   **Vaughn Vernon. 효과적인 집계 디자인 2 부: 만들기 작업 함께 집계**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_문서/Vernon\_2011\_2. pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
--   **Jimmy Bogard. Strengthening your domain: Domain Events(도메인: 강화: 도메인 이벤트)**
+-   **Jimmy Bogard. 도메인 강화: 도메인 이벤트**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
--   **Tony Truong. Domain Events Pattern Example(도메인 이벤트 패턴 예제)**
+-   **Tony Truong. 도메인 이벤트 패턴의 예**
     [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Udi Dahan. How to create fully encapsulated Domain Models(완벽하게 캡슐화된 도메인 모델을 만드는 방법)**
+-   **Udi Dahan. 완벽 하 게 만드는 방법을 캡슐화 도메인 모델**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Udi Dahan. Domain Events – Take 2(도메인 이벤트 – 테이크 2)**
+-   **Udi Dahan. 도메인 이벤트 – 2 수행**
     [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
--   **Udi Dahan. Domain Events – Salvation(도메인 이벤트 - 구원)**
+-   **Udi Dahan. 구원을 받 았 – 도메인 이벤트**
     [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist. Don't publish Domain Events, return them!(도메인 이벤트 게시하지 말고 반환하기!)**
+-   **Jan Kronquist. 반환를 도메인 이벤트를 게시 하지 마십시오!**
     [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures(마이크로 서비스 아키텍처 및 DDD의 도메인 이벤트 및 통합 이벤트)**
+-   **Cesar de la Torre. Domain Events vs. DDD 및 microservices 아키텍처에 대 한 통합 이벤트**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 

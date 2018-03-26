@@ -1,13 +1,13 @@
 ---
-title: "IMetaDataEmit::SetParamProps 메서드"
-ms.custom: 
+title: IMetaDataEmit::SetParamProps 메서드
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IMetaDataEmit.SetParamProps
@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -68,7 +68,7 @@ HRESULT SetParamProps (
  [in] 매개 변수에 상수 값입니다.  
   
  `cchValue`  
- [in] (유니코드) 문자의 크기 `pValue`합니다.  
+ [in] \(유니코드) 문자의 크기 `pValue`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  

@@ -1,12 +1,12 @@
 ---
-title: "최선의 이벤트 기반 비동기 패턴 구현 방법"
-ms.custom: 
+title: 최선의 이벤트 기반 비동기 패턴 구현 방법
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -26,10 +26,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 910edb8c79518f63e8b881b8eaecd69060fb6711
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>최선의 이벤트 기반 비동기 패턴 구현 방법
 이벤트 기반 비동기 패턴은 익숙한 이벤트 및 대리자 의미 체계를 사용하여 클래스에 비동기 동작을 노출하는 효과적인 방법을 제공합니다. 이벤트 기반 비동기 패턴을 구현하려면 몇 가지 구체적인 동작 요구 사항을 따라야 합니다. 다음 섹션에서는 이벤트 기반 비동기 패턴을 따르는 클래스를 구현할 때 고려해야 할 요구 사항 및 지침을 설명합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/13/2018
   
 -   <xref:System.EventArgs> 클래스가 *MethodName* 메서드의 반환 값에 관련되도록 합니다. <xref:System.EventArgs> 클래스를 사용할 경우 개발자가 결과를 캐스팅할 필요가 없도록 해야 합니다.  
   
-     다음 코드 예제에서는 각각 이 디자인 요구 사항의 좋은 구현과 나쁜 구현을 보여줍니다.  
+     다음 코드 예제에서는 각각 이 디자인 요구 사항의 좋은 구현과 나쁜 구현을 보여 줍니다.  
   
 ```csharp  
 // Good design  

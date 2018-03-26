@@ -1,12 +1,12 @@
 ---
-title: "연습: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현"
-ms.custom: 
+title: '연습: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,7 +24,7 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -32,10 +32,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 4d42c1d4b58f5e2517ff8d8c504628c7aab6fd0d
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>연습: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  

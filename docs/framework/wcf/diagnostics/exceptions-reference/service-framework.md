@@ -1,24 +1,26 @@
 ---
-title: "서비스 프레임워크"
-ms.custom: 
+title: 서비스 프레임워크
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="service-framework"></a>서비스 프레임워크
 이 항목에서는 서비스 프레임워크 데이터에 의해 생성된 모든 예외를 보여 줍니다.  
@@ -156,7 +158,7 @@ ms.lasthandoff: 12/22/2017
 |SFxSchemaDoesNotContainType|지정된 대상 네임스페이스를 가진 스키마에 지정된 이름을 가진 형식이 없습니다.|  
 |SfxServiceContractAttributeNotFound|지정된 계약 형식의 특성이 ServiceContractAttribute가 아닙니다. 유효한 계약을 정의하려면 지정한 형식의 특성이 ServiceContractAttribute여야 합니다. 형식은 계약 인터페이스 또는 서비스 클래스일 수 있습니다.|  
 |SFxServiceContractGeneratorConfigRequired|GenerateServiceEndpoint 메서드를 사용하여 구성 정보를 생성하려면 유효한 구성 개체를 사용하여 ServiceContractGenerator 인스턴스를 초기화해야 합니다.|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|ServiceHost가 다음 상태 중 하나가 된 후에는 끝점을 추가할 수 없습니다.<br /><br /> -열<br />오류 처리<br />-종료<br />닫힘|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|ServiceHost가 다음 상태 중 하나가 된 후에는 끝점을 추가할 수 없습니다.<br /><br /> -열<br />-   Faulted<br />-   Terminated<br />닫힘|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|Description 속성을 초기화하기 전에는 끝점을 추가할 수 없습니다.|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|ServiceMetadataBehavior의 HttpGetEnabled 속성이 true로 설정되어 있고 HttpGetUrl 속성이 상대 주소이지만 HTTP 기본 주소가 없습니다. HTTP 기본 주소를 제공하거나 HttpGetUrl을 절대 주소로 설정합니다.|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|ServiceMetadataBehavior의 HttpsGetEnabled 속성이 true로 설정되어 있고 HttpsGetUrl 속성이 상대 주소이지만 HTTPS 기본 주소가 없습니다. HTTPS 기본 주소를 제공하거나 HttpsGetUrl을 절대 주소로 설정합니다.|  

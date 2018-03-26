@@ -1,24 +1,26 @@
 ---
 title: NetTCPBinding
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1690b42f-acfd-4bb3-8f0d-0b17cd5ca36c
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ca7ec090fbac492d4b180eebbfefc42404636135
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="nettcpbinding"></a>NetTCPBinding
 이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 TCP 바인딩을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.  

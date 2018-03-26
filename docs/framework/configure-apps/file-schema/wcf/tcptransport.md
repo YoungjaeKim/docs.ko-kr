@@ -1,33 +1,35 @@
 ---
 title: '&lt;tcpTransport&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9f534bab962e83f76dab7e411cc3c2ca14779df9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 사용자 지정 바인딩에 대한 메시지를 전송하기 위해 채널이 사용할 수 있는 TCP 전송을 정의합니다.  
   
- \<system.serviceModel >  
-\<바인딩 >  
-\<customBinding >  
-\<바인딩 >  
-\<tcpTransport >  
+ \<system.serviceModel>  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<tcpTransport>  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<바인딩 >](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 전송은 "net.tcp://hostname:port/path" 형식의 URI를 사용합니다. 다른 URI 구성 요소는 선택적입니다.  
@@ -102,4 +104,4 @@ ms.lasthandoff: 12/22/2017
  [바인딩](../../../../../docs/framework/wcf/bindings.md)  
  [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

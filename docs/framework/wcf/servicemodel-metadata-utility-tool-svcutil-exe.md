@@ -25,7 +25,7 @@ ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata 유틸리티 도구(Svcutil.exe)
 ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비스 모델 코드를 생성하고, 서비스 모델 코드에서 메타데이터 문서를 생성하는 데 사용됩니다.  

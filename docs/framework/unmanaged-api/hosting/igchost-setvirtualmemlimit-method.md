@@ -1,13 +1,13 @@
 ---
-title: "IGCHost::SetVirtualMemLimit 메서드"
-ms.custom: 
+title: IGCHost::SetVirtualMemLimit 메서드
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IGCHost.SetVirtualMemLimit
@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: c7e7c2d0-e58c-4650-b40c-47b2be2cda45
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -48,7 +48,7 @@ HRESULT SetVirtualMemLimit (
   
 #### <a name="parameters"></a>매개 변수  
  `sztMaxVirtualMemMB`  
- [in] (메가바이트) 런타임 가상 메모리의 최대 크기입니다.  
+ [in] \(메가바이트) 런타임 가상 메모리의 최대 크기입니다.  
   
 ## <a name="remarks"></a>설명  
  런타임 가상 메모리의 최대 크기를 동적으로 변경할 수 있습니다.  

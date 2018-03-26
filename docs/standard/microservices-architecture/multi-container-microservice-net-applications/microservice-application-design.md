@@ -1,7 +1,7 @@
 ---
-title: "마이크로 서비스 지향 응용 프로그램 디자인"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 지향 응용 프로그램 디자인"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 마이크로 서비스 지향 응용 프로그램 디자인
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 지향 응용 프로그램 디자인
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>마이크로 서비스 지향 응용 프로그램 디자인
 
@@ -102,9 +102,9 @@ ms.lasthandoff: 01/19/2018
 
 따라서 마이크로 서비스(및 이 응용 프로그램의 데이터베이스)의 배포 단위는 Docker 컨테이너이며 참조 응용 프로그램은 마이크로 서비스 원칙을 적용한 멀티-컨테이너 응용 프로그램입니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   **eShopOnContainers GitHub 리포지토리. 참조 응용 프로그램의 소스 코드**
+-   **eShopOnContainers GitHub 리포지토리. 참조 응용 프로그램에 대 한 소스 코드**
     *https://aka.ms/eShopOnContainers/*
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>마이크로 서비스 기반 솔루션의 이점

@@ -1,9 +1,9 @@
 ---
-title: "XML Value 속성(Visual Basic)"
+title: XML Value 속성(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d9294c2d1d83dce3bca2abc22ee9c70296fc8014
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value 속성(Visual Basic)
 컬렉션의 첫 번째 요소 값에 대 한 액세스를 제공 <xref:System.Xml.Linq.XElement> 개체입니다.  
@@ -37,7 +37,7 @@ object.Value
   
 |용어|정의|  
 |---|---|  
-|`object`|필수 요소. <xref:System.Xml.Linq.XElement> 개체의 컬렉션입니다.|  
+|`object`|필수. <xref:System.Xml.Linq.XElement> 개체의 컬렉션입니다.|  
   
 ## <a name="return-value"></a>반환 값  
  A `String` 컬렉션의 첫 번째 요소 값이 포함 된 또는 `Nothing` 컬렉션이 비어 있는 경우.  

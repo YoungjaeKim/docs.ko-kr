@@ -1,12 +1,12 @@
 ---
-title: "연속 작업을 사용하여 작업 연결"
-ms.custom: 
+title: 연속 작업을 사용하여 작업 연결
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -22,10 +22,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>연속 작업을 사용하여 작업 연결
 비동기 프로그래밍에서는 한 비동기 작업이 완료 시 두 번째 작업을 호출하고 해당 작업에 데이터를 전달하는 것이 일반적입니다. 일반적으로 이 작업은 콜백 메서드를 통해 수행되었습니다. 작업 병렬 라이브러리에서는 *연속 작업*이 동일한 기능을 제공합니다. 연속 작업(연속이라고도 함)은 선행 작업이 완료될 때 다른 작업( *선행*이라고 함)이 호출하는 비동기 작업입니다.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/19/2018
  연속 작업 자체는 <xref:System.Threading.Tasks.Task> 이며 작업이 시작된 스레드를 차단하지 않습니다. 연속 작업이 완료될 때까지 차단하려면 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드를 호출합니다.  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>단일 선행 작업에 대한 연속 작업 만들기  
- <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 메서드를 호출하여 선행 작업이 완료되었을 때 실행되는 연속 작업을 만듭니다. 다음 예제에서는 기본 패턴을 보여줍니다(이해하기 쉽도록 예외 처리는 생략됨). 현재 요일의 이름을 나타내는 `taskA`개체를 반환하는 선행 작업 <xref:System.DayOfWeek> 를 실행합니다. 선행 작업이 완료되면 연속 작업 `taskB`에 선행 작업이 전달되고 해당 결과를 포함하는 문자열을 표시합니다.  
+ <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 메서드를 호출하여 선행 작업이 완료되었을 때 실행되는 연속 작업을 만듭니다. 다음 예제에서는 기본 패턴을 보여 줍니다(이해하기 쉽도록 예외 처리는 생략됨). 현재 요일의 이름을 나타내는 `taskA`개체를 반환하는 선행 작업 <xref:System.DayOfWeek> 를 실행합니다. 선행 작업이 완료되면 연속 작업 `taskB`에 선행 작업이 전달되고 해당 결과를 포함하는 문자열을 표시합니다.  
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/19/2018
  삭제된 연속 작업은 시작되지 않습니다.  
   
 ## <a name="continuations-and-child-tasks"></a>연속 작업 및 자식 작업  
- 연속 작업은 선행 작업 및 연결된 모든 자식 작업이 완료될 때까지 실행되지 않습니다. 연속 작업은 분리된 자식 작업이 완료되기를 기다리지 않습니다. 다음 두 예제에서는 연속 작업을 만드는 선행 작업에 연결된 자식 작업과 분리된 자식 작업을 보여줍니다. 다음 예제에서는 모든 자식 작업이 완료된 후에만 연속 작업이 실행되며 예제를 여러 번 실행해도 매번 동일한 출력이 생성됩니다. 기본적으로 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 메서드는 기본 작업 생성 옵션이 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>인 부모 작업을 만들기 때문에 예제에서는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 호출하여 선행 작업을 시작합니다.  
+ 연속 작업은 선행 작업 및 연결된 모든 자식 작업이 완료될 때까지 실행되지 않습니다. 연속 작업은 분리된 자식 작업이 완료되기를 기다리지 않습니다. 다음 두 예제에서는 연속 작업을 만드는 선행 작업에 연결된 자식 작업과 분리된 자식 작업을 보여 줍니다. 다음 예제에서는 모든 자식 작업이 완료된 후에만 연속 작업이 실행되며 예제를 여러 번 실행해도 매번 동일한 출력이 생성됩니다. 기본적으로 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 메서드는 기본 작업 생성 옵션이 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>인 부모 작업을 만들기 때문에 예제에서는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 호출하여 선행 작업을 시작합니다.  
   
  [!code-csharp[TPL_Continuations#9](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/attached1.cs#9)]
  [!code-vb[TPL_Continuations#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/attached1.vb#9)]  
@@ -132,7 +132,7 @@ ms.lasthandoff: 01/19/2018
   
  연속 상태는 <xref:System.Threading.Tasks.Task> 디버거에서 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 개체로 작업할 때도 유용할 수 있습니다. 예를 들어 **병렬 작업** 창의 **작업** 열에는 각 작업에 대한 상태 개체의 문자열 표현이 표시됩니다. **병렬 작업** 창에 대한 자세한 내용은 [작업 창 사용](/visualstudio/debugger/using-the-tasks-window)을 참조하세요.  
   
- 다음 예제에서는 연속 상태를 사용하는 방법을 보여줍니다. 연속 작업 체인을 만듭니다. 각 작업은 <xref:System.DateTime> 메서드의 `state` 매개 변수에 대해 현재 시간인 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 개체를 제공합니다. 각 <xref:System.DateTime> 개체는 연속 작업이 만들어진 시간을 나타냅니다. 각 작업은 작업 완료 시간을 나타내는 두 번째 <xref:System.DateTime> 개체를 결과로 생성합니다. 이 예제에서는 모든 작업이 완료된 후 만든 시간과 각 연속 작업의 완료 시간이 표시됩니다.  
+ 다음 예제에서는 연속 상태를 사용하는 방법을 보여 줍니다. 연속 작업 체인을 만듭니다. 각 작업은 <xref:System.DateTime> 메서드의 `state` 매개 변수에 대해 현재 시간인 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 개체를 제공합니다. 각 <xref:System.DateTime> 개체는 연속 작업이 만들어진 시간을 나타냅니다. 각 작업은 작업 완료 시간을 나타내는 두 번째 <xref:System.DateTime> 개체를 결과로 생성합니다. 이 예제에서는 모든 작업이 완료된 후 만든 시간과 각 연속 작업의 완료 시간이 표시됩니다.  
   
  [!code-csharp[TPL_ContinuationState#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuationstate/cs/continuationstate.cs#1)]
  [!code-vb[TPL_ContinuationState#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuationstate/vb/continuationstate.vb#1)]  

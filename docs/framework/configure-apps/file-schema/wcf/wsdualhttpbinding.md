@@ -1,28 +1,28 @@
 ---
 title: '&lt;wsDualHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: a49b534ba22f4ac422eb26885388e24594b49afd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;
 이중 서비스 계약 또는 SOAP 중간 매개자를 통한 통신에 사용할 수 있도록 보안이 유지되고 신뢰할 수 있으며 상호 운용할 수 있는 바인딩을 정의합니다.  
@@ -106,7 +106,7 @@ textEncoding="Unicode/BigEndianUnicode/UTF8"
   
  이 바인딩은 기본적으로 안정성을 위한 WS-ReliableMessaging, 메시지 보안 및 인증을 위한 WS-Security, 메시지 배달을 위한 HTTP 및 텍스트/XML 메시지 인코딩을 지원하는 런타임 스택을 생성합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```xml  
 <configuration>  

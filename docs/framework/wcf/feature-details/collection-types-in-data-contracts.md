@@ -1,12 +1,13 @@
 ---
-title: "데이터 계약의 컬렉션 형식"
-ms.custom: 
+title: 데이터 계약의 컬렉션 형식
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>데이터 계약의 컬렉션 형식
 *컬렉션* 은 특정 형식의 항목으로 구성된 목록입니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 경우 이러한 목록은 배열이나 여러 형식(제네릭 목록, 제네릭 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>또는 <xref:System.Collections.ArrayList>)을 사용하여 나타낼 수 있습니다. 예를 들어, 컬렉션은 지정된 고객에 대한 주소 목록을 보유할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *목록 컬렉션*이라고 합니다.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  `Add` 라는 메서드 및 기본 생성자를 사용하는 등 컬렉션 형식에 대한 추가 요구 사항은 다음 단원에서 자세히 설명합니다. 이렇게 하면 컬렉션 형식이 serialize되고 deserialize될 수 있습니다. 따라서 기본 생성자가 없는 제네릭 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 과 같은 일부 컬렉션은 직접 지원되지 않습니다. 이러한 제한을 해결하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 "컬렉션 인터페이스 형식 및 읽기 전용 컬렉션 사용" 단원을 참조하십시오.  
   
- 컬렉션에 포함된 형식은 데이터 계약 형식이거나 serialize할 수 있어야 합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 Serializer에서 지 원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)합니다.  
+ 컬렉션에 포함된 형식은 데이터 계약 형식이거나 serialize할 수 있어야 합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 계약 Serializer에서 지 원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)합니다.  
   
  유효한 것으로 간주되는 컬렉션과 그렇지 않은 컬렉션 그리고 컬렉션을 serialize하는 방법[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 이 항목에 있는 "고급 컬렉션 규칙" 단원의 컬렉션 serialize에 대한 내용을 참조하십시오.  
   
@@ -280,7 +282,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  목록 컬렉션에서는 다음 표에 있는 것과 같은 경우만 지원됩니다.  
   
-|참조된 형식|참조된 형식으로 구현된 인터페이스|예|처리되는 형식|  
+|참조된 형식|참조된 형식으로 구현된 인터페이스|예제|처리되는 형식|  
 |---------------------|----------------------------------------------|-------------|----------------------|  
 |제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(매개 변수 수에는 제한 없음)|제네릭이 아닌 형식|`MyType : IList`<br /><br /> 또는<br /><br /> `MyType<T> : IList`<br /><br /> 여기서 T= `int`|`Object` 의 폐쇄형 제네릭 형식(예: `IList<object>`)|  
 |제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(컬렉션 형식과 일치하지 않아도 되는 임의의 수의 매개 변수)|폐쇄형 제네릭 형식|`MyType : IList<string>`<br /><br /> 또는<br /><br /> `MyType<T> : IList<string>` 여기서 T=`int`|폐쇄형 제네릭 형식(예: `IList<string>`)|  
@@ -295,11 +297,11 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  사전 컬렉션에서는 다음 표에 있는 것과 같은 경우만 지원됩니다.  
   
-|참조된 형식|참조된 형식으로 구현된 인터페이스|예|처리되는 형식|  
+|참조된 형식|참조된 형식으로 구현된 인터페이스|예제|처리되는 형식|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(매개 변수 수에는 제한 없음)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 또는<br /><br /> `MyType<T> : IDictionary` 여기서 T=`int`|폐쇄형 제네릭 형식(예: `IDictionary<object,object>`)|  
-|폐쇄형 제네릭 형식(여러 개의 매개 변수)|<xref:System.Collections.Generic.IDictionary%602>, 폐쇄형|`MyType<T> : IDictionary<string, bool>`여기서 T =`int`|폐쇄형 제네릭 형식(예: `IDIctionary<string,bool>`)|  
-|폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 값 또는 키 중 하나가 폐쇄형이며, 나머지 하나는 개방형이고 형식의 매개 변수 중 하나를 사용|`MyType<T,U,V> : IDictionary<string,V>`여기서 T =`int`, U =`float`, V =`bool`<br /><br /> 또는<br /><br /> `MyType<Z> : IDictionary<Z,bool>`여기서 Z =`string`|폐쇄형 제네릭 형식(예: `IDictionary<string,bool>`)|  
+|폐쇄형 제네릭 형식(여러 개의 매개 변수)|<xref:System.Collections.Generic.IDictionary%602>, 폐쇄형|`MyType<T> : IDictionary<string, bool>` 여기서 T =`int`|폐쇄형 제네릭 형식(예: `IDIctionary<string,bool>`)|  
+|폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 값 또는 키 중 하나가 폐쇄형이며, 나머지 하나는 개방형이고 형식의 매개 변수 중 하나를 사용|`MyType<T,U,V> : IDictionary<string,V>` where T=`int`, U=`float`,V=`bool`<br /><br /> 또는<br /><br /> `MyType<Z> : IDictionary<Z,bool>` 여기서 Z =`string`|폐쇄형 제네릭 형식(예: `IDictionary<string,bool>`)|  
 |폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 키와 값 모두 개방형이고 각각은 형식의 매개 변수 중 하나를 사용|`MyType<T,U,V> : IDictionary<V,U>` 여기서 T=`int`, U=`bool`, V=`string`|폐쇄형 제네릭 형식(예: `IDictionary<string,bool>`)|  
 |개방형 제네릭 형식(두 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 개방형, 형식의 제네릭 매개 변수가 나타나는 순서대로 두 개의 매개 변수 모두 사용|`MyType<K,V> : IDictionary<K,V>`, K와 V 모두 개방형|개방형 제네릭 형식(예: `IDictionary<K,V>`)|  
   
@@ -353,7 +355,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="collection-naming"></a>컬렉션 명명  
  컬렉션 명명 규칙 목록은 다음과 같습니다.  
   
--   기본 형식이 포함된 목록 컬렉션 데이터 계약 및 모든 사전 컬렉션 데이터 계약의 기본 네임스페이스는 Namespace를 사용하여 재정의되지 않는 한 http://schemas.microsoft.com/2003/10/Serialization/Arrays입니다. `char`, `Timespan`및 `Guid` 형식과 함께 기본 제공 XSD 형식에 매핑되는 형식은 이러한 목적으로 기본 형식으로 간주됩니다.  
+-   모든 사전 컬렉션 데이터 계약에 대 한 것은 물론 기본 형식이 포함 된 목록 컬렉션 데이터 계약의 기본 네임 스페이스 http://schemas.microsoft.com/2003/10/Serialization/Arrays Namespace를 사용 하 여 재정의 되지 않는 경우. `char`, `Timespan`및 `Guid` 형식과 함께 기본 제공 XSD 형식에 매핑되는 형식은 이러한 목적으로 기본 형식으로 간주됩니다.  
   
 -   기본 형식이 아닌 형식이 포함된 컬렉션 형식의 기본 네임스페이스는 Namespace를 사용하여 재정의되지 않는 한 컬렉션에 포함된 형식의 데이터 계약 네임스페이스와 동일합니다.  
   

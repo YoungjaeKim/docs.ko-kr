@@ -1,7 +1,7 @@
 ---
-title: "단순 데이터 기반 CRUD 마이크로 서비스 만들기"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 단순 데이터 기반 CRUD 마이크로 서비스 만들기"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 단순 데이터 기반 CRUD 마이크로 서비스 만들기
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>단순 데이터 기반 CRUD 마이크로 서비스 만들기
 
@@ -215,7 +215,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **데이터 쿼리**
     [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
@@ -291,15 +291,15 @@ public class CatalogController : ControllerBase
 
 이 버전 관리 메커니즘은 간단하며 적합한 엔드포인트에 요청을 전달하는 서버에 따라 달라집니다. 그러나 더 복잡한 버전 관리와, REST를 사용할 때 가장 좋은 방법은 하이퍼미디어를 사용하고 [HATEOAS(Hypertext as the Engine of Application State)](https://docs.microsoft.com/azure/architecture/best-practices/api-design#using-the-hateoas-approach-to-enable-navigation-to-related-resources)를 구현하는 것입니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   **Scott Hanselman. 간편한 ASP.NET Core RESTful Web API 버전 관리**
+-   **Scott Hanselman. 간편해 진 ASP.NET Core RESTful 웹 API 버전 관리**
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **RESTful web API 버전 관리**
+-   **버전 관리는 RESTful 웹 API**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. 버전 관리, 하이퍼미디어 및 REST**
+-   **Roy Fielding. 버전 관리, 하이퍼미디어, 및 REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>ASP.NET Core Web API에서 Swagger 설명 메타데이터 생성 
@@ -310,7 +310,7 @@ Swagger의 핵심은 JSON 또는 YAML 파일의 API 설명 메타데이터인Swa
 
 사양은 OAS(OpenAPI 사양)의 기본이며 RESTful 인터페이스 정의 방법을 표준화하기 위해 투명하고 협력적이며 개방된 커뮤니티에서 개발됩니다.
 
-서비스가 검색될 수 있는 방법과 기능을 이해하는 방법에 대한 구조를 정의합니다. 웹 편집기 및 Spotify, Uber, Slack 및 Microsoft 등의 Swagger 사양 예제에 대한 자세한 내용은 Swagger 사이트 (<http://swagger.io>)를 참조하세요.
+서비스가 검색될 수 있는 방법과 기능을 이해하는 방법에 대한 구조를 정의합니다. 자세한 내용은 Swagger 사이트 참조 웹 편집기 및 Spotify, Uber, 여유 시간 및 Microsoft과 같은 회사에서 Swagger 사양의 예제를 포함 하 여 (<http://swagger.io>).
 
 ### <a name="why-use-swagger"></a>Swagger를 사용하는 이유 
 
@@ -413,9 +413,9 @@ public class Startup
 
 이렇게 간단합니다. 그리고 자동으로 생성되기 때문에 API에 더 많은 기능을 추가하면 Swagger 메타데이터가 커집니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   **Swagger를 사용한 ASP.NET Web API 도움말 페이지 **
+-   **ASP.NET 웹 API 도움말 페이지를 사용 하 여 Swagger**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

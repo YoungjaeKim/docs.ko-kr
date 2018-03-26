@@ -1,12 +1,13 @@
 ---
-title: "Al.exe(어셈블리 링커)"
-ms.custom: 
+title: Al.exe(어셈블리 링커)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Al.exe
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-caps.latest.revision: "37"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 830c141a13f2a7676e120600e05d786093a5ff44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 
@@ -174,7 +176,7 @@ al sources options
 |al1076|'type' 형식이 여러 어셈블리에 전달되었습니다. 'assembly' 및 'assembly'.<br /><br /> 각 형식을 하나의 어셈블리에만 전달할 수 있습니다.|
 |al1077|'type' public 형식이 'assembly'에서 정의되고 'assembly'로 전달됩니다.<br /><br /> 생성되는 어셈블리에 중복된 public 형식이 있습니다. 하나는 유효한 형식 정의이고 다른 하나는 형식 전달자입니다.|
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 명령은 `t2.netmodule` 모듈의 어셈블리를 사용하여 실행 파일 *t2a.exe*를 만듭니다. 진입점은 `Main`의 `MyClass` 메서드입니다.
 
@@ -182,7 +184,7 @@ al sources options
 al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
  
 [도구](../../../docs/framework/tools/index.md)  
 [*Sn.exe* (Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)(Sn.exe(강력한 이름 도구))  

@@ -1,28 +1,30 @@
 ---
-title: "DataGrid 컨트롤 형식에 대한 UI 자동화 지원"
-ms.custom: 
+title: DataGrid 컨트롤 형식에 대한 UI 자동화 지원
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Grid control type
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 3eb60004f4ffad0b62b10cf1e3ff5f28a3bf3fef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>DataGrid 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
  다음 표에서는 모든 데이터 표 컨트롤에서 지원되는 데 필요한 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
   
-|컨트롤 패턴|지원|노트|  
+|컨트롤 패턴|Support(지원)|노트|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|예|데이터 표 컨트롤의 항목에는 표에 배치되는 메타데이터가 포함되어 있기 때문에 이 컨트롤은 항상 Grid 컨트롤 패턴을 지원합니다.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|종속|데이터 표를 스크롤할 수 있는 기능은 내용 및 스크롤 막대가 있는지 여부에 따라 다릅니다.|  
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
  다음 표에서는 모든 데이터 표 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|노트|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|Support(지원)|노트|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
@@ -111,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 컨트롤 뷰|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리-콘텐츠 뷰|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid(Table, Grid, Selection)</li><li>머리글<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>"Contoso" 그룹화 (TableItem, GridItem, SelectionItem, 테이블 *, 그리드\*)<br /><br /> <ul><li>DataItem "계정 Receivable.doc" (SelectionItem, 호출, TableItem\*, GridItem\*)</li><li>DataItem "계정 Payable.doc" (SelectionItem, 호출, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid(Table, Grid, Selection)</li><li>"Contoso" 그룹화 (TableItem, GridItem, SelectionItem, 테이블 *, 그리드\*)<br /><br /> <ul><li>DataItem "계정 Receivable.doc" (SelectionItem, 호출, TableItem\*, GridItem\*)</li><li>DataItem "계정 Payable.doc" (SelectionItem, 호출, TableItem\*, GridItem\*)</li></ul></li></ul>|  
+|<ul><li>DataGrid(Table, Grid, Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>"Contoso" 그룹화 (TableItem, GridItem, SelectionItem, 테이블 *, 그리드\*)<br /><br /> <ul><li>DataItem "계정 Receivable.doc" (SelectionItem, 호출, TableItem\*, GridItem\*)</li><li>DataItem "계정 Payable.doc" (SelectionItem, 호출, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid(Table, Grid, Selection)</li><li>"Contoso" 그룹화 (TableItem, GridItem, SelectionItem, 테이블 *, 그리드\*)<br /><br /> <ul><li>DataItem "계정 Receivable.doc" (SelectionItem, 호출, TableItem\*, GridItem\*)</li><li>DataItem "계정 Payable.doc" (SelectionItem, 호출, TableItem\*, GridItem\*)</li></ul></li></ul>|  
   
  *위 예제에서는 여러 가지 수준의 컨트롤이 포함된 DataGrid를 보여줍니다. Group ("Contoso") 컨트롤에는 두 개의 DataItem 컨트롤("Accounts Receivable.doc" 및 "Accounts Payable.doc")이 있습니다. DataGrid/GridItem 쌍은 다른 수준의 쌍과 관계가 없습니다. Group 아래의 DataItem 컨트롤은 ListItem 컨트롤 형식으로도 노출될 수 있으므로, 단순한 데이터 요소가 아닌 선택 가능한 개체로서 보다 명확하게 표시될 수 있습니다. 이 예제에서는 그룹화된 데이터 항목의 하위 요소는 포함되지 않습니다.  
   

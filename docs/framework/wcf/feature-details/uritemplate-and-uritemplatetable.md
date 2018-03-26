@@ -1,24 +1,26 @@
 ---
-title: "UriTemplate 및 UriTemplateTable"
-ms.custom: 
+title: UriTemplate 및 UriTemplateTable
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 및 UriTemplateTable
 웹 개발자는 서비스가 응답하는 URI의 셰이프 및 레이아웃을 설명할 수 있어야 합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 개발자가 URI를 제어할 수 있는 두 가지 새 클래스가 추가되었습니다. <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable>은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 URI 기반 디스패치 엔진의 기초를 형성합니다. 이러한 클래스를 자체적으로 사용하면 개발자가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 구현하지 않고도 URI 매핑 메커니즘과 템플릿을 활용할 수 있습니다.  
@@ -92,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
 -   "{shoe}/boat"  
   
--   "{shoe} / {보트} /bed/ {quilt}"  
+-   "{shoe}/{boat}/bed/{quilt}"  
   
 -   "shoe / {보트}"  
   
@@ -100,11 +102,11 @@ ms.lasthandoff: 12/22/2017
   
 -   "shoe/보트? x = 2"  
   
--   "shoe / {보트}? x = {평판}"  
+-   "shoe/{boat}?x={bed}"  
   
 -   "shoe/{boat}?x={bed}&y=band"  
   
--   "? x = {shoe}"  
+-   "?x={shoe}"  
   
 -   "shoe?x=3&y={var}  
   
@@ -140,7 +142,7 @@ ms.lasthandoff: 12/22/2017
 -   /{shoe}{boat} - 변수를 리터럴로 구분해야 합니다.  
   
 ### <a name="matching-and-compound-path-segments"></a>복합 및 일치하는 경로 세그먼트  
- 복합 경로 세그먼트를 사용하면 단일 경로 세그먼트 내에 여러 변수가 포함된 UriTemplate을 정의할 수 있습니다. 다음은 템플릿 문자열의 예를 들어: "주소 / {state}. {city} "두 변수 (state 및 city)는 동일한 세그먼트 안에 정의 되어 있습니다. 이 서식 파일은 "http://example.com/Washington.Redmond"과 같이 URL과 일치 하지만 "http://example.com/Washington.Redmond.Microsoft"와 같은 URL 일치 합니다. 후자의 경우 state 변수에 "Washington"이 포함 되 고 고 city 변수에 "redmond.microsoft"가 포함 됩니다. 이 경우 모든 텍스트(‘/’ 제외)가 {city} 변수와 일치합니다. "추가" 텍스트에 일치 하지 않는 템플릿을 원하는 경우 변수 두십시오 별도 템플릿 세그먼트의 예: "주소 / {state} / {city}.  
+ 복합 경로 세그먼트를 사용하면 단일 경로 세그먼트 내에 여러 변수가 포함된 UriTemplate을 정의할 수 있습니다. 다음은 템플릿 문자열의 예를 들어: "주소 / {state}. {city} "두 변수 (state 및 city)는 동일한 세그먼트 안에 정의 되어 있습니다. 이 템플릿을 일치와 같은 "http://example.com/Washington.Redmond"되었지만 같은 URL 일치 합니다."http://example.com/Washington.Redmond.Microsoft"입니다. 후자의 경우 state 변수에 "Washington"이 포함 되 고 고 city 변수에 "redmond.microsoft"가 포함 됩니다. 이 경우 모든 텍스트(‘/’ 제외)가 {city} 변수와 일치합니다. "추가" 텍스트에 일치 하지 않는 템플릿을 원하는 경우 변수 두십시오 별도 템플릿 세그먼트의 예: "주소 / {state} / {city}.  
   
 ### <a name="named-wildcard-segments"></a>명명된 와일드카드 세그먼트  
  명명된 와일드카드 세그먼트는 변수 이름이 와일드카드 문자 ‘*’로 시작하는 경로 변수 세그먼트입니다. 다음 템플릿 문자열에는 이름이 “shoe”인 명명된 와일드카드 세그먼트가 포함되어 있습니다.  

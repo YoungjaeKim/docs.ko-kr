@@ -1,8 +1,9 @@
 ---
-title: "WPF의 전역화"
+title: WPF의 전역화
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], international user interface
@@ -10,16 +11,17 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-caps.latest.revision: "35"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e6f39d40284e6212715d85fece545e653ff2e60a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 문제를 작성할 때 알고 있어야 하는 소개 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 글로벌 시장에 대 한 응용 프로그램입니다. 전역화 프로그래밍 요소에 정의 된 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 에서 `System.Globalization`합니다.  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="xaml_globalization"></a>   
 ## <a name="xaml-globalization"></a>XAML 전역화  
- [!INCLUDE[TLA#tla_xaml#initcap](../../../../includes/tlasharptla-xamlsharpinitcap-md.md)]에 따라 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 에 정의 된 세계화 지원의 활용는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 사양입니다. 다음 섹션에서는 일부 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 알고 있어야 하는 기능입니다.  
+ [!INCLUDE[TLA#tla_xaml#initcap](../../../../includes/tlasharptla-xamlsharpinitcap-md.md)] 에 따라 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 에 정의 된 세계화 지원의 활용는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 사양입니다. 다음 섹션에서는 일부 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 알고 있어야 하는 기능입니다.  
   
 <a name="char_reference"></a>   
 ### <a name="character-references"></a>문자 참조  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="lang_attrib"></a>   
 ### <a name="language-attribute"></a>언어 특성  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]사용 하 여 [xml: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) 요소의 language 특성을 나타내는입니다.  활용 하기 위해는 <xref:System.Globalization.CultureInfo> 클래스의 미리 정의 된 문화권 이름 중 하나를 위해서는 언어 특성 값 <xref:System.Globalization.CultureInfo>합니다. [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)은 요소 트리에서 상속 가능하며(반드시 종속성 속성 상속성때문이 아니라 XML 규칙에 따름), 명시적으로 할당되지 않은 경우 기본값은 비어 있습니다.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용 하 여 [xml: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) 요소의 language 특성을 나타내는입니다.  활용 하기 위해는 <xref:System.Globalization.CultureInfo> 클래스의 미리 정의 된 문화권 이름 중 하나를 위해서는 언어 특성 값 <xref:System.Globalization.CultureInfo>합니다. [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)은 요소 트리에서 상속 가능하며(반드시 종속성 속성 상속성때문이 아니라 XML 규칙에 따름), 명시적으로 할당되지 않은 경우 기본값은 비어 있습니다.  
   
  언어를 지정할 때 언어 특성이 매우 유용합니다. 예를 들어, 프랑스, 퀘벡, 벨기에 및 스위스의 프랑스어에는 다른 철자, 어휘 및 발음이 있습니다. 중국어, 일본어 및 한국어에서 코드 포인트를 공유할 수도 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], 표의 문자 모양이 있고 완전히 다른 글꼴을 사용 합니다.  
   
@@ -66,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="unicode"></a>   
 ### <a name="unicode"></a>유니코드(Unicode)  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]모든 지원 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 서로게이트를 포함 하 여 기능 합니다. 문자 집합에 매핑될 수으로 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], 지원 됩니다. 예를 들어, GB18030에서는 중국어, 일본어 및 한국어(CFK) 확장 A와 B에 매핑되는 일부 문자와 서로게이트 쌍을 소개하므로 완전히 지원됩니다. A [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 צ ְ ײ <xref:System.Globalization.StringInfo> 결합 문자 또는 서로게이트 쌍이 있는지 알지 하지 않고도 문자열을 조작할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 모든 지원 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 서로게이트를 포함 하 여 기능 합니다. 문자 집합에 매핑될 수으로 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], 지원 됩니다. 예를 들어, GB18030에서는 중국어, 일본어 및 한국어(CFK) 확장 A와 B에 매핑되는 일부 문자와 서로게이트 쌍을 소개하므로 완전히 지원됩니다. A [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 צ ְ ײ <xref:System.Globalization.StringInfo> 결합 문자 또는 서로게이트 쌍이 있는지 알지 하지 않고도 문자열을 조작할 수 있습니다.  
   
 <a name="design_intl_ui_with_xaml"></a>   
 ## <a name="designing-an-international-user-interface-with-xaml"></a>XAML로 국가별 사용자 인터페이스 설계  
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="intl_text"></a>   
 ### <a name="international-text"></a>국가별 텍스트  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]모든 기본 제공 처리 작업이 포함 되어 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 쓰기 시스템을 지원 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모든 기본 제공 처리 작업이 포함 되어 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 쓰기 시스템을 지원 합니다.  
   
  현재 지원되는 스크립트는 다음과 같습니다.  
   
@@ -132,11 +134,11 @@ ms.lasthandoff: 12/22/2017
   
 -   스리랑카어  
   
- 모든 쓰기 시스템 엔진은 지원 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴입니다. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]글꼴 포함 될 수 있습니다는 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 국제 / 고급 더 잘 인쇄 글꼴을 디자인 하는 글꼴 작성자가 사용할 수 있는 레이아웃 표입니다. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 글꼴 레이아웃 테이블 정보가 문자 모양 대체, 문자 모양 배치, 근거 및 기준선 배치 하는 방법에 대 한 텍스트 처리 응용 프로그램에서 텍스트 레이아웃을 개선 하기 위해 사용 합니다.  
+ 모든 쓰기 시스템 엔진은 지원 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴입니다. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 글꼴 포함 될 수 있습니다는 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 국제 / 고급 더 잘 인쇄 글꼴을 디자인 하는 글꼴 작성자가 사용할 수 있는 레이아웃 표입니다. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 글꼴 레이아웃 테이블 정보가 문자 모양 대체, 문자 모양 배치, 근거 및 기준선 배치 하는 방법에 대 한 텍스트 처리 응용 프로그램에서 텍스트 레이아웃을 개선 하기 위해 사용 합니다.  
   
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]글꼴을 사용 하 여 설정 하는 큰 문자 모양 처리 사용 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 인코딩입니다. 이러한 인코딩을 사용하면 글꼴 문자 모양 변형 외에도 광범위한 국가별 지원이 가능합니다.  
+ [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 글꼴을 사용 하 여 설정 하는 큰 문자 모양 처리 사용 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 인코딩입니다. 이러한 인코딩을 사용하면 글꼴 문자 모양 변형 외에도 광범위한 국가별 지원이 가능합니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]텍스트 렌더링 연결 된 값 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 하위 픽셀 기술 해상도 독립성 지원입니다. 이 기능을 통해 가독성이 크게 향상되며, 모든 스크립트에 대해 고품질 잡지 스타일 문서를 지원하는 기능을 제공합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트 렌더링 연결 된 값 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 하위 픽셀 기술 해상도 독립성 지원입니다. 이 기능을 통해 가독성이 크게 향상되며, 모든 스크립트에 대해 고품질 잡지 스타일 문서를 지원하는 기능을 제공합니다.  
   
 <a name="intl_layout"></a>   
 ### <a name="international-layout"></a>국가별 레이아웃  
@@ -152,16 +154,16 @@ ms.lasthandoff: 12/22/2017
   
 <a name="mui"></a>   
 ### <a name="multilingual-user-interface"></a>다국어 사용자 인터페이스  
- 인터페이스 MUI (multilingual User)은 한 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 전환에 대 한 지원 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 다른 언어에서입니다. A [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 MUI를 지원 하기 위해 어셈블리 모델을 사용 합니다. 한 응용 프로그램에는 언어 중립 어셈블리 외에도 언어별 위성 리소스 어셈블리도 포함됩니다. 진입점은 기본 어셈블리에서 관리되는 .EXE입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]리소스 로더는 활용은 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]의 리소스 관리자 리소스 조회 및 대체 (fallback)를 지원 하도록 합니다. 여러 언어 위성 어셈블리는 동일한 기본 어셈블리와 작동합니다. 로드 된 리소스 어셈블리에 따라 달라 집니다는 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> 현재 스레드의 합니다.  
+ 인터페이스 MUI (multilingual User)은 한 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 전환에 대 한 지원 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 다른 언어에서입니다. A [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 MUI를 지원 하기 위해 어셈블리 모델을 사용 합니다. 한 응용 프로그램에는 언어 중립 어셈블리 외에도 언어별 위성 리소스 어셈블리도 포함됩니다. 진입점은 기본 어셈블리에서 관리되는 .EXE입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 리소스 로더는 활용은 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]의 리소스 관리자 리소스 조회 및 대체 (fallback)를 지원 하도록 합니다. 여러 언어 위성 어셈블리는 동일한 기본 어셈블리와 작동합니다. 로드 된 리소스 어셈블리에 따라 달라 집니다는 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> 현재 스레드의 합니다.  
   
 <a name="localizable_ui"></a>   
 ### <a name="localizable-user-interface"></a>지역화할 수 있는 사용자 인터페이스  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]응용 프로그램 사용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 정의 하려면 해당 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용하면 개발자가 속성 및 논리 집합이 포함된 개체의 계층 구조를 지정할 수 있습니다. 주된 용도 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 개발 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하지만 응용 프로그램의 계층 구조를 지정 하려면 사용할 수 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체입니다. 대부분의 개발자 사용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 해당 응용 프로그램을 지정 하려면 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 와 같은 프로그래밍 언어를 사용 하 고 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 사용자 상호 작용에 반응 하 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 사용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 정의 하려면 해당 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용하면 개발자가 속성 및 논리 집합이 포함된 개체의 계층 구조를 지정할 수 있습니다. 주된 용도 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 개발 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하지만 응용 프로그램의 계층 구조를 지정 하려면 사용할 수 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체입니다. 대부분의 개발자 사용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 해당 응용 프로그램을 지정 하려면 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 와 같은 프로그래밍 언어를 사용 하 고 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 사용자 상호 작용에 반응 하 합니다.  
   
  리소스의 관점에서 한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 언어 종속적 설명 하기 위해 설계 된 파일 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 리소스 요소 이며 따라서의 최종 배포 형식은 국가별 언어를 지원 하기 위해 지역화할 수 있어야 합니다. 때문에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 수 없는 이벤트를 처리할 여러 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 응용 프로그램에이 작업을 수행 하는 코드 블록을 포함 합니다. 자세한 내용은 참조 [XAML 개요 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)합니다. 코드에서 제거 되 고 다른 이진 파일이 컴파일될 때는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일 BAML 형식의 XAML으로 토큰화 됩니다. XAML 파일의 BAML 양식, 이미지 및 기타 형식의 관리 리소스 개체는 위성 리소스 어셈블리에 포함되어 다른 언어로 지역화되거나, 지역화가 필요하지 않은 경우 기본 어셈블리에 포함됩니다.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]모든 응용 프로그램 지원의 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 리소스 문자열 테이블, 이미지 등을 포함 합니다.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모든 응용 프로그램 지원의 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 리소스 문자열 테이블, 이미지 등을 포함 합니다.  
   
 <a name="building_localizable_apps"></a>   
 ### <a name="building-localizable-applications"></a>지역화 가능 응용 프로그램 빌드  

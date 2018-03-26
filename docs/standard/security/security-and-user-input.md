@@ -1,12 +1,12 @@
 ---
-title: "보안 및 사용자 입력"
-ms.custom: 
+title: 보안 및 사용자 입력
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], user input
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -22,10 +22,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 157e20a80f0a76e157fad091bec6bfe635a9ccb8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="security-and-user-input"></a>보안 및 사용자 입력
 웹 요청 또는 URL에서 받은 데이터와 Microsoft Windows Forms 응용 프로그램의 컨트롤에 대한 입력 등을 포함하여 모든 종류의 사용자 입력 데이터는 다른 코드를 호출하는 매개 변수로 직접 사용되는 경우가 많기 때문에 코드에 악영향을 미칠 수 있습니다. 이런 상황은 이상한 매개 변수로 코드를 호출하는 악성 코드의 경우와 비슷하므로 같은 예방 조치를 취해야 합니다. 사용자 입력의 경우 신뢰할 수 없는 데이터가 있는지 여부를 추적하기 위한 스택 프레임이 없기 때문에 안전을 보장하기가 더 어렵습니다.  

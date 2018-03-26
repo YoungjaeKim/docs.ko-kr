@@ -1,24 +1,26 @@
 ---
-title: "웹 서비스 프로토콜 상호 운용성 가이드"
-ms.custom: 
+title: 웹 서비스 프로토콜 상호 운용성 가이드
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>웹 서비스 프로토콜 상호 운용성 가이드
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 다양한 웹 서비스 프로토콜을 구현합니다. 이러한 프로토콜의 대부분에는 구현자가 결정하는 여러 가지 옵션과 확장 지점이 포함되어 있습니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 구현하는 웹 서비스 프로토콜의 목록을 제공합니다. 이 단원의 다른 항목에서는 지원되는 각 프로토콜의 구현에 대해 자세히 설명합니다.  
@@ -26,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="web-services-protocols-implemented-by-wcf"></a>WCF에서 구현하는 웹 서비스 프로토콜  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 채널을 통해 WS(웹 서비스) 인프라 프로토콜을 지원하고 계약 기능을 통해 웹 서비스 응용 프로그램 프로토콜을 지원합니다. 응용 프로그램 프로토콜의 상호 운용은 XSD(XML 스키마 설명 언어) 1.0과 WSDL(웹 서비스 기술 언어) 1.1을 통해 가능합니다.  
   
- 인프라 프로토콜 상호 운용성은 WS-* 사양에서 제공됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]채널은 다양 한 WS-에 대 한 지원을 제공\* 인프라 프로토콜입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널은 바인딩 요소를 사용하여 구성됩니다. 다음 표에 WS-의 전체 목록을\* 다양 한 의해 구현 되는 인프라 프로토콜 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩 요소입니다.  
+ 인프라 프로토콜 상호 운용성은 WS-* 사양에서 제공됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널은 다양 한 WS-에 대 한 지원을 제공\* 인프라 프로토콜입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널은 바인딩 요소를 사용하여 구성됩니다. 다음 표에 WS-의 전체 목록을\* 다양 한 의해 구현 되는 인프라 프로토콜 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩 요소입니다.  
   
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>는 다음 표의 사양을 지원합니다.  
   
@@ -93,13 +95,13 @@ ms.lasthandoff: 12/22/2017
   
 -   [WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [Ws-policy 1.2](http://go.microsoft.com/fwlink/?LinkId=96705)  
+-   [WS-Policy 1.2](http://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [Ws-policy 1.5](http://go.microsoft.com/fwlink/?LinkId=96706)  
+-   [WS-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=96706)  
   
 -   [Ws-policyattachment 1.2](http://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [Ws-metadataexchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
+-   [WS-MetadataExchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
   
 -   [Ws-transfer Get 메타 데이터 검색](http://go.microsoft.com/fwlink/?LinkId=96708)  
   

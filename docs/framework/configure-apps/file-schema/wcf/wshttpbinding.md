@@ -1,28 +1,28 @@
 ---
 title: '&lt;wsHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 8cf154f94b61e114e1ce379d27d5960987253344
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 비이중 서비스 계약에 적합한 안전하고 신뢰할 수 있으며 상호 운용할 수 있는 바인딩을 정의합니다. 이 바인딩은 안정성을 위해 WS-Reliable Messaging 사양을 구현하고, 메시지 보안 및 인증을 위해 WS-Security 사양을 구현합니다. 전송은 HTTP이며 메시지 인코딩은 Text/XML 인코딩입니다.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="remarks"></a>설명  
  `WSHttpBinding`은 `BasicHttpBinding`과 비슷하지만 더 다양한 웹 서비스 기능을 제공합니다. BasicHttpBinding과 마찬가지로 HTTP 전송을 사용하며 메시지 보안을 제공하지만 다른 점은 트랜잭션, 신뢰할 수 있는 메시징, WS-Addressing도 가능하다는 것입니다. 이러한 기능은 기본적으로 또는 단일 제어 설정을 통해 활성화됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```xml  
 <configuration>  

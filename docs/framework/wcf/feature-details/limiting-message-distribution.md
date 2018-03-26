@@ -1,24 +1,26 @@
 ---
-title: "메시지 분포 제한"
-ms.custom: 
+title: 메시지 분포 제한
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="limiting-message-distribution"></a>메시지 분포 제한
 피어 채널은 디자인상 브로드캐스트 메시입니다. 피어 채널의 기본 플러딩 모델에는 메시의 임의 멤버가 보낸 각 메시지를 해당 메시의 다른 모든 멤버에 배포하는 작업이 포함됩니다. 이는 멤버가 생성한 모든 메시지가 관련성을 지니며 다른 모든 멤버에 유용한 경우(예: 채트 방) 이상적입니다. 그러나 많은 응용 프로그램에서 메시지 배포를 제한해야 하는 경우가 발생합니다. 예를 들어 새 멤버가 메시에 참가하여 메시를 통해 전송된 마지막 메시지를 검색하려고 할 경우 이 요청을 메시의 모든 멤버에 플러딩하지 않아도 됩니다. 이러한 요청을 인접한 환경으로 제한하거나 로컬로 생성된 메시지를 필터링하여 제외할 수 있습니다. 메시지를 메시의 개별 노드로 보낼 수도 있습니다. 이 항목에서는 홉 수, 메시지 전파 필터, 로컬 필터 또는 직접 연결을 사용하여 전체 메시에서 메시지가 전달되는 방법에 대해 설명하고 접근 방식을 선택하기 위한 일반적인 지침을 제공합니다.  
@@ -28,14 +30,14 @@ ms.lasthandoff: 12/22/2017
   
  메시지 클래스 구현 시 적용 가능한 속성이나 필드에 `PeerHopCount`를 특성으로 추가하여 메시지에 홉 수를 추가할 수 있습니다. 메시지를 메시에 보내기 전에 이 홉 수를 특정 값으로 설정할 수 있습니다. 이런 방식으로 홉 수를 사용하여 필요한 경우 전체 메시에서 메시지 배포를 제한하면 불필요한 메시지 복제를 방지할 수 있습니다. 이 방법은 메시에 중복 데이터가 아주 많은 경우 또는 바로 인접한 환경이나 홉 수가 많이 차이 나지 않는 환경으로 메시지를 보내는 경우 유용합니다.  
   
--   코드 조각 및 관련된 정보에 대 한 참조는 [피어 채널 블로그](http://go.microsoft.com/fwlink/?LinkID=114531) (http://go.microsoft.com/fwlink/?LinkID=114531).  
+-   코드 조각 및 관련된 정보에 대 한 참조는 [피어 채널 블로그](http://go.microsoft.com/fwlink/?LinkID=114531) (http://go.microsoft.com/fwlink/?LinkID=114531)합니다.  
   
 ## <a name="message-propagation-filter"></a>메시지 전파 필터  
  `MessagePropagationFilter`는 특히 메시지 내용 또는 다른 특정 시나리오에 따라 전파 여부가 결정되는 경우 메시지 플러딩을 사용자 지정 방식으로 제어하는 데 사용할 수 있습니다. 이 필터를 사용하면 노드를 통해 전달되는 모든 메시지에 대해 전파 여부를 결정할 수 있습니다. 이는 메시의 기타 위치에서 발생하여 노드에 수신된 메시지뿐만 아니라 응용 프로그램에서 생성된 메시지에도 적용됩니다. 이 필터는 메시지와 해당 메시지의 발생 위치에 모두 액세스할 수 있으므로 사용 가능한 전체 정보에 따라 메시지 전달 또는 삭제 여부를 결정할 수 있습니다.  
   
  <xref:System.ServiceModel.PeerMessagePropagationFilter>는 단일 함수 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>가 있는 기본 추상 클래스입니다. 메서드 호출의 첫 번째 인수는 메시지의 전체 복사본을 전달합니다. 메시지를 변경해도 실제 메시지는 영향을 받지 않습니다. 메서드 호출의 마지막 인수는 메시지의 발생 위치(`PeerMessageOrigination.Local` 또는 `PeerMessageOrigination.Remote`)를 식별합니다. 이 메서드를 구체적으로 구현하면 메시지를 로컬 응용 프로그램으로 전달하거나(<xref:System.ServiceModel.PeerMessagePropagation>), 원격 클라이언트로 전달하거나(`Local`), 두 위치 모두로 전달하거나(`Remote`), 두 위치 모두로 전달하지 않음(`LocalAndRemote`)을 나타내는 상수를 `None` 열거형에서 반환해야 합니다. 해당 `PeerNode` 개체에 액세스하고 `PeerNode.MessagePropagationFilter` 속성에 파생된 전파 필터 클래스의 인스턴스를 지정하여 이 필터를 적용할 수 있습니다. 피어 채널을 열기 전에 전파 필터가 연결되어 있는지 확인하십시오.  
   
--   코드 조각 및 관련된 정보에 대 한 참조는 [피어 채널 블로그](http://go.microsoft.com/fwlink/?LinkID=114532) (http://go.microsoft.com/fwlink/?LinkID=114532).  
+-   코드 조각 및 관련된 정보에 대 한 참조는 [피어 채널 블로그](http://go.microsoft.com/fwlink/?LinkID=114532) (http://go.microsoft.com/fwlink/?LinkID=114532)합니다.  
   
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>메시의 개별 노드에 연결  
  로컬 필터를 설정하거나 직접 연결을 설정하여 메시의 개별 노드에 연결할 수 있습니다.  

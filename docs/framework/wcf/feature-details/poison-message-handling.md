@@ -1,24 +1,26 @@
 ---
-title: "포이즌 메시지 처리"
-ms.custom: 
+title: 포이즌 메시지 처리
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
 A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수를 초과한 메시지입니다. 큐 기반 응용 프로그램에서 오류로 인해 메시지를 처리할 수 없는 경우 이러한 상황이 발생할 수 있습니다. 안정성 요청을 충족하려면 대기 중인 응용 프로그램이 트랜잭션에서 메시지를 받습니다. 대기 중인 메시지를 받은 트랜잭션을 중단하면 메시지가 큐에 남으므로 새 트랜잭션에서 해당 메시지가 다시 시도됩니다. 트랜잭션의 중단 문제가 해결되지 않은 경우에는 수신 응용 프로그램이 최대 전달 시도 횟수를 초과할 때까지 같은 메시지를 받고 중단하는 루프에 갇히고, 포이즌 메시지가 발생합니다.  
@@ -73,7 +75,7 @@ A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수�
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>최선의 방법: MsmqPoisonMessageException 처리  
  서비스에서 메시지가 포이즌임을 확인하면 대기 중인 전송이 포이즌 메시지의 <xref:System.ServiceModel.MsmqPoisonMessageException>를 포함하는 `LookupId`을 throw합니다.  
   
- 수신 응용 프로그램이 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 구현하여 응용 프로그램에서 요청하는 모든 오류를 처리할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][오류 처리 및 보고에 대 한 제어 확장](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)합니다.  
+ 수신 응용 프로그램이 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 구현하여 응용 프로그램에서 요청하는 모든 오류를 처리할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [오류 처리 및 보고에 대 한 제어 확장](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)합니다.  
   
  응용 프로그램에서 서비스가 큐의 남은 메시지에 액세스할 수 있도록 포이즌 메시지를 포이즌 메시지 큐로 이동하는 몇 가지 포이즌 메시지 자동 처리 작업이 필요할 수 있습니다. <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 설정이 <xref:System.ServiceModel.ReceiveErrorHandling.Fault>로 설정된 경우에만 오류 처리 메커니즘을 사용하여 포이즌 메시지 예외를 수신 대기할 수 있습니다. 메시지 큐 3.0의 포이즌 메시지 샘플은 이 동작을 보여 줍니다. 다음에서는 최선의 방법을 포함하여 포이즌 메시지를 처리하는 단계를 간략히 보여 줍니다.  
   
@@ -102,7 +104,7 @@ A *포이즌 메시지* 를 응용 프로그램에 배달 시도 최대 횟수�
  세션에서는 단일 메시지와 같은 재시도와 포이즌 메시지 처리 프로시저를 거칩니다. 포이즌 메시지에 대해 위에 나열된 속성은 전체 세션에 적용됩니다. 즉, 메시지가 거부되면 전체 세션이 다시 시도되고 최종 포이즌 메시지 큐나 발신자의 배달 못한 편지 큐로 이동합니다.  
   
 ## <a name="batching-and-poison-messages"></a>일괄 처리 및 포이즌 메시지  
- 메시지가 포이즌 메시지가 되고 일괄 처리에 포함되면 전체 일괄 처리가 롤백되고 채널이 한 번에 하나의 메시지를 반환합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]일괄 처리 참조 [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ 메시지가 포이즌 메시지가 되고 일괄 처리에 포함되면 전체 일괄 처리가 롤백되고 채널이 한 번에 하나의 메시지를 반환합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 일괄 처리 참조 [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>포이즌 큐의 메시지에 대한 포이즌 메시지 처리  
  메시지가 포이즌 메시지 큐에 놓이면 포이즌 메시지 처리가 종료되지 않습니다. 포이즌 메시지 큐의 메시지를 읽고 처리해야 합니다. 최종 포이즌 하위 큐에서 메시지를 읽을 때 포이즌 메시지 처리 설정의 하위 집합을 사용할 수 있습니다. `ReceiveRetryCount` 및 `ReceiveErrorHandling` 설정을 적용할 수 있습니다. `ReceiveErrorHandling`은 Drop, Reject 또는 Fault로 설정할 수 있습니다. `MaxRetryCycles`이 Move로 설정되면 `ReceiveErrorHandling`가 무시되고 예외가 throw됩니다.  

@@ -1,27 +1,29 @@
 ---
-title: "형식화된 데이터 집합에 주석 지정"
-ms.custom: 
+title: 형식화된 데이터 집합에 주석 지정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: cc09f3f9b43b70b7f9b302d7a9d75428b5a0e6c7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="annotating-typed-datasets"></a>형식화된 데이터 집합에 주석 지정
 주석을 사용하면 원본으로 사용하는 스키마를 수정하지 않고 형식화된 <xref:System.Data.DataSet>의 요소 이름을 수정할 수 있습니다. 기본 스키마에서 요소의 이름 수정로 인해 형식화 된 **데이터 집합** 않는 하지 데이터 원본에 없는 뿐만 아니라 데이터 원본에 없는 개체에 대 한 참조를 손실 되는 개체를 참조 하도록 합니다.  

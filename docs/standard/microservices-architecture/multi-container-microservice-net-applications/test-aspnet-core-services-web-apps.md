@@ -1,7 +1,7 @@
 ---
-title: "ASP.NET Core 서비스 및 웹앱 테스트"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | ASP.NET Core 서비스 및 웹앱 테스트"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: ASP.NET Core 서비스 및 웹앱 테스트
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | ASP.NET Core 서비스 및 웹앱 테스트
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -100,22 +100,22 @@ public class PrimeWebDefaultRequestShould
 }
 ```
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
--   **Steve Smith. 컨트롤러 테스트** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. 테스트 컨트롤러** (ASP.NET 코어) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. 통합 테스트** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
+-   **Steve Smith. 통합 테스트** (ASP.NET 코어) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
--   **Dotnet 테스트를 사용하여 .NET Core의 단위 테스트**
+-   **.NET Core dotnet 테스트를 사용 하 여의 단위 테스트**
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. 공식 사이트입니다.
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **단위 테스트 기본 사항.**
+-   **단위 테스트 기본 사항입니다.**
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
--   **Moq**. GitHub 리포지토리.
+-   **Moq**. GitHub 리포지토리
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
 -   **NUnit**. 공식 사이트입니다.

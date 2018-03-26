@@ -1,27 +1,29 @@
 ---
-title: "표준 쿼리 연산자 변환"
-ms.custom: 
+title: 표준 쿼리 연산자 변환
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-caps.latest.revision: "2"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="standard-query-operator-translation"></a>표준 쿼리 연산자 변환
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 표준 쿼리 연산자를 SQL 명령으로 변환합니다. 데이터베이스의 쿼리 프로세서는 SQL 변환에 대 한 실행 의미 체계를 결정합니다.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/17/2018
  <xref:System.Linq.Enumerable.Union%2A> 메서드는 다중 집합에 대해 순서 없는 다중 집합의 연결로 정의됩니다(사실상 SQL UNION ALL 절의 결과와 같음).  
   
 ### <a name="take-skip"></a>Take, Skip  
- <xref:System.Linq.Enumerable.Take%2A>및 <xref:System.Linq.Enumerable.Skip%2A> 에 대해서만 잘 정의 된 메서드는 *순서 있는 집합*합니다. 순서 없는 집합이나 다중 집합에 대한 의미 체계는 정의되어 있지 않습니다.  
+ <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A> 에 대해서만 잘 정의 된 메서드는 *순서 있는 집합*합니다. 순서 없는 집합이나 다중 집합에 대한 의미 체계는 정의되어 있지 않습니다.  
   
 > [!NOTE]
 >  <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>에는 SQL Server 2000에 대한 쿼리에서 사용할 경우 몇 가지 제한이 따릅니다. 자세한 내용은 "Skip 및 Take 예외 SQL Server 2000에서 에서" 항목을 참조 하십시오. [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)합니다.  
@@ -123,7 +125,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]같음 및 비교에 대 한 지원 *플랫* 인수는 이거나 시퀀스를 포함 하는 인수에 대 한 합니다. 단순 인수는 SQL 행에 매핑될 수 있는 형식입니다. 시퀀스를 포함하지 않는 것으로 정적으로 확인할 수 있는 하나 이상의 엔터티 형식에 대한 프로젝션은 단순 인수인 것으로 간주됩니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 같음 및 비교에 대 한 지원 *플랫* 인수는 이거나 시퀀스를 포함 하는 인수에 대 한 합니다. 단순 인수는 SQL 행에 매핑될 수 있는 형식입니다. 시퀀스를 포함하지 않는 것으로 정적으로 확인할 수 있는 하나 이상의 엔터티 형식에 대한 프로젝션은 단순 인수인 것으로 간주됩니다.  
   
  다음은 단순 인수의 예제입니다.  
   

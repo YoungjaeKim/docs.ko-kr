@@ -1,7 +1,7 @@
 ---
-title: "마이크로 서비스 도메인 모델 디자인"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 도메인 모델 디자인"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 마이크로 서비스 도메인 모델 디자인
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 도메인 모델 디자인
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>마이크로 서비스 도메인 모델 디자인
 
@@ -61,7 +61,7 @@ DDD에서 도메인 엔터티는 엔터티 데이터(메모리에 액세스된 �
 
 몇몇 사람은 빈약한 도메인 모델을 안티패턴이라고도 합니다. 이 모델은 실제로 구현하는 내용에 따라 달라집니다. 만들려는 마이크로 서비스가 충분히 단순하다면(예를 들어, CRUD 서비스) 빈약한 도메인 모델을 따르는 것은 안티패턴이 아닙니다. 그러나 끊임없이 변화하는 비즈니스 규칙이 많은 마이크로 서비스 도메인의 복잡성을 해결해야 하는 경우 빈약한 도메인 모델은 해당 마이크로 서비스 또는 바운딩된 컨텍스트에게는 안티패턴일 수 있습니다. 이 경우, 빈약한 모델을 데이터와 동작을 포함할 뿐 아니라 추가적인 DDD 패턴(집계, 가치 개체 등)을 구현하는 엔터티를 지닌 풍성한 모델로 디자인하는 것은 이러한 마이크로 서비스의 장기적인 성공으로 인한 큰 혜택이 있을 수 있습니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 -   **DevIQ. 도메인 엔터티**
     [*http://deviq.com/entity/*](http://deviq.com/entity/)
@@ -85,18 +85,18 @@ Eric Evans의 지적처럼 "많은 개체는 개념적 ID를 갖고 있지 않�
 
 가치 개체는 EF 같은 ORM과 관계형 데이터베이스에서는 관리하기가 어렵습니다. 반면에 문서 지향 데이터베이스에서는 구현과 사용이 훨신 쉽습니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
--   **Martin Fowler. 가치 개체 패턴**
+-   **Martin Fowler. 값 개체 패턴**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **가치 개체**
+-   **값 개체**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **테스트 중심 개발에서의 가치 개체**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **값 기반 개발에서 개체**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub 자동-값 개체*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (서적, 가치 개체 논의 포함) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (도서; 값 개체의 토론 포함) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>집계 모듈
 
@@ -137,24 +137,24 @@ public class Order : Entity, IAggregateRoot
 
 집계를 통한 식별과 작업에는 연구와 경험이 필요합니다. 자세한 내용은 다음의 추가 리소스 목록을 참조하십시오.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
--   **Vaughn Vernon. 효율적인 집계 디자인 - 1부: 단일 집계 모델링**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon. 1 부: 효율적인 집계 디자인-단일 집계를 모델링**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_커뮤니티\_세이\_집계\_부분 \_1. pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. 효율적인 집계 디자인 - 2부: 단일 집계 모델링**
+-   **Vaughn Vernon. 함께 효율적인 집계 디자인-2 부: 만들기 집계 작업**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
--   **Vaughn Vernon. 효율적인 집계 디자인 - 3부: 발견을 통해 통찰력 얻기**
+-   **Vaughn Vernon. 효율적인 집계 디자인-3 부: 검색을 통해 통찰력 얻기**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
 -   **Sergey Grybniak. DDD 전술적 디자인 패턴**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson. 집계를 사용하여 트랜잭션 마이크로 서비스 개발**
+-   **Chris Richardson. 집계를 사용 하 여 트랜잭션 Microservices 개발**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ. 집계 모듈**
+-   **DevIQ. 집계 패턴**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 

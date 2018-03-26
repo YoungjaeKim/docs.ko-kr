@@ -1,12 +1,12 @@
 ---
-title: "비동기 작업을 종료하여 응용 프로그램 실행 차단"
-ms.custom: 
+title: 비동기 작업을 종료하여 응용 프로그램 실행 차단
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - blocks, asynchronous operations
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - asynchronous programming, blocking applications
 - blocking application execution
 ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -25,10 +25,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 3ec7bfe6fe2cef20a6d74030802113a47e8679e1
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>비동기 작업을 종료하여 응용 프로그램 실행 차단
 비동기 작업의 결과를 기다리는 동안 다른 작업을 계속 수행할 수 없는 응용 프로그램은 작업이 완료될 때까지 차단되어야 합니다. 다음 옵션 중 하나를 사용하여 비동기 작업이 완료될 때까지 대기하는 동안 응용 프로그램의 기본 스레드를 차단합니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/13/2018
   
  비동기 작업이 완료될 때까지 **End***OperationName* 메서드를 사용하여 차단되는 응용 프로그램은 일반적으로 **Begin***OperationName* 메서드를 호출하고 작업 결과 없이 완료할 수 있는 작업을 수행한 다음, **End***OperationName*을 호출합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 <xref:System.Net.Dns> 클래스에서 비동기 메서드를 사용하여 사용자가 지정한 컴퓨터의 Domain Name System 정보를 검색하는 방법을 보여줍니다. 이 방법을 사용할 경우 이러한 인수가 필요하지 않기 때문에 <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` 및 `stateObject` 매개 변수에 대해 `null`(Visual Basic의 `Nothing`)이 전달됩니다.  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]

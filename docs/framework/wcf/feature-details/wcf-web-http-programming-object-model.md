@@ -1,24 +1,26 @@
 ---
-title: "WCF 웹 HTTP 프로그래밍 개체 모델"
-ms.custom: 
+title: WCF 웹 HTTP 프로그래밍 개체 모델
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF 웹 HTTP 프로그래밍 개체 모델
 WCF WEB HTTP 프로그래밍 모델을 사용하는 개발자는 SOAP 없이 기본 HTTP 요청을 통해 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 서비스를 노출할 수 있습니다. WCF WEB HTTP 프로그래밍 모델은 기존 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장성 모델 위에 빌드되며 다음과 같은 클래스를 정의합니다.  
@@ -108,7 +110,7 @@ WCF WEB HTTP 프로그래밍 모델을 사용하는 개발자는 SOAP 없이 기
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 프로그래밍 모델은 SOAP 기반 메시지를 사용하지 않으므로 WS-* 프로토콜을 지원하지 않습니다. 그러나 SOAP를 사용하는 끝점과 SOAP를 사용하지 않는 끝점 등 두 개의 다른 끝점에 대해 동일한 계약을 노출할 수 있습니다. 참조 [하는 방법: SOAP 및 웹 클라이언트에 계약 공개](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) 예에 대 한 합니다.  
   
 ## <a name="security"></a>보안  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 프로그래밍 모델은 WS-* 프로토콜을 지원하지 않으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 프로그래밍 모델에 빌드된 웹 서비스를 보호하는 방법은 SSL을 사용하여 서비스를 노출하는 것뿐입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용한 SSL 설정 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 참조 [IIS에서 SSL을 구현 하는 방법](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 프로그래밍 모델은 WS-* 프로토콜을 지원하지 않으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 프로그래밍 모델에 빌드된 웹 서비스를 보호하는 방법은 SSL을 사용하여 서비스를 노출하는 것뿐입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 사용한 SSL 설정 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 참조 [IIS에서 SSL을 구현 하는 방법](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.WebHttpBinding>  

@@ -1,23 +1,24 @@
 ---
-title: "작업 2: 워크플로 디자이너 호스팅"
-ms.custom: 
+title: '작업 2: 워크플로 디자이너 호스팅'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>작업 2: 워크플로 디자이너 호스팅
 이 항목에서는 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 응용 프로그램에서 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 인스턴스를 호스트하는 절차를 설명합니다.  
@@ -107,7 +108,7 @@ ms.lasthandoff: 12/22/2017
         }  
         ```  
   
-         [!INCLUDE[crabout](../../../includes/crabout-md.md)]참조 활동 디자이너를 등록 [하는 방법: 사용자 지정 활동 디자이너를 만드는](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)합니다.  
+         [!INCLUDE[crabout](../../../includes/crabout-md.md)] 참조 활동 디자이너를 등록 [하는 방법: 사용자 지정 활동 디자이너를 만드는](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)합니다.  
   
     5.  `MainWindow` 클래스 생성자에서 앞에서 선언한 메서드에 호출을 추가하여 디자이너 지원을 위한 메타데이터를 등록하고 <xref:System.Activities.Presentation.WorkflowDesigner>를 만듭니다.  
   

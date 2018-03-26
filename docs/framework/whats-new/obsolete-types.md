@@ -1,28 +1,30 @@
 ---
-title: ".NET Framework에서 사용되지 않는 형식"
-ms.custom: 
+title: .NET Framework에서 사용되지 않는 형식
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 형식
 <a name="introduction"></a> 이 문서의 표에는 어셈블리에서 구성된 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 사용하지 않는 형식이 나열되어 있습니다. 사용하지 않는 형식과 각 어셈블리에서 권장되는 대체 형식의 목록을 보려면 다음 링크를 사용합니다. 이러한 형식은 사용되지 않으므로 해당 형식의 멤버도 모두 사용되지 않습니다. .NET Framework 클래스 라이브러리의 사용되지 않는 멤버에 대한 추가 목록은 [사용되지 않는 멤버](../../../docs/framework/whats-new/obsolete-members.md)를 참조하십시오.  

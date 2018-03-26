@@ -1,19 +1,19 @@
 ---
-title: "방법: Windows Communication Foundation 클라이언트 만들기"
-ms.custom: 
+title: '방법: Windows Communication Foundation 클라이언트 만들기'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/19/2018
   
 3.  GettingStartedClient 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 System.ServiceModel에 대 한 참조를 추가 **참조** 선택 하 고 솔루션 탐색기에서 GettingStartedClient 프로젝트 아래의 폴더 **추가** 참조입니다. 에 **참조 추가** 대화 선택 **프레임 워크** 대화 상자의 왼쪽에 있습니다. 검색 어셈블리 텍스트 상자에 `System.ServiceModel`을 입력합니다. 선택 대화 상자 가운데에서 **System.ServiceModel**, 클릭는 **추가** 단추를 클릭 하 고는 **닫기** 단추입니다. 클릭 하 여 솔루션을 저장 된 **모두 저장** 주 메뉴 단추입니다.  
   
-4.  그런 다음 계산기 서비스에 대한 서비스 참조를 추가합니다. 그렇게 하기 전에 GettingStartedHost 콘솔 응용 프로그램을 실행해야 합니다. 솔루션 탐색기에서 GettingStartedClient 프로젝트에서 References 폴더를 마우스 오른쪽 단추로 클릭 하 고 서비스 참조 추가 대화 상자의 주소 상자에 다음 URL에서 서비스 참조 추가 및 형식을 선택할 수 호스트가 실행 되 면: "http:/ 하이퍼링크 / localhost:8000/ServiceModelSamples/Service "을 클릭 하 고: //localhost: 8000/ServiceModelSamples/Service는 **이동** 단추입니다. 서비스 목록 상자에 CalculatorService가 표시됩니다. CalculatorService를 두 번 클릭하면 확장되면서 서비스에서 구현한 서비스 계약이 표시됩니다. 클릭 하 고 기본 네임 스페이스를 그대로 둡니다는 **확인** 단추입니다.  
+4.  그런 다음 계산기 서비스에 대한 서비스 참조를 추가합니다. 그렇게 하기 전에 GettingStartedHost 콘솔 응용 프로그램을 실행해야 합니다. 솔루션 탐색기에서 GettingStartedClient 프로젝트에서 References 폴더를 마우스 오른쪽 단추로 클릭 하 고 서비스 참조 추가 대화 상자의 주소 상자에 다음 URL에서 서비스 참조 추가 및 형식을 선택할 수 호스트가 실행 되 면: 하이퍼링크 "http://localhost:8000/ServiceModelSamples/Service" http://localhost:8000/ServiceModelSamples/Service 는 **이동** 단추입니다. 서비스 목록 상자에 CalculatorService가 표시됩니다. CalculatorService를 두 번 클릭하면 확장되면서 서비스에서 구현한 서비스 계약이 표시됩니다. 클릭 하 고 기본 네임 스페이스를 그대로 둡니다는 **확인** 단추입니다.  
   
      Visual Studio를 사용하여 서비스에 대한 참조를 추가하면 솔루션 탐색기에서 GettingStartedClient 프로젝트 아래의 Service References 폴더에 새 항목이 나타납니다.  사용 하는 경우는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 도구는 소스 코드 파일 및 app.config 파일이 생성 됩니다.  
   

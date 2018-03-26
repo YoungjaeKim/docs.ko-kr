@@ -1,25 +1,26 @@
 ---
-title: "방법: 항목 목록 만들기"
-ms.custom: 
+title: '방법: 항목 목록 만들기'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: c97f2fa5b20deeebc90cad3d7cc732d056242be4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-create-a-list-of-items"></a>방법: 항목 목록 만들기
 이 항목의 코드는 `Student` 클래스를 정의하고 클래스의 인스턴스 목록을 만듭니다. 목록 항목을 지원 하도록 설계 된 [연습: Visual Basic에서 쿼리 작성](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)합니다. 또한 개체 목록이 필요한 모든 응용 프로그램에도 사용할 수 있습니다. 코드는 개체 이니셜라이저를 사용하여 학생 목록에 항목을 정의합니다.  

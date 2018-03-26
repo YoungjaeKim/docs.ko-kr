@@ -1,24 +1,26 @@
 ---
-title: "Windows 스토어 앱을 .NET 네이티브로 마이그레이션"
-ms.custom: 
+title: Windows 스토어 앱을 .NET 네이티브로 마이그레이션
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 는 Windows 스토어 또는 개발자 컴퓨터에서 앱을 정적으로 컴파일하는 기능을 제공합니다. 이 기능은 장치의 [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 또는 JIT(Just-In-Time) 컴파일러가 Windows 스토어 앱에 대해 수행하는 동적 컴파일과는 다릅니다. 이처럼 컴파일 방식이 다르기는 하지만 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 는 [Windows 스토어 앱용 .NET](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)과의 호환성을 유지하려고 합니다. 대부분의 경우 Windows 스토어 앱용 .NET에서 작동하는 기능은 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에서도 작동합니다.  그러나 동작이 변경되는 경우도 있습니다. 이 문서에서는 다음과 같은 영역에서 Windows 스토어 앱용 표준 .NET과 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 간의 이러한 차이점에 대해 설명합니다.  
@@ -166,7 +168,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>에서 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 메서드는 간단한 날짜를 포함하는 문자열을 올바르게 구문 분석합니다. 그러나 Microsoft 기술 자료 문서 [KB2803771](http://support.microsoft.com/kb/2803771) 및 [KB2803755](http://support.microsoft.com/kb/2803755)에서 설명하는 날짜 및 시간 구문 분석 변경 내용과의 호환성은 유지되지 않습니다.  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")` 가에서 올바르게 반올림 [!INCLUDE[net_native](../../../includes/net-native-md.md)]합니다. 일부 CLR 버전에서는 결과 문자열이 반올림되는 대신 잘립니다.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` 가에 올바르게 반올림 [!INCLUDE[net_native](../../../includes/net-native-md.md)]합니다. 일부 CLR 버전에서는 결과 문자열이 반올림되는 대신 잘립니다.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient의 차이점  
@@ -230,7 +232,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>지원으로 사용 하는 경우 등 일부 시나리오에서 예외를 throw 하지만 [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) 또는 byref 변형 합니다.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 지원으로 사용 하는 경우 등 일부 시나리오에서 예외를 throw 하지만 [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) 또는 byref 변형 합니다.  
   
  [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) 지원에 대해 API가 더 이상 사용되지 않습니다.  
   

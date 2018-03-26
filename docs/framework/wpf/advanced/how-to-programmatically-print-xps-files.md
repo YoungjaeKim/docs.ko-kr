@@ -1,12 +1,13 @@
 ---
-title: "방법: 프로그래밍 방식으로 XPS 파일 인쇄"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 XPS 파일 인쇄'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 0b58e617fb04ecaba45ed655dc650459e89453dd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>방법: 프로그래밍 방식으로 XPS 파일 인쇄
 한 오버 로드를 사용할 수 있습니다는 <xref:System.Printing.PrintQueue.AddJob%2A> 인쇄 하려면 메서드 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 는 여는 파일을 <xref:System.Windows.Controls.PrintDialog> 또는 원칙적으로 모든 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 전혀 합니다.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/19/2018
   
  다른 방법으로 인쇄 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 사용 하는 것은 <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> 또는 <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> 의 메서드는 <xref:System.Windows.Controls.PrintDialog> 제어 합니다. [인쇄 호출 대화 상자](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  세 매개 변수를 사용 하는 주요 단계 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 메서드는 다음과 같습니다. 아래 예제에서 자세히 설명합니다.  
   
 1.  프린터가 XPSDrv 프린터인지 확인합니다. XPSDrv에 대한 자세한 내용은 [인쇄 개요](../../../../docs/framework/wpf/advanced/printing-overview.md)를 참조하세요.  

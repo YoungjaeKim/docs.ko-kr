@@ -1,7 +1,7 @@
 ---
-title: "dotnet new에 대한 사용자 지정 템플릿 만들기"
-description: "이 재미있는 자습서에서 dotnet new 명령에 대한 사용자 지정 템플릿을 만드는 방법을 알아봅니다."
-keywords: ".NET, .NET Core, 템플릿, 템플릿 지정, 자습서, dotnet new"
+title: dotnet new에 대한 사용자 지정 템플릿 만들기
+description: 이 재미있는 자습서에서 dotnet new 명령에 대한 사용자 지정 템플릿을 만드는 방법을 알아봅니다.
+keywords: .NET, .NET Core, 템플릿, 템플릿 지정, 자습서, dotnet new
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
@@ -12,10 +12,10 @@ ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
 ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
-ms.sourcegitcommit: 3eea47bff3201ae5d3395b0c7947806c2faca255
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿 만들기
 
@@ -213,7 +213,7 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 > 로컬 파일 시스템에서 템플릿을 제거하려면 경로를 정규화해야 합니다. 예를 들어 *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp* will work, but *./GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지 않습니다.
 > 마지막의 종료하는 디렉터리 슬래시도 템플릿 경로에 포함하지 마세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki)(dotnet/templating GitHub 리포지토리 Wiki)  
 [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)(dotnet/dotnet-template-samples GitHub 리포지토리)  
