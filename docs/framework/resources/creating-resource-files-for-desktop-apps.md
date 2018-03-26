@@ -1,12 +1,13 @@
 ---
-title: "데스크톱 응용 프로그램용 리소스 파일 만들기"
-ms.custom: 
+title: 데스크톱 응용 프로그램용 리소스 파일 만들기
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 555ef705dc485462dc209b090e5cdbee98983681
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b73520dfc3d5123aedce77254f738a61a27ccd95
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>데스크톱 응용 프로그램용 리소스 파일 만들기
 문자열, 이미지 또는 개체 데이터와 같은 리소스를 리소스 파일에 포함하여 응용 프로그램에서 쉽게 사용할 수 있게 설정할 수 있습니다. .NET Framework에서는 리소스 파일을 만드는 다섯 가지 방법을 제공합니다.  
@@ -130,11 +132,15 @@ greeting=Hello, {0}!
   
  Visual Basic을 사용하고 있고 소스 코드 파일 이름이 Greeting.vb라면 다음 명령은 포함된 .resources 파일을 포함하는 실행 파일을 만듭니다.  
   
- **vbc greeting.vb /resource:GreetingResources.resources**  
+```console 
+vbc greeting.vb -resource:GreetingResources.resources
+```
   
  C#을 사용하고 있고 소스 코드 파일 이름이 Greeting.cs라면 다음 명령은 포함된 .resources 파일을 포함하는 실행 파일을 만듭니다.  
   
- **csc greeting.cs /resource:GreetingResources.resources**  
+ ```console
+csc greeting.cs -resource:GreetingResources.resources
+```
   
 <a name="ResxFiles"></a>   
 ## <a name="resources-in-resx-files"></a>.resx 파일의 리소스  

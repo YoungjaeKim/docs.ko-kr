@@ -1,12 +1,12 @@
 ---
-title: "정규식의 역행 검사"
-ms.custom: 
+title: 정규식의 역행 검사
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -30,10 +30,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>정규식의 역행 검사
 <a name="top"></a> 역추적은 정규식 패턴에 선택적인 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 또는 [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)이 포함되어 있고 정규식 엔진이 일치 항목을 계속 검색하기 위해 이전에 저장된 상태로 되돌아갈 때 발생합니다. 역추적은 정규식 성능의 핵심입니다. 역추적을 사용하면 식의 성능과 유연성을 높일 수 있으며 매우 복잡한 패턴도 검색할 수 있습니다. 하지만 이러한 장점에는 단점이 수반됩니다. 역추적은 종종 정규식 엔진의 성능에 영향을 주는 가장 중요한 단일 요소입니다. 다행히도 개발자는 정규식 엔진의 동작과 역추적 사용 방식을 제어할 수 있습니다. 이 항목에서는 역추적의 작동 방식 및 역추적을 제어할 수 있는 방법에 대해 설명합니다.  
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/01/2018
   
 -   정규식 엔진이 이전에 저장된 매치 3으로 돌아갑니다. 추가 캡처 그룹에 할당할 수 있도록 두 개의 추가 "a" 문자가 있는지 확인합니다. 하지만 문자열 끝 테스트가 실패합니다. 그런 다음 매치 3으로 돌아가서 두 개의 추가 캡처 그룹에서 두 개의 추가 "a" 문자를 검색하려고 시도합니다. 그래도 문자열 끝 테스트가 실패합니다. 이렇게 실패한 검색 작업에는 12번의 비교 작업이 필요합니다. 지금까지 총 25번의 비교 작업이 수행되었습니다.  
   
- 입력 문자열을 정규식 엔진에서 비교하는 작업은 정규식이 검색 작업의 모든 가능한 조합을 시도하고 일치 항목이 없다는 결론을 내릴 때까지 이러한 방식으로 계속해서 수행됩니다. 중첩된 수량자로 인해 이러한 비교는 O(2<sup>n</sup>) 또는 지수 연산으로 수행되며, 여기서 *n*은 입력 문자열에 있는 문자 수입니다. 즉, 문자 수가 30개인 입력 문자열에서는 최악의 경우 약 1,073,741,824번의 비교 작업이 필요하고, 입력 문자열의 문자 수가 40개이면 약 1,099,511,627,776번의 비교 작업이 필요합니다. 이정도 또는 심지어 더 긴 문자열을 사용하면 정규식 메서드가 정규식 패턴과 일치하지 않는 입력을 처리할 때 완료 시간이 극단적으로 길어질 수 있습니다.  
+ 입력 문자열을 정규식 엔진에서 비교하는 작업은 정규식이 검색 작업의 모든 가능한 조합을 시도하고 일치 항목이 없다는 결론을 내릴 때까지 이러한 방식으로 계속해서 수행됩니다. 중첩된 된 수량자로 인해 이러한 비교는는 O (2<sup>n</sup>) 또는 지 수 연산, 여기서 *n* 입력된 문자열에서 문자 수입니다. 즉, 문자 수가 30개인 입력 문자열에서는 최악의 경우 약 1,073,741,824번의 비교 작업이 필요하고, 입력 문자열의 문자 수가 40개이면 약 1,099,511,627,776번의 비교 작업이 필요합니다. 이정도 또는 심지어 더 긴 문자열을 사용하면 정규식 메서드가 정규식 패턴과 일치하지 않는 입력을 처리할 때 완료 시간이 극단적으로 길어질 수 있습니다.  
   
  [맨 위로 이동](#top)  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 02/01/2018
 ### <a name="nonbacktracking-subexpression"></a>역추적하지 않는 하위 식  
  `(?>` *subexpression*`)` 언어 요소는 하위 식에서 역추적을 억제합니다. 실패한 검색과 연관된 성능 문제를 방지하는 데 유용합니다.  
   
- 다음 예제에서는 역추적을 억제하여 중첩된 수량자를 사용할 때 성능을 향상시키는 방법을 보여줍니다. 이 예에서는 정규식 엔진이 입력 문자열이 두 개의 정규식과 일치하지 않는지 확인하기 위해 필요한 시간을 측정합니다. 첫 번째 정규식에서는 역추적을 사용하여 하나 이상의 16진수 숫자와 일치하는 하나 이상의 항목이 포함되고 콜론과 하나 이상의 16진수 숫자 그리고 두 개의 콜론이 이어지는 문자열을 검색하려고 시도합니다. 두 번째 정규식은 첫 번째와 동일하지만 역추적이 사용되지 않습니다. 예의 결과에서 보여 지듯이 역추적을 사용하지 않음으로써 얻게 되는 성능 향상 효과가 매우 큽니다.  
+ 다음 예제에서는 역추적을 억제하여 중첩된 수량자를 사용할 때 성능을 향상시키는 방법을 보여 줍니다. 이 예에서는 정규식 엔진이 입력 문자열이 두 개의 정규식과 일치하지 않는지 확인하기 위해 필요한 시간을 측정합니다. 첫 번째 정규식에서는 역추적을 사용하여 하나 이상의 16진수 숫자와 일치하는 하나 이상의 항목이 포함되고 콜론과 하나 이상의 16진수 숫자 그리고 두 개의 콜론이 이어지는 문자열을 검색하려고 시도합니다. 두 번째 정규식은 첫 번째와 동일하지만 역추적이 사용되지 않습니다. 예의 결과에서 보여 지듯이 역추적을 사용하지 않음으로써 얻게 되는 성능 향상 효과가 매우 큽니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking4.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
@@ -183,7 +183,7 @@ ms.lasthandoff: 02/01/2018
   
  두 번째 정규식 패턴 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`은 긍정 lookbehind 어설션을 사용합니다. 이 패턴은 다음 표에서와 같이 정의됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`^`|문자열의 시작 부분에서 검색을 시작합니다.|  
 |`[0-9A-Z]`|일치하는 영숫자 문자를 찾습니다. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드가 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션으로 호출되므로 이 비교는 대/소문자를 구분하지 않습니다.|  
@@ -214,7 +214,7 @@ ms.lasthandoff: 02/01/2018
   
  두 번째 정규식 패턴 `^((?=[A-Z])\w+\.)*[A-Z]\w*$`에는 긍정 lookahead 어설션이 사용됩니다. 이 패턴은 다음 표에서와 같이 정의됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`^`|문자열의 시작 부분에서 검색을 시작합니다.|  
 |`(?=[A-Z])`|첫 번째 문자를 검색하고 영문자(A-Z)인 경우 검색을 계속합니다. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드가 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션으로 호출되므로 이 비교는 대/소문자를 구분하지 않습니다.|  

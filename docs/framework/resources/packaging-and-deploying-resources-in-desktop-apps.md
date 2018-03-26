@@ -1,13 +1,13 @@
 ---
-title: "데스크톱 응용 프로그램의 리소스 패키징 및 배포"
-ms.custom: 
+title: 데스크톱 응용 프로그램의 리소스 패키징 및 배포
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -34,17 +34,17 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3ab23b263d572a5573de5fc21f15b56e784a9a94
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 479ab530ddf02fa3701a7f6f3699258d0eab727e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>데스크톱 응용 프로그램의 리소스 패키징 및 배포
 응용 프로그램은 <xref:System.Resources.ResourceManager> 클래스가 나타내는 .NET Framework 리소스 관리자를 사용하여 지역화된 리소스를 검색합니다. 리소스 관리자는 허브 및 스포크 모델이 리소스 패키지 및 배포에 사용된다고 가정합니다. 허브는 지역화할 수 없는 실행 코드와 중립 또는 기본 문화권이라고 하는 단일 문화권의 리소스를 포함하는 주 어셈블리입니다. 기본 문화권은 응용 프로그램의 대체 문화권으로, 지역화된 리소스를 찾을 수 없는 경우 해당 리소스가 사용되는 문화권입니다. 각 스포크는 단일 문화권의 리소스를 포함하지만 코드는 포함하지 않는 위성 어셈블리에 연결됩니다.  
@@ -177,11 +177,15 @@ Greeting=Добрый день
   
  명령줄에서 다음과 같이 C# 소스 코드를 컴파일할 수 있습니다.  
   
- **csc Example1.cs**  
+```console 
+csc Example1.cs
+```
   
  Visual Basic 컴파일러에 대한 명령도 다음과 같이 매우 유사합니다.  
   
- **vbc Example1.vb**  
+```console
+vbc Example1.vb
+```  
   
  주 어셈블리에 포함된 리소스가 없기 때문에 `/resource` 스위치를 사용하여 컴파일할 필요가 없습니다.  
   

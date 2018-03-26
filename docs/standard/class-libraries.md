@@ -1,6 +1,6 @@
 ---
-title: ".NET 클래스 라이브러리"
-description: ".NET 클래스 라이브러리를 사용하여 유용한 기능을 여러 응용 프로그램에서 사용할 수 있는 모듈로 그룹화하는 방법을 알아봅니다."
+title: .NET 클래스 라이브러리
+description: .NET 클래스 라이브러리를 사용하여 유용한 기능을 여러 응용 프로그램에서 사용할 수 있는 모듈로 그룹화하는 방법을 알아봅니다.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -13,11 +13,11 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="net-class-libraries"></a>.NET 클래스 라이브러리
 
@@ -55,11 +55,16 @@ ms.lasthandoff: 12/23/2017
 
 .NET Standard 라이브러리를 지원하는 플랫폼은 다음과 같습니다.
 
-*   .NET Core
-*   ASP.NET Core
-*   .NET Framework 4.5 이상
-*   Windows 스토어 앱
-*   Windows Phone 8 이상
+* .NET Core
+* .NET Framework
+* Mono
+* Xamarin.iOS, Xamarin.Mac, Xamarin.Android
+* UWP(유니버설 Windows 플랫폼)
+* Windows
+* Windows Phone
+* Windows Phone Silverlight
+
+자세한 내용은 [.NET 표준](net-standard.md) 항목을 참조하세요.
 
 ### <a name="mono-class-libraries"></a>Mono 클래스 라이브러리
 

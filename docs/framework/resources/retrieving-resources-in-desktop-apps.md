@@ -1,12 +1,13 @@
 ---
-title: "데스크톱 응용 프로그램의 리소스 검색"
-ms.custom: 
+title: 데스크톱 응용 프로그램의 리소스 검색
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -25,16 +26,17 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1227aa30d854d736bb24413b37d4722e729b2ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a02d9efcadcc4c7066dba4e55268ab898b6790e8
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>데스크톱 응용 프로그램의 리소스 검색
 .NET Framework 데스크톱 앱의 지역화된 리소스로 작업할 경우에는 기본 또는 중립 문화권의 리소스를 주 어셈블리와 패키지하여 앱이 지원하는 각 언어 또는 문화권에 대해 별도의 위성 어셈블리를 만드는 것이 가장 바람직합니다. 그런 다음 <xref:System.Resources.ResourceManager> 클래스를 다음 섹션에 설명한 대로 사용하여 명명된 리소스에 액세스할 수 있습니다. 주 어셈블리와 위성 어셈블리에 리소스를 포함하지 않으려는 경우 이 문서의 뒷부분에 나오는 [.resources 파일에서 리소스 검색](#from_file) 섹션에서 설명한 것처럼, 이진 .resources 파일에 직접 액세스할 수도 있습니다.  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱의 리소스 검색에 대한 자세한 내용은 Windows 개발자 센터의 [Windows 스토어 앱에서 리소스 만들기 및 검색](http://go.microsoft.com/fwlink/p/?LinkID=241674) 을 참조하세요.  
@@ -77,15 +79,15 @@ TimeHeader=Текущее время —
   
 ```  
 resgen strings.txt  
-csc GetString.cs /resource:strings.resources  
+csc GetString.cs -resource:strings.resources  
   
 resgen strings.fr-FR.txt  
 md fr-FR  
-al /embed:strings.fr-FR.resources /culture:fr-FR /out:fr-FR\GetString.resources.dll  
+al -embed:strings.fr-FR.resources -culture:fr-FR -out:fr-FR\GetString.resources.dll  
   
 resgen strings.ru-RU.txt  
 md ru-RU  
-al /embed:strings.ru-RU.resources /culture:ru-RU /out:ru-RU\GetString.resources.dll  
+al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.dll  
 ```  
   
  현재 UI 문화권이 스페인어(스페인)인 경우 예제에서는 영어 리소스를 표시합니다. 스페인어 리소스를 사용할 수 없거나 영어가 예제의 기본 문화권이기 때문입니다.  
@@ -111,7 +113,7 @@ CreateResources
   
 resgen AppResources.resx  
   
-csc GetStream.cs /resource:AppResources.resources  
+csc GetStream.cs -resource:AppResources.resources  
 ```  
   
  다음 예제에서는 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> 메서드를 사용하여 사용자 지정 개체를 deserialize합니다. 예제에는 `PersonTable`이라는 다음 구조를 정의하는 UIElements.cs(Visual Basic의 경우 UIElements.vb)라는 소스 코드 파일이 포함되어 있습니다. 이 구조는 테이블 열의 지역화된 이름을 표시하는 일반 테이블 표시 루틴에서 사용하기 위한 것입니다. `PersonTable` 구조체는 <xref:System.SerializableAttribute> 특성으로 표시됩니다.  
@@ -132,12 +134,12 @@ csc GetStream.cs /resource:AppResources.resources
  필요한 리소스 파일 및 어셈블리를 빌드하고 다음 배치 파일을 실행하여 앱을 실행할 수 있습니다. `/r` 옵션을 사용하여 UIElements.dll에 대한 참조와 함께 Resgen.exe를 제공해야 합니다. 이렇게 해야 `PersonTable` 구조에 대한 정보에 액세스할 수 있습니다. C#을 사용하는 경우 `vbc` 컴파일러 이름을 `csc`로 바꾸고, `.vb` 확장을 `.cs`로 바꿉니다.  
   
 ```  
-vbc /t:library UIElements.vb  
-vbc CreateResources.vb /r:UIElements.dll  
+vbc -t:library UIElements.vb  
+vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
   
-resgen UIResources.resx  /r:UIElements.dll  
-vbc GetObject.vb /r:UIElements.dll /resource:UIResources.resources  
+resgen UIResources.resx  -r:UIElements.dll  
+vbc GetObject.vb -r:UIElements.dll -resource:UIResources.resources  
   
 GetObject.exe  
 ```  
