@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 자습서"
-description: ".NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windows에서 앱과 라이브러리를 빌드하세요."
+title: .NET Core 자습서
+description: .NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windows에서 앱과 라이브러리를 빌드하세요.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 8b1e80023139a4ebc3c961c47c06b9afd0370014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 267cac338263f964006b424bb855d1022990498c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-core-tutorials"></a>.NET Core 자습서
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/23/2017
 - [클래스 라이브러리 테스트](testing-library-with-visual-studio.md)
 - [클래스 라이브러리 사용](consuming-library-with-visual-studio.md)
 - [Windows에서 완전한 C# .NET Core 솔루션 빌드](using-on-windows-full-solution.md)
-- [NoSQL 자습서: .NET Core의 DocumentDB C# 콘솔 응용 프로그램 빌드](/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Azure Cosmos DB: SQL API 및 .NET Core 시작](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Visual Studio Code를 사용하여 응용 프로그램 빌드
 

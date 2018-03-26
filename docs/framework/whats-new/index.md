@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework의 새로운 기능"
+title: .NET Framework의 새로운 기능
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8d540e3201f0a310641005d95d9c3c0f3dc1d501
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 93c08633af1b4bb46afe9e382066f523c9923a9b
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 <a name="introduction"></a> 이 문서에서는 다음 버전의 .NET Framework에 새로 추가된 주요 기능과 향상된 내용에 대해 요약합니다.  
@@ -100,12 +100,6 @@ ms.lasthandoff: 02/05/2018
 
 .NET Framework 4.7.1의 GC(가비지 수집) 기능이 변경되어 전반적인 성능이 개선되었으며, LOH(큰 개체 힙) 할당 성능이 특히 개선되었습니다. .NET Framework 4.7.1에서는 SOH(작은 개체 힙) 및 LOH 할당에 별도의 잠금이 사용되므로 BGC(백그라운드 GC)가 SOH를 비울 때 LOH 할당이 발생할 수 있습니다. 따라서 다수의 LOH 할당을 수행하는 응용 프로그램은 할당 잠금 경합 감소와 성능 향상 효과를 볼 수 있습니다. 자세한 내용은 [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/)(.NET Framework 4.7.1 런타임 및 컴파일러 기능) 블로그 게시물의 "Runtime -- GC Performance Improvements"(런타임 -- GC 성능 및 개선 사항) 섹션을 참조하세요. 
 
-**이식 가능한 PDB에 대한 지원**
-
-.NET Framework 4.7.1 버전부터 이식 가능한 PDB가 지원됩니다. 표준 PDB 파일은 Windows 전용이지만 이식 가능한 PDB 파일은 모든 플랫폼에서 만들고 읽을 수 있습니다. 대부분의 경우 파일 형식은 특정 .NET 구현에서 실행 중인 응용 프로그램에 투명합니다. 예외는 런타임에 어셈블리를 동적으로 내보내는 응용 프로그램입니다. 이 경우 이식 가능한 PDB 파일을 내보내는 기능은 성능 개선을 지원하고 응용 프로그램의 메모리 사용 공간을 줄일 수 있습니다. 
-
-<xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> 메서드에 "PortablePdb" 문자열을 전달한 후 어셈블리를 내보내면 현재 .NET 구현에서 이식 가능한 PDB가 지원되는지 런타임에서 확인할 수 있습니다.  
- 
 <a name="net471"/>
 #### <a name="networking"></a>네트워킹
 
@@ -198,7 +192,7 @@ NET Framework 4.7에서 ASP.NET에는 다음과 같은 새 기능이 포함됩�
 <a name="wcf47" />
 #### <a name="windows-communication-foundation-wcf"></a>WCF(Windows Communication Foundation)
 
-WFC(Windows Communication Foundation)는 다음과 같은 기능 및 변경 내용을 추가합니다.
+WCF(Windows Communication Foundation)는 다음과 같은 기능 및 변경 내용을 추가합니다.
 
 **TLS1.1.1 또는 TLS1.2에 대한 기본 메시지 보안 설정 구성 가능**
 
@@ -1140,7 +1134,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - **Windows Forms 컨트롤 크기 조정.** 이 기능은 확장되었습니다. 시스템 DPI 설정을 사용하여 다음과 같은 추가 컨트롤의 구성 요소 크기를 조정할 수 있습니다(예: 콤보 상자의 드롭다운 화살표).
 
-     <xref:System.Windows.Forms.ComboBox>    <xref:System.Windows.Forms.ToolStripComboBox>    <xref:System.Windows.Forms.ToolStripMenuItem>    <xref:System.Windows.Forms.Cursor>    <xref:System.Windows.Forms.DataGridView>    <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+     <xref:System.Windows.Forms.ComboBox> <xref:System.Windows.Forms.ToolStripComboBox> <xref:System.Windows.Forms.ToolStripMenuItem> <xref:System.Windows.Forms.Cursor> <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
      이 기능은 옵트인 기능입니다. 이 기능을 사용하려면 아래와 같이 응용 프로그램 구성 파일(app.config)에서 `EnableWindowsFormsHighDpiAutoResizing` 요소를 `true`로 설정해야 합니다.
 
@@ -1220,7 +1214,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - Windows Forms 컨트롤 크기 조정. 앱의 응용 프로그램 구성 파일(app.config)의 항목을 선택하여 시스템 DPI 설정으로 컨트롤 구성 요소(예: 속성 표에 표시되는 아이콘)의 크기를 조정할 수 있습니다. 이 기능은 현재 다음과 같은 Windows Forms 컨트롤에서 지원됩니다.
 
-     <xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>    <xref:System.Windows.Forms.DataGridView>의 일부 구성 요소(그 밖에 지원되는 컨트롤에 대해서는 [4.5.2의 새 기능](#v452) 참조)
+     <xref:System.Windows.Forms.PropertyGrid> <xref:System.Windows.Forms.TreeView> <xref:System.Windows.Forms.DataGridView>의 일부 구성 요소(그 밖에 지원되는 컨트롤에 대해서는 [4.5.2의 새 기능](#v452) 참조)
 
      이 기능을 사용하려면 다음과 같이 새로운 \<appSettings> 요소를 구성 파일(app.config)에 추가하여 `EnableWindowsFormsHighDpiAutoResizing` 요소를 `true`로 설정합니다.
 

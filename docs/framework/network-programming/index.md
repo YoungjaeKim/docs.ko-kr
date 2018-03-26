@@ -1,11 +1,11 @@
 ---
-title: ".NET Framework의 네트워크 프로그래밍"
-ms.custom: 
+title: .NET Framework의 네트워크 프로그래밍
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Networking
@@ -13,21 +13,23 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: e51f4464eb39dc12ea50f4a94e55030895866f08
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework의 네트워크 프로그래밍
 Microsoft .NET Framework는 더 빠르고 쉽게 응용 프로그램에 통합할 수 있는 계층적이고 확장 가능하며 관리되는 인터넷 서비스 구현을 제공합니다. 네트워크 응용 프로그램은 플러그 가능한 프로토콜을 바탕으로 빌드하여 새 인터넷 프로토콜을 자동으로 이용하거나, Windows 소켓 인터페이스의 관리되는 구현을 사용하여 소켓 수준에서 네트워크 작업을 수행할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [플러그형 프로토콜 소개](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
  필요한 액세스 프로토콜에 관계없이 인터넷 리소스에 액세스하는 방법을 설명합니다.  
   
@@ -144,6 +146,8 @@ Microsoft .NET Framework는 더 빠르고 쉽게 응용 프로그램에 통합�
  응용 프로그램의 확장된 보호를 사용하여 인증 구성을 지원합니다.  
   
 ## <a name="see-also"></a>참고 항목  
+
+ [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](../../../docs/framework/network-programming/tls.md)  
  [네트워크 프로그래밍 방법 항목](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)  
  [MSDN 코드 갤러리의 .NET용 네트워킹 샘플](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
