@@ -1,18 +1,18 @@
 ---
-title: "방법: WCF Activation 구성 요소 설치 및 구성"
-ms.custom: 
+title: '방법: WCF Activation 구성 요소 설치 및 구성'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다. 이 명령을 사용 하 여 /\<*WCF 응용 프로그램*> 응용 프로그램에 두 http://localhost를 사용 하 여 액세스할 수*/\<WCF 응용 프로그램 >* 및 net.tcp:// localhost /*\<WCF 응용 프로그램 >*합니다.  
+    >  이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다. 이 명령을 사용 하 여 /\<*WCF 응용 프로그램*> 응용 프로그램에 두 http://localhost*/\<WCF 응용 프로그램>* 사용 하 여 액세스할 수 및 net.tcp://localhost/*\<WCF 응용 프로그램>* 합니다.  
   
      이 샘플에 대해 추가한 net.tcp 사이트 바인딩을 제거합니다.  
   

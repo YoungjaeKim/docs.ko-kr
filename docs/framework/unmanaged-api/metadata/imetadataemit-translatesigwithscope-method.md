@@ -1,13 +1,13 @@
 ---
-title: "IMetaDataEmit::TranslateSigWithScope 메서드"
-ms.custom: 
+title: IMetaDataEmit::TranslateSigWithScope 메서드
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IMetaDataEmit.TranslateSigWithScope
@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -58,7 +58,7 @@ HRESULT TranslateSigWithScope (
   
 #### <a name="parameters"></a>매개 변수  
  `pAssemImport`  
- [in] (서명을 정의 됨) 가져오기 어셈블리에 대 한 인터페이스입니다.  
+ [in] \(서명을 정의 됨) 가져오기 어셈블리에 대 한 인터페이스입니다.  
   
  `pbHashValue`  
  [in] 어셈블리에 대 한 해시 blob입니다.  
