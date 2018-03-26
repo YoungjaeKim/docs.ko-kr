@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: df80dfb6029932c53e028bfb753dcfa94b548ba1
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -236,7 +236,7 @@ Dapper를 사용하여 좀 더 복잡한 개체 그래프를 작성해야 하는
 
 ```sql
 select * from #Posts p
-left join \#Users u on u.Id = p.OwnerId
+left join #Users u on u.Id = p.OwnerId
 Order by p.Id
 ```
 

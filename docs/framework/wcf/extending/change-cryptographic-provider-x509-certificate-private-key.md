@@ -1,5 +1,5 @@
 ---
-title: '방법: X.509 인증서에 대 한 암호화 공급자를 변경&#39;s 개인 키'
+title: '방법: X.509 인증서에 대 한 암호화 공급자를 변경 개인 키'
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -28,7 +28,7 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/23/2018
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>방법: X.509 인증서에 대 한 암호화 공급자를 변경&#39;s 개인 키
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>방법: X.509 인증서에 대 한 암호화 공급자를 변경 개인 키
 이 항목에서는 X.509 인증서의 개인 키를 제공하는 데 사용되는 암호화 공급자를 변경하는 방법 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안 프레임워크에 공급자를 통합하는 방법에 대해 설명합니다. 인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 프레임 워크에 설명 된 대로 새 보안 토큰 형식을 적용 하는 방법 제공 [하는 방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다. 사용자 지정 토큰을 사용하여 시스템에서 제공되는 기존 형식을 대체할 수도 있습니다.  
