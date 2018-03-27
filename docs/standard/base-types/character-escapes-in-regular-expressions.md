@@ -1,12 +1,12 @@
 ---
-title: "정규식의 문자 이스케이프"
-ms.custom: 
+title: 정규식의 문자 이스케이프
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -28,10 +28,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 8a4ec10bfa332c8caafce57385791d8069a7231a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="character-escapes-in-regular-expressions"></a>정규식의 문자 이스케이프
 정규식의 백슬래시(\\)는 다음 중 하나를 나타냅니다.  
@@ -44,11 +44,11 @@ ms.lasthandoff: 12/23/2017
 >  문자 이스케이프는 정규식 패턴에서는 인식되지만 대체 패턴에서 인식되지 않습니다.  
   
 ## <a name="character-escapes-in-net"></a>.NET의 문자 이스케이프  
- 다음 표에서는 .NET의 정규식에서 지원하는 문자 이스케이프를 보여줍니다.  
+ 다음 표에서는 .NET의 정규식에서 지원하는 문자 이스케이프를 보여 줍니다.  
   
 |문자 또는 시퀀스|설명|  
 |---------------------------|-----------------|  
-|다음을 제외한 모든 문자입니다.<br /><br /> 이어야 합니다. $ ^ { [ ( &#124; ) * + ? \|**문자 또는 시퀀스** 열에 나열된 문자 이외의 문자는 정규식에서 특별한 의미를 가지지 않습니다. 문자 그대로 해석됩니다.<br /><br /> **문자 또는 시퀀스** 열에 포함된 문자는 특수 정규식 언어 요소입니다. 정규식에서 이들 문자를 찾으려면 문자를 이스케이프하거나 [긍정 문자 그룹](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함해야 합니다. 예를 들어 정규식 `\$\d+` 또는 `[$]\d+`는 "$1200"을 찾습니다.|  
+|다음을 제외한 모든 문자입니다.<br /><br /> 이어야 합니다. $ ^ { [ ( &#124; ) * + ? \|에 나열 된 문자 이외의 문자는 **문자 또는 시퀀스** 열 정규식에서 특별 한 의미를 있어야 합니다; 문자 그대로 해석 합니다.<br /><br /> **문자 또는 시퀀스** 열에 포함된 문자는 특수 정규식 언어 요소입니다. 정규식에서 이들 문자를 찾으려면 문자를 이스케이프하거나 [긍정 문자 그룹](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함해야 합니다. 예를 들어 정규식 `\$\d+` 또는 `[$]\d+`는 "$1200"을 찾습니다.|  
 |`\a`|벨 문자인 `\u0007`을 찾습니다.|  
 |`\b`|`[`*character_group*`]` 문자 클래스에서 백스페이스 문자인 `\u0008`을 찾습니다.  [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)를 참조하세요. 문자 클래스 이외에 `\b`는 단어 경계와 일치하는 앵커입니다. [앵커](../../../docs/standard/base-types/anchors-in-regular-expressions.md)를 참조하세요.|  
 |`\t`|탭 문자인 `\u0009`를 찾습니다.|  
@@ -60,18 +60,18 @@ ms.lasthandoff: 12/23/2017
 |`\` *nnn*|ASCII 문자를 찾습니다. 여기서 *nnn*은 8진수 문자 코드를 나타내는 두 자리 또는 세 자리 숫자로 구성됩니다. 예를 들어 `\040`은 공백 문자를 나타냅니다. 이 생성자가 한 개의 숫자만 포함하거나(예: `\2`) 캡처링 그룹의 수와 일치하는 경우에는 역참조로 해석됩니다. [역참조 구문](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)을 참조하세요.|  
 |`\x` *nn*|ASCII 문자를 찾습니다. 여기서 *nn*은 두 자리 16진수 문자 코드입니다.|  
 |`\c` *X*|ASCII 제어 문자를 찾습니다. 여기서 X는 제어 문자를 나타내는 문자입니다. 예를 들어, `\cC`는 CTRL-C입니다.|  
-|`\u` *nnnn*|값이 *nnnn* 16진수인 UTF-16 코드 단위를 찾습니다. **참고:** 유니코드를 지정하는 데 사용되는 Perl 5 문자 이스케이프는 .NET에서 지원되지 않습니다. Perl 5 문자 이스케이프는 `\x{`*####*`…}` 형식입니다. 여기서 *####*`…`는 일련의 16진수입니다. 대신 `\u`*nnnn*을 사용합니다.|  
+|`\u` *nnnn*|단위 값이 *nnnn* 16진수인 UTF-16 코드 단위를 찾습니다. **참고:** 유니코드를 지정하는 데 사용되는 Perl 5 문자 이스케이프는 .NET에서 지원되지 않습니다. Perl 5 문자 이스케이프는 `\x{`*####*`…}` 형식입니다. 여기서 *####*`…`는 일련의 16진수입니다. 대신에 `\u`*nnnn*을 사용합니다.|  
 |`\`|이스케이프된 문자로 인식되지 않는 문자가 뒤에 나올 경우 이 문자를 찾습니다. 예를 들어 `\*`는 별표(*)와 일치하고 `\x2A`와 같습니다.|  
   
 ## <a name="an-example"></a>예제  
- 다음 예제에서는 정규식에서 문자 이스케이프를 사용하는 방법을 보여줍니다. 세계 최대 도시의 이름과 2009년 인구가 포함된 문자열을 구문 분석합니다. 각 도시 이름과 해당 인구는 탭(`\t`) 또는 세로 막대(&#124; 또는 `\u007c`)로 구분됩니다. 개별 도시 및 해당 인구는 캐리지 리턴 및 줄 바꿈으로 서로 구분됩니다.  
+ 다음 예제에서는 정규식에서 문자 이스케이프를 사용하는 방법을 보여 줍니다. 세계 최대 도시의 이름과 2009년 인구가 포함된 문자열을 구문 분석합니다. 각 도시 이름과 해당 인구는 탭(`\t`) 또는 세로 막대(&#124; 또는 `\u007c`)로 구분됩니다. 개별 도시 및 해당 인구는 캐리지 리턴 및 줄 바꿈으로 서로 구분됩니다.  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]
  [!code-vb[RegularExpressions.Language.Escapes#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.escapes/vb/escape1.vb#1)]  
   
  정규식 `\G(.+)[\t|\u007c](.+)\r?\n`는 다음 테이블과 같이 해석됩니다.  
   
-|무늬|설명|  
+|패턴|설명|  
 |-------------|-----------------|  
 |`\G`|마지막 일치가 종료되면 일치를 시작합니다.|  
 |`(.+)`|임의 문자를 한 번 이상 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  

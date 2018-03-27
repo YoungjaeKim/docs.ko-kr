@@ -1,7 +1,7 @@
 ---
-title: "클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)"
-description: "컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | 클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)
+description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이크로 서비스 아키텍처 | 클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)
 
@@ -31,12 +31,12 @@ ms.lasthandoff: 12/23/2017
 
 클라이언트 쪽 유효성 검사를 구현하는 작업은 빌드하는 클라이언트 응용 프로그램의 종류에 따라 달라집니다. .NET에서 대부분의 코드를 사용하는 웹 MVC 웹 응용 프로그램, JavaScript 또는 TypeScript로 코딩된 해당 유효성 검사를 사용하는 SPA 웹 응용 프로그램 또는 Xamarin 및 C\#을 사용하는 코딩된 모바일 앱의 데이터 유효성을 검사하는지에 따라 다릅니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin 모바일 앱의 유효성 검사
 
--   **텍스트 입력 유효성 검사 및 오류 표시**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **텍스트 입력 및 표시 한 오류를 유효성 검사**
+    [*https://developer.xamarin.com/recipes/ios/standard\_컨트롤/텍스트\_필드/유효성 검사\_입력 /*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **유효성 검사 콜백**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
@@ -48,10 +48,10 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA 웹앱의 유효성 검사(Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 양식 유효성 검사** **
+-   **Ado Kukic. Angular 2 폼 유효성 검사** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **양식 유효성 검사**
+-   **폼 유효성 검사**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **유효성 검사** Breeze 설명서
