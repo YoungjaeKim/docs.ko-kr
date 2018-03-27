@@ -51,7 +51,7 @@ ms.lasthandoff: 03/26/2018
   
 3.  **게시** 창이 나타납니다. 클릭는 **...** . 단추를 클릭하여 서비스를 배포할 대상 위치를 지정합니다. 로컬 IIS, 파일 시스템 또는 FTP 사이트에 응용 프로그램을 배포 하도록 선택할 수 있습니다. 로컬 IIS에 응용 프로그램을 배포할 경우 웹 사이트를 선택 하 고, 대상 웹 응용 프로그램을 클릭 하 여 만들 수는 **새 웹 응용 프로그램 만들기** 오른쪽 위 모퉁이에서 아이콘입니다.  
   
-4.  클릭 한 후 **게시** 주 창에서 Visual Studio 응용 프로그램을 지정한 대상 위치에 배포 및 대상 디렉터리에 Web.config,.svc 및 어셈블리 파일을 복사 합니다. 이어야 합니다. .Svc의 이름은 됩니다 "projectname.servicename.svc"입니다. 서비스를 성공적으로 게시 된 후에 Visual Studio 출력 창의 "연결 하는 하이퍼링크"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName..."와 비슷합니다는 옥을 찾을 수 있습니다. Ctrl 키를 누르고 링크를 클릭하여 Visual Studio 내에서 브라우저 페이지를 열고 서비스 디렉터리 구조를 볼 수 있습니다.  
+4.  클릭 한 후 **게시** 주 창에서 Visual Studio 응용 프로그램을 지정한 대상 위치에 배포 및 대상 디렉터리에 Web.config,.svc 및 어셈블리 파일을 복사 합니다. 이어야 합니다. .Svc의 이름은 됩니다 "projectname.servicename.svc"입니다. 서비스를 성공적으로 게시 된 후에 Visual Studio 출력 창의 "연결 하는 하이퍼링크 "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName..." 와 비슷합니다는 옥을 찾을 수 있습니다. Ctrl 키를 누르고 링크를 클릭하여 Visual Studio 내에서 브라우저 페이지를 열고 서비스 디렉터리 구조를 볼 수 있습니다.  
   
      사이트를 찾을 수 없으면 IIS에서 디렉터리 브라우저를 사용하도록 설정되지 않았을 수 있습니다. 사용 하도록 설정 하려면 "가능한 해결 방법" 섹션의 팁을 따르십시오. 하이퍼링크 "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc 또는 있습니다 직접 입력할 수"" 서비스 페이지를 표시 합니다.  
   
