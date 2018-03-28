@@ -1,18 +1,19 @@
 ---
-title: "개체 지향 프로그래밍(C#)"
+title: 개체 지향 프로그래밍(C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a7f30293bb2d50981353badfb7e373b60dcfeec
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 6da28e97a33e962d4926a3b65d0fdf388c252d9a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 C#은 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 모든 지원을 제공합니다.  
@@ -84,7 +85,7 @@ struct SampleStruct
   
 -   [class](../../../csharp/language-reference/keywords/class.md)  
   
--   [truct](../../../csharp/language-reference/keywords/struct.md)  
+-   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
 ###  <a name="Members"></a> 클래스 멤버  
  각 클래스에는 클래스 데이터를 설명하는 속성, 클래스 동작을 정의하는 메서드 및 서로 다른 클래스와 개체 간의 통신을 제공하는 이벤트가 포함된 다양한 *클래스 멤버*가 있을 수 있습니다.  
@@ -95,7 +96,7 @@ struct SampleStruct
  필드를 정의하려면  
   
 ```csharp  
-Class SampleClass  
+class SampleClass  
 {  
     public string sampleField;  
 }  
@@ -233,8 +234,8 @@ Container.Nested nestedInstance = new Container.Nested()
 |[private](../../../csharp/language-reference/keywords/private.md)|동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|  
 |[protected](../../../csharp/language-reference/keywords/protected.md)|동일한 클래스의 코드나 파생 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|  
 |[internal](../../../csharp/language-reference/keywords/internal.md)|동일한 어셈블리의 코드에서는 형식이나 멤버에 액세스할 수 있지만 다른 어셈블리의 코드에서는 액세스할 수 없습니다.|  
-|[내부 보호](../../../csharp/language-reference/keywords/protected-internal.md)|동일한 어셈블리의 코드 또는 다른 어셈블리의 파생 클래스에서 형식이나 멤버에 액세스할 수 있습니다.|  
-|[보호 된 개인](../../../csharp/language-reference/keywords/private-protected.md)|형식 또는 멤버는 동일한 클래스 또는 기본 클래스 어셈블리 내에서 파생된 클래스에서 코드를 통해 액세스할 수 있습니다.|  
+|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|동일한 어셈블리의 코드 또는 다른 어셈블리의 파생 클래스에서 형식이나 멤버에 액세스할 수 있습니다.|  
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|기본 클래스 어셈블리 내 동일한 클래스 또는 파생 클래스의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|  
   
  자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
   
@@ -383,7 +384,7 @@ class SampleClass : ISampleInterface
  제네릭 클래스를 정의하려면  
   
 ```csharp  
-Public class SampleGeneric<T>   
+public class SampleGeneric<T>   
 {  
     public T Field;  
 }  

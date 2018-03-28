@@ -1,7 +1,7 @@
 ---
 title: .NET Standard
-description: ".NET Standard, 해당 버전 및 .NET Standard를 지원하는 .NET 구현에 대해 알아봅니다."
-keywords: ".NET 표준, PCL, .NET"
+description: .NET Standard, 해당 버전 및 .NET Standard를 지원하는 .NET 구현에 대해 알아봅니다.
+keywords: .NET 표준, PCL, .NET
 author: mairaw
 ms.author: mairaw
 ms.date: 08/13/2017
@@ -13,11 +13,11 @@ ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f22405f4547edcc5034ed221fa144512a237b050
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="net-standard"></a>.NET Standard
 

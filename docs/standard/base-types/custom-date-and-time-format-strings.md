@@ -1,12 +1,8 @@
 ---
-title: "사용자 지정 날짜 및 시간 형식 문자열"
-ms.custom: 
+title: 사용자 지정 날짜 및 시간 형식 문자열
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>사용자 지정 날짜 및 시간 형식 문자열
 날짜 및 시간 형식 문자열은 형식 지정 작업에서 생성되는 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값의 텍스트 표현을 정의합니다. 또한 문자열을 날짜 및 시간으로 성공적으로 변환하기 위해 구문 분석 작업에 필요한 날짜 및 시간 값의 표현을 정의할 수 있습니다. 사용자 지정 형식 문자열은 하나 이상의 사용자 지정 날짜 및 시간 형식 지정자로 구성됩니다. [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)이 아닌 문자열은 사용자 지정 날짜 및 시간 형식 문자열로 해석됩니다.  
@@ -41,17 +37,17 @@ ms.lasthandoff: 12/23/2017
 > [!TIP]
 >  서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 응용 프로그램인 [서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.  
   
-<a name="table"></a> 형식 작업에서 사용자 지정 날짜 및 시간 형식 문자열은 날짜 및 시간 인스턴스의 `ToString` 메서드 또는 복합 형식을 지원하는 메서드에서 사용할 수 있습니다. 다음 예제에서는 두 가지 사용 방법을 모두 보여줍니다.  
+<a name="table"></a> 형식 작업에서 사용자 지정 날짜 및 시간 형식 문자열은 날짜 및 시간 인스턴스의 `ToString` 메서드 또는 복합 형식을 지원하는 메서드에서 사용할 수 있습니다. 다음 예제에서는 두 가지 사용 방법을 모두 보여 줍니다.  
   
  [!code-csharp[Formatting.DateAndTime.Custom#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandformatting1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Custom#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandformatting1.vb#17)]  
   
- 구문 분석 작업에서 사용자 지정 날짜 및 시간 형식 문자열은 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 및 <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> 메서드에서 사용할 수 있습니다. 이러한 메서드를 사용하려면 구문 분석 작업을 성공하기 위해 입력 문자열이 특정 패턴을 정확하게 따라야 합니다. 다음 예제에서는 <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드를 호출하여 일, 월 및 두 자릿수 연도를 포함해야 하는 날짜를 구문 분석하는 방법을 보여줍니다.  
+ 구문 분석 작업에서 사용자 지정 날짜 및 시간 형식 문자열은 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 및 <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> 메서드에서 사용할 수 있습니다. 이러한 메서드를 사용하려면 구문 분석 작업을 성공하기 위해 입력 문자열이 특정 패턴을 정확하게 따라야 합니다. 다음 예제에서는 <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드를 호출하여 일, 월 및 두 자릿수 연도를 포함해야 하는 날짜를 구문 분석하는 방법을 보여 줍니다.  
   
  [!code-csharp[Formatting.DateAndTime.Custom#18](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
  [!code-vb[Formatting.DateAndTime.Custom#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]  
   
- 다음 표에서는 사용자 지정 날짜 및 시간 형식 지정자 및 각 형식 지정자에 따라 생성되는 결과 문자열을 보여줍니다. 기본적으로 결과 문자열은 en-US 문화권의 형식 규칙을 반영합니다. 특정 형식 지정자가 지역화된 결과 문자열을 생성하는 경우 결과 문자열에 적용되는 문화권의 예도 보여줍니다. 사용자 지정 날짜 및 시간 형식 문자열을 사용하는 방법에 대한 자세한 내용은 참고 단원을 참조하세요.  
+ 다음 표에서는 사용자 지정 날짜 및 시간 형식 지정자 및 각 형식 지정자에 따라 생성되는 결과 문자열을 보여 줍니다. 기본적으로 결과 문자열은 en-US 문화권의 형식 규칙을 반영합니다. 특정 형식 지정자가 지역화된 결과 문자열을 생성하는 경우 결과 문자열에 적용되는 문화권의 예도 보여 줍니다. 사용자 지정 날짜 및 시간 형식 문자열을 사용하는 방법에 대한 자세한 내용은 참고 단원을 참조하세요.  
   
 |형식 지정자|설명|예제|  
 |----------------------|-----------------|--------------|  
@@ -223,7 +219,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="F_Specifier"></a>   
 ## <a name="the-f-custom-format-specifier"></a>"F" 사용자 지정 형식 지정자  
- "F" 사용자 지정 형식 지정자는 초의 소수 부분에 대한 최대 유효 자릿수를 나타냅니다. 즉, 날짜 및 시간 값에서 1/10초까지 표시합니다. 이 자릿수가 0이면 아무것도 표시되지 않습니다.  
+ "F" 사용자 지정 형식 지정자는 초의 소수 부분에 대한 최대 유효 자릿수를 나타냅니다. 즉, 날짜 및 시간 값에서 1/10초까지 표시합니다. 이 자릿수가 0이면 아무 것도 표시되지 않습니다.  
   
  다른 형식 지정자 없이 "F" 형식 지정자만 사용되면 "F" 표준 날짜 및 시간 형식 지정자로 해석됩니다. 단일 형식 지정자를 사용하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [단일 사용자 지정 형식 지정자 사용](#UsingSingleSpecifiers)을 참조하세요.  
   
@@ -374,7 +370,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="mSpecifier"></a>   
 ## <a name="the-m-custom-format-specifier"></a>"m" 사용자 지정 형식 지정자  
- "m" 사용자 지정 형식 지정자는 분을 0부터 59까지의 숫자로 나타냅니다. 분은 마지막 시간 이후 경과한 총 분을 나타냅니다. 한 자리 분의 경우 앞에 0이 표시되지 않습니다.  
+ "m" 사용자 지정 형식 지정자는 분을 0부터 59까지의 숫자로 나타냅니다. 분은 마지막 시간 이후 경과한 총 분 수를 나타냅니다. 한 자리 분의 경우 앞에 0이 표시되지 않습니다.  
   
  다른 사용자 지정 형식 지정자 없이 "m" 형식 지정자만 사용되면 "m" 표준 날짜 및 시간 형식 지정자로 해석됩니다. 단일 형식 지정자를 사용하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [단일 사용자 지정 형식 지정자 사용](#UsingSingleSpecifiers)을 참조하세요.  
   
@@ -387,7 +383,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="mmSpecifier"></a>   
 ## <a name="the-mm-custom-format-specifier"></a>"mm" 사용자 지정 형식 지정자  
- "mm" 사용자 지정 형식 지정자는 임의 개수의 추가 "m" 지정자와 함께 분을 00부터 59까지의 숫자로 나타냅니다. 분은 마지막 시간 이후 경과한 총 분을 나타냅니다. 한 자리 분의 경우 앞에 0이 표시됩니다.  
+ "mm" 사용자 지정 형식 지정자는 임의 개수의 추가 "m" 지정자와 함께 분을 00부터 59까지의 숫자로 나타냅니다. 분은 마지막 시간 이후 경과한 총 분 수를 나타냅니다. 한 자리 분의 경우 앞에 0이 표시됩니다.  
   
  다음 예제에서는 사용자 지정 형식 문자열에 "mm" 사용자 지정 형식 지정자를 포함합니다.  
   
@@ -614,7 +610,7 @@ ms.lasthandoff: 12/23/2017
  ":" 사용자 지정 형식 지정자는 시, 분, 초를 구분하는 데 사용되는 시간 구분 기호를 나타냅니다. 적절한 지역화된 시간 구분 기호는 현재 또는 지정된 문화권의 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 속성에서 검색됩니다.  
   
 > [!NOTE]
->  특정 날짜 및 시간 문자열의 시간 구분 기호를 변경하려면 리터럴 문자열 구분 기호 내에서 구분 기호 문자를 지정합니다. 예를 들어 사용자 지정 형식 문자열 `hh'_'dd'_'ss`는 "_"(밑줄)이 항상 시간 구분 기호로 사용되는 결과 문자열을 생성합니다. 특정 문화권의 모든 날짜에 대한 시간 구분 기호를 변경하려면 현재 문화권의 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 속성 값을 변경하거나 <xref:System.Globalization.DateTimeFormatInfo> 개체를 인스턴스화하고 해당 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> 속성에 문자를 할당한 다음 <xref:System.IFormatProvider> 매개 변수를 포함하는 서식 지정 메서드의 오버로드를 호출합니다.  
+>  특정 날짜 및 시간 문자열의 시간 구분 기호를 변경하려면 리터럴 문자열 구분 기호 내에서 구분 기호 문자를 지정합니다. 예를 들어 사용자 지정 형식 문자열 `hh'_'dd'_'ss`는 "\_"(밑줄)이 항상 시간 구분 기호로 사용되는 결과 문자열을 생성합니다. 특정 문화권의 모든 날짜에 대한 시간 구분 기호를 변경하려면 현재 문화권의 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 속성 값을 변경하거나 <xref:System.Globalization.DateTimeFormatInfo> 개체를 인스턴스화하고 해당 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> 속성에 문자를 할당한 다음 <xref:System.IFormatProvider> 매개 변수를 포함하는 서식 지정 메서드의 오버로드를 호출합니다.  
   
  다른 사용자 지정 형식 지정자 없이 ":" 형식 지정자만 사용되면 표준 날짜 및 시간 형식 지정자로 해석되고 <xref:System.FormatException>이 throw됩니다. 단일 형식 지정자를 사용하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [단일 사용자 지정 형식 지정자 사용](#UsingSingleSpecifiers)을 참조하세요.  
   
@@ -672,7 +668,7 @@ ms.lasthandoff: 12/23/2017
   
  사용자 지정 날짜 및 시간 형식 지정자 중 하나를 형식 문자열의 유일한 지정자로 사용하려면(즉, "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" 또는 "/" 사용자 지정 형식 지정자를 단독으로 사용하려면) 지정자 앞이나 뒤에 공백을 포함하거나 단일 사용자 지정 날짜 및 시간 지정자 앞에 백분율("%") 형식 지정자를 포함합니다.  
   
- 예를 들어, "`%h"`는 현재 날짜 및 시간 값이 나타내는 시간을 표시하는 사용자 지정 날짜 및 시간 형식 문자열로 해석됩니다. 결과 문자열에 시간 외에 공백이 포함되기는 하지만 " h" 또는 "h " 형식 지정자를 사용할 수도 있습니다. 다음 예제에서는 이러한 세 가지 형식 문자열을 보여줍니다.  
+ 예를 들어, "`%h"`는 현재 날짜 및 시간 값이 나타내는 시간을 표시하는 사용자 지정 날짜 및 시간 형식 문자열로 해석됩니다. 결과 문자열에 시간 외에 공백이 포함되기는 하지만 " h" 또는 "h " 형식 지정자를 사용할 수도 있습니다. 다음 예제에서는 이러한 세 가지 형식 문자열을 보여 줍니다.  
   
  [!code-csharp[Formatting.DateAndTime.Custom#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/literal1.cs#16)]
  [!code-vb[Formatting.DateAndTime.Custom#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]  
@@ -684,7 +680,7 @@ ms.lasthandoff: 12/23/2017
  결과 문자열에 백슬래시를 포함하려면`\\`처럼 두 개의 백슬래시를 연속해서 입력해야 합니다.  
   
 > [!NOTE]
->  C++ 및 C# 컴파일러 같은 일부 컴파일러에서는 하나의 백슬래시 문자가 이스케이프 문자로 해석될 수도 있습니다. 형식을 지정할 때 문자열이 올바로 해석되도록 하려면 해당 문자열 앞에 축자 문자열 리터럴 문자(@ 문자)를 사용하거나(C#의 경우) 각 백슬래시 앞에 또 다른 백슬래시를 추가하면 됩니다(C# 및 C++의 경우). 다음 C# 예제에서는 이 두 가지 방법을 모두 보여줍니다.  
+>  C++ 및 C# 컴파일러 같은 일부 컴파일러에서는 하나의 백슬래시 문자가 이스케이프 문자로 해석될 수도 있습니다. 형식을 지정할 때 문자열이 올바로 해석되도록 하려면 해당 문자열 앞에 축자 문자열 리터럴 문자(@ 문자)를 사용하거나(C#의 경우) 각 백슬래시 앞에 또 다른 백슬래시를 추가하면 됩니다(C# 및 C++의 경우). 다음 C# 예제에서는 이 두 가지 방법을 모두 보여 줍니다.  
   
  다음 예제에서는 이스케이프 문자를 사용하여 형식 지정 작업에서 "h" 및 "m" 문자가 형식 지정자로 해석되지 않도록 합니다.  
   

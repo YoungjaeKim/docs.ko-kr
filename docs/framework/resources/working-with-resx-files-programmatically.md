@@ -1,12 +1,13 @@
 ---
-title: "프로그래밍 방식으로 .resx 파일 작업"
-ms.custom: 
+title: 프로그래밍 방식으로 .resx 파일 작업
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17c2cee97c3347a98a015e8526e436815378eed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 951bd2160baddf100a685af2d78ec49e2146077b
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-resx-files-programmatically"></a>프로그래밍 방식으로 .resx 파일 작업
 XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특정 스키마를 따라야 하는 헤더를 비롯한 잘 정의된 XML로 구성되어야 하기 때문에 이러한 파일을 수동으로 만드는 경우 오류가 발생하기 쉽습니다. 또는 .NET Framework 클래스 라이브러리의 형식 및 멤버를 사용하여 프로그래밍 방식으로 .resx 파일을 만들 수 있습니다. .NET Framework 클래스 라이브러리를 사용하여 .resx 파일에 저장된 리소스를 검색할 수도 있습니다. 이 항목에서는 <xref:System.Resources> 네임스페이스의 형식 및 멤버를 사용하여 .resx 파일로 작업하는 방법에 대해 설명합니다.  
@@ -83,15 +85,15 @@ XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특�
   
  결과는 .resx 파일 및 .resources 파일 확장과 동일한 루트 파일 이름이 있는 이진 리소스 파일입니다. 이 파일은 컴파일 시간에 실행 파일이나 라이브러리로 컴파일될 수 있습니다. Visual Basic 컴파일러를 사용하는 경우 다음 구문을 사용하여 .resources 파일을 응용 프로그램의 실행 파일에 포함합니다.  
   
- **vbc** *filename* **.vb /resource:** *.resourcesFilename*  
+ **vbc** *filename* **.vb -resource:** *.resourcesFilename*  
   
  C#을 사용하는 경우 구문은 다음과 같습니다.  
   
- **csc** *filename* **.cs /resource:** *.resourcesFilename*  
+ **csc** *filename* **.cs -resource:** *.resourcesFilename*  
   
  다음 기본 구문을 사용하는 [어셈블리 링커(AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 .resources 파일을 위성 어셈블리에 포함할 수도 있습니다.  
   
- **al** *resourcesFilename* **/out:** *assemblyFilename*  
+ **al** *resourcesFilename* **-out:** *assemblyFilename*  
   
 ## <a name="see-also"></a>참고 항목  
  [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  

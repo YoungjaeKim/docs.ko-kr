@@ -1,6 +1,6 @@
 ---
-title: "값 형식과 참조 의미 체계"
-description: "구조 복사를 안전하게 최소화하는 언어 기능 이해"
+title: 값 형식과 참조 의미 체계
+description: 구조 복사를 안전하게 최소화하는 언어 기능 이해
 author: billwagner
 ms.author: wiwagn
 ms.date: 11/10/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 8a0cfe83200d50eefa9b01ab51591a5fe0703ec0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>값 형식과 참조 의미 체계
 
@@ -110,6 +110,22 @@ ref readonly return의 복사본을 만들기는 쉽습니다. `ref readonly` �
 - 람다 식 또는 로컬 함수에서 `ref struct` 변수를 캡처할 수 없습니다.
 
 이러한 제한 사항은 실수로 `ref struct`를 관리되는 힙으로 승격할 수 있는 방식으로 이 구조체를 사용하지 않게 해줍니다.
+
+## <a name="readonly-ref-struct-type"></a>`readonly ref struct` 형식
+
+구조체를 `readonly ref`로 선언하면 `ref struct` 및 `readonly struct` 선언의 이점과 제한이 결합됩니다. 
+
+다음 예에서는 `readonly ref struct`의 선언을 보여줍니다.
+
+```csharp
+readonly ref struct ReadOnlyRefPoint2D
+{
+    public int X { get; }
+    public int Y { get; }
+    
+    ReadOnlyRefPoint2D(int x, int y) => (X, Y) = (x, y);
+}
+```
 
 ## <a name="conclusions"></a>결론
 

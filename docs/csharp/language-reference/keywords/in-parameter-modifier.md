@@ -1,5 +1,5 @@
 ---
-title: "in 매개 변수 한정자(C# 참조)"
+title: in 매개 변수 한정자(C# 참조)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 035aac3e6b902f607e533b709713eb1d07c9774a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 매개 변수 한정자(C# 참조)
 
@@ -60,7 +60,10 @@ class InOverloads
   
 - [yield return](../../../csharp/language-reference/keywords/yield.md) 또는 `yield break` 문을 포함하는 반복기 메서드  
 
-일반적으로 값으로 인수 전달에 필요한 복사 작업을 방지하도록 `in` 인수를 선언합니다. 인수가 구조체 또는 구조체의 배열인 경우 가장 유용합니다.
+일반적으로 값으로 인수 전달에 필요한 복사 작업을 방지하도록 `in` 인수를 선언합니다. 이는 인수가 복사 작업이 참조로 전달하는 것보다 비용이 많이 드는 구조와 같은 값 유형인 경우에 가장 유용합니다.
+
+> [!WARNING]
+>  `in` 매개 변수는 오용되면 더 비쌀 수 있습니다. 컴파일러는 멤버 메서드가 구조체의 상태를 수정하는지 여부를 알 수 없습니다. 컴파일러가 객체가 수정되지 않았는지 여부를 확인할 수 없으면 방어적으로 복사본을 만들고 해당 복사본을 사용하여 멤버 참조를 호출합니다. 모든 가능한 수정은 해당 방어 복사본에 대한 것입니다. 이러한 복사본을 피하는 두 가지 방법은 `in` 매개 변수를 `in` 인수로 전달하거나 구조를 `readonly struct`으로 정의하는 것입니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -69,4 +72,5 @@ class InOverloads
  [C# 참조](../../../csharp/language-reference/index.md)  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
- [메서드 매개 변수](../../../csharp/language-reference/keywords/method-parameters.md)
+ [메서드 매개 변수](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [값 형식과 참조 의미 체계](../../../csharp/reference-semantics-with-value-types.md)

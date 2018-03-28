@@ -1,7 +1,7 @@
 ---
-title: "마이크로 서비스 응용 프로그램 레이어 및 웹 API 설계"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 응용 프로그램 레이어 및 웹 API 설계"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 마이크로 서비스 응용 프로그램 레이어 및 웹 API 설계
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 응용 프로그램 레이어 및 웹 API 설계
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>마이크로 서비스 응용 프로그램 레이어 및 웹 API 설계
 
@@ -29,7 +29,7 @@ SOLID 원칙은 DDD 패턴을 통한 마이크로 서비스 개발처럼 현대�
 
 -   Liskov 대체 원칙
 
--   Inversion Segregation(반전 분리) 원칙
+-   Interface Segregation(인터페이스 분리) 원칙
 
 -   Dependency Inversion(종속성 반전) 원칙
 
@@ -41,16 +41,16 @@ SOLID 원칙에 따르면 클래스는 당연히 작고 잘 구성되며 쉽게 
 
 SOLID에 대해서는 다른 가이드에서 자세히 다룰 것입니다. 따라서 이 가이드에서는 이 항목에 대한 최소한의 지식만 요구합니다.
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 -   **SOLID: 기본 OOP 원칙**
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
--   **종속성 주입 패턴 및 제어 컨테이너 반전**
+-   **Inversion of Control 컨테이너 및 종속성 주입 패턴**
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Steve Smith. 새로운 연결**
-    [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
+-   **Steve Smith. 새 항목은 글루**
+    [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)입니다.
 
 
 >[!div class="step-by-step"]

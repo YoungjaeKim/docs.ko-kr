@@ -1,12 +1,13 @@
 ---
-title: "데스크톱 응용 프로그램용 위성 어셈블리 만들기"
-ms.custom: 
+title: 데스크톱 응용 프로그램용 위성 어셈블리 만들기
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -30,16 +31,17 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>데스크톱 응용 프로그램용 위성 어셈블리 만들기
 리소스 파일은 지역화된 응용 프로그램에서 중요한 역할을 합니다. 응용 프로그램을 사용하여 사용자의 언어 및 문화권에서 문자열, 이미지 및 기타 데이터를 표시하고 사용자의 언어 또는 문화권에 대한 리소스를 사용할 수 없는 경우 대체 데이터를 제공할 수 있습니다. .NET Framework에서는 허브 및 스포크 모델을 사용하여 지역화된 리소스를 찾고 검색합니다. 허브는 지역화할 수 없는 실행 코드와 중립 또는 기본 문화권이라고 하는 단일 문화권의 리소스를 포함하는 주 어셈블리입니다. 기본 문화권은 응용 프로그램의 대체 문화권으로, 지역화된 리소스를 사용할 수 없는 경우 사용됩니다. <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성을 사용하여 응용 프로그램의 기본 문화권의 문화를 지정합니다. 각 스포크는 지역화된 단일 문화권의 리소스를 포함하지만 코드는 포함하지 않는 위성 어셈블리에 연결됩니다. 위성 어셈블리는 주 어셈블리의 일부가 아니므로 응용 프로그램의 주 어셈블리를 바꾸지 않고도 특정 문화권에 해당하는 리소스를 손쉽게 업데이트하거나 바꿀 수 있습니다.  
@@ -71,25 +73,25 @@ ms.lasthandoff: 12/22/2017
   
  다음 Al.exe 명령은 독일 리소스 파일 strings.de.resources에서 `Example` 응용 프로그램에 대한 위성 어셈블리를 만듭니다.  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll  
 ```  
   
  다음 Al.exe 명령은 파일 strings.de.resources에서 `Example` 응용 프로그램에 대한 위성 어셈블리도 만듭니다. **/template** 옵션을 사용하면 위성 어셈블리가 부모 어셈블리(Example.dll)로부터 문화권 관련 정보를 제외한 모든 어셈블리 메타데이터를 상속합니다.  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll /template:Example.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll  
 ```  
   
  다음 표에서는 이러한 명령에 사용된 Al.exe 옵션을 더 자세히 설명합니다.  
   
 |옵션|설명|  
 |------------|-----------------|  
-|**/target:**lib|위성 어셈블리가 라이브러리(.dll) 파일로 컴파일되도록 지정합니다. 위성 어셈블리가 실행 코드를 포함하지 않고 응용 프로그램의 주 어셈블리가 아니므로 위성 어셈블리를 DLL로 저장해야 합니다.|  
-|**/embed:**strings.de.resources|Al.exe가 어셈블리를 컴파일할 때 포함할 리소스 파일의 이름을 지정합니다. 위성 어셈블리에 여러 개의 .resources 파일을 포함할 수 있지만, 허브 및 스포크 모델을 따르는 경우, 각 문화권에 대해 하나의 위성 어셈블리를 컴파일해야 합니다. 그러나 문자열 및 개체에 대해 별도의 .resources 파일을 만들 수 있습니다.|  
-|**/culture:**de|컴파일한 리소스의 문화권을 지정합니다. 공용 언어 런타임은 지정된 문화권의 리소스를 검색할 때 이 정보를 사용합니다. 이 옵션을 생략해도 Al.exe는 리소스를 컴파일하지만 런타임에서는 사용자가 리소스를 요청할 때 해당 리소스를 찾을 수 없습니다.|  
-|**/out:**Example.resources.dll|출력 파일의 이름을 지정합니다. 이 이름은 명명 표준 *baseName*.resources.*extension*을 따라야 합니다. 여기서 *baseName*은 주 어셈블리의 이름이고 *extension*은 유효한 파일 이름 확장명(예: .dll)입니다. 런타임이 출력 파일 이름을 기반으로 위성 어셈블리의 문화권을 결정할 수 없는 경우 지정하기 위해 **/culture** 옵션을 사용해야 합니다.|  
-|**/template:**Example.dll|위성 어셈블리가 culture 필드를 제외하고 모든 어셈블리 메타데이터를 상속할 어셈블리를 지정합니다. 이 옵션은 [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)을 가진 어셈블리를 지정할 때에만 위성 어셈블리에 영향을 미칩니다.|  
+|**-target:**lib|위성 어셈블리가 라이브러리(.dll) 파일로 컴파일되도록 지정합니다. 위성 어셈블리가 실행 코드를 포함하지 않고 응용 프로그램의 주 어셈블리가 아니므로 위성 어셈블리를 DLL로 저장해야 합니다.|  
+|**-embed:**strings.de.resources|Al.exe가 어셈블리를 컴파일할 때 포함할 리소스 파일의 이름을 지정합니다. 위성 어셈블리에 여러 개의 .resources 파일을 포함할 수 있지만, 허브 및 스포크 모델을 따르는 경우, 각 문화권에 대해 하나의 위성 어셈블리를 컴파일해야 합니다. 그러나 문자열 및 개체에 대해 별도의 .resources 파일을 만들 수 있습니다.|  
+|**-culture:**de|컴파일한 리소스의 문화권을 지정합니다. 공용 언어 런타임은 지정된 문화권의 리소스를 검색할 때 이 정보를 사용합니다. 이 옵션을 생략해도 Al.exe는 리소스를 컴파일하지만 런타임에서는 사용자가 리소스를 요청할 때 해당 리소스를 찾을 수 없습니다.|  
+|**-out:**Example.resources.dll|출력 파일의 이름을 지정합니다. 이 이름은 명명 표준 *baseName*.resources.*extension*을 따라야 합니다. 여기서 *baseName*은 주 어셈블리의 이름이고 *extension*은 유효한 파일 이름 확장명(예: .dll)입니다. 런타임이 출력 파일 이름을 기반으로 위성 어셈블리의 문화권을 결정할 수 없는 경우 지정하기 위해 **/culture** 옵션을 사용해야 합니다.|  
+|**-template:**Example.dll|위성 어셈블리가 culture 필드를 제외하고 모든 어셈블리 메타데이터를 상속할 어셈블리를 지정합니다. 이 옵션은 [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)을 가진 어셈블리를 지정할 때에만 위성 어셈블리에 영향을 미칩니다.|  
   
  Al.exe에서 사용할 수 있는 전체 옵션 목록을 보려면 [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 참조하세요.  
   
@@ -113,7 +115,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
 4.  [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 각 텍스트 또는 XML 리소스 파일을 이진 .resources 파일로 컴파일합니다. 출력은 .resx 또는 .txt 파일과 동일한 루트 파일 이름을 가지고 있지만 .resources 확장명과는 다른 파일의 집합입니다. Visual Studio를 사용하여 예제를 만들면 컴파일 프로세스는 자동으로 처리됩니다. Visual Studio를 사용하지 않는 경우, .resx 파일을 .resources 파일로 컴파일하는 데 다음 명령을 실행합니다.  
   
-    ```  
+    ```console
     resgen Greeting.resx  
     resgen Greeting.en-us.resx  
     resgen Greeting.fr-FR.resx  
@@ -132,22 +134,22 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
      응용 프로그램의 이름이 Example이고 명령줄에서 컴파일하는 경우 C# 컴파일러에 대한 명령은 다음과 같습니다.  
   
-    ```  
-    csc Example.cs /res:Greeting.resources  
+    ```console  
+    csc Example.cs -res:Greeting.resources  
     ```  
   
      해당 Visual Basic 컴파일러 명령은 다음과 같습니다.  
   
-    ```  
-    vbc Example.vb /res:Greeting.resources  
+    ```console  
+    vbc Example.vb -res:Greeting.resources  
     ```  
   
 6.  응용 프로그램에서 지원되는 각 지역화된 문화권에 대한 주 응용 프로그램 디렉터리에서 하위 디렉터리를 만듭니다. en-US, fr-FR 및 ru-RU 하위 디렉터리를 만들어야 합니다. Visual Studio는 컴파일 프로세스의 일부로 이러한 하위 디렉터리를 자동으로 만듭니다.  
   
 7.  각 문화권별 .resources 파일을 위성 어셈블리로 포함하고 해당 디렉터리에 저장합니다. 각 .resources 파일에 대해 이 작업을 수행하는 명령은 다음과 같습니다.  
   
-    ```  
-    al /target:lib /embed:Greeting.culture.resources /culture:culture /out:culture\Example.resources.dll  
+    ```console
+    al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
     ```  
   
      여기서 *culture*는 리소스가 위성 어셈블리에 포함된 문화권의 이름입니다. Visual Studio는 이 프로세스를 자동으로 처리합니다.  
@@ -167,13 +169,13 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
  다음 Sn.exe 명령으로 테스트 공개/개인 키 쌍을 만듭니다. **–k** 옵션은 Sn.exe가 새 키 쌍을 만들고 TestKeyPair.snk라는 파일에 저장하도록 지정합니다.  
   
-```  
+```console
 sn –k TestKeyPair.snk   
 ```  
   
  테스트 키 쌍을 포함하는 파일에서 공개 키를 추출할 수 있습니다. 다음 명령은 TestKeyPair.snk에서 공개 키를 추출하고 PublicKey.snk에 저장합니다.  
   
-```  
+```console
 sn –p TestKeyPair.snk PublicKey.snk  
 ```  
   
@@ -182,18 +184,18 @@ sn –p TestKeyPair.snk PublicKey.snk
   
  다음 Al.exe 명령은 strings.ja.resources 파일로부터 StringLibrary 응용 프로그램에 대한 강력한 이름의 위성 어셈블리를 만듭니다.  
   
-```  
-al /target:lib /embed:strings.ja.resources /culture:ja /out:StringLibrary.resources.dll /delay+ /keyfile:PublicKey.snk  
+```console 
+al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk  
 ```  
   
- **/delay+** 옵션은 어셈블리 링커가 어셈블리 서명을 연기하도록 지정합니다. **/keyfile** 옵션은 어셈블리 서명을 연기하는 데 사용할 공개 키를 포함하는 키 파일의 이름을 지정합니다.  
+ **-delay+** 옵션은 어셈블리 링커가 어셈블리 서명을 연기하도록 지정합니다. **-keyfile** 옵션은 어셈블리 서명을 연기하는 데 사용할 공개 키를 포함하는 키 파일의 이름을 지정합니다.  
   
 ### <a name="re-signing-an-assembly"></a>어셈블리 다시 서명  
  응용 프로그램을 배포하기 전에, 실제 키 쌍으로 지연 서명된 위성 어셈블리를 다시 서명해야 합니다. Sn.exe를 사용하여 이를 수행할 수 있습니다.  
   
  다음 Sn.exe 명령은 RealKeyPair.snk 파일에 저장된 실제 키 쌍으로 StringLibrary.resources.dll에 서명합니다. **–R** 옵션은 이전에 서명했거나 지연 서명된 어셈블리에 다시 서명하도록 지정합니다.  
   
-```  
+```console
 sn –R StringLibrary.resources.dll RealKeyPair.snk   
 ```  
   
@@ -202,8 +204,8 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
   
  다음 Gacutil.exe 명령은 StringLibrary.resources.dll을 전역 어셈블리 캐시에 설치합니다.  
   
-```  
-gacutil /i:StringLibrary.resources.dll  
+```console
+gacutil -i:StringLibrary.resources.dll  
 ```  
   
  **/i** 옵션은 Gacutil.exe가 지정된 어셈블리를 전역 어셈블리 캐시에 설치하도록 지정합니다. 위성 어셈블리가 캐시에 설치된 후, 포함된 리소스는 위성 어셈블리를 사용하도록 설계된 모든 응용 프로그램에서 사용할 수 있게 됩니다.  
@@ -213,7 +215,7 @@ gacutil /i:StringLibrary.resources.dll
   
 1.  Visual Studio를 사용하지 않는 경우 다음 [강력한 이름 도구(Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 명령을 사용하여 ResKey.snk라는 공개/개인 키 쌍을 만듭니다.  
   
-    ```  
+    ```console
     sn –k ResKey.snk  
     ```  
   
@@ -221,7 +223,7 @@ gacutil /i:StringLibrary.resources.dll
   
 2.  다음 [강력한 이름 도구(Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 명령을 사용하여 PublicKey.snk라는 공개 키 파일을 만듭니다.  
   
-    ```  
+    ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
@@ -242,7 +244,7 @@ gacutil /i:StringLibrary.resources.dll
   
 6.  [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 각 텍스트 또는 XML 리소스 파일을 이진 .resources 파일로 컴파일합니다. 출력은 .resx 또는 .txt 파일과 동일한 루트 파일 이름을 가지고 있지만 .resources 확장명과는 다른 파일의 집합입니다. Visual Studio를 사용하여 예제를 만들면 컴파일 프로세스는 자동으로 처리됩니다. Visual Studio를 사용하지 않는 경우, .resx 파일을 .resources 파일로 컴파일하는 데 다음 명령을 실행합니다.  
   
-    ```  
+    ```console
     resgen filename  
     ```  
   
@@ -258,42 +260,42 @@ gacutil /i:StringLibrary.resources.dll
   
      C# 컴파일러에 대한 명령은 다음과 같습니다.  
   
-    ```  
-    csc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.cs  
+    ```console
+    csc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.cs  
     ```  
   
      해당 Visual Basic 컴파일러 명령은 다음과 같습니다.  
   
-    ```  
-    vbc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.vb  
+    ```console  
+    vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
 8.  응용 프로그램에서 지원되는 각 지역화된 문화권에 대한 주 응용 프로그램 디렉터리에서 하위 디렉터리를 만듭니다. en-US, fr-FR 및 ru-RU 하위 디렉터리를 만들어야 합니다. Visual Studio는 컴파일 프로세스의 일부로 이러한 하위 디렉터리를 자동으로 만듭니다. 위성 어셈블리가 모두 같은 파일 이름을 갖기 때문에, 공개/개인 키 쌍으로 서명될 때까지 각 문화권별 위성 어셈블리를 저장하는 데 하위 디렉터리가 사용됩니다.  
   
 9. 각 문화권별 .resources 파일을 지연 서명된 위성 어셈블리로 포함하고 해당 디렉터리에 저장합니다. 각 .resources 파일에 대해 이 작업을 수행하는 명령은 다음과 같습니다.  
   
-    ```  
-    al /target:lib /embed:Strings.culture.resources /culture:culture /out:culture\StringLibrary.resources.dll /delay+ /keyfile:publickey.snk  
+    ```console
+    al -target:lib -embed:Strings.culture.resources -culture:culture -out:culture\StringLibrary.resources.dll -delay+ -keyfile:publickey.snk  
     ```  
   
      여기서 *culture*는 문화권의 이름입니다. 이 예제에서 문화권 이름은 en-US, fr-FR 및 ru-RU입니다.  
   
 10. 다음과 같이 [강력한 이름 도구(Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 StringLibrary.dll에 다시 서명합니다.  
   
-    ```  
+    ```console
     sn –R StringLibrary.dll RealKeyPair.snk  
     ```  
   
 11. 개별 위성 어셈블리에 다시 서명합니다. 이를 위해 각 위성 어셈블리에 대해 [강력한 이름 도구(Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 다음과 같이 사용합니다.  
   
-    ```  
+    ```console
     sn –R StringLibrary.resources.dll RealKeyPair.snk  
     ```  
   
 12. 다음 명령을 사용하여 StringLibrary.dll 및 전역 어셈블리 캐시에 있는 각 위성 어셈블리를 등록합니다.  
   
-    ```  
-    gacutil /i filename  
+    ```console
+    gacutil -i filename  
     ```  
   
      여기서 *filename*은 등록할 파일의 이름입니다.  
@@ -305,14 +307,14 @@ gacutil /i:StringLibrary.resources.dll
   
      명령줄에서 컴파일하려면 C# 컴파일러에서 다음 명령을 사용합니다.  
   
-    ```  
-    csc Example.cs /r:StringLibrary.dll   
+    ```console
+    csc Example.cs -r:StringLibrary.dll   
     ```  
   
      Visual Basic 컴파일러의 명령줄은 다음과 같습니다.  
   
-    ```  
-    vbc Example.vb /r:StringLibrary.dll   
+    ```console
+    vbc Example.vb -r:StringLibrary.dll   
     ```  
   
 14. Example.exe를 실행합니다.  

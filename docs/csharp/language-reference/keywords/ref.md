@@ -1,5 +1,5 @@
 ---
-title: "ref(C# 참조)"
+title: ref(C# 참조)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ref keyword [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 63f984f4004cfce9694e7e7405ec2477bc370731
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-c-reference"></a>ref(C# 참조)
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/15/2018
 
 - 메서드 시그니처에서 값을 호출자에게 참조로 반환합니다. 자세한 내용은 [참조 반환 값](#reference-return-values)을 참조하세요.
 
-- 멤버 본문에서 참조 반환 값이 호출자가 수정하려는 참조로 로컬에 저장됨을 나타냅니다. 자세한 내용은 [참조 로컬](#ref-locals)을 참조하세요.
+- 멤버 본문에서 참조 반환 값이 호출자가 수정하려는 참조로 로컬에 저장되거나 일반적으로 로컬 변수가 참조를 기준으로 다른 값에 액세스 함을 나타냅니다. 자세한 내용은 [참조 로컬](#ref-locals)을 참조하세요.
 
 ## <a name="passing-an-argument-by-reference"></a>참조로 인수 전달
 
@@ -109,7 +109,13 @@ class CS0663_Example
 ref decimal estValue = ref Building.GetEstimatedValue();
 ```
 
-`ref` 키워드를 두 위치에 모두 사용해야 합니다. 그러지 않으면 컴파일러 오류 CS8172, “값을 사용하여 참조 형식 변수를 초기화할 수 없습니다.”가 생성됩니다. 
+동일한 방법으로 참조로 값에 액세스할 수 있습니다. 경우에 따라 참조로 값에 액세스하면 비용이 많이 들 수 있는 복사 작업을 피함으로써 성능이 향상됩니다. 예를 들어, 다음 명령문은 값을 참조하는 데 사용되는 참조 로컬 값을 정의하는 방법을 보여줍니다.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+두 예에서 `ref` 키워드는 두 위치에 모두 사용해야 합니다. 그렇지 않으면 컴파일러 오류 CS8172, "값을 사용하여 참조 형식 변수를 초기화할 수 없습니다."가 생성됩니다. 
  
 ## <a name="a-ref-returns-and-ref-locals-example"></a>참조 반환 및 참조 로컬 예제
 

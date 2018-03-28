@@ -1,7 +1,7 @@
 ---
-title: "Docker 앱에 대한 개발 워크플로"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | Docker 앱에 대한 개발 워크플로"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: Docker 앱에 대한 개발 워크플로
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | Docker 앱에 대한 개발 워크플로
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8537b1db27f512ec0bfc2f23589efe8199ca3287
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 9c3df50430117936fd0b9d4390cb84e02085e48d
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -67,7 +67,7 @@ Docker 응용 프로그램 개발은 Docker 없이 응용 프로그램을 개발
 
 심지어 응용 프로그램에서 Docker를 사용하도록 설정하고 Docker에 배포 및 테스트하기 전에도 일반 .NET에서 응용 프로그램 코딩을 시작할 수 있습니다(컨테이너를 사용하려는 경우 일반적으로 .NET Core). 하지만 되도록이면 빨리 Docker에서 작업을 시작하는 것이 좋습니다. 실제로 사용하게 될 환경이고 문제를 최대한 신속하게 검색할 수 있기 때문입니다. 이렇게 하도록 권장하는 이유는 Visual Studio를 사용하면 거의 투명한 것처럼 느껴지는 Docker를 손쉽게 작업할 수 있기 때문입니다. 가장 대표적인 예로 Visual Studio에서 다중 컨테이너 응용 프로그램을 디버깅하는 경우를 들 수 있습니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **Windows용 Docker CE 시작**
     [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
@@ -125,9 +125,9 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 사용하는 언어 및 프레임워크에 따라 Dockerfile에서 추가 구성 설정을 지정할 수 있습니다. 예를 들어 \["dotnet", "MySingleContainerWebApp.dll"\]이 포함된 ENTRYPOINT 줄은 Docker에 .NET Core 응용 프로그램을 실행하라고 알려줍니다. SDK 및 .NET Core CLI(dotnet CLI)를 사용하여 .NET 응용 프로그램을 빌드하고 실행하는 경우 이 설정이 달라집니다. 결론적으로 ENTRYPOINT 줄 및 기타 설정은 개발자가 응용 프로그램에 대해 선택하는 언어 및 플랫폼에 따라 달라집니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   **.NET Core 응용 프로그램에 대한 Docker 이미지 빌드**
+-   **.NET Core 응용 프로그램에 대한 Docker 이미지 작성**
     [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 -   **고유의 이미지 빌드**. 공식 Docker 설명서에 있습니다.
@@ -159,7 +159,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 개발자 고유의 Docker 기본 이미지를 처음부터 새로 만들 수 있습니다. 이 시나리오는 Docker를 시작하는 분들에게는 권장하지 않지만, 자신만의 고유한 기본 이미지 비트를 설정하고 싶은 분들은 그렇게 하셔도 됩니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **다중 아키텍처 .NET Core 이미지**.
 https://github.com/dotnet/announcements/issues/14 
@@ -336,7 +336,7 @@ Visual Studio 2017을 사용하여 다중 컨테이너 응용 프로그램을 �
 
 **그림 5-12**. Visual Studio 2017에서 다중 컨테이너 앱 실행
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **원격 Docker 호스트에 ASP.NET 컨테이너 배포**
     [*https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker*](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
@@ -351,7 +351,7 @@ docker-compose up 및 docker run 명령(또는 Visual Studio에서 컨테이너�
 
 ## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>6단계. 로컬 Docker 호스트를 사용하여 Docker 응용 프로그램 테스트
 
-이 단계는 응용 프로그램에서 하는 일에 따라 달라집니다. 단일 컨테이너 또는 서비스로 배포되는 간단한 .NET Core 웹 응용 프로그램에서는 그림 5-13처럼 Docker 호스트에서 브라우저를 열고 해당 사이트로 이동하여 서비스에 액세스할 수 있습니다. (Dockerfile의 구성이 컨테이너를 호스트에 있는 80 이외의 포트로 매핑하는 경우 호스트 게시물을 URL에 포함합니다.)
+이 단계는 응용 프로그램에서 하는 일에 따라 달라집니다. 단일 컨테이너 또는 서비스로 배포되는 간단한 .NET Core 웹 응용 프로그램에서는 그림 5-13처럼 Docker 호스트에서 브라우저를 열고 해당 사이트로 이동하여 서비스에 액세스할 수 있습니다. (Dockerfile의 구성이 컨테이너를 호스트에 있는 80 이외의 포트로 매핑하는 경우 호스트 포트를 URL에 포함합니다.)
 
 ![](./media/image18.png)
 
@@ -375,7 +375,7 @@ Visual Studio 2017을 사용하여 컨테이너를 실행하고 디버깅할 때
 
 편집기/CLI 방식을 사용하여 개발하는 경우 컨테이너를 디버깅하기가 훨씬 어려우며 추적을 생성하여 디버그하는 것이 좋습니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **로컬 Docker 컨테이너에서 앱 디버깅**
     [*https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh*](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
@@ -393,12 +393,12 @@ Visual Studio를 사용하면 편집기/CLI 방식을 사용할 때보다 워크
 
 또한 2단계(프로젝트에 Docker 지원 추가)를 한 번만 수행하면 됩니다. 따라서 다른 개발에서 .NET을 사용하여 수행하는 일반적인 개발 작업과 워크플로가 비슷합니다. 내부에서 어떤 동작이 발생하는지(이미지 빌드 프로세스, 사용하는 기본 이미지, 컨테이너 배포 등) 알아야 하며, 때로는 Dockerfile 또는 docker-compose.yml 파일을 편집하여 동작을 사용자 지정해야 합니다. 하지만 Visual Studio를 사용하여 대부분의 작업이 대폭 간소화되므로 개발자의 생산성이 크게 향상됩니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   **Steve Lasker. Visual Studio 2017을 사용하여 .NET Docker 개발**
+-   **Steve Lasker. Visual Studio 2017을 사용한 .NET Docker 개발**
     [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
--   **Jeffrey T. Fritz. 새로운 Visual Studio용 Docker 도구를 사용하여 컨테이너에 .NET Core 앱 배포**
+-   **Jeffrey T. Fritz. 새로운 Visual Studio용 Docker 도구로 컨테이너에 .NET Core 앱 배치**
     [*https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/*](https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>DockerFile에서 PowerShell 명령을 사용하여 Windows 컨테이너 설정 
@@ -421,7 +421,7 @@ CMD [ "ping", "localhost", "-t" ]
 RUN powershell add-windowsfeature web-asp-net45
 ```
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 -   **aspnet-docker/Dockerfile.** Windows 기능을 포함하도록 dockerfile에서 실행되는 Powershell 명령 예제.
     [*https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
