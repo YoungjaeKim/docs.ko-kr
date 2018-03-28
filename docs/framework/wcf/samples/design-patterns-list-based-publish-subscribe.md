@@ -1,24 +1,26 @@
 ---
-title: "디자인 패턴: 목록 기반 게시-구독"
-ms.custom: 
+title: '디자인 패턴: 목록 기반 게시-구독'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f5d9b334aae1607f4fb46e0b41155b50eb95a46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2a4f36c7231146811e4eb033cfb6a3433a58dbb2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>디자인 패턴: 목록 기반 게시-구독
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프로그램으로 구현된 목록 기반 게시-구독 패턴을 보여 줍니다.  
@@ -89,7 +91,7 @@ public class PriceChangeEventArgs : EventArgs
         }  
   
         //Clients call this service operation to unsubscribe.  
-        //The previous price change event handler is deregistered.  
+        //The previous price change event handler is unregistered.  
   
         public void Unsubscribe()  
         {  
@@ -129,7 +131,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>단일 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  http://localhost/servicemodelsamples/service.svc 주소를 입력하여 브라우저에서 서비스에 액세스할 수 있는지 테스트합니다. 확인 페이지가 응답으로 표시됩니다.  
+1.  다음 주소를 입력 하 여 브라우저를 사용 하는 서비스에 액세스할 수 있는지 테스트: http://localhost/servicemodelsamples/service.svc합니다. 확인 페이지가 응답으로 표시됩니다.  
   
 2.  \Client\bin에서 Client.exe를 실행\\, 언어별 폴더의 합니다. 클라이언트 콘솔 창에 클라이언트 동작이 표시됩니다. 여러 클라이언트가 시작됩니다.  
   

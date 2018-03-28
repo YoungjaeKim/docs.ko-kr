@@ -1,7 +1,7 @@
 ---
-title: "Azure에서 F# 사용"
-description: "F #을 사용한 Azure 서비스를 사용 하 여 안내 합니다."
-keywords: "Azure, 클라우드, visual f#, f#, 함수형 프로그래밍, .NET, .NET Core"
+title: Azure에서 F# 사용
+description: 'F #을 사용한 Azure 서비스를 사용 하 여 안내 합니다.'
+keywords: Azure, 클라우드, visual f#, f#, 함수형 프로그래밍, .NET, .NET Core
 author: sylvanc
 ms.author: phcart
 ms.date: 09/22/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 8f1d5abe0412ecf72e38c7d76ef44fdc5fd4a0f7
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-f-on-azure"></a>Azure에서 F# 사용
 
@@ -69,14 +69,14 @@ Azure Storage는 내구성, 가용성, 확장성을 활용하여 고객의 요�
 * [Mobius를 사용하여 F#으로 Spark 앱 구현](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
 * [Mobius를 사용하는 예제 F# Spark 앱](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
-## <a name="using-azure-documentdb-with-f"></a>F #을 사용한 Azure DocumentDB를 사용 하 여 #
+## <a name="using-azure-cosmos-db-with-f"></a>F #을 사용한 Azure Cosmos DB를 사용 하 여 #
 
-[Azure DocumentDB](https://azure.microsoft.com/services/documentdb/)는 세계적으로 분산된 고가용성 앱용 NoSQL 서비스입니다.
+[Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db) 는 고가용성, 전 세계적으로 분산 응용 프로그램에 대 한 NoSQL 서비스입니다.
 
-Azure DocumentDB는 다음과 같은 두 가지 방법으로 F#과 함께 사용할 수 있습니다.
+두 가지 방법으로 F #을 사용한 azure Cosmos DB은 사용할 수 있습니다.
 
-1. DocumentDB 컬렉션에 반응하거나 이 컬렉션을 변경하는 F# Azure Functions 생성을 통해. [Azure DocumentDB에 대한 Azure Function 트리거](/azure/azure-functions/functions-bindings-documentdb)를 참조하세요.
-2. [Azure용 .NET SDK](/azure/documentdb/documentdb-get-started-quickstart)를 사용하여. 이러한 예제는 C#으로 작성됩니다.
+1. F # Azure 함수를 만드는 과정에 반응 하 하거나 Azure Cosmos DB 컬렉션으로 인해 변경 합니다. 참조 [Azure 함수에 대 한 Azure Cosmos DB 바인딩을](/azure/azure-functions/functions-bindings-cosmosdb), 또는
+2. 사용 하 여는 [SQL API에 대 한 Cosmos DB AZURE.NET SDK](/azure/cosmos-db/sql-api-sdk-dotnet)합니다. C# 관련된 샘플은 됩니다.
 
 ## <a name="using-azure-event-hubs-with-f"></a>F #을 사용한 Azure 이벤트 허브를 사용 하 여 #
 
@@ -119,7 +119,7 @@ Webhook은 [F#의 Azure Function 및 Webhook 바인딩](/azure/azure-functions/f
 
 Azure VM은 Microsoft.Azure.Management 패키지 및 API를 사용하여 프로그래밍 방식으로 배포하고 관리할 수 있습니다. 예를 들어 [.NET용 관리 라이브러리 시작](https://msdn.microsoft.com/library/dn722415.aspx) 및 [Azure Resource Manager 사용](/azure/azure-resource-manager/resource-manager-deployment-model)을 참조하세요.
 
-마찬가지로, 동일한 구성 요소를 사용하여 F# 스크립트에서 다른 Azure 리소스를 배포하고 관리할 수 있습니다. 예를 들어 저장소 계정을 만들고, Azure Cloud Services를 배포하고, Azure DocumentDB 인스턴스를 만들 수 있으며 F# 스크립트에서 Azure Notifcation Hubs를 프로그래밍 방식으로 관리할 수 있습니다.
+마찬가지로, 동일한 구성 요소를 사용하여 F# 스크립트에서 다른 Azure 리소스를 배포하고 관리할 수 있습니다. 예를 들어 저장소 계정을 만들 하 고 Azure 클라우드 서비스를 배포 하 고 Azure Cosmos DB 인스턴스를 만들 수 있으며 F # 스크립트에서 Azure 알림에 허브를 프로그래밍 방식으로 관리 수 있습니다 합니다.
 
 F# 스크립트를 사용하여 리소스를 배포하고 관리하는 작업은 일반적으로 필요하지 않습니다. 예를 들어 Azure 리소스는 JSON 템플릿 설명에서 직접 배포할 수도 있습니다(매개 변수화할 수 있음). [Azure 퀵 스타트 템플릿](https://azure.microsoft.com/documentation/templates/)과 같은 예제를 비롯하여 [Azure Resource Manager 템플릿](/azure/azure-resource-manager/resource-manager-template-best-practices)을 참조하세요.
 

@@ -1,16 +1,17 @@
 ---
-title: "보간된 문자열 (Visual Basic)"
+title: 보간된 문자열 (Visual Basic)
 ms.date: 10/31/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f865d5a7167847bf869d70a39570413dac271a2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>보간된 문자열 (Visual Basic 참조)
 
@@ -40,7 +41,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 - *형식 문자열*은 형식을 지정할 개체 형식에 적합한 형식 문자열입니다. 예를 들어는 <xref:System.DateTime> 때문일 값은 [표준 날짜 및 시간 형식 문자열](~/docs/standard/base-types/standard-date-and-time-format-strings.md) "D" 또는 "d"와 같은 합니다.
 
 > [!IMPORTANT]
-> 사이 공백이 없어야 없어야는 `$` 및 `"` 문자열을 시작 하 합니다. 이렇게 하면 컴파일러 오류가 발생 합니다.
+> 문자열을 시작하는 `$` 및 `"` 사이에 공백이 없어야 합니다. 이렇게 하면 컴파일러 오류가 발생 합니다.
 
  문자열 리터럴을 사용할 수 있는 곳이면 어디든지 보간된 문자열을 사용할 수 있습니다.  보간된 문자열을 포함하는 코드가 실행될 때마다 보간된 문자열이 평가됩니다. 이렇게 하면 보간된 문자열의 정의 및 평가를 구분할 수 있습니다.  
   
@@ -54,7 +55,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 보간된 문자열에서 다음과 같은 세 가지 암시적 형식 변환을 수행할 수 있습니다.  
 
-1. 보간된 문자열을 <xref:System.String>으로 변환. 다음 예제에서는 보간된 문자열 식이 해당 문자열 표현으로 바뀐 문자열을 반환합니다. 예:
+1. 보간된 문자열을 <xref:System.String>으로 변환. 다음 예제에서는 보간된 문자열 식이 해당 문자열 표현으로 바뀐 문자열을 반환합니다. 예를 들어:
 
    [!code-vb[interpolated-strings1](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings1.vb)]  
 
@@ -62,11 +63,11 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 2. 보간된 문자열을 <xref:System.IFormattable> 변수로 변환. 이 변수를 사용하면 단일 <xref:System.IFormattable> 인스턴스의 문화권별 콘텐츠로 여러 결과 문자열을 만들 수 있습니다. 이 옵션은 개별 문화권의 올바른 숫자 및 날짜 형식 등을 포함하는 데 유용합니다.  모든 이중 중괄호("{{" 및 "}}")는 <xref:System.Object.ToString> 메서드를 명시적 또는 암시적으로 호출하여 문자열을 형식을 지정할 때까지 이중 중괄호로 유지됩니다.  포함된 보간 식은 모두 {0}, {1} 등으로 변환됩니다.  
 
-   다음 예제에서는 리플렉션을 사용하여 보간된 문자열에서 생성된 <xref:System.IFormattable> 변수의 필드 및 속성 값뿐 아니라 멤버를 표시합니다. 또한 전달 된 <xref:System.IFormattable> 변수를 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드.
+   다음 예제에서는 리플렉션을 사용하여 보간된 문자열에서 생성된 <xref:System.IFormattable> 변수의 필드 및 속성 값뿐 아니라 멤버를 표시합니다. 또한 <xref:System.IFormattable> 변수를 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드에 전달합니다.
 
    [!code-vb[interpolated-strings2](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings2.vb)]  
 
-   보간된 문자열은 리플렉션을 통해서만 검사할 수 있습니다. 와 같은 서식 지정 메서드에 문자열에 전달 된 경우 <xref:System.Console.WriteLine(System.String)>, 형식 항목을 해결 하 고 결과 문자열을 반환 합니다. 
+   보간된 문자열은 리플렉션을 통해서만 검사할 수 있습니다. <xref:System.Console.WriteLine(System.String)> 등의 문자열 형식 지정 메서드에 전달되는 경우 해당 형식 항목이 확인되고 결과 문자열이 반환됩니다. 
 
 3. 보간된 문자열을 변환은 <xref:System.FormattableString> 합성 형식 문자열을 나타내는 변수입니다. 예를 들어 복합 형식 문자열 및 복합 형식 문자열이 결과 문자열로 렌더링되는 방식을 검사하면 쿼리를 빌드하는 경우 삽입 공격으로부터 보호하는 데 도움이 됩니다. A <xref:System.FormattableString> 도 포함 됩니다.
 
@@ -81,7 +82,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
 ## <a name="see-also"></a>참고 항목  
-f<xref:System.IFormattable?displayProperty=nameWithType>   
+ <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
  [Visual Basic 언어 참조](index.md)  
  

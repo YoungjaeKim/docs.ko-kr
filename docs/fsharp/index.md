@@ -1,6 +1,6 @@
 ---
-title: "F# 가이드"
-description: "이 가이드에서는 F #,.NET에서 실행 되는 함수형 프로그래밍 언어에 대 한 다양 한 교육 자료에 대 한 개요를 제공 합니다."
+title: F# 가이드
+description: '이 가이드에서는 F #,.NET에서 실행 되는 함수형 프로그래밍 언어에 대 한 다양 한 교육 자료에 대 한 개요를 제공 합니다.'
 author: jackfoxy
 ms.author: phcart
 ms.date: 03/19/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 8be5ac5090e10ae9270e7eec529bd9b7c3c663fb
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: a101233f396368c0bc25937c49f77699cb9f8cf2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="f-guide"></a>F# 가이드
 
@@ -54,11 +54,14 @@ F #은 본래 생산성에 대 한 합니다. F #에 대 한 도구 지원을 �
 
 [F #으로.NET Core CLI 시작](get-started/get-started-command-line.md) 명령줄 도구를 사용 하려는 경우.
 
+[F # 및 Xamarin 시작](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) F #을 사용한 모바일 프로그래밍에 대 한 합니다.
+
 ## <a name="references"></a>참조
 
 [F # 언어 참조](language-reference/index.md) 은 F # 언어의 모든 기능에 대 한 공식 하 고 포괄적인 참조 합니다. 각 문서는 구문에 설명 하 고 코드 샘플을 보여 줍니다. 특정 문서를 찾습니다는 목차에서 필터 표시줄을 사용할 수 있습니다.
 
 [F # 핵심 라이브러리 참조가](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) F # 핵심 라이브러리에 대 한 API 참조 됩니다.
+
 
 ## <a name="additional-guides"></a>추가 가이드
 
