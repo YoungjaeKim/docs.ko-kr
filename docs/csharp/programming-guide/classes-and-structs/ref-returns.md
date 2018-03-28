@@ -1,6 +1,6 @@
 ---
-title: "참조 반환 값 및 참조 로컬(C# 가이드)"
-description: "참조 반환 및 참조 로컬 값을 정의하고 사용하는 방법을 알아봅니다."
+title: 참조 반환 값 및 참조 로컬(C# 가이드)
+description: 참조 반환 및 참조 로컬 값을 정의하고 사용하는 방법을 알아봅니다.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/23/2017
@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>참조 반환 및 참조 로컬
 
@@ -85,7 +85,15 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 `p`가 해당 변수의 별칭이므로 이후 `p` 사용은 `GetContactInformation`에서 반환된 변수를 사용하는 것과 같습니다. 또한 `p`를 변경하면 `GetContactInformation`에서 반환된 변수도 변경됩니다.
 
-`ref` 키워드는 지역 변수 선언 앞, *그리고* 메서드 호출 앞에 사용됩니다. 변수 선언과 할당에 `ref` 키워드를 둘 다 포함하지 않으면 컴파일러 오류 CS8172, “값을 사용하여 참조 형식 변수를 초기화할 수 없습니다.”가 생성됩니다. 
+`ref` 키워드는 지역 변수 선언 앞, *그리고* 메서드 호출 앞에 사용됩니다. 
+
+동일한 방법으로 참조로 값에 액세스할 수 있습니다. 경우에 따라 참조로 값에 액세스하면 비용이 많이 들 수 있는 복사 작업을 피함으로써 성능이 향상됩니다. 예를 들어, 다음 명령문은 값을 참조하는 데 사용되는 참조 로컬 값을 정의하는 방법을 보여줍니다.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+`ref` 키워드는 지역 변수 선언 *및* 앞 그리고 두 번째 예의 값 앞에 사용됩니다. 두 예에서 변수 선언과 할당에 `ref` 키워드를 둘 다 포함하지 않으면 컴파일러 오류 CS8172, "값을 사용하여 참조 형식 변수를 초기화할 수 없습니다."가 생성됩니다. 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>참조 반환 및 참조 로컬: 예제
 
@@ -101,4 +109,5 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
  
 ## <a name="see-also"></a>참고 항목
 
-[ref 키워드](../../language-reference/keywords/ref.md)
+[ref 키워드](../../language-reference/keywords/ref.md)  
+[값 형식과 참조 의미 체계](../../../csharp/reference-semantics-with-value-types.md)
