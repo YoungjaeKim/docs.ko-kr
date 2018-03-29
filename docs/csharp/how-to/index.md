@@ -1,17 +1,17 @@
 ---
-title: "방법 문서(C# 가이드)"
-description: "유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션"
+title: 방법 문서(C# 가이드)
+description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 author: billwagner
 ms.author: wiwagn
 ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: dfb90870233acbe3898e8863f060cd15dd22c3c7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -54,7 +54,7 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 
 문자열은 텍스트를 표시하거나 조작하는 데 사용되는 기본 데이터 형식입니다. 이러한 문서는 문자열이 포함된 일반적인 사례를 보여줍니다.
 
-- [문자열을 비교합니다](../programming-guide/strings/how-to-compare-strings.md).
+- [문자열을 비교합니다](compare-strings.md).
 - [문자열의 내용을 수정합니다](modify-string-contents.md).
 - [문자열이 숫자를 나타내는지 여부를 확인합니다](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [`String.Split`를 사용하여 문자열을 구분합니다](parse-strings-using-split.md).

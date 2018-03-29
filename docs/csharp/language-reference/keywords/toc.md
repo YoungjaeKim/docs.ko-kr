@@ -23,7 +23,6 @@
 #### [interface](interface.md)
 #### [object](object.md)
 #### [string](string.md)
-#### [보간된 문자열](interpolated-strings.md)
 ### [void](void.md)
 ### [var](var.md)
 ### [형식 참조 테이블](reference-tables-for-types.md)
