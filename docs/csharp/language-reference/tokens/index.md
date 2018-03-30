@@ -14,7 +14,7 @@ helpviewer_keywords:
 - '@ character (C#)'
 - $ character (C#)
 ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dda26377dd9671b60c72417175c85b3465daad47

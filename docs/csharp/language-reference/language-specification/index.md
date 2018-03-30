@@ -11,7 +11,7 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-caps.latest.revision: ''
+caps.latest.revision: 46
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 98c0ae41d9c29238f364d3bfcecc193c6a391149

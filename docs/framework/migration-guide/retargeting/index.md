@@ -6,7 +6,7 @@ ms.technology:
 - dotnet-clr
 - app-compat
 ms.topic: article
-caps.latest.revision: ''
+caps.latest.revision: 1
 ms.assetid: f8365847-6e39-4fd1-81d7-73bf02ddd79d
 author: conniey
 ms.author: ronpet
