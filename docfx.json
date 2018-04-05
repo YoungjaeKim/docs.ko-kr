@@ -165,7 +165,7 @@
     "template": [
       "docs.html"
     ],
-    "xref": ["missingapi.yml", "office15.zip" ],
+    "xref": ["_zip/missingapi.yml", "_zip/office15.zip" ],
     "lruSize": 0
   }
 }
