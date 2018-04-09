@@ -1,7 +1,7 @@
 ---
-title: "열거형 형식 대신 열거형 클래스 사용"
-description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 열거형 형식 대신 열거형 클래스 사용"
-keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
+title: 열거형 형식 대신 열거형 클래스 사용
+description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 열거형 형식 대신 열거형 클래스 사용
+keywords: Docker, 마이크로 서비스, ASP.NET, 컨테이너
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 57ff60ea01421f1a2a0466b7de9716b72b02d2c1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>열거형 형식 대신 열거형 클래스 사용
 
@@ -32,8 +32,8 @@ ms.lasthandoff: 12/23/2017
 ```csharp
 public abstract class Enumeration : IComparable
 {
-    public string Name { get; private set; }
-    public int Id { get; private set; }
+    public string Name { get; }
+    public int Id { get; }
 
     protected Enumeration()
     {
@@ -112,21 +112,21 @@ public class CardType : Enumeration
 }
 ```
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
--   **열거형은 악의적인 업데이트입니다.**
+-   **열거형을 의심할 것 - 업데이트**
     [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)
 
--   **Daniel Hardman 열거형으로 질병을 분산하는 방법 - 및 이를 치료하기 위한 방법**
+-   **Daniel Hardman 열거형이 질병을 전파하는 방법 - 및 질병 치료 방법**
     [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
 
 -   **Jimmy Bogard. 열거형 클래스**
     [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
 
--   **Steve Smith C#에서 열거형 대체**
+-   **Steve Smith. C#의 열거형 옵션**
     [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)
 
--   **Enumeration.cs.** eShopOnContainers의 기본 열거형 클래스[*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+-   **Enumeration.cs.** eShopOnContainers의 기본 열거형 클래스 [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
 
 -   **CardType.cs**. eShopOnContainers의 샘플 열거형 클래스
     [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)

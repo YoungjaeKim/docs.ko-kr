@@ -1,12 +1,13 @@
 ---
-title: "런타임에서 어셈블리를 찾는 방법"
-ms.custom: 
+title: 런타임에서 어셈블리를 찾는 방법
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 .NET Framework 응용 프로그램을 성공적으로 배포하려면 공용 언어 런타임이 응용 프로그램을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 이해해야 합니다. 기본적으로 런타임은 응용 프로그램 빌드 시 사용된 정확한 버전의 어셈블리로 바인딩을 시도합니다. 이 기본 동작은 구성 파일 설정으로 재정의할 수 있습니다.  
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   참조되는 어셈블리의 이름인 이름  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소의 `privatePath` 특성으로서, 루트 위치 아래의 하위 디렉터리에 대해 사용자가 정의한 목록입니다. 이 위치는 응용 프로그램 구성 파일과 관리 코드에서 응용 프로그램 도메인에 대한 <xref:System.AppDomain.AppendPrivatePath%2A> 속성을 사용하여 지정할 수 있습니다. 관리 코드에서 지정된 경우 관리 코드 `privatePath` 가 먼저 검색된 다음 응용 프로그램 구성 파일에 지정된 경로가 검색됩니다.  
+-   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소의 `privatePath` 특성으로서, 루트 위치 아래의 하위 디렉터리에 대해 사용자가 정의한 목록입니다. 이 위치는 응용 프로그램 구성 파일과 관리 코드에서 응용 프로그램 도메인에 대한 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 속성을 사용하여 지정할 수 있습니다. 관리 코드에서 지정된 경우 관리 코드 `privatePath` 가 먼저 검색된 다음 응용 프로그램 구성 파일에 지정된 경로가 검색됩니다.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>응용 프로그램 기준 위치 및 문화권 디렉터리 검색  
  런타임은 항상 URL이나 컴퓨터의 응용 프로그램 루트 디렉터리일 수 있는 응용 프로그램 기준 위치에서 검색을 시작합니다. 참조된 어셈블리가 응용 프로그램 기준 위치에 없고 문화권 정보가 제공되지 않은 경우 런타임은 어셈블리 이름을 사용하여 하위 디렉터리를 모두 검색합니다. 검색되는 디렉터리는 다음과 같습니다.  
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>검색되는 기타 위치  
  현재 바인딩 컨텍스트를 사용하여 어셈블리 위치를 결정할 수도 있습니다. 이러한 경우는 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드가 사용될 때 및 COM interop 시나리오에서 자주 발생합니다. 어셈블리가 <xref:System.Reflection.Assembly.LoadFrom%2A> 메서드를 사용하여 다른 어셈블리를 참조하는 경우 호출 어셈블리의 위치는 참조된 어셈블리를 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 일치 항목이 있으면 해당 어셈블리가 로드됩니다. 일치 항목이 없으면 런타임이 해당 검색 의미 체계를 계속하고 Windows Installer에 어셈블리를 제공하도록 쿼리합니다. 바인딩 요청과 일치하는 어셈블리가 제공되지 않으면 예외가 발생합니다. 이 예외는 형식이 참조된 경우 관리 코드의 <xref:System.TypeLoadException> 이거나, 로드되는 어셈블리가 없는 경우 <xref:System.IO.FileNotFoundException> 입니다.  
   
- 예를 들어 Assembly1이 Assembly2를 참조하고 Assembly1이 http://www.code.microsoft.com/utils에서 다운로드된 경우 해당 위치가 Assembly2.dll을 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 그러면 런타임이 http://www.code.microsoft.com/utils/Assembly2.dll 및 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll에서 어셈블리를 검색합니다. Assembly2가 이러한 위치 중 하나에  없으면 런타임에서 Windows Installer를 쿼리합니다.  
+ 예를 들어 Assembly1이 Assembly2를 참조하고 Assembly1이 http://www.code.microsoft.com/utils에서 다운로드된 경우 해당 위치는 Assembly2.dll을 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 런타임은 http://www.code.microsoft.com/utils/Assembly2.dll과 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll의 어셈블리를 탐지합니다. Assembly2가 이러한 위치 중 하나에  없으면 런타임에서 Windows Installer를 쿼리합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [최선의 어셈블리 로드 방법](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  

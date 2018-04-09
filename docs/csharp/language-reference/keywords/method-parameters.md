@@ -1,5 +1,5 @@
 ---
-title: "메서드 매개 변수(C# 참조)"
+title: 메서드 매개 변수(C# 참조)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-caps.latest.revision: 
+caps.latest.revision: 8
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b20d2d233350cfb9de55cbd07e722082ec311597
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 35d96066deb866e02f6bf624121376fe3ae94373
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="method-parameters-c-reference"></a>메서드 매개 변수(C# 참조)
 
@@ -25,13 +25,13 @@ ms.lasthandoff: 03/15/2018
   
  이 섹션에서는 메서드 매개 변수를 선언할 때 사용할 수 있는 키워드를 설명합니다.  
   
--   [params](../../../csharp/language-reference/keywords/params.md)  
+-   [params](../../../csharp/language-reference/keywords/params.md)는 이 매개 변수가 가변 개수의 인수를 사용할 수 있음을 지정합니다.
   
--   [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
+-   [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)은 이 매개 변수를 참조로 전달할 수 있지만 호출된 메서드로만 읽을 수 있음을 지정합니다.
   
--   [ref](../../../csharp/language-reference/keywords/ref.md)  
+-   [ref](../../../csharp/language-reference/keywords/ref.md)는 이 매개 변수를 참조로 전달할 수 있고 호출된 메서드로 읽거나 쓸 수 있음을 지정합니다.
   
--   [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md)  
+-   [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md)는 이 매개 변수가 참조로 전달되고 호출된 메서드에 의해 기록되도록 지정합니다.
   
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)  

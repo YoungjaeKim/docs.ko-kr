@@ -1,6 +1,6 @@
 ---
-title: "LINQ 작업"
-description: "이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하고, LINQ 쿼리에서 사용할 메서드를 작성하고, 즉시 계산 및 지연 계산 간을 구분하는 방법을 알아봅니다."
+title: LINQ 작업
+description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하고, LINQ 쿼리에서 사용할 메서드를 작성하고, 즉시 계산 및 지연 계산 간을 구분하는 방법을 알아봅니다.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="working-with-linq"></a>LINQ 작업
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/01/2018
 *   LINQ 쿼리에서 쉽게 사용할 수 있는 메서드를 작성하는 방법
 *   즉시 계산 및 지연 계산을 구분하는 방법
 
-모든 마술사들이 기본적으로 익히는 기술 중 하나인 [파로 셔플](https://en.wikipedia.org/wiki/Faro_shuffle)을 보여주는 응용 프로그램을 빌드하여 이러한 기술을 살펴봅니다. 간단히 말해서 파로 셔플은 카드 데크를 정확히 절반으로 분할한 다음 각 절반의 각 카드를 교차로 섞어 원래 데크 순서로 다시 빌드하는 기술입니다.
+모든 마술사들이 기본적으로 익히는 기술 중 하나인 [파로 셔플](https://en.wikipedia.org/wiki/Faro_shuffle)을 보여 주는 응용 프로그램을 빌드하여 이러한 기술을 살펴봅니다. 간단히 말해서 파로 셔플은 카드 데크를 정확히 절반으로 분할한 다음 각 절반의 각 카드를 교차로 섞어 원래 데크 순서로 다시 빌드하는 기술입니다.
 
 마술사들은 카드를 섞은 후에 모든 카드가 알려진 위치로 들어가고 순서가 반복 패턴을 가지게 되므로 이 기술을 사용합니다. 
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/01/2018
 
 이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 응용 프로그램을 실행하고 진행 상황을 확인할 수 있습니다. GitHub의 dotnet/docs 리포지토리에서 [완성된 샘플](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq)을 볼 수도 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 .NET Core를 실행하도록 컴퓨터에 설정해야 합니다. [.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다. Windows, Ubuntu Linux, OS X 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 
@@ -179,7 +179,7 @@ public static void Main(string[] args)
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-다음에서는 두 번째 Linq 관용구인 터미널 메서드를 보여줍니다. 여기서는 시퀀스를 입력으로 사용하고(또는 이 경우 두 개의 시퀀스) 단일 스칼라 값을 반환합니다. 이러한 메서드를 사용한다면 항상 쿼리의 마지막 메서드로 사용합니다. (그래서 이러한 이름을 갖습니다.) 
+다음에서는 두 번째 Linq 관용구인 터미널 메서드를 보여 줍니다. 여기서는 시퀀스를 입력으로 사용하고(또는 이 경우 두 개의 시퀀스) 단일 스칼라 값을 반환합니다. 이러한 메서드를 사용한다면 항상 쿼리의 마지막 메서드로 사용합니다. (그래서 이러한 이름을 갖습니다.) 
 
 이 메서드를 사용하여 데크가 원래 순서로 돌아갈 때를 확인하면 작동 방식을 확인할 수 있습니다. 순서 섞기 코드를 루프 내에 포함하고, `SequenceEquals()` 메서드를 적용하여 시퀀스가 원래 순서가 될 때 중지합니다. 이 메서드는 시퀀스 대신 단일 값을 반환하므로 어떤 쿼리에서든지 항상 마지막 메서드로 사용되는 것을 확인할 수 있습니다.
 
@@ -313,7 +313,7 @@ public static void Main(string[] args)
 
 [!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
 
-이 형식은 *자동 구현된 읽기 전용 속성*을 사용합니다. 이러한 속성은 생성자에서 설정되며 수정할 수 없습니다. 또한 문자열 출력 서식을 보다 쉽게 지정할 수 있도록 하는 새로운 *문자열 보간* 기능도 사용합니다.
+이 형식은 *자동 구현된 읽기 전용 속성*을 사용합니다. 이러한 속성은 생성자에서 설정되며 수정할 수 없습니다. 또한 문자열 출력 서식을 보다 쉽게 지정할 수 있도록 하는 [문자열 보간](../language-reference/tokens/interpolated.md) 기능도 사용합니다.
 
 시작 데크를 생성하는 쿼리가 새 형식을 사용하도록 업데이트합니다.
 

@@ -1,6 +1,6 @@
 ---
-title: "의미 체계 분석 시작"
-description: "이 자습서는 .NET Compiler SDK를 사용하여 의미 체계 분석으로 작업하는 방법의 개요를 제공합니다."
+title: 의미 체계 분석 시작
+description: 이 자습서는 .NET Compiler SDK를 사용하여 의미 체계 분석으로 작업하는 방법의 개요를 제공합니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/06/2018
@@ -8,17 +8,21 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 94a28d21cfec1894c3ee3b631335043e1d0ec817
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>의미 체계 분석 시작
 
 이 자습서는 사용자가 구문 API에 익숙하다고 가정합니다. [구문 분석 작업 시작](syntax-analysis.md) 아티클에서는 소개를 충분히 설명합니다.
 
 이 자습서에서는 **기호** 및 **바인딩 API**를 탐색합니다. 이러한 API는 프로그램의 _의미 체계_에 대한 정보를 제공합니다. 이를 통해 프로그램에서 기호를 나타내는 형식에 대해 질문하고 대답할 수 있습니다.
+
+**.NET Compiler Platform SDK**를 설치해야 합니다.
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-compilations-and-symbols"></a>컴파일 및 기호 이해
 
@@ -31,9 +35,6 @@ ms.lasthandoff: 03/12/2018
 ## <a name="querying-symbols"></a>기호 쿼리
 
 이 자습서에서는 "Hello World" 프로그램을 다시 확인합니다. 이번에는 프로그램의 기호를 쿼리하여 해당 기호가 나타내는 형식을 이해합니다. 네임스페이스의 형식에 대해 쿼리하고 형식에 사용할 수 있는 메서드를 찾는 방법을 알아봅니다.
-
-> [!IMPORTANT]
-> 다음 샘플에는 **.NET Compiler SDK**가 Visual Studio 2017의 일부로 설치되어야 합니다. **Visual Studio 확장 개발** 워크로드 아래에 나열된 마지막 선택적 구성 요소인 .NET Compiler SDK를 찾을 수 있습니다. 템플릿은 이 구성 요소 없이 설치되지 않습니다.
 
 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart)에서 이 샘플의 완성된 코드를 볼 수 있습니다.
 

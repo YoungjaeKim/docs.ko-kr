@@ -1,8 +1,9 @@
 ---
-title: "숫자 결과 형식 지정 표(C# 참조)"
+title: 숫자 결과 형식 지정 표(C# 참조)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - formatting [C#]
@@ -10,19 +11,19 @@ helpviewer_keywords:
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cce14d5124ffdf030701ae0fc769278da51f86cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d389703c2d82d74760b99059201cb634849aa433
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>숫자 결과 형식 지정 표(C# 참조)
-<xref:System.String.Format%2A?displayProperty=nameWithType> 메서드를 사용하거나 `String.Format`을 호출하는 <xref:System.Console.Write%2A?displayProperty=nameWithType> 또는 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 메서드를 통해 숫자 결과의 서식을 지정할 수 있습니다. 형식은 형식 문자열을 사용하여 지정됩니다. 다음 표에는 지원되는 표준 형식 문자열을 보여 줍니다. 형식 문자열은 `Axx` 형식을 사용합니다. 여기서 `A`는 형식 지정자이고 `xx`는 전체 자릿수 지정자입니다. 형식 지정자는 숫자 값에 적용되는 서식 형식을 제어하고, 전체 자릿수 지정자는 서식이 지정된 출력의 유효 자릿수 또는 소수 자릿수를 제어합니다. 전체 자릿수 지정자의 값은 0에서 99 사이입니다.  
+<xref:System.String.Format%2A?displayProperty=nameWithType> 메서드를 사용하거나 `String.Format`을 호출하는 <xref:System.Console.Write%2A?displayProperty=nameWithType> 또는 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 메서드를 통하거나 [문자열 보간](../tokens/interpolated.md)을 사용하여 숫자 결과의 서식을 지정할 수 있습니다. 형식은 형식 문자열을 사용하여 지정됩니다. 다음 표에는 지원되는 표준 형식 문자열을 보여 줍니다. 형식 문자열은 `Axx` 형식을 사용합니다. 여기서 `A`는 형식 지정자이고 `xx`는 전체 자릿수 지정자입니다. 형식 지정자는 숫자 값에 적용되는 서식 형식을 제어하고, 전체 자릿수 지정자는 서식이 지정된 출력의 유효 자릿수 또는 소수 자릿수를 제어합니다. 전체 자릿수 지정자의 값은 0에서 99 사이입니다.  
   
- 표준 및 사용자 지정 서식 문자열에 대한 자세한 내용은 [형식 서식 지정](../../../standard/base-types/formatting-types.md)을 참조하세요. `String.Format` 메서드에 대한 자세한 내용은 <xref:System.String.Format%2A?displayProperty=nameWithType>을 참조하십시오.  
+ 표준 및 사용자 지정 서식 문자열에 대한 자세한 내용은 [형식 서식 지정](../../../standard/base-types/formatting-types.md)을 참조하세요.
   
 |형식 지정자|설명|예제|출력|  
 |----------------------|-----------------|--------------|------------|  

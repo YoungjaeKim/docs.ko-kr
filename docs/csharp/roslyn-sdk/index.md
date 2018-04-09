@@ -1,7 +1,7 @@
 ---
 title: .NET Compiler Platform SDK(Roslyn API)
-description: ".NET Compiler Platform SDK(Roslyn API라고도 함)를 사용하여 .NET 코드를 이해하고 오류를 찾고 이러한 오류를 수정하는 방법을 알아봅니다."
-keywords: "roslyn, 분석기, 코드 수정 사항"
+description: .NET Compiler Platform SDK(Roslyn API라고도 함)를 사용하여 .NET 코드를 이해하고 오류를 찾고 이러한 오류를 수정하는 방법을 알아봅니다.
+keywords: roslyn, 분석기, 코드 수정 사항
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 260efa9810e6587224bddb196b4a746d15f785e2
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
@@ -67,10 +67,15 @@ NuGet의 라이브러리를 사용하여 분석기 및 코드 수정 사항을 �
 
 다음 네 가지 항목에서 .NET Compiler Platform SDK의 개념에 대해 자세히 알아볼 수 있습니다.
 
+ - [구문 시각화 도우미를 사용하여 코드 탐색](syntax-visualizer.md)
  - [컴파일러 API 모델 이해](compiler-api-model.md)
  - [구문 작업](work-with-syntax.md)
  - [의미 체계 작업](work-with-semantics.md)
  - [작업 영역 작업](work-with-workspace.md)
+ 
+시작하려면 **.NET Compiler Platform SDK**를 설치해야 합니다.
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 <!--
 

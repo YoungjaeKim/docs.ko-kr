@@ -1,6 +1,6 @@
 ---
-title: "구문 분석 시작(Roslyn API)"
-description: "구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다."
+title: 구문 분석 시작(Roslyn API)
+description: 구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/05/2018
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>구문 분석 시작
 
@@ -43,6 +43,10 @@ namespace HelloWorld
 
 간략한 설명을 통해 구문 API를 사용하여 액세스할 수 있는 정보의 종류에 대한 개요를 제공합니다. 구문 API는 C#에서 알아낸 친숙한 코드 구문을 설명하는 공식 API입니다. 줄 바꿈, 공백 및 들여쓰기를 비롯하여 코드의 형식을 지정하는 방법에 대한 정보가 포함된 완전한 기능입니다. 이 정보를 사용하여 코드를 작성한 대로 완벽하게 나타내고 휴먼 프로그래머 또는 컴파일러가 읽을 수 있습니다. 이 구조를 사용하면 의미 있는 수준에서 소스 코드와 상호 작용할 수 있습니다. 더 이상 텍스트 문자열이 아니지만 C# 프로그램의 구조를 나타내는 데이터입니다.
 
+시작하려면 **.NET Compiler Platform SDK**를 설치해야 합니다.
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+
 ## <a name="understanding-syntax-trees"></a>구문 트리 이해
 
 C# 코드 구조의 분석에 구문 API를 사용합니다. **구문 API**는 구문 트리를 분석하고 생성하기 위한 파서, 구문 트리 및 유틸리티를 노출합니다. 그렇게 특정 구문 요소에 대한 코드를 검색하거나 프로그램에 대한 코드를 읽을 수 있습니다.
@@ -67,9 +71,6 @@ C# 코드 구조의 분석에 구문 API를 사용합니다. **구문 API**는 �
 ## <a name="traversing-trees"></a>트리 트래버스
 
 두 가지 방법으로 구문 트리에서 노드를 검사할 수 있습니다. 트리를 트래버스하여 각 노드를 검사하거나 특정 요소 또는 노드에 대해 쿼리할 수 있습니다.
-
-> [!IMPORTANT]
-> 다음 샘플에는 **.NET Compiler Platform SDK**가 Visual Studio 2017의 일부로 설치되어야 합니다. **Visual Studio 확장 개발** 워크로드 아래에 나열된 마지막 선택적 구성 요소인 .NET Compiler SDK를 찾을 수 있습니다. 템플릿은 이 구성 요소 없이 설치되지 않습니다.
 
 ### <a name="manual-traversal"></a>수동 트래버스
 

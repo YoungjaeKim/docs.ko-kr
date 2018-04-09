@@ -1,5 +1,5 @@
 ---
-title: "문자열(C# 프로그래밍 가이드)"
+title: 문자열(C# 프로그래밍 가이드)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24b3db01047a9f9a47182e0e1ac105f69562c316
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>문자열(C# 프로그래밍 가이드)
 문자열은 값이 텍스트인 <xref:System.String> 형식의 개체입니다. 내부적으로 텍스트는 <xref:System.Char> 개체의 순차적 읽기 전용 컬렉션으로 저장됩니다. C# 문자열의 끝에 null 종료 문자가 없으므로 C# 문자열에는 포함된 null 문자('\0')를 여러 개 사용할 수 있습니다. 문자열의 <xref:System.String.Length%2A> 속성은 유니코드 문자 수가 아닌 포함된 `Char` 개체 수를 나타냅니다. 문자열에서 개별 유니코드 코드 포인트에 액세스하려면 <xref:System.Globalization.StringInfo> 개체를 사용합니다.  
@@ -124,8 +124,7 @@ string s = String.Empty;
 |항목|설명|  
 |-----------|-----------------|  
 |[방법: 문자열 내용 수정](../../how-to/modify-string-contents.md)|문자열을 변환하고 문자열의 내용을 수정하는 기술을 보여 줍니다.|  
-|[방법: 여러 문자열 연결](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|컴파일 시간 및 실행 시간에 여러 문자열을 하나의 문자열로 결합하는 기술을 보여 줍니다.|  
-|[방법: 문자열 비교](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|문자열의 서수 비교를 수행하는 방법을 보여 줍니다.|  
+|[방법: 문자열 비교](../../how-to/compare-strings.md)|문자열의 서수 및 문화권 비교를 수행하는 방법을 보여 줍니다.|  
 |[방법: String.Split을 사용하여 문자열 구문 분석](../../how-to/parse-strings-using-split.md)|`String.Split` 메서드 문자열을 사용하여 문자열을 구문 분석하는 방법을 보여 주는 코드 예제가 포함되어 있습니다.|  
 |[방법: 문자열 검색](../../how-to/search-strings.md)|문자열에서 특정 텍스트 또는 패턴에 대해 검색을 사용하는 방법을 설명합니다.|  
 |[방법: 문자열이 숫자 값을 나타내는지 확인](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|문자열에 올바른 숫자 값이 있는지 여부를 확인할 수 있도록 문자열을 안전하게 구문 분석하는 방법을 보여 줍니다.|  

@@ -1,6 +1,6 @@
 ---
-title: "컬렉션 자습서 - C# 로컬 빠른 시작"
-description: "이 자습서에서는 목록 컬렉션을 살펴보면서 C#에 대해 학습합니다."
+title: 컬렉션 자습서 - C# 로컬 빠른 시작
+description: 이 자습서에서는 목록 컬렉션을 살펴보면서 C#에 대해 학습합니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-quickstart-collections"></a>C# 빠른 시작: 컬렉션
 
@@ -54,7 +54,7 @@ namespace list_quickstart
 
 문자열 목록을 만들고, 해당 목록에 3개의 이름을 추가하고, 이름을 모두 대문자로 출력했습니다. 이전 빠른 시작에서 학습한 개념을 사용하여 목록을 반복합니다.
 
-이름을 표시하는 코드는 **보간된 문자열**을 사용합니다.  `string` 앞에 `$` 문자를 넣으면 문자열 선언에 C# 코드를 포함할 수 있습니다. 실제 문자열은 C# 코드를 생성하는 값으로 바꿉니다. 이 예제에서는 <xref:System.String.ToUpper%2A> 메서드를 호출했기 때문에 `{name.ToUpper()}`를 대문자로 변환된 각 이름으로 바꿉니다.
+이름을 표시하는 코드는 [문자열 보간](../language-reference/tokens/interpolated.md) 기능을 사용합니다.  `string` 앞에 `$` 문자를 넣으면 문자열 선언에 C# 코드를 포함할 수 있습니다. 실제 문자열은 C# 코드를 생성하는 값으로 바꿉니다. 이 예제에서는 <xref:System.String.ToUpper%2A> 메서드를 호출했기 때문에 `{name.ToUpper()}`를 대문자로 변환된 각 이름으로 바꿉니다.
 
 계속해서 살펴보겠습니다.
 

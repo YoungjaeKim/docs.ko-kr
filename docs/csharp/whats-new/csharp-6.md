@@ -1,6 +1,6 @@
 ---
-title: "C# 6-C# 가이드의 새로운 기능"
-description: "C# 버전 6의 새로운 기능을 알아봅니다."
+title: C# 6의 새로운 기능 - C# 가이드
+description: C# 버전 6의 새로운 기능을 알아봅니다.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.date: 09/22/2016
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f3e7a515b1dde52461ab6abf8a9adbe84d27b7c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea54e9a05120134eea8e1bc9d82302a7513b43e7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-c-6"></a>C# 6의 새로운 기능
 
@@ -56,7 +56,7 @@ C#의 6.0 릴리스에는 개발자의 생산성을 개선하는 많은 기능�
 
 하지만 이 간단한 구문은 auto 속성 사용을 지원할 수 있는 디자인 종류를 제한했습니다. C# 6에서는 더 많은 시나리오에서 사용할 수 있도록 auto 속성 기능이 향상되었습니다. 지원 필드를 직접 자주 선언하고 조작하는 더 자세한 구문을 대신 사용할 필요가 없습니다.
 
-새 구문 auto 속성 뒤 변수 저장소를 초기화 하 고 읽기 전용 속성에 대 한 시나리오를 해결 합니다.
+새 구문은 읽기 전용 속성에 대한 시나리오와 auto 속성 뒤에서 변수 저장소를 초기화하는 시나리오를 처리합니다.
 
 ### <a name="read-only-auto-properties"></a>읽기 전용 auto 속성
 
@@ -105,17 +105,17 @@ C# 6에서는 auto 속성 선언에서 auto 속성에 사용되는 저장소의 
 
 `Grades` 멤버는 선언된 위치에서 초기화됩니다. 따라서 더 쉽게 정확히 한 번 초기화를 수행할 수 있습니다. 초기화가 속성 선언의 일부이므로 `Student` 개체에 대한 public 인터페이스를 통해 저장소를 균등하게 할당하기 쉽습니다.
 
-속성 이니셜라이저는 여기 표시 된 것 처럼 읽기 전용 속성 뿐만 아니라 읽기/쓰기 속성으로 사용할 수 있습니다.
+다음과 같이 속성 이니셜라이저는 읽기 전용 속성 및 읽기/쓰기 속성과 함께 사용할 수 있습니다.
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 
 ## <a name="expression-bodied-function-members"></a>식 본문 함수 멤버
 
-여기서 작성하는 많은 멤버의 본문은 식으로 표현될 수 있는 하나의 식으로만 구성됩니다. 대신 식 본문 멤버를 작성하여 해당 구문을 줄일 수 있습니다. 메서드 및 읽기 전용 속성에 대 한 작동합니다. 예를 들어 `ToString()`의 재정의가 좋은 예입니다.
+여기서 작성하는 많은 멤버의 본문은 식으로 표현될 수 있는 하나의 식으로만 구성됩니다. 대신 식 본문 멤버를 작성하여 해당 구문을 줄일 수 있습니다. 이 내용은 메서드 및 읽기 전용 속성에 적용됩니다. 예를 들어 `ToString()`의 재정의가 좋은 예입니다.
 
 [!code-csharp[ToStringExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#ToStringExpressionMember)]
 
-또한 읽기 전용 속성에도에서 식 본문이 멤버를 사용할 수 있습니다.
+읽기 전용 속성에서도 식 본문 멤버를 사용할 수 있습니다.
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
@@ -128,7 +128,7 @@ C# 6에서는 auto 속성 선언에서 auto 속성에 사용되는 저장소의 
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
-이제 <xref:System.Math> 클래스를 한정하지 않고 <xref:System.Math> 클래스에서 정적 메서드를 사용할 수 있습니다. <xref:System.Math> 클래스는 인스턴스 메서드를 포함하지 않으므로 이 기능에 대한 좋은 사용 사례입니다. `using static`을 사용하여 정적 및 인스턴스 메서드가 둘 다 포함된 클래스에 대한 클래스의 정적 메서드를 가져올 수도 있습니다. 가장 유용한 예 중 하나는 <xref:System.String>:
+이제 <xref:System.Math> 클래스를 한정하지 않고 <xref:System.Math> 클래스에서 정적 메서드를 사용할 수 있습니다. <xref:System.Math> 클래스는 인스턴스 메서드를 포함하지 않으므로 이 기능에 대한 좋은 사용 사례입니다. `using static`을 사용하여 정적 및 인스턴스 메서드가 둘 다 포함된 클래스에 대한 클래스의 정적 메서드를 가져올 수도 있습니다. 가장 유용한 예 중 하나는 <xref:System.String>입니다.
 
 [!code-csharp[UsingStatic](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStatic)]
 
@@ -209,17 +209,17 @@ this.SomethingHappened?.Invoke(this, eventArgs);
 
 ## <a name="string-interpolation"></a>문자열 보간
 
-C# 6에는 서식 문자열 기반 문자열 및 다른 문자열 값을 생성하기 위해 계산될 수 있는 식을 작성하기 위한 새 구문이 포함됩니다.
+C# 6에는 형식 문자열 및 다른 문자열 값을 생성하기 위해 계산되는 식에서 문자열을 작성하기 위한 새 구문이 포함됩니다.
 
 기존에는 `string.Format` 같은 메서드에서 위치 매개 변수를 사용해야 했습니다.
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-C# 6에서는 새 문자열 보간 기능을 통해 서식 문자열에 식을 포함할 수 있습니다. 문자열 앞에 `$`를 추가하면 됩니다.
+C# 6에서는 새 [문자열 보간](../language-reference/tokens/interpolated.md) 기능을 통해 서식 문자열에 식을 포함할 수 있습니다. 간단히 문자열 앞에 `$`를 추가하면 됩니다.
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-이 초기 예제에서는 대체 식에 변수 식을 사용했습니다. 임의 식을 사용하도록 이 구문을 확장할 수 있습니다. 예를 들어 보간의 일부로 학생의 성적 점수 평균을 계산할 수 있습니다.
+이 초기 예제에서는 대체 식에 속성 식을 사용했습니다. 임의 식을 사용하도록 이 구문을 확장할 수 있습니다. 예를 들어 보간의 일부로 학생의 성적 점수 평균을 계산할 수 있습니다.
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -227,7 +227,7 @@ C# 6에서는 새 문자열 보간 기능을 통해 서식 문자열에 식을 �
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
-이전 코드 줄은 `Grades.Average()` 값의 서식을 소수 자릿수가 두 개인 부동 소수점 숫자로 지정합니다.
+이전 코드 줄은 소수 자릿수가 두 개인 부동 소수점 숫자로 `Grades.Average()` 값의 형식을 지정합니다.
 
 `:`은 항상 서식이 지정되는 식과 서식 문자열 사이의 구분 기호로 해석됩니다. 식에서 `:`을 조건 연산자와 같은 다른 방식으로 사용할 경우 이로 인해 문제가 발생할 수 있습니다.
 
@@ -250,21 +250,16 @@ public string GetGradePointPercentages() =>
 ### <a name="string-interpolation-and-specific-cultures"></a>문자열 보간 및 특정 문화권
 
 이전 섹션에 나와 있는 모든 예제는 코드가 실행되는 컴퓨터에서 현재 문화권과 언어를 사용하여 문자열의 서식을 지정합니다. 일반적으로 특정 문화권을 사용하여 생성된 문자열의 서식을 지정해야 할 수 있습니다.
-문자열 보간에서 생성된 개체는 <xref:System.String> 또는 <xref:System.FormattableString>으로 암시적으로 변환되는 형식입니다.
+이렇게 하려면 문자열 보간에 의해 생성된 개체가 암시적으로 <xref:System.FormattableString>으로 변환될 수 있다는 사실을 참고하세요.
 
-<xref:System.FormattableString> 형식에는 서식 문자열 및 문자열로 변환하기 전에 인수를 계산한 결과가 포함됩니다. <xref:System.FormattableString>의 public 메서드를 사용하여 문자열의 서식을 지정할 때 문화권을 지정할 수 있습니다. 예를 들어 다음은 언어 및 문화권으로 독일어를 사용하여 문자열을 생성합니다. ',' 문자를 소수 구분 기호로 사용하고 '.' 문자를 천 단위 구분 기호로 사용합니다.
+<xref:System.FormattableString> 인스턴스에는 서식 문자열 및 문자열로 변환하기 전에 식을 계산한 결과가 포함됩니다. <xref:System.FormattableString>의 public 메서드를 사용하여 문자열의 서식을 지정할 때 문화권을 지정할 수 있습니다. 예를 들어 다음 예에서는 독일 문화권을 사용하여 문자열을 생성합니다. (',' 문자를 소수 구분 기호로 사용하고 '.' 문자를 천 단위 구분 기호로 사용합니다.)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
-var gradeStr = string.Format(null, 
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    str.GetFormat(), str.GetArguments());
+var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-> [!NOTE]
-> .NET Core 버전 1.0.1에서는 이전 예제가 지원되지 않습니다. .NET Framework에서만 지원됩니다.
-
-일반적으로 문자열 보간 식은 출력으로 문자열을 생성합니다. 하지만 문자열 서식을 지정하는 데 사용되는 문화권을 더 세밀히 제어하려는 경우 특정 출력을 지정할 수 있습니다.  일반적으로 이 기능이 사용되지만 편리한 메서드를 확장 메서드로 만들어 특정 문화권을 사용한 서식을 쉽게 지정할 수 있습니다.
+자세한 내용은 [문자열 보간](../language-reference/tokens/interpolated.md) 토픽을 참조하세요.
 
 ## <a name="exception-filters"></a>예외 필터
 

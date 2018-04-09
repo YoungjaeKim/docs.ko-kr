@@ -1,12 +1,12 @@
 ---
-title: "복합 형식 지정"
-ms.custom: 
+title: 복합 형식 지정
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 
+caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
-.NET Framework의 합성 서식 지정 기능에는 개체 목록과 합성 서식 문자열이 입력으로 사용됩니다. 합성 서식 문자열은 고정 텍스트와 목록의 개체에 해당하는 인덱싱된 자리 표시자(서식 항목이라고 함)가 결합된 형태로 구성됩니다. 서식 지정 작업을 통해 원래의 고정 텍스트와 목록에 있는 개체의 문자열 표현이 결합된 형태의 결과 문자열을 얻을 수 있습니다.  
+.NET의 복합 형식 지정 기능에는 개체 목록과 복합 형식 문자열이 입력으로 사용됩니다. 합성 서식 문자열은 고정 텍스트와 목록의 개체에 해당하는 인덱싱된 자리 표시자(서식 항목이라고 함)가 결합된 형태로 구성됩니다. 서식 지정 작업을 통해 원래의 고정 텍스트와 목록에 있는 개체의 문자열 표현이 결합된 형태의 결과 문자열을 얻을 수 있습니다.  
   
  다음과 같은 메서드에서 합성 형식 지정 기능을 지원합니다.  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="composite-format-string"></a>합성 서식 문자열  
  합성 서식 문자열과 개체 목록은 합성 서식 지정 기능을 지원하는 메서드의 인수로 사용됩니다. 합성 서식 문자열은 0개 이상의 고정 텍스트가 하나 이상의 서식 항목과 결합된 형태로 구성됩니다. 고정 텍스트는 사용자가 선택하는 임의의 문자열이고, 각 서식 항목은 목록의 개체나 boxed 구조체에 해당합니다. 합성 서식 지정 기능은 각 서식 항목을 목록에 있는 해당 개체의 문자열 표현으로 바꿔 새로운 결과 문자열을 반환합니다.  
   
- 다음은 이 기능을 보여주는 <xref:System.String.Format%2A> 코드 조각입니다.  
+ 다음은 이 기능을 보여 주는 <xref:System.String.Format%2A> 코드 조각입니다.  
   
  [!code-csharp[Formatting.Composite#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#1)]
  [!code-vb[Formatting.Composite#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#1)]  
@@ -117,7 +117,7 @@ ms.lasthandoff: 12/23/2017
   
 5.  표시되는 최종 결과는 리터럴 문자열 "{D}"입니다. 서식 지정 시 의도했던 숫자 값이 표시되지 않습니다.  
   
- 이스케이프된 중괄호 및 서식 항목이 잘못 해석되지 않도록 코드를 작성하는 방법 중 하나는 중괄호와 서식 항목의 서식을 따로 지정하는 것입니다. 즉, 첫째 서식 작업에서 리터럴 여는 중괄호를 표시하고 다음 작업에서 서식 항목의 결과를 표시한 다음 마지막 작업에서 리터럴 닫는 괄호를 표시합니다. 다음 예제에서 이 방법을 보여줍니다.  
+ 이스케이프된 중괄호 및 서식 항목이 잘못 해석되지 않도록 코드를 작성하는 방법 중 하나는 중괄호와 서식 항목의 서식을 따로 지정하는 것입니다. 즉, 첫째 서식 작업에서 리터럴 여는 중괄호를 표시하고 다음 작업에서 서식 항목의 결과를 표시한 다음 마지막 작업에서 리터럴 닫는 괄호를 표시합니다. 다음 예제에서 이 방법을 보여 줍니다.  
   
  [!code-csharp[Formatting.Composite#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Escaping1.cs#2)]
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
@@ -144,7 +144,7 @@ ms.lasthandoff: 12/23/2017
  앞의 단계가 수행된 후에 맞춤이 적용됩니다.  
   
 ## <a name="code-examples"></a>코드 예제  
- 다음 예제에서는 합성 서식 지정을 사용하여 만든 문자열과 개체의 `ToString` 메서드를 사용하여 만든 문자열을 보여줍니다. 두 형식의 서식을 지정한 결과는 같습니다.  
+ 다음 예제에서는 합성 서식 지정을 사용하여 만든 문자열과 개체의 `ToString` 메서드를 사용하여 만든 문자열을 보여 줍니다. 두 형식의 서식을 지정한 결과는 같습니다.  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]
  [!code-vb[Formatting.Composite#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#3)]  
@@ -156,12 +156,12 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Formatting.Composite#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#4)]
  [!code-vb[Formatting.Composite#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#4)]  
   
- 다음 예제에서는 하나의 개체 서식을 두 가지 다른 방법으로 지정하는 경우를 비롯하여 여러 개체의 서식을 지정하는 방법을 보여줍니다.  
+ 다음 예제에서는 하나의 개체 서식을 두 가지 다른 방법으로 지정하는 경우를 비롯하여 여러 개체의 서식을 지정하는 방법을 보여 줍니다.  
   
  [!code-csharp[Formatting.Composite#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#5)]
  [!code-vb[Formatting.Composite#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#5)]  
   
- 다음 예제에서는 서식 지정에서 맞춤을 사용하는 방법을 보여줍니다. 서식 지정되는 인수가 세로줄 문자(&#124;) 사이에 위치하면서 결과 맞춤이 강조됩니다.  
+ 다음 예제에서는 서식 지정에서 맞춤을 사용하는 방법을 보여 줍니다. 서식 지정되는 인수가 세로줄 문자(&#124;) 사이에 위치하면서 결과 맞춤이 강조됩니다.  
   
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
@@ -169,6 +169,8 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Console.WriteLine%2A>  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [문자열 보간(C#)](../../csharp/language-reference/tokens/interpolated.md)  
+ [문자열 보간(Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)  
  [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)  

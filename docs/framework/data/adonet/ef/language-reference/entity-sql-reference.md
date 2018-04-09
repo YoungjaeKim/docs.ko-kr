@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/23/2018
 |[<(보다 작음)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작은지 여부를 결정합니다.|  
 |[<=(작거나 같음)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작거나 같은지 여부를 결정합니다.|  
 |[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.|  
-|[!=(같지 않음)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값과 다른지 여부를 결정합니다.|  
+|[\!= (같지 않음)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값과 다른지 여부를 결정합니다.|  
 |[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|특정 문자열이 지정된 패턴과 일치하는지 여부를 결정합니다.|  
   
 ## <a name="logical-and-case-expression-operators"></a>논리 및 Case 식 연산자  
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/23/2018
 |연산자|설명|  
 |--------------|-----------------|  
 |[& & (논리적 AND)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|논리적 AND|  
-|[! (논리적 NOT)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|논리적 NOT|  
+|[\! (논리적 NOT)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|논리적 NOT|  
 |[&#124;&#124;(논리적 OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|논리적 OR|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|부울 식 집합을 계산하여 결과를 확인합니다.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|결과 [때](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) true로 평가 될 때 절.|  

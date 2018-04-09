@@ -1,6 +1,6 @@
 ---
-title: ".NET Framework 시스템 요구 사항"
-description: ".NET Framework 4.5 이상 버전을 설치하기 위한 하드웨어, 운영 체제 및 소프트웨어 요구 사항을 확인하세요."
+title: .NET Framework 시스템 요구 사항
+description: .NET Framework 4.5 이상 버전을 설치하기 위한 하드웨어, 운영 체제 및 소프트웨어 요구 사항을 확인하세요.
 ms.custom: updateeachrelease
 ms.date: 02/02/2018
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: e0b6faf42f0fa47f6104454440033a6272efb224
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
 
@@ -35,13 +35,7 @@ ms.lasthandoff: 02/09/2018
 
 .NET Framework용 앱을 개발할 수 있는 개발 환경을 구축하려면 또 다른 여러 가지 요구 사항을 충족해야 합니다.
 
-> [!IMPORTANT]
-> .NET Framework 4 이후 모든 .NET Framework 버전은 내부 업데이트이므로 한 시스템에는 단일 4.x 버전만 있을 수 있습니다.
-> 또한 .NET Framework의 특정 버전은 일부 Windows 운영 체제 버전에 사전 설치되어 있습니다. 이는 다음을 의미합니다.
->
-> * 컴퓨터에 이미 설치된 최신 버전이 있는 경우 이전 4.x 버전을 설치할 수 없습니다.
-> * OS에 특정 .NET 버전이 사전 설치된 경우 같은 컴퓨터에 이전 4.x 버전을 설치할 수 없습니다.
-> * 최신 버전을 설치하는 경우 이전 버전을 먼저 제거하지 않아도 됩니다.
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
 다운로드 정보와 링크에 대해서는 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.
 
@@ -101,7 +95,7 @@ ms.lasthandoff: 02/09/2018
 
  **참고:**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 에 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]가 포함되므로 별도로 설치할 필요가 없습니다. 마찬가지로 [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]에는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]이 포함됩니다.
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]에 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]가 포함되기 때문에 별도로 설치할 필요가 없습니다. 마찬가지로 [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]에는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]이 포함됩니다.
 
 - .NET Framework는 Windows Server 2008 R2 SP1 이상의 Server Core 역할에 대해 제한적으로 지원됩니다. 지원되지 않는 API 목록은 [Server Core .NET Functionality](https://msdn.microsoft.com/library/ee391632.aspx)(Server Core .NET 기능)를 참조하세요.
 

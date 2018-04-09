@@ -1,5 +1,5 @@
 ---
-title: "표준 숫자 형식 문자열"
+title: 표준 숫자 형식 문자열
 ms.date: 09/10/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>표준 숫자 형식 문자열
 표준 숫자 서식 문자열은 일반 숫자 형식의 서식을 지정하는 데 사용됩니다. 표준 숫자 서식 문자열은 `Axx` 형식을 취합니다. 여기서  
@@ -48,12 +48,12 @@ ms.lasthandoff: 12/23/2017
  
 - <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드, <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드에 사용되는 .NET [복합 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md). 합성 서식 기능을 사용하여 단일 문자열에 여러 데이터 항목의 문자열 표현을 포함하고, 필드 너비를 지정하며, 필드에서 숫자를 맞출 수 있습니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요.  
 
-- 복합 형식 문자열과 비교했을 때 간소화된 구문을 제공하는 C# 및 Visual Basic의 [보간된 문자열](../../csharp/language-reference/keywords/interpolated-strings.md).
+- 복합 형식 문자열과 비교했을 때 간소화된 구문을 제공하는 C# 및 Visual Basic의 [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md).
  
 > [!TIP]
 >  서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 응용 프로그램인 [서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.  
   
-<a name="table"></a> 다음 표에서는 표준 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여줍니다. 표준 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesStandardFormatting) 섹션을 참조하고, 이러한 사용 방법을 자세히 보여주는 예제를 보려면 [예제](#example) 섹션을 참조하세요.  
+<a name="table"></a> 다음 표에서는 표준 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여 줍니다. 표준 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesStandardFormatting) 섹션을 참조하고, 이러한 사용 방법을 자세히 보여 주는 예제를 보려면 [예제](#example) 섹션을 참조하세요.  
   
 |형식 지정자|name|설명|예제|  
 |----------------------|----------|-----------------|--------------|  
@@ -90,6 +90,8 @@ ms.lasthandoff: 12/23/2017
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
+-   보간된 문자열의 보간된 식 항목에서 `formatString` 인수로 제공될 수 있습니다. 자세한 내용은 C# 참조의 [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 토픽 또는 Visual Basic 참조의 [문자열 보간](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 토픽을 참조하세요.  
+  
  다음 단원에서는 각 표준 숫자 서식 문자열에 대해 자세히 설명합니다.  
   
 <a name="CFormatString"></a>   
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/23/2017
   
  서식을 지정할 값의 소수 자릿수가 지정된 소수 자릿수 또는 기본 소수 자릿수보다 크면 결과 문자열에서 소수 값이 반올림됩니다. 지정한 소수 자릿수의 오른쪽에 있는 값이 5 이상인 경우 결과 문자열에서 마지막 자릿수가 양수인 경우 올림, 음수인 경우 내림됩니다(Round Away From Zero 방식).  
   
- 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여줍니다.  
+ 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여 줍니다.  
   
 |NumberFormatInfo 속성|설명|  
 |-------------------------------|-----------------|  
@@ -147,7 +149,7 @@ ms.lasthandoff: 12/23/2017
   
  서식 지정자의 대/소문자에 따라 지수에 "E" 또는 "e" 접두사를 붙일 것인지가 결정됩니다. 지수는 항상 더하기 또는 빼기 기호가 포함된 최소 3자리로 구성됩니다. 필요하면 지수를 0으로 채워서 이 조건을 만족시킵니다.  
   
- 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여줍니다.  
+ 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여 줍니다.  
   
 |NumberFormatInfo 속성|설명|  
 |-------------------------------|-----------------|  
@@ -169,7 +171,7 @@ ms.lasthandoff: 12/23/2017
   
  전체 자릿수 지정자는 필요한 소수 자릿수를 나타냅니다. 전체 자릿수 지정자를 생략하면 현재 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 속성에서 숫자 전체 자릿수를 제공합니다.  
   
- 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 결과 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 개체의 속성을 보여줍니다.  
+ 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 결과 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 개체의 속성을 보여 줍니다.  
   
 |NumberFormatInfo 속성|설명|  
 |-------------------------------|-----------------|  
@@ -214,7 +216,7 @@ ms.lasthandoff: 12/23/2017
 
 <xref:System.Single> 값과 함께 사용될 때 “G9” 형식 지정자는 원래 <xref:System.Single> 값이 성공적으로 라운드트립되도록 합니다. 이는 <xref:System.Single>이 최대 9자의 전체 유효 자릿수를 제공하는 IEEE 754-2008 규격의 단정밀도(`binary32`) 부동 소수점 숫자이기 때문입니다. 일부 경우에 “R”이 단정밀도 부동 소수점 값을 성공적으로 라운드트립하지 못하기 때문에 [“R” 형식 지정자](#RFormatString) 대신 사용하는 것이 좋습니다.
 
- 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 결과 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여줍니다.  
+ 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 결과 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여 줍니다.  
   
 |NumberFormatInfo 속성|설명|  
 |-------------------------------|-----------------|  
@@ -234,7 +236,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-numeric-n-format-specifier"></a>숫자("N") 서식 지정자  
  숫자("N") 서식 지정자는 숫자를 "-d,ddd,ddd.ddd…" 형태의 문자열로 변환합니다. 여기서 "-"는 필요한 경우 음수 기호를 나타내고, "d"는 숫자(0-9)를 나타내고, ","는 그룹 구분 기호를 나타내고, "."은 소수점 기호를 나타냅니다. 전체 자릿수 지정자는 소수점 뒤에 필요한 자릿수를 나타냅니다. 전체 자릿수 지정자를 생략하면 현재 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 속성에 의해 소수 자릿수가 정의됩니다.  
   
- 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 결과 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여줍니다.  
+ 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 결과 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여 줍니다.  
   
 |NumberFormatInfo 속성|설명|  
 |-------------------------------|-----------------|  
@@ -257,7 +259,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="the-percent-p-format-specifier"></a>백분율("P") 서식 지정자  
  백분율("P") 서식 지정자는 숫자를 100으로 곱한 다음 백분율을 나타내는 문자열로 변환합니다. 전체 자릿수 지정자는 필요한 소수 자릿수를 나타냅니다. 전체 자릿수 지정자를 생략하면 현재 <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A> 속성에서 제공하는 기본 숫자 전체 자릿수가 사용됩니다.  
   
- 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여줍니다.  
+ 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여 줍니다.  
   
 |NumberFormatInfo 속성|설명|  
 |-------------------------------|-----------------|  
@@ -287,7 +289,7 @@ ms.lasthandoff: 12/23/2017
  이 지정자를 사용하여 <xref:System.Numerics.BigInteger> 값의 서식을 지정하면 해당 문자열 표현에 <xref:System.Numerics.BigInteger> 값의 모든 유효 자릿수가 포함됩니다.  
   
  전체 자릿수 지정자는 포함되어 있더라도 무시됩니다. 이 지정자를 사용할 때는 라운드트립이 전체 자릿수보다 우선합니다.    
- 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 결과 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여줍니다.  
+ 결과 문자열은 현재 <xref:System.Globalization.NumberFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 결과 문자열의 서식을 제어하는 <xref:System.Globalization.NumberFormatInfo> 속성을 보여 줍니다.  
   
 |NumberFormatInfo 속성|설명|  
 |-------------------------------|-----------------|  

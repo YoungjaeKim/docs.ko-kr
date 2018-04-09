@@ -3,7 +3,7 @@
 ## [구문 작업](work-with-syntax.md)
 ## [의미 체계 작업](work-with-semantics.md)
 ## [작업 영역 작업](work-with-workspace.md)
-
+## [구문 시각화 도우미를 사용하여 코드 탐색](syntax-visualizer.md)
 ## 빠른 시작
 ### [구문 분석](get-started/syntax-analysis.md)
 ### [의미 체계 분석](get-started/semantic-analysis.md)

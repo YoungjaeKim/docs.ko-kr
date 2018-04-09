@@ -1,6 +1,6 @@
 ---
-title: "CLI를 사용하여 .NET Core 시작"
-description: ".NET Core CLI(명령줄 인터페이스)를 사용하여 Windows, Linux 또는 macOS에서 .NET Core를 시작하는 방법을 보여 주는 단계별 자습서입니다."
+title: CLI를 사용하여 .NET Core 시작
+description: .NET Core CLI(명령줄 인터페이스)를 사용하여 Windows, Linux 또는 macOS에서 .NET Core를 시작하는 방법을 보여 주는 단계별 자습서입니다.
 keywords: .NET Core, CLI
 author: cartermp
 ms.author: mairaw
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
-ms.workload: dotnetcore
-ms.openlocfilehash: 544274783e8a77f55c8ec7e1da0069bf8bdf7b0b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8587857ef0d0f48f88331d9588e7e97e3290d34c
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 12/23/2017
 
 .NET Core CLI 도구 집합에 익숙하지 않은 경우 [.NET Core SDK 개요](../tools/index.md)를 읽어 보세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - [.NET Core SDK 1.0](https://www.microsoft.com/net/download/core).
 - 선택하는 텍스트 편집기 또는 코드 편집기입니다.

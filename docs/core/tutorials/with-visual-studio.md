@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio 2017에서 .NET Core 및 C#을 사용하여 Hello World 응용 프로그램 빌드"
-description: "Visual Studio 2017에서 C#을 사용하여 간단한 .NET Core 콘솔 응용 프로그램을 빌드하는 방법을 알아봅니다."
-keywords: ".NET Core, .NET Core 콘솔 응용 프로그램, Visual Studio 2017"
+title: Visual Studio 2017에서 .NET Core 및 C#을 사용하여 Hello World 응용 프로그램 빌드
+description: Visual Studio 2017에서 C#을 사용하여 간단한 .NET Core 콘솔 응용 프로그램을 빌드하는 방법을 알아봅니다.
+keywords: .NET Core, .NET Core 콘솔 응용 프로그램, Visual Studio 2017
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
@@ -12,17 +12,17 @@ ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 21b36bfa355bbea1b078c4bd29afdf5afeb61453
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 7042a7356fa1b65f7a152208dbfaa9ba27081a8d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드
 
 이 항목에서는 Visual Studio 2017에서 C#을 사용하여 간단한 .NET Core 콘솔 응용 프로그램을 빌드, 디버그 및 게시하는 과정을 단계별로 소개합니다. Visual Studio 2017은 .NET Core 응용 프로그램 빌드를 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 플랫폼 특정 종속성이 없는 응용 프로그램은 .NET Core에서 대상으로 하는 모든 플랫폼과 .NET Core가 설치된 모든 시스템에서 실행할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 ".NET Core 플랫폼 간 개발" 워크로드가 설치된 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs). .NET Core 1.1 또는 .NET Core 2.0을 사용하여 앱을 개발할 수 있습니다.
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/28/2018
 
    ![업데이트된 Main 메서드가 포함된 Visual Studio 프로그램 C# 파일](./media/with-visual-studio/codewindow.png)
 
-   이 코드는 "What is your name?"을 콘솔 창에 표시하고 사용자가 문자열을 입력한 후 Enter 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다. 마지막으로, [보간된 문자열](../../csharp/language-reference/keywords/interpolated-strings.md)을 사용하여 콘솔 창에 이러한 값을 표시합니다.
+   이 코드는 "What is your name?"을 콘솔 창에 표시하고 사용자가 문자열을 입력한 후 Enter 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다. 마지막으로, [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md)을 사용하여 콘솔 창에 이러한 값을 표시합니다.
 
 1. **빌드** > **솔루션 빌드**를 선택하여 프로그램을 컴파일합니다.
 

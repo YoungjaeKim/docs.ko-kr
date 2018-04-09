@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3c15cc0dce5b37866fd826e3d6b9adcb00724672
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 매개 변수 한정자(C# 참조)
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/23/2018
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
-위 예제는 `in` 한정자가 호출 사이트에서 필요하지 않다는 것을 설명합니다. 메서드 선언에만 필요합니다.
+앞의 예제는 호출 사이트에서 일반적으로 `in` 한정자가 필요하지 않다는 것을 설명합니다. 메서드 선언에만 필요합니다.
 
 > [!NOTE] 
 > `in` 키워드는 `foreach` 명령문의 일부 또는 LINQ 쿼리에서 `join` 절의 일부로 형식 매개 변수가 반공변(contravariant)임을 지정하도록 제네릭 형식 매개 변수와 함께 사용될 수도 있습니다. 이러한 컨텍스트에서 `in` 키워드의 사용에 대한 자세한 내용은 모든 해당 사용에 대한 링크를 제공하는 [in](in.md)을 참조하세요.
@@ -41,36 +41,90 @@ class CS0663_Example
 }
 ```
   
-`in`의 존재 여부에 따른 오버로드는 허용되지만 컴파일러 경고를 생성합니다.  
+`in`의 존재에 기반한 오버로딩이 허용됩니다.  
   
 ```csharp
 class InOverloads
 {
-    // Discouraged. Calling SampleMethod(value) is ambiguous.
     public void SampleMethod(in int i) { }
     public void SampleMethod(int i) { }
 }
 ```
 
-속성 또는 상수는 호출 메서드가 해당 값을 수정할 수 없으므로 `in` 매개 변수로 전달될 수 있습니다.
-  
+## <a name="overload-resolution-rules"></a>오버로드 해결 규칙
+
+`in` 인수에 대한 동기 이해를 통해 값과 `in` 인수로 메서드의 오버로드 해결 규칙을 이해할 수 있습니다. `in` 매개 변수를 사용하여 메서드를 정의하면 잠재적인 성능 최적화가 이루어집니다. 일부 `struct` 형식 인수는 크기가 클 수 있으며 긴밀한 루프 또는 중요한 코드 경로에서 메서드를 호출할 때 해당 구조를 복사하는 비용이 중요합니다. 메서드는 호출된 메서드가 인수의 상태를 수정하지 않으므로 `in` 매개 변수를 선언하여 해당 인수가 참조로 안전하게 전달될 수 있음을 지정합니다. 이러한 인수를 참조로 전달하면 (잠재적으로) 비용이 많이 드는 복사본을 방지할 수 있습니다. 
+
+호출 사이트의 인수에 `in`을 지정하는 것은 일반적으로 선택 사항입니다. 값으로 인수를 전달하고 `in` 한정자를 사용하여 인수를 전달하는 것 사이에는 의미 체계상 차이가 없습니다. 호출 사이트의 `in` 한정자는 인수 값이 변경될 수 있음을 나타내지 않아도 되므로 선택 사항입니다. 호출 사이트에서 `in` 한정자를 명시적으로 추가하여 인수가 값이 아닌 참조로 전달되도록 합니다. 명시적으로 `in`을 사용하는 경우 두 가지 효과가 있습니다.
+
+먼저 호출 사이트에서 `in`을 지정하면 컴파일러가 일치하는 `in` 매개 변수로 정의된 메서드를 선택하게 됩니다. 그렇지 않으면 두 메서드가 `in`이 있을 때만 다른 경우 by 값 오버로드가 더 적합합니다.
+
+둘째, `in`을 지정하면 참조로 인수를 전달할 의사가 있음을 선언하는 것입니다. `in`에 사용된 인수는 직접 참조할 수 있는 위치를 나타내야 합니다. `out` 및 `ref` 인수에는 동일한 일반 규칙이 적용됩니다. 상수, 일반 속성 또는 값을 생성하는 다른 식은 사용할 수 없습니다. 그렇지 않으면 호출 사이트에서 `in`을 생략할 경우 메서드에 대한 읽기 전용 참조로 전달할 임시 변수를 만들 수 있도록 컴파일러에 알립니다. 컴파일러는 `in` 인수를 사용하여 몇 가지 제한 사항을 해결하기 위해 임시 변수를 만듭니다.
+
+- 임시 변수는 컴파일 시간 상수를 `in` 매개 변수로 허용합니다.
+- 임시 변수는 속성 또는 `in` 매개 변수에 대한 다른 식을 허용합니다.
+- 임시 변수는 인수 형식에서 매개 변수 형식으로의 암시적 변환이 있는 경우 인수를 허용합니다.
+
+앞의 모든 인스턴스에서 컴파일러는 상수, 속성 또는 다른 식의 값을 저장하는 임시 변수를 만듭니다.
+
+다음 코드에서는 이러한 규칙을 보여줍니다.
+
+```csharp
+static void Method(in int argument)
+{
+    // implementation removed
+}
+
+Method(5); // OK, temporary variable created.
+Method(5L); // CS1503: no implicit conversion from long to int
+short s = 0;
+Method(s); // OK, temporary int created with the value 0
+Method(in s); // CS1503: cannot convert from in short to in int
+int i = 42;
+Method(i); // passed by readonly reference
+Method(in i); // passed by readonly reference, explicitly using `in`
+```
+
+이제 by 값 인수를 사용하는 다른 메서드를 사용할 수 있다고 가정하겠습니다. 결과는 다음 코드와 같이 변경됩니다.
+
+```csharp
+static void Method(int argument)
+{
+    // implementation removed
+}
+
+static void Method(in int argument)
+{
+    // implementation removed
+}
+
+Method(5); // Calls overload passed by value
+Method(5L); // CS1503: no implicit conversion from long to int
+short s = 0;
+Method(s); // Calls overload passed by value.
+Method(in s); // CS1503: cannot convert from in short to in int
+int i = 42;
+Method(i); // Calls overload passed by value
+Method(in i); // passed by readonly reference, explicitly using `in`
+```
+
+인수가 참조로 전달되는 유일한 메서드 호출이 마지막입니다.
+
+> [!NOTE]
+> 앞의 코드는 단순화를 위해 인수 형식으로 `int`를 사용합니다. `int`는 대부분의 최신 컴퓨터에서 참조보다 크지 않기 때문에 단일 `int`를 읽기 전용 참조로 전달하면 아무런 이점이 없습니다. 
+
+## <a name="limitations-on-in-parameters"></a>`in` 매개 변수에 대한 제한 사항
+
 다음과 같은 종류의 메서드에는 `in`, `ref` 및 `out` 키워드를 사용할 수 없습니다.  
   
-- [async](../../../csharp/language-reference/keywords/async.md) 한정자를 사용하여 정의하는 비동기 메서드  
-  
-- [yield return](../../../csharp/language-reference/keywords/yield.md) 또는 `yield break` 문을 포함하는 반복기 메서드  
-
-일반적으로 값으로 인수 전달에 필요한 복사 작업을 방지하도록 `in` 인수를 선언합니다. 이는 인수가 복사 작업이 참조로 전달하는 것보다 비용이 많이 드는 구조와 같은 값 유형인 경우에 가장 유용합니다.
-
-> [!WARNING]
->  `in` 매개 변수는 오용되면 더 비쌀 수 있습니다. 컴파일러는 멤버 메서드가 구조체의 상태를 수정하는지 여부를 알 수 없습니다. 컴파일러가 객체가 수정되지 않았는지 여부를 확인할 수 없으면 방어적으로 복사본을 만들고 해당 복사본을 사용하여 멤버 참조를 호출합니다. 모든 가능한 수정은 해당 방어 복사본에 대한 것입니다. 이러한 복사본을 피하는 두 가지 방법은 `in` 매개 변수를 `in` 인수로 전달하거나 구조를 `readonly struct`으로 정의하는 것입니다.
+- [async](async.md) 한정자를 사용하여 정의하는 비동기 메서드  
+- [yield return](yield.md) 또는 `yield break` 문을 포함하는 반복기 메서드  
 
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
- [메서드 매개 변수](../../../csharp/language-reference/keywords/method-parameters.md)  
- [값 형식과 참조 의미 체계](../../../csharp/reference-semantics-with-value-types.md)
+ [C# 참조](../index.md)  
+ [C# 프로그래밍 가이드](../../programming-guide/index.md)  
+ [C# 키워드](index.md)  
+ [메서드 매개 변수](method-parameters.md) [값 형식과 참조 의미 체계](../../reference-semantics-with-value-types.md)

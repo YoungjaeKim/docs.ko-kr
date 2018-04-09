@@ -1,7 +1,7 @@
 ---
 layout: HubPage
 ms.topic: hub-page
-hide_bc: ''
+hide_bc: true
 title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 응용 프로그램을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease

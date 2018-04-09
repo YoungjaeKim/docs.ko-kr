@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -81,7 +81,7 @@ Visual Basic 2017은 숫자 구분 기호로 밑줄 문자(`_`)에 대한 지원
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-밑줄 문자는 선행 구분 기호를 사용 하려면 Visual Basic 프로젝트에 다음 요소를 추가 해야 (\*.vbproj) 파일:
+선행 구분 기호로 밑줄 문자를 사용하려면 Visual Basic 프로젝트(\*.vbproj) 파일에 다음 요소를 추가해야 합니다.
 
 ```xml
 <PropertyGroup>
@@ -91,7 +91,7 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[**명명 된 튜플 유추**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**명명된 튜플 유추**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 변수에서 튜플 요소의 값을 할당할 때 Visual Basic는 해당 변수 이름에서 튜플 요소의 이름을 유추합니다. 튜블 요소의 이름을 명시적으로 지정할 필요가 없습니다. 다음 예제에서는 유추를 사용하여 세 개의 명명된 요소, `state`, `stateName` 및 `capital`로 튜플을 만듭니다.
 
@@ -99,7 +99,7 @@ Dim number As Integer = &H_C305_F860
 
 **추가 컴파일러 스위치**  
 
-Visual Basic 명령줄 컴파일러는 이제 지원는 [ **-refout** ](../reference/command-line-compiler/refout-compiler-option.md) 및 [ **-refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) 의 출력을 제어 하는 컴파일러 옵션 참조 어셈블리입니다. **-refout** 참조 어셈블리의 출력 디렉터리를 정의 하 고 **-refonly** 한 참조 어셈블리 출력 컴파일에서 임을 지정 합니다.
+이제 Visual Basic 명령줄 컴파일러는 참조 어셈블리의 출력을 제어하기 위해 [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) 및 [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) 컴파일러 옵션을 지원합니다. **-refout**는 참조 어셈블리의 출력 디렉터리를 정의하고 **-refonly**는 참조 어셈블리만 컴파일로 출력되도록 지정합니다.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -154,7 +154,7 @@ C# 7부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 메�
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  문자열을 하드 코드하지 않고 오류 메시지에서 사용하기 위해 형식이나 멤버의 정규화되지 않은 문자열 이름을 가져올 수 있습니다.  이 기능을 사용하면 리팩터링할 때 코드를 올바르게 유지할 수 있습니다.  이 기능은 MVC(Model-View-Controller) 링크를 연결하고 속성 변경 이벤트를 발생시키는 데도 유용합니다.  
   
-[문자열 보간](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[문자열 보간](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  문자열 보간 식을 사용하여 문자열을 생성할 수 있습니다.  보간된 문자열 식은 식이 포함된 템플릿 문자열과 유사합니다.  보간된 문자열은 인수 측면에서 [Composite Formatting](../../standard/base-types/composite-format.md)보다 이해하기 쉽습니다.  
   
 [Null 조건부 멤버 액세스 및 인덱싱](../../csharp/language-reference/operators/null-conditional-operators.md)  
@@ -218,5 +218,5 @@ End Interface
   
  이제 컴파일러에서 일반 오버로드 확인 규칙을 사용하여 호출하는 데 가장 적합한 `GetDetails`를 선택하며, 샘플에서와 같이 Visual Basic에서 인터페이스 관계를 선언할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참고 항목  
  [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-in-visual-studio)

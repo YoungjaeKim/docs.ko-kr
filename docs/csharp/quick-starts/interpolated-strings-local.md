@@ -1,6 +1,6 @@
 ---
-title: "보간된 문자열 자습서 - C# 로컬 빠른 시작"
-description: "보간된 문자열에 관한 이 빠른 시작에서는 더 큰 문자열에 식의 결과를 포함하는 C# 코드를 작성합니다."
+title: 보간된 문자열 자습서 - C# 로컬 빠른 시작
+description: 보간된 문자열에 관한 이 빠른 시작에서는 더 큰 문자열에 식의 결과를 포함하는 C# 코드를 작성합니다.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1edd2b9f59d1933547c4152343f226a86ad90216
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings"></a>보간된 문자열
 
@@ -166,5 +166,4 @@ Console.WriteLine($"{DateTime.Now,-20:d} Hour {DateTime.Now,-10:HH} {1063.342,15
     
 자체 개발 환경에서 [배열 및 컬렉션](arrays-and-collections.md) 빠른 시작을 계속할 수 있습니다.
 
-C# 참조의 [보간된 문자열](../language-reference/keywords/interpolated-strings.md) 항목에서 보간된 문자열로 작업하는 방법에 대해 자세히 알아볼 수 있습니다.
-
+C# 참조의 [문자열 보간](../language-reference/tokens/interpolated.md) 토픽에서 보간된 문자열에 대해 자세히 알아볼 수 있습니다.

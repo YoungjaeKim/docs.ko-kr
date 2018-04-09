@@ -1,7 +1,7 @@
 ---
 layout: ApiBrowserPage
-hide_bc: 
-title: ".NET API 브라우저"
+hide_bc: true
+title: .NET API 브라우저
 quickFilterColumn1: netframework-4.7.1,netcore-2.0,netstandard-2.0
 quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0
 quickFilterColumn3: azure-dotnet,aspnetcore-2.0

@@ -1,6 +1,6 @@
 ---
-title: "macOS에서 .NET Core 시작"
-description: "이 문서에서는 Visual Studio Code를 사용하여 .NET Core 솔루션을 만드는 단계와 워크플로를 제공합니다."
+title: macOS에서 .NET Core 시작
+description: 이 문서에서는 Visual Studio Code를 사용하여 .NET Core 솔루션을 만드는 단계와 워크플로를 제공합니다.
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.workload: dotnetcore
-ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>macOS에서 .NET Core 시작
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 > 이 문서에서는 macOS의 [Visual Studio Code](http://code.visualstudio.com)를 사용합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 [.NET Core SDK](https://www.microsoft.com/net/core)를 설치합니다. .NET Core SDK에는 최신 버전의 .NET Core 프레임워크 및 런타임이 포함되어 있습니다.
 
@@ -102,7 +103,7 @@ namespace Library
 }
 ```
 
-`Thing` 클래스에는 공용 메서드 `Get`이 포함되어 있습니다. 이 메서드는 두 숫자의 합계를 반환하지만, 이 작업을 위해 합계를 문자열로 변환한 다음 정수로 deserialize합니다. 여기에는 [`using static` 지시문](../../csharp/language-reference/keywords/using-static.md), [식 본문 멤버](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), [보간된 문자열](../../csharp/language-reference/keywords/interpolated-strings.md) 등 많은 최신 C# 기능이 사용됩니다.
+`Thing` 클래스에는 공용 메서드 `Get`이 포함되어 있습니다. 이 메서드는 두 숫자의 합계를 반환하지만, 이 작업을 위해 합계를 문자열로 변환한 다음 정수로 deserialize합니다. 여기에는 [`using static` 지시문](../../csharp/language-reference/keywords/using-static.md), [식 본문 멤버](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 등 많은 최신 C# 기능이 사용됩니다.
 
 [`dotnet build`](../tools/dotnet-build.md) 명령을 사용하여 라이브러리를 빌드합니다. 그러면 *golden/library/bin/Debug/netstandard1.4* 아래에 *library.dll* 파일이 생성됩니다.
 

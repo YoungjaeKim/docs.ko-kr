@@ -1,6 +1,6 @@
 ---
-title: "방법: 여러 문자열 연결(C# 가이드)"
-description: "C#에서 문자열을 연결하는 데는 여러 방법이 있습니다. 서로 다른 선택의 옵션과 이유에 대해 알아보세요."
+title: '방법: 여러 문자열 연결(C# 가이드)'
+description: C#에서 문자열을 연결하는 데는 여러 방법이 있습니다. 서로 다른 선택의 옵션과 이유에 대해 알아보세요.
 ms.date: 02/20/2018
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-caps.latest.revision: 
+caps.latest.revision: 21
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 43b60455762ecd91a790ea5c7dae49d3348794aa
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 05f4932710870c26256659252fcef3814462d488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>방법: 여러 문자열 연결(C# 가이드)
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/28/2018
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
   
 
-문자열 변수를 연결하려면 `+` 또는 `+=` 연산자, [문자열 보간](../tutorials/string-interpolation.md) 또는 <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> 또는 <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다. `+` 연산자는 사용하기 쉽고 직관적인 코드를 만듭니다. 하나의 문에서 여러 `+` 연산자를 사용해도 문자열 콘텐츠는 한 번만 복사됩니다. 다음 코드는 `+` 및 `+=` 연산자를 사용하여 문자열을 연결하는 예제를 보여줍니다.
+문자열 변수를 연결하려면 `+` 또는 `+=` 연산자, [문자열 보간](../language-reference/tokens/interpolated.md) 또는 <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> 또는 <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다. `+` 연산자는 사용하기 쉽고 직관적인 코드를 만듭니다. 하나의 문에서 여러 `+` 연산자를 사용해도 문자열 콘텐츠는 한 번만 복사됩니다. 다음 코드는 `+` 및 `+=` 연산자를 사용하여 문자열을 연결하는 예제를 보여줍니다.
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 

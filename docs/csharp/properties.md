@@ -1,6 +1,6 @@
 ---
-title: "속성"
-description: "유효성 검사, 계산된 값, 지연 평가, 속성 변경 알림 기능을 포함하는 C# 속성에 대해 알아봅니다."
+title: 속성
+description: 유효성 검사, 계산된 값, 지연 평가, 속성 변경 알림 기능을 포함하는 C# 속성에 대해 알아봅니다.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="properties"></a>속성
 
@@ -149,7 +149,7 @@ public class Person
 
 이제 `FirstName` 속성을 모든 코드에서 액세스할 수 있지만 `Person` 클래스의 다른 코드에서만 할당할 수 있습니다.
 
-set 또는 get 접근자에 제한적인 액세스 한정자를 추가할 수 있습니다. 개별 접근자에 설정하는 액세스 한정자는 속성 정의의 액세스 한정자보다 더 제한적이어야 합니다. 위 내용은 `FirstName` 속성이 `public`이지만 set 접근자가 `private`이므로 유효합니다. `public` 접근자를 사용하여 `private` 속성을 선언할 수 없습니다. 속성 선언을 선언할 수도 `protected`, `internal`, `protected internal`, `private protected` 또는 심지어 `private`합니다.   
+set 또는 get 접근자에 제한적인 액세스 한정자를 추가할 수 있습니다. 개별 접근자에 설정하는 액세스 한정자는 속성 정의의 액세스 한정자보다 더 제한적이어야 합니다. 위 내용은 `FirstName` 속성이 `public`이지만 set 접근자가 `private`이므로 유효합니다. `public` 접근자를 사용하여 `private` 속성을 선언할 수 없습니다. 속성 선언을 `protected`, `internal`, `protected internal`, `private protected` 또는 `private`로 선언할 수도 있습니다.   
 
 `get` 접근자에 더 제한적인 한정자를 설정하는 것도 가능합니다. 예를 들어 `public` 속성이 있지만 `get` 접근자를 `private`로 제한할 수 있습니다. 이 시나리오는 실제로 거의 수행되지 않습니다.
 
@@ -193,7 +193,7 @@ public class Person
 }
 ```
 
-위 예제에서는 *문자열 보간* 구문을 사용하여 전체 이름에 대한 서식이 지정된 문자열을 만듭니다.
+위 예에서는 [문자열 보간](../csharp/language-reference/tokens/interpolated.md) 기능을 사용하여 전체 이름에 대한 서식이 지정된 문자열을 만듭니다.
 
 계산된 `FullName` 속성을 만드는 보다 간결한 방법을 제공하는 *식 본문 멤버*를 사용할 수도 있습니다.
 

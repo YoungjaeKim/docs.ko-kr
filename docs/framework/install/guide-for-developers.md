@@ -1,9 +1,10 @@
 ---
-title: "개발자용 .NET Framework 설치"
+title: 개발자용 .NET Framework 설치
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
+ms.date: 03/23/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: get-started-article
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
@@ -14,25 +15,26 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4be70c047566416b40da3fd34d1e8b8f479af7c5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b5cfa21306ccad78825d5f46c78c00a24ff67436
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
 .NET은 Windows에서 실행되는 대부분의 앱에서 필수적인 요소이며, 해당 앱이 실행되는 데 필요한 공통적인 기능을 제공합니다. 개발자를 위해 .NET Framework에서는 시각적으로 멋진 사용자 환경 및 원활하고 안전한 통신이 가능한 앱을 구축하기 위한 포괄적이고 일관적인 프로그래밍 모델을 제공합니다.  
 
+> [!NOTE]
+> 이 토픽은 시스템에 .NET Framework를 설치하거나 응용 프로그램과 함께 .NET Framework를 설치하려는 **개발자**를 대상으로 합니다. .NET Framework 설치에 관심이 있는 **사용자**는 [Windows 10 및 Windows Server 2016에 .NET Framework 설치](on-windows-10.md)와 같은 특정 운영 체제에 .NET Framework를 설치하는 방법을 설명하는 개별 토픽을 참조하세요.  
+
 이 문서에서는 컴퓨터에 .NET Framework 4.5부터 [!INCLUDE[net_current](../../../includes/net-current-version.md)]까지 모든 .NET Framework 버전을 설치할 수 있는 링크를 제공합니다. 개발자는 이러한 링크를 앱과 함께 .NET Framework를 다운로드하고 재배포하기 위해 사용할 수 있습니다. 앱과 함께 .NET Framework 버전을 배포하는 방법에 대한 자세한 내용은 [개발자를 위한 .NET Framework 배포 가이드](../deployment/deployment-guide-for-developers.md)를 참조하세요.
 
-> [!NOTE]
-> 이 항목은 시스템에 .NET Framework를 설치하거나 응용 프로그램과 함께 .NET Framework를 설치하려는 개발자를 대상으로 합니다. .NET Framework 설치에 관심이 있는 사용자는 [Windows 10 및 Windows Server 2016에 .NET Framework 설치](on-windows-10.md)와 같은 특정 운영 체제에 .NET Framework를 설치하는 방법을 설명하는 개별 항목을 참조하세요.  
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
   
-.NET Framework의 새 버전을 설치한다고 항상 이전 버전이 대체되는 것은 아닙니다. .NET Framework 버전 및 컴퓨터에 설치된 버전을 확인하는 방법에 대한 자세한 내용은 [버전 및 종속성](~/docs/framework/migration-guide/versions-and-dependencies.md) 및 [방법: 설치되는 .NET Framework 버전 결정](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하십시오. 다음 표에 나열된 모든 .NET Framework 버전은 .NET Framework 4의 현재 위치 업데이트입니다. 다시 말해 .NET Framework 4.6과 같은 최신 버전을 설치하는 경우 .NET Framework 4.5, 4.5.1 또는 4.5.2 등의 이전 버전을 먼저 설치할 필요가 없습니다. 마찬가지로 .NET Framework 4.6과 같은 최신 버전을 설치하는 경우 .NET Framework 4.5, 4.5.1 또는 4.5.2 등의 이전 버전을 먼저 제거할 필요도 없습니다. 
-
-.NET Framework 4.x 이상 버전이 이전 버전에 In-place 업데이트된다는 것은 최신 버전이 이미 설치된 경우 표에 나열된 이전 버전을 설치*할 수 없다*는 의미입니다. 예를 들면 Windows 10의 11월 업데이트 시스템에 .NET Framework 4.6.1이 사전 설치되어 있으므로 .NET Framework 4.6을 설치할 수 없습니다.    
+.NET Framework 버전 및 컴퓨터에 설치된 버전을 확인하는 방법에 대한 자세한 내용은 [버전 및 종속성](~/docs/framework/migration-guide/versions-and-dependencies.md) 및 [방법: 설치되는 .NET Framework 버전 결정](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하십시오.  
 
 > [!NOTE]
 > .NET Framework 3.5에 대한 자세한 내용은 [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](~/docs/framework/install/dotnet-35-windows-10.md)를 참조하세요.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
 |.NET Framework 버전|개발자 설치|재배포 가능 설치|플랫폼 지원|  
 |----------------------------|----------------------------|----------------------------------|----------------------|  
-|**4.7.1**|[.NET Framework 4.7.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 웹 설치 관리자 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 오프라인 설치 관리자 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=852107)|포함된 운영 체제: <br/>Windows 10 Fall Creators Update<br/>Windows Server, 버전 1709<br /><br /> 설치 가능한 운영 체제:<br/> Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)||
+|**4.7.1**|[NET Framework 4.7.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 웹 설치 관리자 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 오프라인 설치 관리자 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=852107)|포함된 운영 체제: <br/>Windows 10 Fall Creators Update<br/>Windows Server, 버전 1709<br /><br /> 설치 가능한 운영 체제:<br/> Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)||
 |**4.7**|[NET Framework 4.7 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 웹 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 오프라인 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=825303)|포함된 운영 체제: <br/>Windows 10 크리에이터스 업데이트<br /><br /> 설치 가능한 운영 체제:<br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)||
 |**4.6.2**|[NET Framework 4.6.2 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 웹 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 오프라인 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=780601)|포함된 운영 체제: <br /> Windows 10 1주년 업데이트<br /><br /> 설치 가능한 운영 체제:<br /> Windows 10 11월 업데이트 <br/> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)|
 |**4.6.1**|[NET Framework 4.6.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 웹 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 오프라인 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=671744)|설치 가능한 운영 체제:<br /> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)|
@@ -67,9 +69,11 @@ ms.lasthandoff: 01/19/2018
 
 Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework에 대한 개발을 위해 개발자 대상 팩을 설치하거나 앱 또는 컨트롤 배포를 위해 .NET Framework 재배포 가능 패키지를 다운로드합니다.  
   
-## <a name="to-install-the-net-framework-developer-or-targeting-pack"></a>.NET Framework 개발자 또는 타기팅 팩을 설치하려면
+### <a name="to-install-the-net-framework-developer-pack-or-targeting-pack"></a>.NET Framework 개발자 팩 또는 대상 팩을 설치하려면
 
-.NET Framework 4.5.1 또는 4.5.2용 개발자 팩, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]용 타기팅 팩 및 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], 4.6.2, 4.7 또는 4.7.1용 개발자 팩에서는 Visual Studio와 같은 통합 개발 환경에서 사용할 수 있는 .NET Framework 4.5.1이나 4.5.2 또는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1이나 4.6.2 또는 .NET Framework 4.7이나 4.7.1 참조 어셈블리, 언어 팩 및 IntelliSense 파일을 제공합니다.  Visual Studio를 사용하는 경우 개발자 팩 또는 타기팅 팩은 설치된 .NET Framework 버전을 새 프로젝트를 만들 때 선택한 대상에도 추가합니다.  다음 개발자 팩 또는 타기팅 팩 중 하나를 선택합니다.  
+*대상 팩*을 사용하면 Visual Studio 및 기타 개발 환경에서 개발할 때 앱이 특정 버전의 .NET Framework를 대상으로 할 수 있습니다. *개발자 팩*에는 특정 버전의 .NET Framework 및 해당 대상 팩과 함께 제공된 해당 SDK가 포함되어 있습니다.
+
+.NET Framework 4.5.1 또는 4.5.2용 개발자 팩, .NET Framework 4.6용 대상 팩 및 .NET Framework 4.6.1, 4.6.2, 4.7 또는 4.7.1용 개발자 팩에서는 Visual Studio와 같은 통합 개발 환경에서 사용할 수 있는 특정 .NET Framework 버전의 참조 어셈블리, 언어 팩 및 IntelliSense 파일을 제공합니다.  Visual Studio를 사용하는 경우 개발자 팩 또는 타기팅 팩은 설치된 .NET Framework 버전을 새 프로젝트를 만들 때 선택한 대상에도 추가합니다.  다음 중 하나를 선택합니다.  
 
 - [Microsoft .NET Framework 4.7.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=852105)
 
@@ -85,40 +89,46 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
   
 - [.NET Framework 4.5.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=324213)(버전 4.5.1을 Visual Studio 2012 또는 기타 IDE에 설치하려는 경우)  
   
-개발자 팩 다운로드 페이지에서 **다운로드**를 선택합니다. 그리고 **실행** 또는 **저장**을 선택하고 표시된 메시지의 지침을 따릅니다.  
-  
-## <a name="to-install-or-download-the-net-framework-redistributable"></a>.NET Framework 재배포 가능 패키지를 설치하거나 다운로드하려면
+개발자 팩 다운로드 페이지에서 **다운로드**를 선택합니다. 그리고 **실행** 또는 **저장**을 선택하고 표시된 메시지의 지침을 따릅니다. 다음 그림과 같이 Visual Studio 설치 관리자에서 **.NET 데스크톱 개발** 워크로드의 옵션 구성 요소 중에서 선택하여 특정 버전의.NET Framework용 개발자 팩 또는 대상 팩을 설치할 수도 있습니다. 
 
-이러한 설치 관리자는 응용 프로그램에 대한 .NET Framework 구성 요소나 해당 버전의 .NET Framework를 대상으로 하는 컨트롤을 다운로드합니다. 이러한 구성 요소는 응용 프로그램이나 컨트롤이 실행되는 각 컴퓨터에 설치되어야 합니다. 두 설치 관리자 모두 재배포 가능하므로 응용 프로그램의 설치 프로그램에 포함할 수 있습니다.  
+   ![.NET 데스크톱 개발 워크로드와 Visual Studio 설치 관리자](./media/visual-studio-installer.jpg) 
+
+특정 버전의 .NET Framework를 대상으로 할 때 응용 프로그램은 해당 버전의 개발자 팩에 포함된 참조 어셈블리를 사용하여 빌드됩니다. 런타임 시 전역 어셈블리 캐시에서 어셈블리가 확인되고 참조 어셈블리는 사용되지 않습니다.
+
+Visual Studio에서 응용 프로그램을 빌드하거나 명령줄에서 MSBuild를 사용하면 MSBuild에서 "프레임워크 "*framework-version*"에 대한 참조 어셈블리를 찾을 수 없습니다"라는 오류 MSB3644가 표시될 수 있습니다. 이 오류를 해결하려면 해당 버전의 .NET Framework에 대한 개발자 팩 또는 대상 팩을 다운로드합니다.   
+
+### <a name="to-install-or-download-the-net-framework-redistributable"></a>.NET Framework 재배포 가능 패키지를 설치하거나 다운로드하려면
+
+설치 관리자는 앱에 대한 .NET Framework 구성 요소나 해당 버전의 .NET Framework를 대상으로 하는 컨트롤을 다운로드합니다. 이러한 구성 요소는 응용 프로그램이나 컨트롤이 실행되는 각 컴퓨터에 설치되어야 합니다. 이러한 설치 관리자는 재배포 가능하므로 앱의 설치 프로그램에 포함할 수 있습니다.  
   
 다운로드 페이지는 여러 언어로 제공되지만 대부분의 다운로드가 영어로만 제공됩니다. 추가 언어 지원을 사용하려면 언어 팩을 설치해야 합니다.  
   
-다음 두 가지 재배포 가능 설치 유형을 사용할 수 있습니다.  
+다음 두 가지 유형의 재배포 가능 설치 관리자를 사용할 수 있습니다.  
   
 - **웹 설치 관리자**(웹 부트스트래퍼)는 설치 컴퓨터의 운영 체제와 일치하는 필수 구성 요소와 언어 팩을 웹에서 다운로드합니다. 이 패키지는 오프라인 설치 관리자보다 크기가 훨씬 작지만 지속적인 인터넷 연결이 필요합니다. [독립 실행형 언어 팩](#standalone_language_packs)을 다운로드하면 추가 언어 지원을 설치할 수 있습니다.  
   
-- **오프라인 설치 관리자**(독립 실행형 재배포 가능 패키지)에는 .NET Framework를 설치하는 데 필요한 구성 요소가 모두 포함되어 있지만 언어 팩은 포함되어 있지 않습니다. 이 다운로드는 웹 설치 관리자보다 크기가 큽니다. 오프라인 설치 관리자는 인터넷 연결이 필요 없습니다. 오프라인 설치 관리자를 실행한 후 [독립 실행형 언어 팩](#standalone_language_packs)을 다운로드하여 언어 지원을 설치할 수 있습니다. 지속적인 인터넷 연결이 제공된다는 보장이 없는 경우 오프라인 설치 관리자를 사용합니다.  
+- **오프라인 설치 관리자**(독립 실행형 재배포 가능 패키지)에는 .NET Framework를 설치하는 데 필요한 구성 요소가 모두 포함되어 있지만 언어 팩은 포함되어 있지 않습니다. 이 다운로드는 웹 설치 관리자보다 크기가 큽니다. 오프라인 설치 관리자는 인터넷 연결이 필요 없습니다. 오프라인 설치 관리자를 실행한 후, [독립 실행형 언어 팩](#standalone_language_packs)을 다운로드하여 언어 지원을 설치할 수 있습니다. 지속적인 인터넷 연결이 제공된다는 보장이 없는 경우 오프라인 설치 관리자를 사용합니다.  
   
 웹 설치 관리자와 오프라인 설치 관리자 모두 x86 기반 컴퓨터 및 x64 기반 컴퓨터용으로 설계되었지만([시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조) Itanium 기반 컴퓨터는 지원하지 않습니다.  
   
 1.  설치하려는 .NET Framework 버전의 다운로드 페이지를 엽니다.  
 
-   - .NET Framework 4.7.1([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=852095) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=852107))
+    - .NET Framework 4.7.1([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=852095) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=852107))
 
-   - .NET Framework 4.7([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=825299) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=825303))
+    - .NET Framework 4.7([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=825299) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=825303))
 
     - .NET Framework 4.6.2([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=780597) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=780601))  
     
     - .NET Framework 4.6.1([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=671729) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=671744))  
   
-    - .NET Framework 4.6([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=528259) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=528233))  
-  
+    - .NET Framework 4.6([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=528259) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=528233))    
+   
     - .NET Framework 4.5.2([웹 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=397703) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=397706))  
   
     - .NET Framework 4.5.1([웹 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=310158) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=310159))  
   
-    - [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)  
-  
+    - [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)
+
 1. 다운로드 페이지의 언어를 선택합니다. 이 옵션을 선택해도 .NET Framework의 지역화된 리소스를 다운로드하지는 않습니다. 이는 다운로드 페이지에 표시되는 텍스트에만 영향을 줍니다.  
   
 1. **다운로드**를 선택합니다.  
